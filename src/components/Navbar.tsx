@@ -7,7 +7,7 @@ import { Search } from "lucide-react";
 export default function Navbar() {
     return (
         <nav className="w-full mt-2">
-            <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 py-4">
+            <div className="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 py-4">
                 <div className="flex items-center gap-10">
                     <Link href="/" className="flex items-center gap-2 justify-center">
                         <Image src="/logo/elixir-logo.png" alt="Elixir UI" width={18} height={18} className="invert-0 dark:invert-100" />

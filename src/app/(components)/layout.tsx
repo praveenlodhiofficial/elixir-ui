@@ -23,11 +23,9 @@ export default function DocsLayout({
   return (
   <main className="flex">
   <LeftSide />
-  <section className="flex flex-1 flex-col overflow-auto px-16" role="main" aria-label="Main content">
+  <section className="flex flex-1 flex-col overflow-auto px-12" role="main" aria-label="Main content">
     <div className="flex-1">
-      <div className="mb-4">
         {/* <RequestComponents /> */}
-      </div>
       {children}
     </div>
   </section>

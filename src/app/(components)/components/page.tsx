@@ -111,12 +111,8 @@ export default function IntroductionPage() {
         <h2 className="text-3xl font-bold tracking-tight">Credits</h2>
         <p className="text-muted-foreground gap-4">
           Built with{" "}
-          <Link href="https://ui.aceternity.com/" className="font-medium underline underline-offset-4 mr-2">
-            Aceternity UI 
-          </Link>
-          ,{" "}
-          <Link href="https://magicui.design/" className="font-medium underline underline-offset-4">
-             Magic UI
+          <Link href="https://ui.aceternity.com/" className="font-medium underline underline-offset-4">
+            Aceternity UI
           </Link>
           ,{" "}
           <Link href="https://ui.shadcn.com" className="font-medium underline underline-offset-4">

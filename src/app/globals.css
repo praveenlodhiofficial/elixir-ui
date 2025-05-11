@@ -9,6 +9,7 @@
   --color-foreground: var(--foreground);
   --font-exo: var(--font-exo);
   --font-roboto: var(--font-roboto);
+  --font-barlow-condensed: var(--font-barlow-condensed);
   --color-sidebar-ring: var(--sidebar-ring);
   --color-sidebar-border: var(--sidebar-border);
   --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
@@ -136,4 +137,30 @@ body {
   body {
     @apply bg-background text-foreground text-sm;
   }
+}
+
+/* Custom scrollbar for code blocks */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 8px;
+  height: 0px;
+}
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 8px;
+}
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: transparent;
+}
+.custom-scrollbar {
+  scrollbar-width: thin;
+  scrollbar-color: #444 transparent;
+}
+
+/* Highlight.js transparent background and theme-aware text color */
+.hljs {
+  background: transparent !important;
+  color: #222 !important;
+}
+.dark .hljs {
+  color: #e0e0e0 !important;
 }

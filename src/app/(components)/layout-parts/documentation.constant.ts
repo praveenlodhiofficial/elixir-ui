@@ -44,21 +44,6 @@ export const DOCS: Documentation[] = [
         groupValue: "Components",
         children: [
             {
-                label: "Animated SVG Chart",
-                value: "animatedchart",
-                url: "/components/animatedchart",
-            },
-            {
-                label: "Animated Testimonials",
-                value: "animatedtestimonials",
-                url: "/components/animatedtestimonials",
-            },
-            {
-                label: "Autosize Textarea",
-                value: "autosize-textarea",
-                url: "/components/autosize-textarea",
-            },
-            {
                 label: "Teammates",
                 value: "teammates",
                 url: "/components/teammates",
