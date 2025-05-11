@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
-import { Exo, Geist, Roboto } from "next/font/google";
+import { Exo, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+
 
 const exo = Exo({
   variable: "--font-exo",
@@ -32,9 +29,9 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
+    <html lang="en" suppressHydrationWarning>
       <body
-        className={`${geistSans.variable} ${exo.variable} ${roboto.variable} font-exo antialiased bg-background text-foreground tracking-wider px-20`}
+        className={`${exo.variable} ${roboto.variable} font-exo antialiased bg-background text-foreground tracking-wider min-h-screen`}
       >
         <ThemeProvider
           attribute="class"
@@ -42,8 +39,12 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <Navbar />
-          {children}
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <Navbar />
+            <main className="py-10">
+              {children}
+            </main>
+          </div>
         </ThemeProvider>
       </body>
     </html>

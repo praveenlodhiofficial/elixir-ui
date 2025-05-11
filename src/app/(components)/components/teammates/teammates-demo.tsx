@@ -127,7 +127,7 @@ export default function TeamHover() {
 
   return (
     <section className="flex flex-col items-center justify-center w-screen h-screen bg-[#111111] text-white gap-[50px] md:flex-col">
-      <div className="flex w-max gap-[5px] flex-wrap justify-center max-w-[80%] md:flex-nowrap" ref={profileImagesRef}>
+      <div className="flex w-fit gap-[5px] flex-wrap justify-center max-w-[80%] md:flex-nowrap" ref={profileImagesRef}>
         {teamMembers.map((member, index) => (
           <div
             key={member.name}

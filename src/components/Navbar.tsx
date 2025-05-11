@@ -2,13 +2,13 @@ import Link from "next/link";
 import Image from "next/image";
 import { ToggleTheme } from "./ToggleTheme";
 import { Input } from "./ui/input";
+import { Search } from "lucide-react";
 
 export default function Navbar() {
     return (
-        <nav>
-            <div className="flex items-center justify-between border-b border-gray-200 py-3 mt-2">
+        <nav className="w-full mt-2">
+            <div className="flex items-center justify-between border-b border-gray-200 dark:border-gray-800 py-4">
                 <div className="flex items-center gap-10">
-                    
                     <Link href="/" className="flex items-center gap-2 justify-center">
                         <Image src="/logo/elixir-logo.png" alt="Elixir UI" width={18} height={18} className="invert-0 dark:invert-100" />
                         <span className="text-2xl font-bold">Elixir UI</span>
@@ -20,12 +20,10 @@ export default function Navbar() {
                         <Link href="/about">About</Link>
                         <Link href="/contact">Contact</Link>
                     </div>
-
                 </div>
 
                 <div className="flex items-center gap-10">
-
-                    {/* sovial handles */}
+                    {/* social handles */}
                     <div className="flex items-center gap-5">
                         <Link href="/">Twitter</Link>
                         <Link href="/">Github</Link>
@@ -37,9 +35,9 @@ export default function Navbar() {
                     {/* search component */}
                     <Input
                         placeholder="Search components..."
-                        className="border rounded-full bg-gray-100 active:border-none active:ring-0 active:ring-offset-0 text-white px-3"
+                        className="w-[200px] rounded-full bg-gray-100 dark:bg-zinc-800 border-none active:border-none active:ring-0 active:ring-offset-0 pl-10 pr-3"
+                        icon={<Search className="w-4 h-4 cursor-pointer" />}   
                     />
-
                 </div>
             </div>
         </nav>
