@@ -1,13 +1,11 @@
-import Navbar from '@/components/Navbar'
 import React from 'react'
 
-const page = () => {
+const Home = () => {
   return (
-    <div className='px-10 font-exo'>
-      <Navbar />
-      <h1>Elixir UI</h1>
+    <div className='py-10'>
+        <h1 className='text-2xl font-bold'>Elixir UI</h1>
     </div>
   )
 }
 
-export default page
+export default Home

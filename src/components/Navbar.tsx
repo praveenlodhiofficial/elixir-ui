@@ -6,12 +6,12 @@ import { Input } from "./ui/input";
 export default function Navbar() {
     return (
         <nav>
-            <div className="flex items-center justify-between border-b border-gray-200 py-4">
+            <div className="flex items-center justify-between border-b border-gray-200 py-3 mt-2">
                 <div className="flex items-center gap-10">
                     
                     <Link href="/" className="flex items-center gap-2 justify-center">
-                        <Image src="/logo/elixir-logo.png" alt="Elixir UI" width={21} height={21} className="invert-0 dark:invert-100" />
-                        <span className="text-3xl font-bold">Elixir UI</span>
+                        <Image src="/logo/elixir-logo.png" alt="Elixir UI" width={18} height={18} className="invert-0 dark:invert-100" />
+                        <span className="text-2xl font-bold">Elixir UI</span>
                     </Link>
                     
                     <div className="flex items-center gap-5">

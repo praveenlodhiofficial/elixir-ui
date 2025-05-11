@@ -1,8 +1,8 @@
 import type { Metadata } from "next";
-import { Exo, Geist, Geist_Mono, Roboto } from "next/font/google";
+import { Exo, Geist, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
-
+import Navbar from "@/components/Navbar";
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
@@ -21,6 +21,9 @@ const roboto = Roboto({
 export const metadata: Metadata = {
   title: "Elixir UI",
   description: "Elixir UI is a reusable component library for Next.js",
+  icons: {
+    icon: "/logo/elixir-logo.png",
+  },
 };
 
 export default function RootLayout({
@@ -31,7 +34,7 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body
-        className={`${geistSans.variable} ${exo.variable} ${roboto.variable} antialiased bg-background text-foreground`}
+        className={`${geistSans.variable} ${exo.variable} ${roboto.variable} font-exo antialiased bg-background text-foreground tracking-wider px-20`}
       >
         <ThemeProvider
           attribute="class"
@@ -39,6 +42,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <Navbar />
           {children}
         </ThemeProvider>
       </body>

@@ -1,11 +1,9 @@
-import Navbar from '@/components/Navbar'
 import React from 'react'
 
 const components = () => {
   return (
-    <div className='px-10 font-exo'>
-        <Navbar />
-        <h1>Components Page</h1>
+    <div className='py-10'>
+        <h1 className='text-2xl font-bold'>Components Page</h1>
     </div>
   )
 }
