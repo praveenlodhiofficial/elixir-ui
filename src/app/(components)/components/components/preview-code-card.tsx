@@ -14,14 +14,14 @@ const PreviewCodeCard = async ({ className, path, children }: PreviewCodeCardPro
     const demoCode = await fs.readFile(path, 'utf8');
     return (
       <CodeCard code={demoCode} className={cn('mb-12 md:mt-5', className)}>
-        <div className="flex items-center justify-center md:py-10">{children}</div>
+        <div className="flex items-center justify-center">{children}</div>
       </CodeCard>
     );
   } catch (error) {
     console.error(`Error loading demo code from ${path}:`, error);
     return (
       <CodeCard className={cn('mb-12 md:mt-5', className)}>
-        <div className="flex items-center justify-center md:py-10">{children}</div>
+        <div className="flex items-center justify-center">{children}</div>
       </CodeCard>
     );
   }

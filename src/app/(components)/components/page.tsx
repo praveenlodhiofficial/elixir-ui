@@ -15,7 +15,7 @@ export default function IntroductionPage() {
       {/* Hero Section */}
       <div className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">Elixir UI</h1>
-        <p className="md:text-base text-sm text-muted-foreground font-medium dark:font-normal">
+        <p className="md:text-base text-sm/6 text-muted-foreground font-medium dark:font-normal">
           Beautifully designed components built with Aceternity UI ,ShadCN UI and MAGIC UI a that you can copy and
           paste into your apps. Accessible. Customizable. Open Source.
         </p>
@@ -37,7 +37,7 @@ export default function IntroductionPage() {
       {/* Introduction Section */}
       <div className="space-y-4">
         <h2 className="text-3xl font-bold tracking-tight">Introduction</h2>
-        <div className="text-muted-foreground space-y-4 font-medium dark:font-normal">
+        <div className="text-muted-foreground space-y-4 font-medium dark:font-normal text-sm/6">
           <p>
             Elixir UI is a collection of re-usable components built using{" "}
             <Link href="https://ui.aceternity.com/" className="font-medium underline underline-offset-4">
@@ -51,15 +51,15 @@ export default function IntroductionPage() {
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-lg border p-4">
-              <h3 className="md:text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What do you mean by copy and paste?</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="text-base/6 font-bold mb-2 text-black dark:text-white">What do you mean by copy and paste?</h3>
+              <p className="text-sm/6 text-muted-foreground">
                 Elixir UI is not a component library. It&apos;s a collection of re-usable components that
                 you can copy and paste into your projects.
               </p>
             </div>
             <div className="rounded-lg border p-4">
-              <h3 className="md:text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What? Why?</h3>
-              <p className="text-sm text-muted-foreground">
+              <h3 className="text-base/6 font-bold mb-2 text-black dark:text-white">What? Why?</h3>
+              <p className="text-sm/6 text-muted-foreground">
                 The goal is to give you a set of beautiful, accessible, and customizable components that
                 you can use in your projects. Use this as a reference implementation or copy and paste
                 the code into your project and customize it to your needs.
@@ -74,28 +74,28 @@ export default function IntroductionPage() {
         <h2 className="text-3xl font-bold tracking-tight">FAQ</h2>
         <Accordion type="single" collapsible className="w-full font-medium">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="md:text-base dark:font-normal cursor-pointer hover:no-underline">Is this a component library?</AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
+            <AccordionTrigger className="text-sm/6 md:text-base font-bold md:font-normal cursor-pointer hover:no-underline">Is this a component library?</AccordionTrigger>
+            <AccordionContent className="text-sm/6 text-muted-foreground">
               No. Elixir UI is not a component library. It&apos;s a collection of re-usable components
               that you can copy and paste into your projects.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="md:text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this in my project?</AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
+            <AccordionTrigger className="text-sm/6 md:text-base font-bold md:font-normal cursor-pointer hover:no-underline">Can I use this in my project?</AccordionTrigger>
+            <AccordionContent className="text-sm/6 text-muted-foreground">
               Yes. Free to use for personal and commercial projects. No attribution required.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="md:text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Which frameworks are supported?</AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
+            <AccordionTrigger className="text-sm/6 md:text-base font-bold md:font-normal cursor-pointer hover:no-underline">Which frameworks are supported?</AccordionTrigger>
+            <AccordionContent className="text-sm/6 text-muted-foreground">
               You can use these components in any framework that supports React. This includes Next.js,
               Gatsby, and others. 
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger className="md:text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this with JavaScript?</AccordionTrigger>
-            <AccordionContent className="text-sm text-muted-foreground">
+            <AccordionTrigger className="text-sm/6 md:text-base font-bold md:font-normal cursor-pointer hover:no-underline">Can I use this with JavaScript?</AccordionTrigger>
+            <AccordionContent className="text-sm/6 text-muted-foreground">
               Yes. You can use these components in your JavaScript projects. We use TypeScript for type
               checking and documentation.
             </AccordionContent>
@@ -106,7 +106,7 @@ export default function IntroductionPage() {
       {/* Credits Section */}
       <div className="space-y-4 ">
         <h2 className="text-3xl font-bold tracking-tight">Credits</h2>
-        <p className="text-muted-foreground gap-4 font-medium">
+        <p className="text-muted-foreground gap-4 font-medium text-sm/6">
           Built with{" "}
           <Link href="https://ui.aceternity.com/" className="font-medium underline underline-offset-4 text-black dark:text-white">
             Aceternity UI

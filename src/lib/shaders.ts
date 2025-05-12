@@ -91,3 +91,12 @@ export const renderFragmentShader = `
     gl_FragColor = color + vec4(specular);
   }
 `;
+
+
+
+
+
+
+
+
+// 

@@ -3,11 +3,10 @@
 import Link from "next/link";
 import Image from "next/image";
 import { ToggleTheme } from "./ToggleTheme";
-import { Input } from "./ui/input";
-import { Menu, Search, X } from "lucide-react";
-import { useState, useEffect } from "react";
+import { Menu, X } from "lucide-react";
+import { useState } from "react";
 import { motion } from "framer-motion";
-import { DOCS } from "@/app/(components)/layout-parts/documentation.constant";
+import { SearchComponent } from "./SearchComponent";
 
 interface NavbarProps {
     className?: string;
@@ -16,27 +15,10 @@ interface NavbarProps {
 
 export default function Navbar({ className, pageName }: NavbarProps) {
     const [isOpen, setIsOpen] = useState(false);
-    const [searchQuery, setSearchQuery] = useState("");
-    const [searchResults, setSearchResults] = useState<{ label: string; url: string }[]>([]);
-    const [showResults, setShowResults] = useState(false);
 
-    useEffect(() => {
-        if (searchQuery.trim() === "") {
-            setSearchResults([]);
-            return;
-        }
-
-        const results = DOCS.flatMap(group =>
-            group.children.filter(child =>
-                child.label.toLowerCase().includes(searchQuery.toLowerCase())
-            ).map(child => ({
-                label: child.label,
-                url: child.url
-            }))
-        );
-
-        setSearchResults(results);
-    }, [searchQuery]);
+    const handleLinkClick = () => {
+        setIsOpen(false);
+    };
 
     return (
         <nav className="w-full mt-2 md:px-6 lg:px-2">
@@ -68,32 +50,9 @@ export default function Navbar({ className, pageName }: NavbarProps) {
                     </div>
 
                     {/* search component */}
-                    <div className="relative hidden lg:block">
-                        <Input
-                            placeholder="Search components..."
-                            className="w-[200px] rounded-full bg-gray-100 dark:bg-zinc-800 border-none active:border-none active:ring-0 active:ring-offset-0 pl-10 pr-3"
-                            value={searchQuery}
-                            onChange={(e) => setSearchQuery(e.target.value)}
-                            onFocus={() => setShowResults(true)}
-                            onBlur={() => setTimeout(() => setShowResults(false), 200)}
-                        />
-                        <Search className="w-4 h-4 absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-500" />
-
-                        {showResults && searchResults.length > 0 && (
-                            <div className="absolute top-full right-0 w-2xs text-sm mt-4 bg-white dark:bg-transparent rounded-lg shadow-2xl border dark:border-gray-200 border-zinc-700 z-50 overflow-hidden">
-                                {searchResults.map((result, index) => (
-                                    <Link
-                                        key={index}
-                                        href={result.url}
-                                        className="block m-1 p-2 rounded-md transition-all duration-200 hover:text-[107%] hover:bg-gray-100 dark:hover:bg-zinc-700 text-sm border-gray-200 dark:border-zinc-700"
-                                    >
-                                        {result.label}
-                                    </Link>
-                                ))}
-                            </div>
-                        )}
+                    <div className="hidden lg:block">
+                        <SearchComponent onClick={handleLinkClick}/>
                     </div>
-
                 </div>
 
                 {/* Mobile Menu Button */}
@@ -114,11 +73,17 @@ export default function Navbar({ className, pageName }: NavbarProps) {
                         {isOpen ? <X size={24} className="z-20 m-1 scale-110" /> : <Menu size={24} className="z-20" />}
                     </button>
 
-                    <Link href="/" className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Home</Link>
-                    <Link href="/components" className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Components</Link>
-                    <Link href="/templates" className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Templates</Link>
-                    <Link href="/about" className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">About</Link>
-                    <Link href="/contact" className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Contact</Link>
+
+                    <Link href="/" onClick={handleLinkClick} className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Home</Link>
+                    <Link href="/components" onClick={handleLinkClick} className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Components</Link>
+                    
+                    <div className="w-full px-8 mb-4">
+                        <SearchComponent onClick={handleLinkClick} className="w-full" />
+                    </div>
+
+                    <Link href="/templates" onClick={handleLinkClick} className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Templates</Link>
+                    <Link href="/about" onClick={handleLinkClick} className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">About</Link>
+                    <Link href="/contact" onClick={handleLinkClick} className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Contact</Link>
                 </motion.div>
             </div>
         </nav>

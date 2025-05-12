@@ -36,7 +36,7 @@ interface Dimensions {
   height: number;
 }
 
-export default function LiquidFrame({
+export default function LiquidFrameComponent({
   src,
   alt = 'Image with water effect',
   width = 500,
@@ -286,3 +286,12 @@ export default function LiquidFrame({
     </div>
   );
 }
+
+
+
+
+
+
+
+
+// 

@@ -9,7 +9,7 @@ const page = () => {
   return (
     <div>
       <PageTemplate title="Teammates" className="md:mt-5" description="A component that displays a list of teammates with a hover effect.">
-        
+
         <PreviewCodeCard path="src/app/(components)/components/teammates/teammates-demo.tsx">
           <TeamHover />
         </PreviewCodeCard>
@@ -21,10 +21,19 @@ const page = () => {
 
         <Steppers
           className=""
-          installScript="pnpm i gsap @types/gsap"
-          steps={[{ title: "Add your teammates data" }]}
-          withInstall
-          codePath="src/lib/utils.ts"
+          installDependencies="pnpm i three @types/three"
+          steps={[
+            {
+              title: "Add the teammates component to your project in `src/components/teammates.tsx`",
+              codePath: "src/app/(components)/components/teammates/teammates-demo.tsx",
+              isCodeStep: true
+            },
+            {
+              title: "Modify, the teammates names in the component accordinglly in `src/components/teammates.tsx`",
+              codePath: "src/app/(components)/components/teammates/teammates-demo.tsx",
+              isCodeStep: true
+            }
+          ]}
         />
 
       </PageTemplate>

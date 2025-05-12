@@ -1,3 +1,5 @@
+//  teammates.tsx
+
 'use client'
 
 import Image from 'next/image'
@@ -113,7 +115,7 @@ export default function TeamHover() {
   }, [])
 
   return (
-    <section className="flex flex-col items-center justify-center md:min-h-[50vh] h-68 w-full text-white gap-8 p-5 md:p-0">
+    <section className="flex flex-col items-center justify-center md:min-h-[50vh] h-fit w-full text-white gap-8 p-5 md:my-10">
       <style jsx global>{`
         .letter {
           position: relative;

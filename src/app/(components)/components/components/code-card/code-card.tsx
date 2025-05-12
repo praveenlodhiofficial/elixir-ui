@@ -18,10 +18,10 @@ const CodeCard = ({ children, code, className }: CodeCardProps) => {
   return (
     <Tabs defaultValue="preview" className={cn(className)}>
       <TabsList className="bg-transparent border">
-        <TabsTrigger value="preview" className="font-semibold text-sm cursor-pointer bg-transparent dark:bg-transparent border-none">
+        <TabsTrigger value="preview" className="font-semibold text-sm/6 cursor-pointer bg-transparent dark:bg-transparent border-none">
           Preview
         </TabsTrigger>
-        <TabsTrigger value="code" className="font-semibold text-sm cursor-pointer bg-transparent dark:bg-transparent border-none">
+        <TabsTrigger value="code" className="font-semibold text-sm/6 cursor-pointer bg-transparent dark:bg-transparent border-none">
           Code
         </TabsTrigger>
       </TabsList>

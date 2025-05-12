@@ -6,15 +6,15 @@ import { readFileContent } from "@/lib/file-utils";
 
 interface StepProps {
   title: string;
-  codePath?: string; // Path where code is located
-  code?: string;     // Code snippet
-  isCodeStep?: boolean; // Boolean to determine if this is a code step
+  codePath?: string; 
+  code?: string;     
+  isCodeStep?: boolean;           // Boolean to determine if this is a code step (height of the code block)
 }
 
 interface SteppersProps {
   steps: StepProps[];
   className?: string;
-  installScript?: string;
+  installDependencies?: string;
 }
 
 const Step = async ({ title, codePath, code, step, isCodeStep = false }: StepProps & { step: number }) => {
@@ -26,17 +26,17 @@ const Step = async ({ title, codePath, code, step, isCodeStep = false }: StepPro
 
   return (
     <div>
-      <div className="flex items-center gap-3 md:text-sm text-xs font-bold">
+      <div className="flex items-center gap-3 md:text-sm/6 text-sm/6 font-bold">
         <span className="flex h-7 md:h-10 w-7 md:w-10 items-center justify-center rounded-full bg-zinc-800 text-white p-3">
           {step}
         </span>
-        <h4 className="text-xs md:text-base">
+        <h4 className="text-sm/6 md:text-base">
           {title}
         </h4>
       </div>
       <div className="my-3 ml-5 border-l-2 border-l-gray-200 pl-2 md:pl-8 text-sm">
         {/* {codePath && (
-          <div className="mb-2 text-xs text-gray-500">
+          <div className="mb-2 text-xs/6 text-gray-500">
             <InlineCode>{codePath}</InlineCode>
           </div>
         )} */}
@@ -47,8 +47,8 @@ const Step = async ({ title, codePath, code, step, isCodeStep = false }: StepPro
             className={cn(
               "border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center custom-scrollbar",
               isCodeStep 
-                ? "max-h-[200px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar" 
-                : "max-h-[200px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
+                ? "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar" 
+                : "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
             )} 
           />
         )}
@@ -57,15 +57,15 @@ const Step = async ({ title, codePath, code, step, isCodeStep = false }: StepPro
   );
 };
 
-export const Steppers = async ({ steps, className, installScript }: SteppersProps) => {
+export const Steppers = async ({ steps, className, installDependencies }: SteppersProps) => {
   let currentStep = 1;
 
   return (
     <div className={cn(className)}>
-      {installScript && (
+      {installDependencies && (
         <Step
           title="Install the package"
-          code={installScript}
+          code={installDependencies}
           step={currentStep++}
           isCodeStep={false}
         />
