@@ -8,7 +8,7 @@ import LiquidFrame from "./liquid-frame";
 const page = () => {
     return (
         <div>
-            <PageTemplate title="Liquid Frame" className="md:mt-5" description="AquaRipple adds a fluid, interactive water ripple effect to images using Three.js. It maintains aspect ratio, supports mouse interaction, and is styled with Tailwind CSS for a modern, magical UI touch.">
+            <PageTemplate title="Liquid Frame" className="md:mt-5" description="Liquid Frame adds a fluid, interactive water ripple effect to images using Three.js. It maintains aspect ratio, supports mouse interaction, and is styled with Tailwind CSS for a modern, magical UI touch.">
 
                 <PreviewCodeCard path="src/app/(components)/components/liquid-frame/liquid-frame-component.tsx">
                     <LiquidFrame /> 

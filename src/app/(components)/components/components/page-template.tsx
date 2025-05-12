@@ -1,5 +1,4 @@
 import React from 'react';
-import { H1, H2, P } from '@/components/ui/heading-with-anchor';
 import { cn } from '@/lib/utils';
 
 
@@ -13,8 +12,8 @@ interface PageTemplateProps {
 const PageTemplate = ({ title, description, children, className }: PageTemplateProps) => {
   return (
     <section className={cn('flex flex-col gap-2 md:pb-3 pb-10', className)}>
-      <H1 className="md:text-4xl text-3xl">{title}</H1>
-      <P className="text-sm">{description}</P>
+      <h1 className="md:text-4xl text-3xl font-bold">{title}</h1>
+      <p className="text-sm/6">{description}</p>
       {children}
       
     </section>
@@ -23,9 +22,9 @@ const PageTemplate = ({ title, description, children, className }: PageTemplateP
 
 const PageSubTitle = ({ children }: { children: React.ReactNode }) => {
   return (
-    <H2 className="mb-2 border-b border-b-gray-600 pb-2" anchor={children?.toString()}>
+    <h2 className="mb-2 border-b border-b-gray-600 pb-2" >
       {children}
-    </H2>
+    </h2>
   );
 };
 
