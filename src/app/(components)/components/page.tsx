@@ -21,12 +21,12 @@ export default function IntroductionPage() {
         </p>
         <div className="flex gap-4">
           <Button asChild>
-            <Link href="/docs/installation">
+            <Link href="/components/teammates">
               Get Started <ArrowRight className="ml-2 h-4 w-4" />
             </Link>
           </Button>
           <Button variant="outline" asChild>
-            <Link href="https://github.com/praveenlodhiofficial/elixir-ui">
+            <Link href="https://github.com/praveenlodhiofficial/" target="_blank">
               <Github className="mr-2 h-4 w-4" />
               GitHub
             </Link>
@@ -43,9 +43,6 @@ export default function IntroductionPage() {
             <Link href="https://ui.aceternity.com/" className="font-medium underline underline-offset-4">
               Aceternity UI
             </Link>{" "}
-            <Link href="https://magicui.design/" className="font-medium underline underline-offset-4">
-              Magic UI
-            </Link>{" "}
             and{" "}
             <Link href="https://ui.shadcn.com" className="font-medium underline underline-offset-4">
               ShadCN UI
@@ -54,15 +51,15 @@ export default function IntroductionPage() {
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-lg border p-4">
-              <h3 className="text-base font-medium dark:font-normal mb-2 text-white">What do you mean by copy and paste?</h3>
-              <p>
+              <h3 className="text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What do you mean by copy and paste?</h3>
+              <p className="text-sm text-muted-foreground">
                 Elixir UI is not a component library. It&apos;s a collection of re-usable components that
                 you can copy and paste into your projects.
               </p>
             </div>
             <div className="rounded-lg border p-4">
-              <h3 className="text-base font-medium dark:font-normal mb-2 text-white">What? Why?</h3>
-              <p>
+              <h3 className="text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What? Why?</h3>
+              <p className="text-sm text-muted-foreground">
                 The goal is to give you a set of beautiful, accessible, and customizable components that
                 you can use in your projects. Use this as a reference implementation or copy and paste
                 the code into your project and customize it to your needs.
@@ -75,30 +72,30 @@ export default function IntroductionPage() {
       {/* FAQ Section */}
       <div className="space-y-4">
         <h2 className="text-3xl font-bold tracking-tight">FAQ</h2>
-        <Accordion type="single" collapsible className="w-full">
+        <Accordion type="single" collapsible className="w-full font-medium">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer">Is this a component library?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="text-base dark:font-normal cursor-pointer hover:no-underline">Is this a component library?</AccordionTrigger>
+            <AccordionContent className="text-sm text-muted-foreground">
               No. Elixir UI is not a component library. It&apos;s a collection of re-usable components
               that you can copy and paste into your projects.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer">Can I use this in my project?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this in my project?</AccordionTrigger>
+            <AccordionContent className="text-sm text-muted-foreground">
               Yes. Free to use for personal and commercial projects. No attribution required.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer">Which frameworks are supported?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Which frameworks are supported?</AccordionTrigger>
+            <AccordionContent className="text-sm text-muted-foreground">
               You can use these components in any framework that supports React. This includes Next.js,
               Gatsby, and others. 
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer">Can I use this with JavaScript?</AccordionTrigger>
-            <AccordionContent>
+            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this with JavaScript?</AccordionTrigger>
+            <AccordionContent className="text-sm text-muted-foreground">
               Yes. You can use these components in your JavaScript projects. We use TypeScript for type
               checking and documentation.
             </AccordionContent>
@@ -109,21 +106,21 @@ export default function IntroductionPage() {
       {/* Credits Section */}
       <div className="space-y-4 ">
         <h2 className="text-3xl font-bold tracking-tight">Credits</h2>
-        <p className="text-muted-foreground gap-4">
+        <p className="text-muted-foreground gap-4 font-medium">
           Built with{" "}
-          <Link href="https://ui.aceternity.com/" className="font-medium underline underline-offset-4">
+          <Link href="https://ui.aceternity.com/" className="font-medium underline underline-offset-4 text-black dark:text-white">
             Aceternity UI
           </Link>
           ,{" "}
-          <Link href="https://ui.shadcn.com" className="font-medium underline underline-offset-4">
+          <Link href="https://ui.shadcn.com" className="font-medium underline underline-offset-4 text-black dark:text-white">
             ShadCN UI
           </Link>
           ,{" "}
-          <Link href="https://nextjs.org" className="font-medium underline underline-offset-4">
+          <Link href="https://nextjs.org" className="font-medium underline underline-offset-4 text-black dark:text-white">
             Next.js
           </Link>
           , and{" "}
-          <Link href="https://www.typescriptlang.org" className="font-medium underline underline-offset-4">
+          <Link href="https://www.typescriptlang.org" className="font-medium underline underline-offset-4 text-black dark:text-white">
             TypeScript
           </Link>
           .

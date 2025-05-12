@@ -32,11 +32,11 @@ export const DOCS: Documentation[] = [
                 value: "introduction",
                 url: "/components",
             },
-            {
-                label: "Installation",
-                value: "installation",
-                url: "/components/installation",
-            },
+            // {
+            //     label: "Installation",
+            //     value: "installation",
+            //     url: "/components/installation",
+            // },
         ],
     },
     {

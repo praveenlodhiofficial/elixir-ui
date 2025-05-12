@@ -11,11 +11,10 @@ export default function TeamHover() {
   const headingsRef = useRef<(HTMLHeadingElement | null)[]>([])
 
   const teamMembers = [
-    { name: 'KENNY', alt: 'Kenny', url: 'https://images.unsplash.com/photo-1560250097-0b93528c311a' },
-    { name: 'PEYTON', alt: 'Peyton', url: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2' },
-    { name: 'SPENCER', alt: 'Spencer', url: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7' },
-    { name: 'TAYLOR', alt: 'Taylor', url: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e' },
-    { name: 'JORDAN', alt: 'Jordan', url: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e' },
+    { name: 'John Lennon', alt: 'John Lennon', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbyFx0xQ3G2dkq-lqayWCpO0X2-w4u_OKdNSYoHnFVAHRGTr8OCVY36l0H70gAPU3xpM&usqp=CAU' },
+    { name: 'Paul McCartney', alt: 'Paul McCartney', url: 'https://i2-prod.liverpoolecho.co.uk/article30944658.ece/ALTERNATES/s615/0_Paul-McCartney-Press-Conference.jpg' },
+    { name: 'George Harrison', alt: 'George Harrison', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBleaQNyfFvrLIzZvO--vrs_wL_d1D2krIj2YNMZhObgWRxJ36C9tq5EoxLltUhmHZHc&usqp=CAU' },
+    { name: 'Ringo Starr', alt: 'Ringo Starr', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUQBHhh4v6JNARVkXmWNu9dqQgiDoSxZ1sg&s' },
   ]
 
   useEffect(() => {
@@ -129,10 +128,10 @@ export default function TeamHover() {
             ref={(el) => void (imagesRef.current[index] = el)}
           >
             <Image
-              src={`${member.url}?w=100&h=100&fit=crop&crop=faces`}
+              src={`${member.url}?w=500&h=500&fit=crop&crop=faces`}
               alt={member.alt}
-              width={100}
-              height={100}
+              width={500}
+              height={500}
               className="w-full h-full object-cover rounded-[3px]"
             />
           </div>
@@ -142,10 +141,11 @@ export default function TeamHover() {
       <div className="relative h-[120px] md:h-[150px] w-full overflow-hidden [clip-path:inset(0_0_0_0)]">
         <div className="absolute w-full h-full flex items-center justify-center overflow-hidden" ref={(el) => void (namesRef.current[0] = el)}>
           <h1
-            className="absolute w-full text-center font-barlow-condensed font-semibold text-[50px] md:text-9xl uppercase dark:text-white text-black"
+            className="absolute w-full text-center font-barlow-condensed font-semibold text-4xl md:text-9xl uppercase dark:text-white text-black"
             ref={(el) => void (headingsRef.current[0] = el)}
           >
-            TEAMMATES
+            {/* add &nbsp for leaving blank space between letters */}
+            THE &nbsp; BEATLES
           </h1>
         </div>
         {teamMembers.map((member, index) => (
@@ -155,11 +155,12 @@ export default function TeamHover() {
             ref={(el) => void (namesRef.current[index + 1] = el)}
           >
             <h1
-              className="absolute w-full text-center font-barlow-condensed font-semibold text-[50px] md:text-9xl uppercase text-[#ff3333] translate-y-full"
+              className="absolute w-full text-center font-barlow-condensed font-semibold text-4xl md:text-9xl uppercase text-[#ff3333] translate-y-full"
+              
+              // added &nbsp for leaving blank space between letters
+              dangerouslySetInnerHTML={{ __html: member.name.replace(/\s/g, '&nbsp;') }}
               ref={(el) => void (headingsRef.current[index + 1] = el)}
-            >
-              {member.name}
-            </h1>
+            />
           </div>
         ))}
       </div>

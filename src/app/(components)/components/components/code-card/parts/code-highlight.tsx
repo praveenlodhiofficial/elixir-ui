@@ -1,7 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Highlight from "react-highlight";
-import "highlight.js/styles/atom-one-dark.css";
+// import "highlight.js/styles/tomorrow-night-blue.css";
+import "highlight.js/styles/atom-one-light.css";
 
 import { Button } from "@/components/ui/button";
 import { Copy, Check } from "lucide-react";
@@ -50,7 +51,7 @@ const CodeHighlight = ({
       </Button>
       <div
         className={cn(
-          "max-h-[130px] overflow-y-auto overflow-x-hidden rounded-md custom-scrollbar contrast-150 saturate-200 dark:contrast-110 dark:saturate-100",
+          "max-h-[130px] overflow-y-auto overflow-x-hidden rounded-md custom-scrollbar contrast-150 saturate-200",
           expand && "max-h-[400px] overflow-y-auto overflow-x-hidden scroll-smooth"
         )}
       >
