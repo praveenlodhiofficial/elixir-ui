@@ -29,7 +29,7 @@ const CodeHighlight = ({
   if (!code) return null;
 
   return (
-    <div className={cn("relative rounded-md my-5 mx-2 md:mx-5 font-exo dark:text-zinc-200 text-zinc-800 bg-background", className)}>
+    <div className={cn("relative rounded-md my-5 mx-2 md:mx-5 font-exo dark:text-zinc-200 text-zinc-800 bg-background no-scrollbar", className)}>
       <CopyButton
         value={code}
         className={cn(
@@ -40,11 +40,11 @@ const CodeHighlight = ({
       />
       <div
         className={cn(
-          "max-h-[130px] overflow-y-auto overflow-x-hidden rounded-md custom-scrollbar contrast-150 saturate-200",
+          "max-h-[130px] overflow-y-auto overflow-x-hidden rounded-md contrast-150 saturate-200",
           expand && "max-h-[400px] overflow-y-auto overflow-x-hidden scroll-smooth"
         )}
       >
-        <Highlight className={cn("h-full font-exo text-xs", lang)}>{code}</Highlight>
+        <Highlight className={cn("h-full font-exo text-xs/6", lang)}>{code}</Highlight>
       </div>
       {withExpand && (
         <div

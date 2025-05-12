@@ -49,6 +49,12 @@ export const DOCS: Documentation[] = [
                 url: "/components/teammates",
                 new: true,
             },
+            {
+                label: "Liquid Frame",
+                value: "liquid-frame",
+                url: "/components/liquid-frame",
+                new: true,
+            },
         ],
     },
 ];
