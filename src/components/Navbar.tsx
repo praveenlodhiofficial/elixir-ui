@@ -25,8 +25,8 @@ export default function Navbar() {
                 <div className="flex items-center gap-10">
                     {/* social handles */}
                     <div className="flex items-center gap-5">
-                        <Link href="/">Twitter</Link>
-                        <Link href="/">Github</Link>
+                        <Link href="https://x.com/praveenlodhi99" target="_blank">Twitter</Link>
+                        <Link href="https://github.com/praveenlodhiofficial" target="_blank">Github</Link>
                     </div>
 
                     {/* toggle theme */}
