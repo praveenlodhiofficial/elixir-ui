@@ -12,8 +12,8 @@ interface PageTemplateProps {
 
 const PageTemplate = ({ title, description, children, className }: PageTemplateProps) => {
   return (
-    <section className={cn('flex flex-col gap-3 pb-10', className)}>
-      <H1>{title}</H1>
+    <section className={cn('flex flex-col gap-2 md:pb-3 pb-10', className)}>
+      <H1 className="md:text-4xl text-3xl">{title}</H1>
       <P className="text-sm">{description}</P>
       {children}
       

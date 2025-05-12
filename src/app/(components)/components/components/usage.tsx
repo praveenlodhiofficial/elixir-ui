@@ -10,6 +10,7 @@ interface UsageProps {
   children?: React.ReactNode;
   path: string;
 }
+
 const Usage = ({ className, children, title, path, description }: UsageProps) => {
   return (
     <div className={cn(className)}>

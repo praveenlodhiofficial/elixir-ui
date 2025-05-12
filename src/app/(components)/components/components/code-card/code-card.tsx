@@ -9,12 +9,21 @@ interface CodeCardProps {
   code?: string;
   className?: string;
 }
+
 const CodeCard = ({ children, code, className }: CodeCardProps) => {
+  if (!code) {
+    return <div className={cn(className)}>{children}</div>;
+  }
+
   return (
     <Tabs defaultValue="preview" className={cn(className)}>
       <TabsList className="bg-transparent border">
-        <TabsTrigger value="preview" className="font-semibold text-sm cursor-pointer bg-transparent dark:bg-transparent border-none">Preview</TabsTrigger>
-        <TabsTrigger value="code"  className="font-semibold text-sm cursor-pointer bg-transparent dark:bg-transparent border-none">Code</TabsTrigger>
+        <TabsTrigger value="preview" className="font-semibold text-sm cursor-pointer bg-transparent dark:bg-transparent border-none">
+          Preview
+        </TabsTrigger>
+        <TabsTrigger value="code" className="font-semibold text-sm cursor-pointer bg-transparent dark:bg-transparent border-none">
+          Code
+        </TabsTrigger>
       </TabsList>
       <TabsContent value="preview" className="rounded-md border-2 mt-4">
         {children}

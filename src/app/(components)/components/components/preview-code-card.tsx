@@ -10,18 +10,21 @@ interface PreviewCodeCardProps {
 }
 
 const PreviewCodeCard = async ({ className, path, children }: PreviewCodeCardProps) => {
-  const demoCode = await fs.readFile(path, 'utf8');
-
-  if (!demoCode) {
-    console.error(`No demo code found in ${path}`);
-    return null;
+  try {
+    const demoCode = await fs.readFile(path, 'utf8');
+    return (
+      <CodeCard code={demoCode} className={cn('mb-12 md:mt-5', className)}>
+        <div className="flex items-center justify-center md:py-10">{children}</div>
+      </CodeCard>
+    );
+  } catch (error) {
+    console.error(`Error loading demo code from ${path}:`, error);
+    return (
+      <CodeCard className={cn('mb-12 md:mt-5', className)}>
+        <div className="flex items-center justify-center md:py-10">{children}</div>
+      </CodeCard>
+    );
   }
-
-  return (
-    <CodeCard code={demoCode} className={cn('mb-12 mt-5', className)}>
-      <div className="flex items-center justify-center py-10">{children}</div>
-    </CodeCard>
-  );
 };
 
 export default PreviewCodeCard;

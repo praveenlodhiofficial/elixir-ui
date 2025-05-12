@@ -11,11 +11,11 @@ import {
 
 export default function IntroductionPage() {
   return (
-    <div className="max-w-4xl mx-auto space-y-12 py-8">
+    <div className="max-w-4xl mx-auto space-y-12 lg:py-8">
       {/* Hero Section */}
       <div className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">Elixir UI</h1>
-        <p className="text-base text-muted-foreground font-medium dark:font-normal">
+        <p className="md:text-base text-sm text-muted-foreground font-medium dark:font-normal">
           Beautifully designed components built with Aceternity UI ,ShadCN UI and MAGIC UI a that you can copy and
           paste into your apps. Accessible. Customizable. Open Source.
         </p>
@@ -51,14 +51,14 @@ export default function IntroductionPage() {
           </p>
           <div className="grid gap-4 md:grid-cols-2">
             <div className="rounded-lg border p-4">
-              <h3 className="text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What do you mean by copy and paste?</h3>
+              <h3 className="md:text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What do you mean by copy and paste?</h3>
               <p className="text-sm text-muted-foreground">
                 Elixir UI is not a component library. It&apos;s a collection of re-usable components that
                 you can copy and paste into your projects.
               </p>
             </div>
             <div className="rounded-lg border p-4">
-              <h3 className="text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What? Why?</h3>
+              <h3 className="md:text-base font-semibold dark:font-normal mb-2 text-black dark:text-white">What? Why?</h3>
               <p className="text-sm text-muted-foreground">
                 The goal is to give you a set of beautiful, accessible, and customizable components that
                 you can use in your projects. Use this as a reference implementation or copy and paste
@@ -74,27 +74,27 @@ export default function IntroductionPage() {
         <h2 className="text-3xl font-bold tracking-tight">FAQ</h2>
         <Accordion type="single" collapsible className="w-full font-medium">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-base dark:font-normal cursor-pointer hover:no-underline">Is this a component library?</AccordionTrigger>
+            <AccordionTrigger className="md:text-base dark:font-normal cursor-pointer hover:no-underline">Is this a component library?</AccordionTrigger>
             <AccordionContent className="text-sm text-muted-foreground">
               No. Elixir UI is not a component library. It&apos;s a collection of re-usable components
               that you can copy and paste into your projects.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">
-            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this in my project?</AccordionTrigger>
+            <AccordionTrigger className="md:text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this in my project?</AccordionTrigger>
             <AccordionContent className="text-sm text-muted-foreground">
               Yes. Free to use for personal and commercial projects. No attribution required.
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-3">
-            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Which frameworks are supported?</AccordionTrigger>
+            <AccordionTrigger className="md:text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Which frameworks are supported?</AccordionTrigger>
             <AccordionContent className="text-sm text-muted-foreground">
               You can use these components in any framework that supports React. This includes Next.js,
               Gatsby, and others. 
             </AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-4">
-            <AccordionTrigger className="text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this with JavaScript?</AccordionTrigger>
+            <AccordionTrigger className="md:text-base font-medium dark:font-normal cursor-pointer hover:no-underline">Can I use this with JavaScript?</AccordionTrigger>
             <AccordionContent className="text-sm text-muted-foreground">
               Yes. You can use these components in your JavaScript projects. We use TypeScript for type
               checking and documentation.

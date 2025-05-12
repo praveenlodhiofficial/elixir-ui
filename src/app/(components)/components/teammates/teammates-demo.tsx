@@ -113,7 +113,7 @@ export default function TeamHover() {
   }, [])
 
   return (
-    <section className="flex flex-col items-center justify-center min-h-[50vh] w-full text-white gap-8">
+    <section className="flex flex-col items-center justify-center md:min-h-[50vh] h-68 w-full text-white gap-8 p-5 md:p-0">
       <style jsx global>{`
         .letter {
           position: relative;
@@ -124,7 +124,7 @@ export default function TeamHover() {
         {teamMembers.map((member, index) => (
           <div
             key={member.name}
-            className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] p-0 cursor-pointer relative z-[1] hover:scale-125 transition-transform duration-200 ease-out"
+            className="w-[70px] h-[70px] md:w-[100px] md:h-[100px] cursor-pointer relative z-[1] hover:scale-125 transition-transform duration-200 ease-out"
             ref={(el) => void (imagesRef.current[index] = el)}
           >
             <Image
@@ -141,7 +141,7 @@ export default function TeamHover() {
       <div className="relative h-[120px] md:h-[150px] w-full overflow-hidden [clip-path:inset(0_0_0_0)]">
         <div className="absolute w-full h-full flex items-center justify-center overflow-hidden" ref={(el) => void (namesRef.current[0] = el)}>
           <h1
-            className="absolute w-full text-center font-barlow-condensed font-semibold text-4xl md:text-9xl uppercase dark:text-white text-black"
+            className="absolute w-full text-center font-barlow-condensed font-extrabold md:font-semibold text-4xl md:text-9xl uppercase dark:text-white text-black"
             ref={(el) => void (headingsRef.current[0] = el)}
           >
             {/* add &nbsp for leaving blank space between letters */}
@@ -155,7 +155,7 @@ export default function TeamHover() {
             ref={(el) => void (namesRef.current[index + 1] = el)}
           >
             <h1
-              className="absolute w-full text-center font-barlow-condensed font-semibold text-4xl md:text-9xl uppercase text-[#ff3333] translate-y-full"
+              className="absolute w-full text-center font-barlow-condensed font-extrabold md:font-semibold text-4xl md:text-9xl uppercase text-[#ff3333] translate-y-full"
               
               // added &nbsp for leaving blank space between letters
               dangerouslySetInnerHTML={{ __html: member.name.replace(/\s/g, '&nbsp;') }}

@@ -5,7 +5,7 @@ import Highlight from "react-highlight";
 import "highlight.js/styles/atom-one-light.css";
 
 import { Button } from "@/components/ui/button";
-import { Copy, Check } from "lucide-react";
+import { CopyButton } from "@/components/ui/copy";
 import { cn } from "@/lib/utils";
 
 interface CodeHighlightProps {
@@ -24,31 +24,20 @@ const CodeHighlight = ({
   lang = "tsx",
   className,
 }: CodeHighlightProps) => {
-  const [copied, setCopied] = useState(false);
   const [expand, setExpanded] = useState(!withExpand);
+
+  if (!code) return null;
+
   return (
-    <div className={cn("relative rounded-md m-5 font-exo dark:text-zinc-200 text-zinc-800 bg-background", className)}>
-      <Button
+    <div className={cn("relative rounded-md my-5 mx-2 md:mx-5 font-exo dark:text-zinc-200 text-zinc-800 bg-background", className)}>
+      <CopyButton
+        value={code}
         className={cn(
-          "absolute right-4 top-4 h-8 w-8 bg-secondary cursor-pointer transition-all duration-100",
+          "absolute right-4 top-4",
           (inTab || lang === "shell") && "right-1 top-1"
         )}
-        variant="ghost"
-        size="icon"
-        onClick={() => {
-          navigator.clipboard.writeText(code || "");
-          setCopied(true);
-          setTimeout(() => {
-            setCopied(false);
-          }, 3000);
-        }}
-      >
-        {copied ? (
-          <Check className="h-4 w-4 text-green-600 dark:text-green-500" />
-        ) : (
-          <Copy className="h-4 w-4 text-zinc-800 dark:text-zinc-200 cursor-pointer" />
-        )}
-      </Button>
+        aria-label="Copy code"
+      />
       <div
         className={cn(
           "max-h-[130px] overflow-y-auto overflow-x-hidden rounded-md custom-scrollbar contrast-150 saturate-200",
@@ -57,22 +46,21 @@ const CodeHighlight = ({
       >
         <Highlight className={cn("h-full font-exo text-xs", lang)}>{code}</Highlight>
       </div>
-      <div
-        className={cn(
-          "absolute bottom-2 flex w-full items-center justify-center  transition-opacity duration-300 ",
-          inTab && "bottom-0",
-          !withExpand && "hidden"
-        )}
-      >
-        <Button
-          variant="outline"
-          onClick={() => {
-            setExpanded((prev) => !prev);
-          }}
+      {withExpand && (
+        <div
+          className={cn(
+            "absolute bottom-2 flex w-full items-center justify-center transition-opacity duration-300",
+            inTab && "bottom-0"
+          )}
         >
-          {expand ? "Collapse" : "Expand"}
-        </Button>
-      </div>
+          <Button
+            variant="outline"
+            onClick={() => setExpanded((prev) => !prev)}
+          >
+            {expand ? "Collapse" : "Expand"}
+          </Button>
+        </div>
+      )}
     </div>
   );
 };

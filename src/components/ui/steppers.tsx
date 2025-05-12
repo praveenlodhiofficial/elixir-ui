@@ -14,11 +14,11 @@ interface StepperProps {
 const Stepper = ({ title, children, step }: StepperProps) => {
   return (
     <div>
-      <div className="flex items-center gap-3 text-sm">
-        <span className="flex h-10 w-10 items-center justify-center rounded-full bg-zinc-800 text-white p-3">
+      <div className="flex items-center gap-3 md:text-sm text-xs font-bold">
+        <span className="flex h-7 md:h-10 w-7 md:w-10 items-center justify-center rounded-full bg-zinc-800 text-white p-3">
           {step}
         </span>
-        <H5>
+        <H5 className="text-xs md:text-base">
           {title === "Extend tailwind.config.js" ? (
             <span>
               Extend <InlineCode>tailwind.config.js</InlineCode>
@@ -28,7 +28,7 @@ const Stepper = ({ title, children, step }: StepperProps) => {
           )}
         </H5>
       </div>
-      <div className="my-3 ml-5 border-l-2 border-l-gray-200 pl-8 text-sm">
+      <div className="my-3 ml-5 border-l-2 border-l-gray-200 pl-2 md:pl-8 text-sm">
         {children}
       </div>
     </div>
@@ -83,14 +83,14 @@ export const Steppers = async (props: SteppersProps) => {
                 title="Install the package if you do not have it."
                 step={1}
               >
-                <CodeHighlight lang="shell" code={props.installScript} className="px-5 py-3 border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center"/>
+                <CodeHighlight lang="shell" code={props.installScript} className="md:px-5 md:py-2 px-2 py-1 border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center"/>
               </Stepper>
             )}
             <Stepper
               title="Copy and paste the following code into your project."
               step={props.installScript ? 2 : 1}
             >
-              <CodeHighlight code={installCode} withExpand={false} className="px-5 py-3 border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center"/>
+              <CodeHighlight code={installCode} withExpand={false} className="md:px-5 md:py-2 px-2 py-1 border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center"/>
             </Stepper>
           </>
         )}
