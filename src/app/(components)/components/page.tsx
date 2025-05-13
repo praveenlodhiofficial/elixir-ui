@@ -1,4 +1,3 @@
-
 import Link from "next/link"
 import { ArrowRight, Github } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -8,16 +7,17 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { DOCS } from "../layout-parts/documentation.constant"
 
-export default function IntroductionPage() {
+export default function ComponentsPage() {
   return (
     <div className="max-w-4xl mx-auto space-y-12 lg:py-8">
       {/* Hero Section */}
       <div className="space-y-4">
         <h1 className="text-4xl font-bold tracking-tight">Elixir UI</h1>
-        <p className="md:text-base text-sm/6 text-muted-foreground font-medium dark:font-normal">
-          Beautifully designed components built with Aceternity UI ,ShadCN UI and MAGIC UI a that you can copy and
-          paste into your apps. Accessible. Customizable. Open Source.
+        <p className="text-normal/6 text-muted-foreground font-medium dark:font-normal">
+          Beautifully designed components built with Aceternity UI ,ShadCN, Three.js & many more that you can copy and
+          paste into your apps. Easy to access, use and customize.
         </p>
         <div className="flex gap-4">
           <Button asChild>
@@ -66,6 +66,27 @@ export default function IntroductionPage() {
               </p>
             </div>
           </div>
+        </div>
+      </div>
+
+      {/* Components List Section */}
+      <div className="space-y-4">
+        <h2 className="text-3xl font-bold tracking-tight">Components List</h2>
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          {DOCS.find(group => group.groupKey === "components")?.children.map((component) => (
+            <div key={component.value} className="py-3 px-4 rounded-lg border hover:border-primary transition-colors">
+              <Link href={component.url} className="flex items-center justify-between group">
+                <span className="text-primary font-medium group-hover:text-primary/80">
+                  {component.label}
+                </span>
+                {component.new && (
+                  <span className="relative bottom-6 left-0 px-1.5 py-0.5  text-[10px] dark:bg-lime-500 bg-black dark:text-black text-zinc-200 font-bold rounded-full">
+                    NEW
+                  </span>
+                )}
+              </Link>
+            </div>
+          ))}
         </div>
       </div>
 

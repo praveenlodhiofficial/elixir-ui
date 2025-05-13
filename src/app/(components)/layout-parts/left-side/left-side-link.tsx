@@ -7,7 +7,6 @@ import Link, { LinkProps } from 'next/link';
 interface LeftSideLinkProps extends LinkProps {
   children?: React.ReactNode;
   className?: string;
-
   target?: '_blank';
 }
 
