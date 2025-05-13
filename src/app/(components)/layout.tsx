@@ -4,6 +4,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 
 import type { Viewport } from "next";
+import LenisScroll from "@/components/LenisScroll";
 // import RequestComponents from "@/components/requestcomponets";
 
 export const viewport: Viewport = {
@@ -21,15 +22,16 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   return (
-  <main className="flex">
-  <LeftSide />
-  <section className="flex flex-1 flex-col overflow-auto px-2 md:px-8 lg:px-12" role="main" aria-label="Main content">
-    <div className="flex-1">
-        {/* <RequestComponents /> */}
-      {children}
-    </div>
-  </section>
-  <Toaster />
-</main>
+    <main className="flex">
+      <LenisScroll />
+      <LeftSide />
+      <section className="flex flex-1 flex-col overflow-auto px-2 md:px-8 lg:px-12" role="main" aria-label="Main content">
+        <div className="flex-1">
+          {/* <RequestComponents /> */}
+          {children}
+        </div>
+      </section>
+      <Toaster />
+    </main>
   );
 }

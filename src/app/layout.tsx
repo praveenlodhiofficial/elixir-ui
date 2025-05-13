@@ -3,6 +3,7 @@ import {Barlow_Condensed, Exo, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
+import LenisScroll from "@/components/LenisScroll";
 
 const exo = Exo({
   variable: "--font-exo",
@@ -45,6 +46,7 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
+          <LenisScroll />
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <Navbar />
             <main className="py-10">
