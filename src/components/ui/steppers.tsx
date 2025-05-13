@@ -67,7 +67,7 @@ export const Steppers = ({ steps, className, installDependencies }: SteppersProp
       {installDependencies && (
         <div>
           <Step
-            title="Install the package"
+            title="Install the dependencies"
             codeDirectory={undefined}
             code={undefined}
             step={currentStep++}

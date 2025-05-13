@@ -3,7 +3,7 @@
 import React from 'react'
 import TeamMates from './teammates-component'
 
-const LiquidFrame = () => {
+const Teammates = () => {
     return (
         <TeamMates
             teamMembers={[
@@ -32,7 +32,7 @@ const LiquidFrame = () => {
     )
 }
 
-export default LiquidFrame
+export default Teammates;
 
 
 
@@ -41,4 +41,4 @@ export default LiquidFrame
 
 
 
-// 
+

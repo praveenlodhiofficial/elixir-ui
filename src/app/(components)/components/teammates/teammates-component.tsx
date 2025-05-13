@@ -169,3 +169,12 @@ export default function TeamMates({ teamMembers }: TeamMatesProps) {
     </section>
   )
 }
+
+
+
+
+
+
+
+
+
