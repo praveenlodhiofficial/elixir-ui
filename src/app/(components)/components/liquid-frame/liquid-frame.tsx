@@ -11,7 +11,6 @@ const LiquidFrame = () => {
         width={900}
         alt="Zenitsu from Demon Slayer"
         className="rounded-[5px] contrast-125 saturate-125 self-center object-cover object-center"
-
         />
     )
 }

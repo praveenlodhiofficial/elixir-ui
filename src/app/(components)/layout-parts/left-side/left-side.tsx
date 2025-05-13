@@ -81,15 +81,16 @@ export default function EnhancedSidebar() {
                     key={child.value}
                     href={child.url}
                     className={cn(
-                      "flex items-center gap-2 px-4 py-2 rounded-md transition-colors",
+                      "flex items-center gap-2 px-4 py-1.5 rounded-md scale-95 hover:font-semibold hover:scale-100 hover:pl-9 transition-all duration-[0.25s] group",
                       pathname === child.url
-                        ? "dark:text-gray-200"
+                        ? "dark:text-gray-200 font-semibold"
                         : "hover:text-gray-500 dark:hover:text-gray-200"
                     )}
                   >
+                    <span className="text-transparent group-hover:text-white text-sm">|</span>
                     {child.label}
                     {child.new && (
-                      <span className="text-xs/6 text-black bg-lime-400 px-1.5 py-0.5 rounded-full">
+                      <span className="text-[12px] font-semibold text-black bg-lime-400 px-2 py-0.5 rounded-full">
                         New
                       </span>
                     )}

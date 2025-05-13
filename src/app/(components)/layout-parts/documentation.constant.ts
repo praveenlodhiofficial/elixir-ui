@@ -47,7 +47,6 @@ export const DOCS: Documentation[] = [
                 label: "Teammates",
                 value: "teammates",
                 url: "/components/teammates",
-                new: true,
             },
             {
                 label: "Liquid Frame",

@@ -15,14 +15,13 @@ const PageTemplate = ({ title, description, children, className }: PageTemplateP
       <h1 className="md:text-4xl text-3xl font-bold">{title}</h1>
       <p className="text-sm/6">{description}</p>
       {children}
-      
     </section>
   );
 };
 
 const PageSubTitle = ({ children }: { children: React.ReactNode }) => {
   return (
-    <h2 className="mb-2 border-b border-b-gray-600 pb-2" >
+    <h2 className="text-2xl font-bold mb-2 border-b border-b-gray-600 pb-2" >
       {children}
     </h2>
   );

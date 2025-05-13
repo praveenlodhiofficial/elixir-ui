@@ -5,7 +5,7 @@ export function InlineCode({ className, ...props }: React.HTMLAttributes<HTMLSpa
   return (
     <code
       className={cn(
-        'relative rounded bg-muted px-[0.3rem] py-[0.2rem] font-mono text-sm/6 font-semibold',
+        'relative rounded dark:bg-zinc-200 dark:text-zinc-800 bg-zinc-800 text-zinc-100 px-[0.3rem] py-[0.2rem] font-mono text-sm/6 font-semibold',
         className,
       )}
       {...props}

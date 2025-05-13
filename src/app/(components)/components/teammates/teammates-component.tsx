@@ -6,18 +6,21 @@ import Image from 'next/image'
 import { useEffect, useRef } from 'react'
 import gsap from 'gsap'
 
-export default function TeamHover() {
+interface TeamMember {
+  name: string
+  alt: string
+  url: string
+}
+
+interface TeamMatesProps {
+  teamMembers: TeamMember[]
+}
+
+export default function TeamMates({ teamMembers }: TeamMatesProps) {
   const profileImagesRef = useRef<HTMLDivElement>(null)
   const imagesRef = useRef<(HTMLDivElement | null)[]>([])
   const namesRef = useRef<(HTMLDivElement | null)[]>([])
   const headingsRef = useRef<(HTMLHeadingElement | null)[]>([])
-
-  const teamMembers = [
-    { name: 'John Lennon', alt: 'John Lennon', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmbyFx0xQ3G2dkq-lqayWCpO0X2-w4u_OKdNSYoHnFVAHRGTr8OCVY36l0H70gAPU3xpM&usqp=CAU' },
-    { name: 'Paul McCartney', alt: 'Paul McCartney', url: 'https://i2-prod.liverpoolecho.co.uk/article30944658.ece/ALTERNATES/s615/0_Paul-McCartney-Press-Conference.jpg' },
-    { name: 'George Harrison', alt: 'George Harrison', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQqBleaQNyfFvrLIzZvO--vrs_wL_d1D2krIj2YNMZhObgWRxJ36C9tq5EoxLltUhmHZHc&usqp=CAU' },
-    { name: 'Ringo Starr', alt: 'Ringo Starr', url: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSzUQBHhh4v6JNARVkXmWNu9dqQgiDoSxZ1sg&s' },
-  ]
 
   useEffect(() => {
     // Manual text splitting function
@@ -146,8 +149,7 @@ export default function TeamHover() {
             className="absolute w-full text-center font-barlow-condensed font-extrabold md:font-semibold text-4xl md:text-9xl uppercase dark:text-white text-black"
             ref={(el) => void (headingsRef.current[0] = el)}
           >
-            {/* add &nbsp for leaving blank space between letters */}
-            THE &nbsp; BEATLES
+            THE BEATLES
           </h1>
         </div>
         {teamMembers.map((member, index) => (
@@ -158,8 +160,6 @@ export default function TeamHover() {
           >
             <h1
               className="absolute w-full text-center font-barlow-condensed font-extrabold md:font-semibold text-4xl md:text-9xl uppercase text-[#ff3333] translate-y-full"
-              
-              // added &nbsp for leaving blank space between letters
               dangerouslySetInnerHTML={{ __html: member.name.replace(/\s/g, '&nbsp;') }}
               ref={(el) => void (headingsRef.current[index + 1] = el)}
             />

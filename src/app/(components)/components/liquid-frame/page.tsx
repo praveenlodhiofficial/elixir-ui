@@ -16,7 +16,7 @@ const page = () => {
 
                 <PageSubTitle>Installation</PageSubTitle>
                 <p className="dark:text-gray-200 text-gray-800 md:pb-5 pb-2">
-                    Install the component using npm, pnpm or yarn.
+                    Follow the steps below to add the <span className="font-bold">Liquid Frame Component</span> to your project.
                 </p>
 
                 <Steppers
@@ -29,7 +29,8 @@ const page = () => {
                             isCodeStep: true
                         },
                         {
-                            title: "Add the liquid frame component to your project in `src/components/liquid-frame.tsx`",
+                            title: "Add the liquid frame component to your project in ",
+                            codeDirectory: "src/components/liquid-frame.tsx",
                             codePath: "src/app/(components)/components/liquid-frame/liquid-frame-component.tsx",
                             isCodeStep: true
                         },

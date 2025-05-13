@@ -29,7 +29,7 @@ export default function Navbar({ className, pageName }: NavbarProps) {
                         <span className="text-2xl font-bold">Elixir UI</span>
                     </Link>
 
-                    <div className="items-center gap-5  hidden md:flex">
+                    <div className="items-center gap-5  hidden md:flex md:font-semibold">
                         <Link href="/components">Components</Link>
                         <Link href="/templates">Templates</Link>
                         <Link href="/about">About</Link>
@@ -39,7 +39,7 @@ export default function Navbar({ className, pageName }: NavbarProps) {
 
                 <div className="flex items-center gap-10">
                     {/* social handles */}
-                    <div className="items-center gap-5 hidden lg:flex ">
+                    <div className="items-center gap-5 hidden lg:flex md:font-semibold">
                         <Link href="https://x.com/praveenlodhi99" target="_blank">Twitter</Link>
                         <Link href="https://github.com/praveenlodhiofficial" target="_blank">Github</Link>
                     </div>
