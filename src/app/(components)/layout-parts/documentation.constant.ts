@@ -54,6 +54,12 @@ export const DOCS: Documentation[] = [
                 url: "/components/liquid-frame",
                 new: true,
             },
+            {
+                label: "Showcase",
+                value: "showcase",
+                url: "/components/showcase",
+                new: true,
+            },
         ],
     },
 ];
