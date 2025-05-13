@@ -34,7 +34,7 @@ const Step = async ({ title, codePath, code, step, isCodeStep = false, codeDirec
           {step}
         </span>
         <h4 className="text-sm/6 md:text-base">
-          {title}
+          {title} &nbsp;
           <span className="mb-2 text-xs/6 text-gray-500">
             {codeDirectory && <InlineCode>{codeDirectory}</InlineCode>}
           </span>

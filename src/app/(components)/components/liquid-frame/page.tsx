@@ -24,12 +24,13 @@ const page = () => {
                     installDependencies="pnpm i three @types/three"
                     steps={[
                         {
-                            title: "Add shaders to your project in `src/lib/shaders.ts`",
+                            title: "Add shaders to your project in",
+                            codeDirectory: "src/lib/shaders.ts",
                             codePath: "src/lib/shaders.ts",
                             isCodeStep: true
                         },
                         {
-                            title: "Add the liquid frame component to your project in ",
+                            title: "Add the liquid frame component to your project in",
                             codeDirectory: "src/components/liquid-frame.tsx",
                             codePath: "src/app/(components)/components/liquid-frame/liquid-frame-component.tsx",
                             isCodeStep: true

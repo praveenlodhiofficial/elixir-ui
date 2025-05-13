@@ -25,7 +25,7 @@ export const metadata: Metadata = {
   title: "Elixir UI",
   description: "Elixir UI is a reusable component library for Next.js",
   icons: {
-    icon: "/logo/elixir.png",
+    icon: "/logo/elixir-logo-dark.png",
   },
 };
 

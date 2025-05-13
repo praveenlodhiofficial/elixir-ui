@@ -24,13 +24,13 @@ const page = () => {
           installDependencies="pnpm i three @types/three"
           steps={[
             {
-              title: "Add the teammates component to your project in ",
+              title: "Add the teammates component to your project in",
               codeDirectory: "src/components/teammates.tsx",
               codePath: "src/app/(components)/components/teammates/teammates-component.tsx",
               isCodeStep: true
             },
             {
-              title: "Modify, the teammates names in the component accordinglly in ",
+              title: "Modify, the teammates names in the component accordinglly in",
               codeDirectory: "src/app/page.tsx",
               codePath: "src/app/(components)/components/teammates/teammates.tsx",
               isCodeStep: true

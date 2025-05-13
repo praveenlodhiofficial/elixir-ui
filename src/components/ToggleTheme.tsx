@@ -28,7 +28,7 @@ export function ToggleTheme() {
   return (
     <button
       aria-label={`Switch to ${isDarkMode ? "light" : "dark"} mode`}
-      className="relative flex items-center justify-center w-6 h-6 rounded-full bg-transparent"
+      className="relative flex items-center justify-center w-6 h-6 rounded-full bg-transparent cursor-pointer"
       onClick={handleClick}
     >
       <span

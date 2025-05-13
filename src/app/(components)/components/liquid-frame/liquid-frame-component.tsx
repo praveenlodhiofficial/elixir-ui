@@ -56,26 +56,17 @@ export default function LiquidFrameComponent({
     img.src = src;
     img.onload = () => {
       const aspectRatio = img.naturalWidth / img.naturalHeight;
+      const containerWidth = container.clientWidth;
+      const containerHeight = container.clientHeight;
 
-      // Calculate dimensions to maintain aspect ratio
-      let newWidth = width;
-      let newHeight = height;
+      // Calculate dimensions to cover the container while maintaining aspect ratio
+      let newWidth = containerWidth;
+      let newHeight = containerWidth / aspectRatio;
 
-      // If width is provided, adjust height to maintain aspect ratio
-      if (width) {
-        newHeight = width / aspectRatio;
-      }
-      // If height is provided and no width, adjust width to maintain aspect ratio
-      else if (height) {
-        newWidth = height * aspectRatio;
-      }
-      // If both are provided, use the one that fits within bounds
-      else if (width && height) {
-        newHeight = width / aspectRatio;
-        if (newHeight > height) {
-          newHeight = height;
-          newWidth = height * aspectRatio;
-        }
+      // If calculated height is less than container height, adjust to cover height
+      if (newHeight < containerHeight) {
+        newHeight = containerHeight;
+        newWidth = containerHeight * aspectRatio;
       }
 
       // Update dimensions
@@ -266,32 +257,22 @@ export default function LiquidFrameComponent({
   return (
     <div
       ref={containerRef}
-      className={`relative ${className}`}
+      className={`relative w-full h-full ${className}`}
       style={{
-        width: `${dimensions.width}px`,
-        height: `${dimensions.height}px`,
+        width: '100%',
+        height: '100%',
         overflow: 'hidden',
       }}
     >
       {/* Hidden base image for proper sizing */}
-      <div style={{ visibility: 'hidden', position: 'absolute' }}>
+      <div style={{ visibility: 'hidden', position: 'absolute', width: '100%', height: '100%' }}>
         <Image
           src={src}
           alt={alt}
-          width={dimensions.width}
-          height={dimensions.height}
-          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+          fill
+          style={{ objectFit: 'cover' }}
         />
       </div>
     </div>
   );
 }
-
-
-
-
-
-
-
-
-// 
