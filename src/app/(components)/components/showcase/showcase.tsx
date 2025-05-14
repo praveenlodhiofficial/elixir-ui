@@ -7,7 +7,7 @@ import ShowcaseComponent from './showcase-component'
 
 const Showcase = () => {
   return (
-    <div className='w-full h-[60vh]'>
+    <div className='w-full h-[60vh] bg-black'>
       <ShowcaseComponent
         imageSrc="/components/showcase/showcase-image.png"
         text="Anime"

@@ -24,7 +24,7 @@ function ShowcaseScene({
   const tex = useTexture(imageSrc);
 
   // Adjust texture settings
-  tex.anisotropy = 0.5;
+  tex.anisotropy = 20;
   tex.minFilter = THREE.LinearFilter;
   tex.magFilter = THREE.LinearFilter;
 
@@ -42,9 +42,9 @@ function ShowcaseScene({
       <EffectComposer>
         <Bloom
           mipmapBlur
-          intensity={4}
-          luminanceThreshold={0.1}
-          luminanceSmoothing={2}
+          intensity={3}
+          luminanceThreshold={0.6}
+          luminanceSmoothing={0.1}
         />
       </EffectComposer>
       <OrbitControls
