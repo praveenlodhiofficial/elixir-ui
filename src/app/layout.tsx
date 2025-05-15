@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import {Barlow_Condensed, Exo, Roboto } from "next/font/google";
+import { Analytics } from '@vercel/analytics/next';
+import { Barlow_Condensed, Exo, Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/ThemeProvider";
 import Navbar from "@/components/Navbar";
@@ -40,20 +41,23 @@ export default function RootLayout({
       <body
         className={`${exo.variable} ${roboto.variable} ${barlowCondensed.variable} font-exo antialiased bg-background text-foreground tracking-wider min-h-screen`}
       >
-        <ThemeProvider
-          attribute="class"
-          defaultTheme="system"
-          enableSystem
-          disableTransitionOnChange
-        >
-          <LenisScroll />
-          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <Navbar />
-            <main className="py-10">
-              {children}
-            </main>
-          </div>
-        </ThemeProvider>
+        <>
+          <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          >
+            <LenisScroll />
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+              <Navbar />
+              <main className="py-10">
+                {children}
+              </main>
+            </div>
+          </ThemeProvider>
+          <Analytics />
+        </>
       </body>
     </html>
   );
