@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { ToggleTheme } from "./ToggleTheme";
+import { ThemeToggleButton } from "./ThemeToggleButton";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
@@ -46,7 +46,17 @@ export default function Navbar({ className, pageName }: NavbarProps) {
 
                     {/* toggle theme */}
                     <div className="sm:block">
-                        <ToggleTheme />
+                        {/* <ThemeToggleButton showLabel /> */}
+                        <ThemeToggleButton showLabel variant="circle-blur" start="top-right" />
+                        {/* <ThemeToggleButton showLabel variant="circle-blur" start="bottom-left" />
+                        <ThemeToggleButton showLabel variant="circle-blur" start="bottom-right" />
+
+                        <ThemeToggleButton showLabel variant="circle" start="top-left" />
+                        <ThemeToggleButton showLabel variant="circle" start="top-right" />
+                        <ThemeToggleButton showLabel variant="circle" start="bottom-left" />
+                        <ThemeToggleButton showLabel variant="circle" start="bottom-right" />
+
+                        <ThemeToggleButton showLabel variant="circle" start="center" /> */}
                     </div>
 
                     {/* search component */}

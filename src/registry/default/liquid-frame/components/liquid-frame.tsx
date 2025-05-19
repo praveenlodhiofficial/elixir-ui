@@ -8,7 +8,7 @@ import {
   simulationFragmentShader,
   renderVertexShader,
   renderFragmentShader,
-} from '@/lib/liquid-frame';
+} from '@/registry/default/liquid-frame/lib/liquid-frame';
 
 // Define shader types (assuming shaders are strings)
 type ShaderSource = string;
