@@ -46,17 +46,7 @@ export default function Navbar({ className, pageName }: NavbarProps) {
 
                     {/* toggle theme */}
                     <div className="sm:block">
-                        {/* <ThemeToggleButton showLabel /> */}
-                        <ThemeToggleButton showLabel variant="circle-blur" start="top-right" />
-                        {/* <ThemeToggleButton showLabel variant="circle-blur" start="bottom-left" />
-                        <ThemeToggleButton showLabel variant="circle-blur" start="bottom-right" />
-
-                        <ThemeToggleButton showLabel variant="circle" start="top-left" />
-                        <ThemeToggleButton showLabel variant="circle" start="top-right" />
-                        <ThemeToggleButton showLabel variant="circle" start="bottom-left" />
-                        <ThemeToggleButton showLabel variant="circle" start="bottom-right" />
-
-                        <ThemeToggleButton showLabel variant="circle" start="center" /> */}
+                        <ThemeToggleButton variant="circle-blur" start="top-right" />
                     </div>
 
                     {/* search component */}
