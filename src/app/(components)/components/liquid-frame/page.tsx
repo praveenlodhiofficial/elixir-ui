@@ -10,7 +10,7 @@ const page = () => {
         <div>
             <PageTemplate title="Liquid Frame" className="md:mt-5" description="Liquid Frame adds a fluid, interactive water ripple effect to images using Three.js. It maintains aspect ratio, supports mouse interaction, and is styled with Tailwind CSS for a modern, magical UI touch.">
 
-                <PreviewCodeCard path="src/app/(components)/components/liquid-frame/liquid-frame-component.tsx">
+                <PreviewCodeCard path="src/registry/default/liquid-frame/components/liquid-frame.tsx">
                     <LiquidFrame /> 
                 </PreviewCodeCard>
 
@@ -24,9 +24,9 @@ const page = () => {
                     installDependencies="pnpm i three @types/three"
                     steps={[
                         {
-                            title: "Add shaders to your project in",
-                            codeDirectory: "src/lib/shaders.ts",
-                            codePath: "src/lib/shaders.ts",
+                            title: "Add shaders logic to your project in",
+                            codeDirectory: "src/lib/liquid-frame.ts",
+                            codePath: "src/registry/default/liquid-frame/lib/liquid-frame.ts",
                             isCodeStep: true
                         },
                         {
