@@ -1,5 +1,3 @@
-// liquid-frame.tsx
-
 'use client';
 
 import React, { useEffect, useRef, useState } from 'react';
@@ -10,7 +8,7 @@ import {
   simulationFragmentShader,
   renderVertexShader,
   renderFragmentShader,
-} from '@/lib/shaders';
+} from '../lib/liquid-frame';
 
 // Define shader types (assuming shaders are strings)
 type ShaderSource = string;
@@ -23,7 +21,7 @@ interface ShaderImports {
   renderFragmentShader: ShaderSource;
 }
 
-interface Props {
+interface LiquidFrameProps {
   src: string;
   alt?: string;
   width?: number;
@@ -31,20 +29,20 @@ interface Props {
   className?: string;
 }
 
-interface Dimensions {
+interface DimensionsProps {
   width: number;
   height: number;
 }
 
-export default function LiquidFrameComponent({
+export default function LiquidFrame({
   src,
   alt = 'Image with water effect',
   width = 500,
   height = 300,
   className = '',
-}: Props) {
+}: LiquidFrameProps) {
   const containerRef = useRef<HTMLDivElement>(null);
-  const [dimensions, setDimensions] = useState<Dimensions>({ width, height });
+  const [dimensions, setDimensions] = useState<DimensionsProps>({ width, height });
 
   useEffect(() => {
     if (!containerRef.current) return;
@@ -276,3 +274,9 @@ export default function LiquidFrameComponent({
     </div>
   );
 }
+
+
+
+
+
+

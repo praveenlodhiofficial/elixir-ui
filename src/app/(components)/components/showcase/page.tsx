@@ -1,14 +1,9 @@
 import React from "react";
-import { PageSubTitle, PageTemplate } from "@/app/(components)/components/components/page-template";
-import PreviewCodeCard from "@/app/(components)/components/components/preview-code-card";
-
-import { Steppers } from "@/components/ui/steppers";
-import Showcase from "./showcase";
 
 const page = () => {
   return (
     <div>
-      <PageTemplate title="Showcase" className="md:mt-5" description="A React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases.">
+      {/* <PageTemplate title="Showcase" className="md:mt-5" description="A React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases.">
 
         <PreviewCodeCard path="src/app/(components)/components/showcase/showcase-component.tsx">
           <Showcase />
@@ -38,7 +33,7 @@ const page = () => {
           ]}
         />
 
-      </PageTemplate>
+      </PageTemplate> */}
     </div>
   );
 };

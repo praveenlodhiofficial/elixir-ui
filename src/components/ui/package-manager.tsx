@@ -20,7 +20,7 @@ export const PackageManagers: React.FC<PackageManagersProps> = ({ command, pkg }
     const selected = managers.find((m) => m.name === selectedManager) || managers[0];
 
     return (
-        <div className="ml-5 border-l-2 border-l-gray-200 pl-2 md:pl-8 text-sm">
+        <div>
             <div className="flex gap-2 md:mx-5 mx-2">
                 {managers.map((m) => (
                     <button

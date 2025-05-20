@@ -1,0 +1,53 @@
+import CodeHighlight from "@/app/(components)/components/components/code-card/parts/code-highlight";
+import { InlineCode } from "./inline-code";
+import { cn } from "@/lib/utils";
+import { Steppers } from "./steppers";
+
+interface UsageProps {
+    step: number;
+    title: string;
+    code?: string;
+    codePath?: string;
+    isCodeStep?: boolean;
+}
+
+export default function Usage({ step, title, code, codePath, isCodeStep }: UsageProps) {
+    return (
+        <div>
+
+            {/* Step title and code */}
+            <div className="flex flex-col">
+                <div className="flex items-center gap-3 font-bold">
+                    <span className="flex h-7 md:h-10 w-7 md:w-10 items-center justify-center rounded-full bg-zinc-800 text-white p-3">
+                        {step}
+                    </span>
+                    <h4 className="text-sm/6 md:text-base">{title}</h4>
+                </div>
+                <div className="ml-5 border-l-2 border-l-gray-200 pl-2 md:pl-8 text-sm">
+                    <CodeHighlight
+                        code={code}
+                        withExpand={false}
+                        className={cn(
+                            "border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center custom-scrollbar",
+                            isCodeStep
+                                ? "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
+                                : "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
+                        )}
+                    />
+                </div>
+            </div>
+
+            {/* Stepper */}
+            <Steppers
+                steps={[
+                    {
+                        title: "Add Component to your project",
+                        
+                        codePath: "src/registry/default/liquid-frame/usage/liquid-frame.mdx"
+                    }
+                ]}
+            />
+        </div>
+    )
+}
+

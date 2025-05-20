@@ -1,14 +1,9 @@
 import React from "react";
-import { PageSubTitle, PageTemplate } from "@/app/(components)/components/components/page-template";
-import PreviewCodeCard from "@/app/(components)/components/components/preview-code-card";
-
-import { Steppers } from "@/components/ui/steppers";
-import TeamMates from "./teammates";
 
 const page = () => {
   return (
     <div>
-      <PageTemplate title="Teammates" className="md:mt-5" description="A component that displays a list of teammates with a hover effect.">
+      {/* <PageTemplate title="Teammates" className="md:mt-5" description="A component that displays a list of teammates with a hover effect.">
 
         <PreviewCodeCard path="src/app/(components)/components/teammates/teammates-component.tsx">
           <TeamMates />
@@ -38,7 +33,7 @@ const page = () => {
           ]}
         />
 
-      </PageTemplate>
+      </PageTemplate> */}
     </div>
   );
 };

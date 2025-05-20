@@ -1,5 +1,3 @@
-// shaders.ts
-
 export const simulationVertexShader = `
   varying vec2 vUv;
   void main() {
@@ -97,6 +95,3 @@ export const renderFragmentShader = `
 
 
 
-
-
-// 

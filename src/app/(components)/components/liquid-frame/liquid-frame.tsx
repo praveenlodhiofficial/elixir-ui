@@ -1,7 +1,7 @@
 //  page.tsx
 
 import React from 'react'
-import LiquidFrameComponent from './liquid-frame-component'
+import LiquidFrameComponent from '@/registry/default/liquid-frame/components/liquid-frame'
 
 const LiquidFrame = () => {
     return (
