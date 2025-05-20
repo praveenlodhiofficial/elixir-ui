@@ -1,9 +1,7 @@
-//  page.tsx
-
 "use client"
 
 import React from 'react'
-import ShowcaseComponent from './showcase-component'
+import ShowcaseComponent from '@/registry/default/showcase/components/showcase'
 
 const Showcase = () => {
   return (

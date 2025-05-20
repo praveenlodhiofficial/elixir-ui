@@ -4,7 +4,6 @@ import PreviewCodeCard from "@/app/(components)/components/components/preview-co
 import { Steppers } from "@/components/ui/steppers";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import CodeHighlight from "../components/code-card/parts/code-highlight";
 import LiquidFrame from "./liquid-frame";
 
 const LiquidFramePage = () => {

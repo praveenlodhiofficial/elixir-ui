@@ -41,9 +41,6 @@ importers:
       '@studio-freight/lenis':
         specifier: ^1.0.42
         version: 1.0.42
-      '@types/gsap':
-        specifier: ^3.0.0
-        version: 3.0.0
       '@types/react-highlight':
         specifier: ^0.12.8
         version: 0.12.8
@@ -99,6 +96,9 @@ importers:
       '@tailwindcss/postcss':
         specifier: ^4
         version: 4.1.6
+      '@types/gsap':
+        specifier: ^3.0.0
+        version: 3.0.0
       '@types/node':
         specifier: ^20
         version: 20.17.46

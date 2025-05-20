@@ -1,7 +1,7 @@
 //  page.tsx
 
 import React from 'react'
-import TeamMates from './teammates-component'
+import TeamMates from '@/registry/default/teammates/components/teammates'
 
 const Teammates = () => {
     return (

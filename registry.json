@@ -22,6 +22,36 @@
             ],
             "dependencies": ["three"],
             "devDependencies": ["@types/three"]
+        },
+        {
+            "name": "showcase",
+            "type": "registry:block",
+            "title": "Showcase Component",
+            "description": "A React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases.",
+            "files": [
+                {
+                    "path": "src/registry/default/showcase/components/showcase.tsx",
+                    "type": "registry:component",
+                    "target": "src/components/showcase.tsx"
+                }
+            ],
+            "dependencies": ["three", "@react-three/postprocessing", "@react-three/drei", "@react-three/fiber"],
+            "devDependencies": ["@types/three"]
+        },
+        {
+            "name": "teammates",
+            "type": "registry:block",
+            "title": "Teammates Component",
+            "description": "A component that displays a list of teammates with a hover effect.",
+            "files": [
+                {
+                    "path": "src/registry/default/teammates/components/teammates.tsx",
+                    "type": "registry:component",
+                    "target": "src/components/teammates.tsx"
+                }
+            ],
+            "dependencies": ["gsap"],
+            "devDependencies": ["@types/gsap"]
         }
     ]
 }
