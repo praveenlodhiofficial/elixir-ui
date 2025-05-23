@@ -1,4 +1,4 @@
-import LiquidFrame from "@/components/liquid-frame";
+import LiquidFrame from "@/registry/default/liquid-frame/components/liquid-frame";
 
 export default function Try() {
     return (

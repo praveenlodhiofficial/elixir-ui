@@ -4,17 +4,17 @@ import PreviewCodeCard from "@/app/(components)/components/components/preview-co
 import { Steppers } from "@/components/ui/steppers";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";
-import Teammates from "./teammates";
+import Teammates from "./teammates-v2.0.0";
 
 const TeammatesPage = () => {
     return (
         <PageTemplate 
-            title="Teammates" 
+            title="Teammates v2.0.0" 
             className="md:mt-5" 
-            description="A component that displays a list of teammates with a hover effect."
+            description="The Teammates-v2.0.0 is a responsive React component for team rosters. List with profile images on large screens, stacked cards on small screens. Includes social links and Framer Motion animations."
         >
             <section className="space-y-8">
-                <PreviewCodeCard path="src/registry/default/teammates/components/teammates.tsx">
+                <PreviewCodeCard path="src/registry/default/teammates/components/teammates-v2.0.0.tsx">
                     <Teammates />
                 </PreviewCodeCard>
 
@@ -47,7 +47,7 @@ const TeammatesPage = () => {
                                     {
                                         step: "+",
                                         title: "Run the following command in the terminal.",
-                                        codePath: "src/registry/default/teammates/usage/teammates-cli.md"
+                                        codePath: "src/registry/default/teammates/usage/cli/teammates-v2.0.0-cli.md"
                                     }
                                 ]}
                             />
@@ -60,15 +60,22 @@ const TeammatesPage = () => {
                                     {
                                         step: 1,
                                         title: "Install the dependencies",
-                                        code: `pnpm i gsap @types/gsap`,
+                                        code: `pnpm i framer-motion`,
                                         isInstallStep: true
                                     },
                                     {
                                         step: 2,
+                                        title: "Add the icons component in your project",
+                                        codeDirectory: "src/components/ui/icons.tsx",
+                                        codePath: "src/registry/default/teammates/components/ui/icons.tsx",
+                                    },
+                                    {
+                                        step: 3,
                                         title: "Add the teammates component to your project in",
-                                        codeDirectory: "src/components/teammates.tsx",
-                                        codePath: "src/registry/default/teammates/components/teammates.tsx",
-                                    }
+                                        codeDirectory: "src/components/teammates-v2.0.0.tsx",
+                                        codePath: "src/registry/default/teammates/components/teammates-v2.0.0.tsx",
+                                    },
+                                    
                                 ]}
                             />
                         </TabsContent>
@@ -87,12 +94,12 @@ const TeammatesPage = () => {
                             {
                                 step: 1,
                                 title: "Import the component",
-                                code: `import Teammates from "@/components/teammates";`
+                                code: `import TeamMates from "@/components/teammates-v2.0.0";`
                             },
                             {
                                 step: 2,
                                 title: "Add the component to your project",
-                                codePath: "src/registry/default/teammates/usage/teammates-example.md",
+                                codePath: "src/registry/default/teammates/usage/example/teammates-v2.0.0-example.md",
                             }
                         ]}
                     />

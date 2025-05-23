@@ -24,8 +24,15 @@ export default function Navbar({ className, pageName }: NavbarProps) {
         <nav className="w-full  md:px-6 lg:px-2">
             <div className="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 py-4">
                 <div className="flex items-center gap-10">
-                    <Link href="/" className="flex items-center gap-3 justify-center">
-                        <Image src="/logo/elixir-logo-light.png" alt="Elixir UI" width={20} height={20} className="invert-0 dark:invert-100" />
+                    <Link href="/" className="flex items-center gap-1 justify-center">
+                        <Image 
+                            src="/logo/elixir-logo-light.png" 
+                            alt="Elixir UI" 
+                            width={40} 
+                            height={40} 
+                            className="invert-0 dark:invert-100 w-8 h-8" 
+                            style={{ objectFit: 'contain' }}
+                        />
                         <span className="text-3xl font-bold">Elixir UI</span>
                     </Link>
 

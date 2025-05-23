@@ -19,7 +19,7 @@ export default function DocsLayout({
   children: React.ReactNode;
 }) {
   return (
-    <main className="flex">
+    <main className="flex" suppressHydrationWarning>
       <LenisScroll />
       <LeftSide />
       <section className="flex flex-1 flex-col overflow-auto px-2 md:px-8 lg:px-12" role="main" aria-label="Main content">

@@ -7,7 +7,6 @@ import Link from "next/link";
 import { ChevronDown, ChevronRight, Search } from "lucide-react";
 import { cn } from "@/lib/utils";
 import { Button } from "@/components/ui/button";
-
 import { ScrollArea } from "@/components/ui/scroll-area";
 import {
   Collapsible,
@@ -15,8 +14,105 @@ import {
   CollapsibleTrigger,
 } from "@/components/ui/collapsible";
 
+// Define types for the documentation structure
+interface DocItem {
+  value: string;
+  label: string;
+  url: string;
+  new?: boolean;
+  children?: DocItem[];
+}
+
+interface DocGroup {
+  groupKey: string;
+  groupValue: string;
+  children: DocItem[];
+}
+
 // Assuming DOCS is imported from your constant file
 import { DOCS } from "@/app/(components)/layout-parts/documentation.constant";
+
+interface SubItemProps {
+  item: DocItem;
+  pathname: string;
+  level?: number;
+}
+
+const SubItem: React.FC<SubItemProps> = ({ item, pathname, level = 1 }) => {
+  const [isOpen, setIsOpen] = useState(false);
+
+  useEffect(() => {
+    // Open the subitem if it contains the active path or any of its children do
+    if (
+      pathname === item.url ||
+      (item.children &&
+        item.children.some(
+          (child) =>
+            pathname === child.url ||
+            (child.children &&
+              child.children.some((subChild) => pathname === subChild.url))
+        ))
+    ) {
+      setIsOpen(true);
+    }
+  }, [pathname, item.url, item.children]);
+
+  // If no children, render a Link directly
+  if (!item.children || item.children.length === 0) {
+    return (
+      <Link
+        href={item.url}
+        className={cn(
+          "flex items-center gap-2 py-1.5 rounded-md scale-95 hover:font-semibold transition-all duration-200 group",
+          pathname === item.url
+            ? "dark:text-gray-200 font-semibold"
+            : "hover:text-gray-500 dark:hover:text-gray-200",
+          { "pl-6 hover:pl-8": level === 1, "pl-15 hover:pl-17": level === 2, "pl-20 hover:pl-22": level > 2 }
+        )}
+      >
+        <span className="text-transparent group-hover:text-white">|</span>
+        {item.label}
+        {item.new && (
+          <span className="text-[12px] font-semibold text-black bg-lime-400 px-2 py-0.5 rounded-full">
+            New
+          </span>
+        )}
+      </Link>
+    );
+  }
+
+  // If children exist, render a Collapsible
+  return (
+    <Collapsible open={isOpen} onOpenChange={setIsOpen}>
+      <CollapsibleTrigger asChild>
+        <Button
+          variant="ghost"
+          className="w-full justify-between text-sm font-semibold "
+          style={{ paddingLeft: `${level * 2.5}rem` }}
+        >
+          {item.label}
+          <span>
+            {isOpen ? (
+              <ChevronDown className="h-4 w-4" />
+            ) : (
+              <ChevronRight className="h-4 w-4" />
+            )}
+          </span>
+        </Button>
+      </CollapsibleTrigger>
+      <CollapsibleContent className="space-y-1">
+        {item.children.map((child) => (
+          <SubItem
+            key={child.value}
+            item={child}
+            pathname={pathname}
+            level={level + 1}
+          />
+        ))}
+      </CollapsibleContent>
+    </Collapsible>
+  );
+};
 
 export default function EnhancedSidebar() {
   const [openGroups, setOpenGroups] = useState<string[]>(
@@ -28,7 +124,17 @@ export default function EnhancedSidebar() {
   useEffect(() => {
     // Ensure the group of the active link is open
     const activeGroup = DOCS.find((group) =>
-      group.children.some((child) => child.url === pathname)
+      group.children.some(
+        (child) =>
+          child.url === pathname ||
+          (child.children &&
+            child.children.some(
+              (subChild) =>
+                subChild.url === pathname ||
+                (subChild.children &&
+                  subChild.children.some((subSubChild) => subSubChild.url === pathname))
+            ))
+      )
     );
     if (activeGroup && !openGroups.includes(activeGroup.groupKey)) {
       setOpenGroups((prev) => [...prev, activeGroup.groupKey]);
@@ -43,14 +149,26 @@ export default function EnhancedSidebar() {
     );
   };
 
-  const filteredDocs = DOCS.map((group) => ({
-    ...group,
-    children: group.children
-      .filter((child) =>
-        child.label.toLowerCase().includes(searchTerm.toLowerCase())
-      )
-      .sort((a, b) => a.label.localeCompare(b.label)),
-  })).filter((group) => group.children.length > 0);
+  const filteredDocs = DOCS.map((group) => {
+    const filterItems = (items: DocItem[]): DocItem[] => {
+      return items
+        .map((item) => ({
+          ...item,
+          children: item.children ? filterItems(item.children) : undefined,
+        }))
+        .filter(
+          (item) =>
+            item.label.toLowerCase().includes(searchTerm.toLowerCase()) ||
+            (item.children && item.children.length > 0)
+        )
+        .sort((a, b) => a.label.localeCompare(b.label));
+    };
+
+    return {
+      ...group,
+      children: filterItems(group.children),
+    };
+  }).filter((group) => group.children.length > 0);
 
   return (
     <aside className="hidden lg:flex flex-col w-64 h-screen sticky top-0 border-r border-gray-200 dark:border-zinc-800">
@@ -77,24 +195,12 @@ export default function EnhancedSidebar() {
               </CollapsibleTrigger>
               <CollapsibleContent className="space-y-1 ml-2 dark:text-gray-400">
                 {group.children.map((child) => (
-                  <Link
+                  <SubItem
                     key={child.value}
-                    href={child.url}
-                    className={cn(
-                      "flex items-center gap-2 px-4 py-1.5 rounded-md scale-95 hover:font-semibold hover:scale-100 hover:pl-9 transition-all duration-[0.25s] group",
-                      pathname === child.url
-                        ? "dark:text-gray-200 font-semibold"
-                        : "hover:text-gray-500 dark:hover:text-gray-200"
-                    )}
-                  >
-                    <span className="text-transparent group-hover:text-white text-sm">|</span>
-                    {child.label}
-                    {child.new && (
-                      <span className="text-[12px] font-semibold text-black bg-lime-400 px-2 py-0.5 rounded-full">
-                        New
-                      </span>
-                    )}
-                  </Link>
+                    item={child}
+                    pathname={pathname}
+                    level={1}
+                  />
                 ))}
               </CollapsibleContent>
             </Collapsible>

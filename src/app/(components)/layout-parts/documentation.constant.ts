@@ -9,6 +9,7 @@ interface DocumentationChild {
     value: string;
     url: string;
     new?: boolean;
+    children?: DocumentationChild[];
 }
 
 export const DOCS: Documentation[] = [
@@ -47,6 +48,20 @@ export const DOCS: Documentation[] = [
                 label: "Teammates",
                 value: "teammates",
                 url: "/components/teammates",
+                children: [
+                    {
+                        label: "v1.0.0",
+                        value: "v1.0.0",
+                        url: "/components/teammates/v1.0.0",
+                        new: false,
+                    },
+                    {
+                        label: "v2.0.0",
+                        value: "v2.0.0",
+                        url: "/components/teammates/v2.0.0",
+                        new: true,
+                    }
+                ]
             },
             {
                 label: "Liquid Frame",
