@@ -45,7 +45,7 @@ interface TeammatesSectionProps {
   descriptionSize?: 'xs' | 'sm' | 'md' | 'lg' | 'xl' | '2xl';
 }
 
-export default function Teammates({ 
+export default function TeammatesSection({ 
   teammates, 
   nameSize = 'xl',
   descriptionSize = 'sm'
