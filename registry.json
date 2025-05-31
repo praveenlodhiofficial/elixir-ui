@@ -20,8 +20,12 @@
                     "target": "src/lib/liquid-frame.ts"
                 }
             ],
-            "dependencies": ["three"],
-            "devDependencies": ["@types/three"]
+            "dependencies": [
+                "three"
+            ],
+            "devDependencies": [
+                "@types/three"
+            ]
         },
         {
             "name": "showcase",
@@ -35,8 +39,15 @@
                     "target": "src/components/showcase.tsx"
                 }
             ],
-            "dependencies": ["three", "@react-three/postprocessing", "@react-three/drei", "@react-three/fiber"],
-            "devDependencies": ["@types/three"]
+            "dependencies": [
+                "three",
+                "@react-three/postprocessing",
+                "@react-three/drei",
+                "@react-three/fiber"
+            ],
+            "devDependencies": [
+                "@types/three"
+            ]
         },
         {
             "name": "teammates-v1.0.0",
@@ -50,9 +61,14 @@
                     "target": "src/components/teammates-v1.0.0.tsx"
                 }
             ],
-            "dependencies": ["gsap"],
-            "devDependencies": ["@types/gsap"]
-        }, {
+            "dependencies": [
+                "gsap"
+            ],
+            "devDependencies": [
+                "@types/gsap"
+            ]
+        },
+        {
             "name": "teammates-v2.0.0",
             "type": "registry:block",
             "title": "Teammates Component",
@@ -69,7 +85,25 @@
                     "target": "src/components/ui/icons.tsx"
                 }
             ],
-            "dependencies": ["framer-motion"]
+            "dependencies": [
+                "framer-motion"
+            ]
+        },
+        {
+            "name": "vanilla-tilt-card",
+            "type": "registry:block",
+            "title": "Vanilla Tilt Card",
+            "description": "A component that displays a 3D tilt effect using VanillaTilt.",
+            "files": [
+                {
+                    "path": "src/registry/default/card/components/vanilla-tilt-card.tsx",
+                    "type": "registry:component",
+                    "target": "src/components/vanilla-tilt-card.tsx"
+                }
+            ],
+            "dependencies": [
+                "vanilla-tilt"
+            ]
         }
     ]
 }
