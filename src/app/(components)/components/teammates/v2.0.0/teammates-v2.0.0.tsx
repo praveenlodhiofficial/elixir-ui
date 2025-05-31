@@ -1,4 +1,4 @@
-import TeammatesSection from "@/registry/default/teammates/components/teammates-v2.0.0";
+import Teammates from "@/registry/default/teammates/components/Teammates-v2.0.0";
 
 const teammates = [
     {
@@ -66,7 +66,7 @@ const teammates = [
 export default function Page() {
   return (
     <div className=" scale-75" >
-      <TeammatesSection teammates={teammates} nameSize="xl" descriptionSize="sm" />
+      <Teammates teammates={teammates} nameSize="xl" descriptionSize="sm" />
     </div>
   );
 }

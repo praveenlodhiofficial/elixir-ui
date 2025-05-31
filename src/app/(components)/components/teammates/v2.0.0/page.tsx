@@ -14,7 +14,7 @@ const TeammatesPage = () => {
             description="The Teammates-v2.0.0 is a responsive React component for team rosters. List with profile images on large screens, stacked cards on small screens. Includes social links and Framer Motion animations."
         >
             <section className="space-y-8">
-                <PreviewCodeCard path="src/registry/default/teammates/components/teammates-v2.0.0.tsx">
+                <PreviewCodeCard path="src/registry/default/teammates/components/Teammates-v2.0.0.tsx">
                     <Teammates />
                 </PreviewCodeCard>
 
