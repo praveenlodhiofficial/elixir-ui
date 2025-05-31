@@ -45,7 +45,7 @@ export const DOCS: Documentation[] = [
         groupValue: "Components",
         children: [
             {
-                label: "Teammates",
+                label: "Teams",
                 value: "teammates",
                 url: "/components/teammates",
                 children: [
@@ -73,7 +73,19 @@ export const DOCS: Documentation[] = [
                 label: "Showcase",
                 value: "showcase",
                 url: "/components/showcase",
-                new: true,
+            },
+            {
+                label: "Card",
+                value: "card",
+                url: "/components/card",
+                children: [
+                    {
+                        label: "3D Vanilla Tilt",
+                        value: "3d-tilt-card",
+                        url: "/components/card/vanilla-tilt-card",
+                        new: true,
+                    },
+                ]
             },
         ],
     },

@@ -1,4 +1,4 @@
-import TeammatesSection from "@/registry/default/teammates/components/Teammates-v2.0.0";
+import TeammatesSection from "@/registry/default/teammates/components/teammates-v2.0.0";
 
 const teammates = [
     {

@@ -70,6 +70,20 @@
                 }
             ],
             "dependencies": ["framer-motion"]
+        },
+        {
+            "name": "vanilla-tilt-card",
+            "type": "registry:block",
+            "title": "Vanilla Tilt Card",
+            "description": "A component that displays a 3D tilt effect using VanillaTilt.",
+            "files": [
+                {
+                    "path": "src/registry/default/card/components/vanilla-tilt-card.tsx",
+                    "type": "registry:component",
+                    "target": "src/components/vanilla-tilt-card.tsx"
+                }
+            ],
+            "dependencies": ["vanilla-tilt"]
         }
     ]
 }

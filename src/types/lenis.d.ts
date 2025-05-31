@@ -1,4 +1,4 @@
-declare module '@studio-freight/lenis' {
+declare module 'lenis' {
   export default class Lenis {
     constructor(options?: {
       duration?: number;

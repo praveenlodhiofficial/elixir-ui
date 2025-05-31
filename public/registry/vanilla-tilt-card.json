@@ -1,0 +1,18 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "vanilla-tilt-card",
+  "type": "registry:block",
+  "title": "Vanilla Tilt Card",
+  "description": "A component that displays a 3D tilt effect using VanillaTilt.",
+  "dependencies": [
+    "vanilla-tilt"
+  ],
+  "files": [
+    {
+      "path": "src/registry/default/card/components/vanilla-tilt-card.tsx",
+      "content": "\"use client\";\r\n\r\nimport React, { useEffect, useRef } from \"react\";\r\nimport VanillaTilt from \"vanilla-tilt\";\r\n\r\ninterface VanillaTiltCardProps {\r\n  options?: {\r\n    max?: number;\r\n    speed?: number;\r\n    glare?: boolean;\r\n    scale?: number;\r\n    \"max-glare\"?: number;\r\n  };\r\n  children: React.ReactNode;\r\n  className?: string;\r\n}\r\n\r\nexport default function VanillaTiltCard({\r\n  options = { max: 10, speed: 300, glare: true, \"max-glare\": 1, scale: 1.03 },\r\n  children,\r\n  className,\r\n  ...props\r\n}: VanillaTiltCardProps) {\r\n  const tiltRef = useRef(null);\r\n\r\n  useEffect(() => {\r\n    const currentTilt = tiltRef.current;\r\n\r\n    if (currentTilt) {\r\n      VanillaTilt.init(currentTilt, options);\r\n    }\r\n\r\n    return () => {\r\n      // @ts-ignore\r\n      if (currentTilt && currentTilt.vanillaTilt) {\r\n        // @ts-ignore\r\n        currentTilt.vanillaTilt.destroy();\r\n      }\r\n    };\r\n  }, [options]);\r\n\r\n  return (\r\n    <div\r\n      ref={tiltRef}\r\n      className={`\r\n        ${className} hover:shadow-lg flex px-6 py-5 rounded-sm`}\r\n      style={{\r\n        transformStyle: 'preserve-3d',\r\n        perspective: '-500px',\r\n      }}\r\n      {...props}\r\n    >\r\n      <div style={{\r\n        transform: 'translate3d(0, 0, 50px)',\r\n        transformStyle: 'preserve-3d',\r\n      }}>\r\n        {children}\r\n      </div>\r\n    </div>\r\n  );\r\n};\r\n",
+      "type": "registry:component",
+      "target": "src/components/vanilla-tilt-card.tsx"
+    }
+  ]
+}
