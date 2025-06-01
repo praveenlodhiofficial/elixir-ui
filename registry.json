@@ -104,6 +104,32 @@
             "dependencies": [
                 "vanilla-tilt"
             ]
+        },
+        {
+            "name": "sidemenu",
+            "type": "registry:block",
+            "title": "SideMenu",
+            "description": "The SideMenu component is a compact and interactive sidebar menu, ideal for responsive navigation. It offers a toggleable design with smooth animations, making it a versatile choice for modern web applications.",
+            "files": [
+                {
+                    "path": "src/registry/default/sidemenu/components/sidemenu.tsx",
+                    "type": "registry:component",
+                    "target": "src/components/sidemenu.tsx"
+                },
+                {
+                    "path": "src/registry/default/sidemenu/components/ui/button.tsx",
+                    "type": "registry:ui",
+                    "target": "src/components/ui/button.tsx"
+                },
+                {
+                    "path": "src/registry/default/sidemenu/components/ui/nav.tsx",
+                    "type": "registry:ui",
+                    "target": "src/components/ui/nav.tsx"
+                }
+            ],
+            "dependencies": [
+                "framer-motion"
+            ]
         }
     ]
 }

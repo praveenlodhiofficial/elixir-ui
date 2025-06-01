@@ -52,8 +52,8 @@ const Step = async ({ step, title, codePath, code, isCodeStep = false, codeDirec
               className={cn(
                 "border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center custom-scrollbar",
                 isCodeStep
-                  ? "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
-                  : "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
+                  ? "max-h-[250px] overflow-auto scroll-smooth md:px-5 md:py-2 px-1 py-1"
+                  : "max-h-[250px] overflow-auto scroll-smooth md:px-5 md:py-2 px-1 py-1"
               )}
             />
           )
@@ -110,8 +110,8 @@ export const usageSteppers = ({ step, title, code, codePath, isCodeStep = true }
                         className={cn(
                             "border-zinc-300 dark:border-zinc-800 dark:bg-white/5 border items-center custom-scrollbar",
                             isCodeStep
-                                ? "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
-                                : "max-h-[250px] overflow-hidden scroll-smooth md:px-5 md:py-2 px-1 py-1 no-scrollbar"
+                                ? "max-h-[250px] overflow-auto scroll-smooth md:px-5 md:py-2 px-1 py-1"
+                                : "max-h-[250px] overflow-auto scroll-smooth md:px-5 md:py-2 px-1 py-1"
                         )}
                     />
                 </div>

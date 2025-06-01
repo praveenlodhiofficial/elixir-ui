@@ -87,6 +87,12 @@ export const DOCS: Documentation[] = [
                     },
                 ]
             },
+            {
+                label: "SideMenu",
+                value: "sidemenu",
+                url: "/components/sidemenu",
+                new: true,
+            },
         ],
     },
 ];
