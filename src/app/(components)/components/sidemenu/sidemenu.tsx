@@ -1,3 +1,5 @@
+import SideMenu from "@/registry/default/sidemenu/components/sidemenu";
+
 interface LinkProps {
     title: string;
     href: string;
@@ -19,15 +21,16 @@ const FooterLinks: LinkProps[] = [
     { title: "Facebook", href: "/" },
 ];
 
-export default function SidemenuPage() {
+export default function SideMenuDemo() {
     return (
-        <div>
+        <div className="w-full h-[70vh] relative top-0 mb-10">
             <SideMenu 
-            cardImage="/image.jpg" 
-            footerLinks={FooterLinks} 
+            cardImage="/components/sidemenu/bg1.webp"
+            cardColor="#FFB6C1" 
             links={Links} 
-            imageOpacity={0.5} 
-            imageSaturation={0.8}
+            footerLinks={FooterLinks} 
+            imageOpacity={1}
+            imageSaturation={1.1}
             />
         </div>
     )

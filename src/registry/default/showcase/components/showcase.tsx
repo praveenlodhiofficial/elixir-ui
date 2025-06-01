@@ -104,9 +104,3 @@ export const createTextTexture = ({
   }
   return canvas;
 };
-
-
-
-
-
-

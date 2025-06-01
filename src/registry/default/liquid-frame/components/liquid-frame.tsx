@@ -274,9 +274,3 @@ export default function LiquidFrame({
     </div>
   );
 }
-
-
-
-
-
-
