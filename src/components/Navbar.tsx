@@ -21,7 +21,7 @@ export default function Navbar({ className, pageName }: NavbarProps) {
     };
 
     return (
-        <nav className="w-full  md:px-6 lg:px-2">
+        <nav className="w-[60rem] lg:w-6xl  md:px-6 lg:px-2">
             <div className="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 py-4">
                 <div className="flex items-center gap-10">
                     <Link href="/" className="flex items-center gap-1 justify-center">

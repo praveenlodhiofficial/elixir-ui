@@ -172,7 +172,7 @@ export default function Sidebar() {
   }).filter((group) => group.children.length > 0);
 
   return (
-    <aside className="hidden lg:flex flex-col w-64 h-screen sticky top-0 border-r border-gray-200 dark:border-zinc-800">
+    <aside className="hidden md:flex flex-col w-64 h-screen sticky top-0 border-r border-gray-200 dark:border-zinc-800">
       <ScrollArea className="flex-1">
         <nav className="space-y-2">
           {filteredDocs.map((group) => (

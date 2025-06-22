@@ -31,12 +31,12 @@ export const DOCS: Documentation[] = [
             {
                 label: "Introduction",
                 value: "introduction",
-                url: "/docs/content",
+                url: "/docs/components",
             },
             // {
             //     label: "Installation",
             //     value: "installation",
-            //     url: "/docs/content/installation",
+            //     url: "/docs/components/installation",
             // },
         ],
     },
@@ -47,18 +47,18 @@ export const DOCS: Documentation[] = [
             {
                 label: "Teams",
                 value: "teammates",
-                url: "/docs/content/teammates",
+                url: "/docs/components/teammates",
                 children: [
                     {
                         label: "v1.0.0",
                         value: "v1.0.0",
-                        url: "/docs/content/teammates/v1.0.0",
+                        url: "/docs/components/teammates/v1.0.0",
                         new: false,
                     },
                     {
                         label: "v2.0.0",
                         value: "v2.0.0",
-                        url: "/docs/content/teammates/v2.0.0",
+                        url: "/docs/components/teammates/v2.0.0",
                         new: true,
                     }
                 ]
@@ -66,23 +66,23 @@ export const DOCS: Documentation[] = [
             {
                 label: "Liquid Frame",
                 value: "liquid-frame",
-                url: "/docs/content/liquid-frame",
+                url: "/docs/components/liquid-frame",
                 new: true,
             },
             {
                 label: "Showcase",
                 value: "showcase",
-                url: "/docs/content/showcase",
+                url: "/docs/components/showcase",
             },
             {
                 label: "Card",
                 value: "card",
-                url: "/docs/content/card",
+                url: "/docs/components/card",
                 children: [
                     {
                         label: "3D Vanilla Tilt",
                         value: "3d-tilt-card",
-                        url: "/docs/content/card/vanilla-tilt-card",
+                        url: "/docs/components/card/vanilla-tilt-card",
                         new: true,
                     },
                 ]
@@ -90,7 +90,7 @@ export const DOCS: Documentation[] = [
             {
                 label: "SideMenu",
                 value: "sidemenu",
-                url: "/docs/content/sidemenu",
+                url: "/docs/components/sidemenu",
                 new: true,
             },
         ],
