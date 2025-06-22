@@ -1,0 +1,72 @@
+import Teammates from "@/registry/default/teammates/components/Teammates-v2.0.0";
+
+const teammates = [
+    {
+        id: 'carlosmendes',
+        name: 'Carlos Mendes',
+        role: 'Co-Founder and CTO',
+        company: 'NextTech',
+        companyUrl: 'https://nexttech.com',
+        image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7',
+        socialLinks: {
+          twitter: 'https://x.com/praveenlodhi99',
+          linkedin: 'https://www.linkedin.com/in/praveenlodhiofficial'
+        },
+      },
+      {
+        id: 'sophielaurent',
+        name: 'Sophie Laurent',
+        role: 'Operations Director',
+        company: 'NextTech',
+        companyUrl: 'https://nexttech.com',
+        image: 'https://images.unsplash.com/photo-1573496359142-b8d87734a5a2',
+        socialLinks: {
+          twitter: 'https://x.com/praveenlodhi99',
+          linkedin: 'https://www.linkedin.com/in/praveenlodhiofficial'
+        }
+      },
+      {
+        id: 'larseriksson',
+        name: 'Lars Eriksson',
+        role: 'Senior Software Developer',
+        company: 'FreshMeals',
+        companyUrl: 'https://www.freshmeals.com',
+        image: 'https://images.unsplash.com/photo-1500648767791-00dcc994a43e',
+        socialLinks: {
+          twitter: 'https://x.com/praveenlodhi99',
+          linkedin: 'https://www.linkedin.com/in/praveenlodhiofficial'
+        }
+      },
+      {
+        id: 'samuelkowalski',
+        name: 'Samuel Kowalski',
+        role: 'Product Lead',
+        company: 'NextTech',
+        companyUrl: 'https://nexttech.com',
+        image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e',
+        socialLinks: {
+          twitter: 'https://x.com/praveenlodhi99',
+          linkedin: 'https://www.linkedin.com/in/praveenlodhiofficial'
+        }
+      },
+      {
+        id: 'johannilsson',
+        name: 'Johan Nilsson',
+        role: 'Lead Software Engineer',
+        company: 'TechRetail',
+        companyUrl: 'https://www.techretail.com',
+        image: 'https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d',
+        socialLinks: {
+          twitter: 'https://x.com/praveenlodhi99',
+          linkedin: 'https://www.linkedin.com/in/praveenlodhiofficial'
+        }
+      }
+];
+
+export default function Page() {
+  return (
+    <div className=" scale-75" >
+      <Teammates teammates={teammates} nameSize="xl" descriptionSize="sm" />
+    </div>
+  );
+}

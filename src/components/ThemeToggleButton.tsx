@@ -12,9 +12,10 @@ interface ThemeToggleAnimationProps {
   variant?: AnimationVariant
   start?: AnimationStart
   url?: string
+  className?: string
 }
 
-export function ThemeToggleButton({ variant = "circle-blur", start = "top-left",  url = "" }: ThemeToggleAnimationProps) {
+export function ThemeToggleButton({ variant = "circle-blur", start = "top-left",  url = "", className }: ThemeToggleAnimationProps) {
   
   const { theme, setTheme } = useTheme()
   const styleId = "theme-transition-styles"
@@ -62,7 +63,7 @@ export function ThemeToggleButton({ variant = "circle-blur", start = "top-left",
       onClick={toggleTheme}
       variant="ghost"
       size="icon"
-      className="w-9 p-0 h-9 relative group cursor-pointer"
+      className={`w-9 p-0 h-9 relative group cursor-pointer ${className}`}
       name="Theme Toggle Button"
     >
       <SunIcon className="size-[1.2rem] rotate-0 scale-100 transition-all dark:-rotate-90 dark:scale-0 bg-transparent border-none" />

@@ -15,12 +15,12 @@ export function AppContent({ children }: { children: React.ReactNode }) {
     >
       <KBarProvider>
         <LenisScroll />
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8"> */}
           <Navbar />
-          <main className="py-10">
+          <main className="">
             {children}
           </main>
-        </div>
+        {/* </div> */}
       </KBarProvider>
     </ThemeProvider>
   );
