@@ -2,9 +2,7 @@ import type { Metadata } from "next";
 import { Analytics } from '@vercel/analytics/next';
 import { Barlow_Condensed, Exo, Roboto } from "next/font/google";
 import "./globals.css";
-import { ThemeProvider } from "@/components/ThemeProvider";
-import Navbar from "@/components/Navbar";
-import LenisScroll from "@/components/LenisScroll";
+import { AppContent } from "@/components/AppContent";
 
 const exo = Exo({
   variable: "--font-exo",
@@ -16,7 +14,6 @@ const barlowCondensed = Barlow_Condensed({
   subsets: ["latin"],
   weight: ["400", "500", "600", "700"],
 });
-
 
 const roboto = Roboto({
   variable: "--font-roboto",
@@ -45,23 +42,10 @@ export default function RootLayout({
       <body
         className={`${exo.variable} ${roboto.variable} ${barlowCondensed.variable} font-exo antialiased bg-background text-foreground tracking-wider min-h-screen`}
       >
-        <>
-          <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-            <LenisScroll />
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-              <Navbar />
-              <main className="py-10">
-                {children}
-              </main>
-            </div>
-          </ThemeProvider>
-          <Analytics />
-        </>
+        <AppContent>
+          {children}
+          </AppContent>
+        <Analytics />
       </body>
     </html>
   );
