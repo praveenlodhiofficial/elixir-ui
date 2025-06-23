@@ -118,7 +118,7 @@ export const DOCS: Documentation[] = [
             {
                 label: "Web3 SaaS",
                 value: "web3-saas",
-                url: "/docs/templates/web-saas",
+                url: "/docs/templates/web3-saas",
             },
         ],
     }
