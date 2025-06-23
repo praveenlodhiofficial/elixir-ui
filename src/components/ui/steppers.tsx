@@ -1,6 +1,6 @@
 import React from "react";
 import { cn } from "@/lib/utils";
-import CodeHighlight from "@/app/(components)/components/components/code-card/parts/code-highlight";
+import CodeHighlight from "@/app/docs/components/components/code-card/parts/code-highlight";
 import { InlineCode } from "@/components/ui/inline-code";
 import { readFileContent } from "@/lib/file-utils";
 import { PackageManagers } from "./package-manager";

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import CodeHighlight from "@/app/(components)/components/components/code-card/parts/code-highlight";
+import CodeHighlight from "@/app/docs/components/components/code-card/parts/code-highlight";
 
 interface PackageManagersProps {
     command: string;

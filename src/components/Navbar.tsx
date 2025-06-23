@@ -6,7 +6,7 @@ import { ThemeToggleButton } from "./ThemeToggleButton";
 import { Menu, X } from "lucide-react";
 import { useState } from "react";
 import { motion } from "framer-motion";
-import { SearchComponent } from "./SearchComponent";
+import { KBarSearchComponent } from "./KBarSearch";
 
 interface NavbarProps {
     className?: string;
@@ -21,7 +21,7 @@ export default function Navbar({ className, pageName }: NavbarProps) {
     };
 
     return (
-        <nav className="w-full  md:px-6 lg:px-2">
+        <nav className="w-[60rem] lg:w-6xl  md:px-6 lg:px-2">
             <div className="flex items-center justify-between border-b border-gray-200 dark:border-zinc-800 py-4">
                 <div className="flex items-center gap-10">
                     <Link href="/" className="flex items-center gap-1 justify-center">
@@ -58,7 +58,7 @@ export default function Navbar({ className, pageName }: NavbarProps) {
 
                     {/* search component */}
                     <div className="hidden lg:block">
-                        <SearchComponent onClick={handleLinkClick} />
+                        <KBarSearchComponent onClick={handleLinkClick} />
                     </div>
 
                     {/* Mobile Menu Button */}
@@ -84,7 +84,7 @@ export default function Navbar({ className, pageName }: NavbarProps) {
                         <Link href="/components" onClick={handleLinkClick} className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Components</Link>
 
                         <div className="w-full px-8 mb-4">
-                            <SearchComponent onClick={handleLinkClick} className="w-full" />
+                            <KBarSearchComponent onClick={handleLinkClick} className="w-full" />
                         </div>
 
                         <Link href="/templates" onClick={handleLinkClick} className="text-4xl font-extrabold md:text-7xl md:font-bold mb-3 md:mb-4">Templates</Link>
