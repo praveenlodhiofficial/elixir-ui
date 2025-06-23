@@ -1,1 +1,0 @@
-npx shadcn add https://elixir-ui-xi.vercel.app/registry/teammates-v1.0.0.json
