@@ -1,7 +1,7 @@
 "use client";
 import React from "react";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
-import CodeHighlight from "@/app/(components)/components/components/code-card/parts/code-highlight";
+import CodeHighlight from "@/app/docs/components/components/code-card/parts/code-highlight";
 import { cn } from "@/lib/utils";
 
 interface CodeCardProps {

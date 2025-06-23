@@ -1,10 +1,7 @@
-import { cn } from "@/lib/utils"
-
 interface ContentLayoutProps {
-    children: React.ReactNode
-    className?: string
+     children: React.ReactNode
 }
 
-export default function ContentLayout({ children, className }: ContentLayoutProps) {
-     return <div className={cn(className)}>{children}</div>
+export default function ContentLayout({ children }: ContentLayoutProps) {
+     return <div>{children}</div>
 }

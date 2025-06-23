@@ -1,7 +1,7 @@
 "use client";
 
 import { KBarProvider as Provider, useKBar } from "kbar";
-import { DOCS } from "@/app/(components)/layout-parts/documentation.constant";
+import { DOCS } from "@/app/docs/sidebar-layout/documentation.constant";
 import { useEffect } from "react";
 
 interface KBarProviderProps {

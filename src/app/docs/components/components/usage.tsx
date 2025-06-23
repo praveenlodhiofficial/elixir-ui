@@ -1,5 +1,5 @@
 import React from 'react';
-import PreviewCodeCard from '@/app/(components)/components/components/preview-code-card';
+import PreviewCodeCard from '@/app/docs/components/components/preview-code-card';
 import { H3 } from '@/components/ui/heading-with-anchor';
 import { cn } from '@/lib/utils';
 

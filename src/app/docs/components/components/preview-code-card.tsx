@@ -1,5 +1,5 @@
 import React from 'react';
-import CodeCard from '@/app/(components)/components/components/code-card/code-card';
+import CodeCard from '@/app/docs/components/components/code-card/code-card';
 import fs from 'fs/promises';
 import { cn } from '@/lib/utils';
 

@@ -77,7 +77,7 @@ export default function Navbar() {
           duration: 0.3,
           ease: "easeInOut",
         }}
-        className="z-50 fixed inset-x-0 top-7 px-5 py-1 md:py-2 mx-auto flex items-center justify-between backdrop-blur-sm"
+        className="z-50 fixed inset-x-0 top-10 px-5 py-1 md:py-2 mx-auto flex items-center justify-between backdrop-blur-sm"
       >
         <Link href="/" className="flex items-center justify-center">
           <Image
@@ -126,7 +126,7 @@ export default function Navbar() {
             variant="circle-blur"
             start="top-right"
           />
-          <Button variant="ghost" className="bg-transparent lg:block hidden rounded-full">
+          <Button variant="ghost" className="bg-lime-400 text-black md:block hidden rounded-full">
             Get Started
           </Button>
         </div>

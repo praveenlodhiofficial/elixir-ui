@@ -1,6 +1,6 @@
 import React from "react";
-import { PageSubTitle, PageTemplate } from "@/app/(components)/components/components/page-template";
-import PreviewCodeCard from "@/app/(components)/components/components/preview-code-card";
+import { PageSubTitle, PageTemplate } from "@/app/docs/components/components/page-template";
+import PreviewCodeCard from "@/app/docs/components/components/preview-code-card";
 import { Steppers } from "@/components/ui/steppers";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { cn } from "@/lib/utils";

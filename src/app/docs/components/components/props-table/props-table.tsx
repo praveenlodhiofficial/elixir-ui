@@ -8,8 +8,8 @@ import {
   TableHeader,
   TableRow,
 } from '@/components/ui/table';
-import { PageSubTitle } from '@/app/(components)/components/components/page-template';
-import PropInfo from '@/app/(components)/components/components/props-table/prop-info';
+import { PageSubTitle } from '@/app/docs/components/components/page-template';
+import PropInfo from '@/app/docs/components/components/props-table/prop-info';
 import { InlineCode } from '@/components/ui/inline-code';
 import { X } from 'lucide-react';
 export interface Props {
