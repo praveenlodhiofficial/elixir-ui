@@ -126,8 +126,8 @@ export default function Navbar() {
             variant="circle-blur"
             start="top-right"
           />
-          <Button variant="ghost" className="bg-lime-400 text-black md:block hidden rounded-full">
-            Get Started
+          <Button asChild variant="ghost" className="bg-lime-400 text-black md:block hidden rounded-full">
+            <Link href="/docs">Get Started</Link>
           </Button>
         </div>
 

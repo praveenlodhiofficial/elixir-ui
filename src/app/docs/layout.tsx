@@ -1,5 +1,5 @@
 import Navbar from '@/components/Navbar'
-import Sidebar from './sidebar-layout/(sidebar)/page'
+import Sidebar from './sidebar-layout/page'
 
 interface DocsLayoutProps {
      children: React.ReactNode

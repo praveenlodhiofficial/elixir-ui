@@ -50,15 +50,15 @@
             ]
         },
         {
-            "name": "teammates-v1.0.0",
+            "name": "teammates-v1",
             "type": "registry:block",
             "title": "Teammates Component",
             "description": "A component that displays a list of teammates with a hover effect.",
             "files": [
                 {
-                    "path": "src/registry/default/teammates/components/teammates-v1.0.0.tsx",
+                    "path": "src/registry/default/teammates/components/teammates-v1.tsx",
                     "type": "registry:component",
-                    "target": "src/components/teammates-v1.0.0.tsx"
+                    "target": "src/components/teammates-v1.tsx"
                 }
             ],
             "dependencies": [
@@ -69,15 +69,15 @@
             ]
         },
         {
-            "name": "teammates-v2.0.0",
+            "name": "teammates-v2",
             "type": "registry:block",
             "title": "Teammates Component",
             "description": "A component that displays a list of teammates with a hover effect.",
             "files": [
                 {
-                    "path": "src/registry/default/teammates/components/Teammates-v2.0.0.tsx",
+                    "path": "src/registry/default/teammates/components/teammates-v2.tsx",
                     "type": "registry:component",
-                    "target": "src/components/Teammates-v2.0.0.tsx"
+                    "target": "src/components/teammates-v2.tsx"
                 },
                 {
                     "path": "src/registry/default/teammates/components/ui/icons.tsx",
