@@ -31,13 +31,13 @@ export const DOCS: Documentation[] = [
             {
                 label: "Introduction",
                 value: "introduction",
-                url: "/docs/components",
+                url: "/docs",
             },
-            // {
-            //     label: "Installation",
-            //     value: "installation",
-            //     url: "/docs/components/installation",
-            // },
+            {
+                label: "All Components",
+                value: "all-components",
+                url: "/docs/all-components",
+            },
         ],
     },
     {

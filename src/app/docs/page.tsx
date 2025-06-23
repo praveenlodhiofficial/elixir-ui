@@ -1,4 +1,4 @@
-import Content from './components/page'
+import Content from './(documentation)/introduction/page'
 
 export default function DocsPage() {
      return <Content />

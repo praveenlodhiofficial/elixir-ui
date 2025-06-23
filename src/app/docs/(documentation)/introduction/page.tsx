@@ -1,40 +1,14 @@
 import Link from 'next/link'
-import {
-     ArrowRight,
-     Github,
-     Sparkles,
-     Zap,
-     Palette,
-     Code,
-     Download,
-     Star,
-     Users,
-     Layers,
-     Eye,
-     MousePointer,
-     Wind,
-     Library,
-     BookOpen,
-     Rocket,
-     Grid3X3,
-} from 'lucide-react'
+import { ArrowRight, Github, Sparkles, Zap, Palette, Code, Download,  Star, Users, Layers, Eye, MousePointer, Wind, Library, BookOpen, Rocket, Grid3X3, } from 'lucide-react'
 import { Button } from '@/components/ui/button'
-import {
-     Accordion,
-     AccordionContent,
-     AccordionItem,
-     AccordionTrigger,
-} from '@/components/ui/accordion'
-import { DOCS } from '@/app/docs/sidebar-layout/documentation.constant'
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from '@/components/ui/accordion'
 
 export default function Content() {
-     const componentsList = DOCS.find(group => group.groupKey === 'components')?.children || []
-
      return (
           <div className="mx-auto max-w-5xl space-y-20">
                {/* Navigation Section */}
-               <div className="space-y-6 pt-8">
-                    <div className="space-y-4">
+               <div className="space-y-6 pt-5">
+                    <div className="space-y-5">
                          <h1 className="text-4xl font-bold tracking-tight">Documentation</h1>
                          <p className="text-muted-foreground max-w-2xl text-sm">
                               Welcome to Elixir UI documentation. Choose a section to get started
@@ -43,10 +17,12 @@ export default function Content() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
+
+                         {/* Introduction */}
                          <Link href="#introduction" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                   <div className="relative space-y-4">
+                                   <div className="relative space-x-4 flex items-center justify-between">
                                         <div className="flex items-center gap-3">
                                              <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
                                                   <BookOpen className="h-6 w-6" />
@@ -60,15 +36,16 @@ export default function Content() {
                                                   </p>
                                              </div>
                                         </div>
-                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1" />
+                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
                                    </div>
                               </div>
                          </Link>
 
+                         {/* Getting Started */}
                          <Link href="#getting-started" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                   <div className="relative space-y-4">
+                                   <div className="relative space-x-4 flex items-center justify-between">
                                         <div className="flex items-center gap-3">
                                              <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
                                                   <Rocket className="h-6 w-6" />
@@ -82,15 +59,16 @@ export default function Content() {
                                                   </p>
                                              </div>
                                         </div>
-                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1" />
+                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
                                    </div>
                               </div>
                          </Link>
 
-                         <Link href="#all-components" className="group">
+                         {/* All Components */}
+                         <Link href="/docs/all-components" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                   <div className="relative space-y-4">
+                                   <div className="relative space-x-4 flex items-center justify-between">
                                         <div className="flex items-center gap-3">
                                              <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
                                                   <Grid3X3 className="h-6 w-6" />
@@ -104,16 +82,40 @@ export default function Content() {
                                                   </p>
                                              </div>
                                         </div>
-                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1" />
+                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
                                    </div>
                               </div>
                          </Link>
+
+                         {/* All Templates */}
+                         <Link href="/docs/all-templates" className="group">
+                              <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
+                                   <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
+                                   <div className="relative space-x-4 flex items-center justify-between">
+                                        <div className="flex items-center gap-3">
+                                             <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
+                                             <BookOpen className="h-6 w-6" />
+                                             </div>
+                                             <div>
+                                                  <h3 className="text-foreground group-hover:text-primary font-semibold transition-colors">
+                                                       All Templates
+                                                  </h3>
+                                                  <p className="text-muted-foreground text-xs">
+                                                       Browse all templates
+                                                  </p>
+                                             </div>
+                                        </div>
+                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
+                                   </div>
+                              </div>
+                         </Link>
+
                     </div>
                </div>
 
                {/* Introduction Section */}
                <div className="space-y-8" id="introduction">
-                    <div className="space-y-4">
+                    <div className="space-y-5">
                          <h2 className="text-3xl font-bold tracking-tight">Introduction</h2>
                          <p className="text-muted-foreground max-w-2xl text-sm">
                               Welcome to the documentation for Elixir UI. Discover a collection of
@@ -206,7 +208,7 @@ export default function Content() {
 
                {/* Getting Started Section */}
                <div className="space-y-8" id="getting-started">
-                    <div className="space-y-4">
+                    <div className="space-y-5">
                          <h2 className="text-3xl font-bold tracking-tight">Getting Started</h2>
                          <p className="text-muted-foreground max-w-2xl text-sm">
                               Get up and running with Elixir UI in just a few simple steps. No
@@ -216,7 +218,7 @@ export default function Content() {
 
                     <div className="space-y-6">
                          <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
-                              <div className="bg-card/50 space-y-4 rounded-xl border p-6">
+                              <div className="bg-card/50 space-y-5 rounded-xl border p-6">
                                    <div className="flex items-center gap-3">
                                         <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
                                              <Code className="h-5 w-5" />
@@ -243,14 +245,14 @@ export default function Content() {
                                    </ul>
                               </div>
 
-                              <div className="bg-card/50 space-y-4 rounded-xl border p-6">
+                              <div className="bg-card/50 space-y-5 rounded-xl border p-6">
                                    <div className="flex items-center gap-3">
                                         <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
                                              <Download className="h-5 w-5" />
                                         </div>
                                         <h3 className="font-semibold">Installation</h3>
                                    </div>
-                                   <div className="space-y-3 text-sm">
+                                   <div className="space-y-5 text-sm">
                                         <div>
                                              <p className="text-foreground mb-1 font-medium">
                                                   1. Copy Component Code
@@ -292,7 +294,7 @@ export default function Content() {
                                    <p className="text-muted-foreground">
                                         Here's how easy it is to use an Elixir UI component:
                                    </p>
-                                   <div className="bg-muted rounded-lg p-4 font-mono text-xs">
+                                   <div className="bg-muted rounded-lg p-4 font-mono text-xs space-y-2">
                                         <div className="text-muted-foreground">
                                              // 1. Copy component code from docs
                                         </div>
@@ -310,114 +312,8 @@ export default function Content() {
                     </div>
                </div>
 
-               {/* All Components Section */}
-               <div className="space-y-8" id="all-components">
-                    <div className="space-y-4">
-                         <h2 className="text-3xl font-bold tracking-tight">All Components</h2>
-                         <p className="text-muted-foreground max-w-2xl text-sm">
-                              Explore our collection of carefully crafted components. Each component
-                              is designed to be copy-paste ready with full customization control.
-                         </p>
-                    </div>
-
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-                         {componentsList.map(component => (
-                              <div
-                                   key={component.value}
-                                   className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg"
-                              >
-                                   {/* Background gradient effect */}
-                                   <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-
-                                   <div className="relative space-y-4">
-                                        {/* Header */}
-                                        <div className="flex items-start justify-between">
-                                             <div className="flex items-center gap-3">
-                                                  <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-10 w-10 items-center justify-center rounded-lg transition-colors">
-                                                       {component.value === 'teammates' && (
-                                                            <Users className="h-5 w-5" />
-                                                       )}
-                                                       {component.value === 'liquid-frame' && (
-                                                            <Eye className="h-5 w-5" />
-                                                       )}
-                                                       {component.value === 'showcase' && (
-                                                            <Star className="h-5 w-5" />
-                                                       )}
-                                                       {component.value === 'card' && (
-                                                            <MousePointer className="h-5 w-5" />
-                                                       )}
-                                                       {component.value === 'sidemenu' && (
-                                                            <Layers className="h-5 w-5" />
-                                                       )}
-                                                  </div>
-                                                  <div>
-                                                       <h3 className="text-foreground group-hover:text-primary font-semibold transition-colors">
-                                                            {component.label}
-                                                       </h3>
-                                                       <p className="text-muted-foreground text-xs">
-                                                            {component.children?.length || 1}{' '}
-                                                            component
-                                                            {component.children?.length !== 1
-                                                                 ? 's'
-                                                                 : ''}
-                                                       </p>
-                                                  </div>
-                                             </div>
-                                             {component.new && (
-                                                  <span className="bg-primary/10 text-primary border-primary/20 rounded-full border px-2.5 py-1 text-xs font-semibold">
-                                                       NEW
-                                                  </span>
-                                             )}
-                                        </div>
-
-                                        {/* Component links */}
-                                        {component.children && component.children.length > 0 ? (
-                                             <div className="space-y-2">
-                                                  <div className="bg-border h-px" />
-                                                  <ul className="space-y-2">
-                                                       {component.children.map(child => (
-                                                            <li key={child.value}>
-                                                                 <Link
-                                                                      href={child.url}
-                                                                      className="group/link text-muted-foreground hover:bg-muted/50 hover:text-foreground flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-all duration-200"
-                                                                 >
-                                                                      <span className="flex items-center gap-2">
-                                                                           <div className="bg-muted-foreground/40 h-1.5 w-1.5 rounded-full" />
-                                                                           {child.label}
-                                                                      </span>
-                                                                      <div className="flex items-center gap-2">
-                                                                           {child.new && (
-                                                                                <span className="bg-primary/10 text-primary rounded-full px-1.5 py-0.5 text-xs font-semibold">
-                                                                                     NEW
-                                                                                </span>
-                                                                           )}
-                                                                           <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all duration-200 group-hover/link:translate-x-0.5 group-hover/link:opacity-100" />
-                                                                      </div>
-                                                                 </Link>
-                                                            </li>
-                                                       ))}
-                                                  </ul>
-                                             </div>
-                                        ) : (
-                                             <div className="space-y-2">
-                                                  <div className="bg-border h-px" />
-                                                  <Link
-                                                       href={component.url}
-                                                       className="group/link text-muted-foreground hover:bg-muted/50 hover:text-foreground flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-all duration-200"
-                                                  >
-                                                       <span>View Component</span>
-                                                       <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all duration-200 group-hover/link:translate-x-0.5 group-hover/link:opacity-100" />
-                                                  </Link>
-                                             </div>
-                                        )}
-                                   </div>
-                              </div>
-                         ))}
-                    </div>
-               </div>
-
                {/* FAQ Section */}
-               <div className="space-y-6">
+               <div className="space-y-5">
                     <h2 className="text-3xl font-bold tracking-tight">
                          Frequently Asked Questions
                     </h2>
