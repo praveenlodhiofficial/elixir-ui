@@ -9,9 +9,9 @@ export default function Template({
 }) {
   return (
     <motion.div
-      initial={{ opacity: 0, scale: 1, y: 20 }}
-      animate={{ opacity: 1, scale: 1, y: 0 }}
-      exit={{ opacity: 0, scale: 1, y: -20 }}
+      // initial={{ opacity: 0, scale: 1, y: 20 }}
+      // animate={{ opacity: 1, scale: 1, y: 0 }}
+      // exit={{ opacity: 0, scale: 1, y: -20 }}
       transition={{ duration: 0.5, ease: "easeInOut" }}
       className="overflow-hidden"
     >

@@ -65,7 +65,7 @@ export default function Documentation() {
                          </Link>
 
                          {/* All Components */}
-                         <Link href="/docs/all-components" className="group">
+                         <Link href="/docs/components" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                                    <div className="relative space-x-4 flex items-center justify-between">
@@ -88,7 +88,7 @@ export default function Documentation() {
                          </Link>
 
                          {/* All Templates */}
-                         <Link href="/docs/all-templates" className="group">
+                         <Link href="/docs/templates" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
                                    <div className="relative space-x-4 flex items-center justify-between">
@@ -313,7 +313,7 @@ export default function Documentation() {
                </div>
 
                {/* FAQ Section */}
-               <div className="space-y-5">
+               <div className="space-y-5 mb-20">
                     <h2 className="text-3xl font-bold tracking-tight">
                          Frequently Asked Questions
                     </h2>

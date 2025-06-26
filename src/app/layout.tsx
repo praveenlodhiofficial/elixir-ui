@@ -44,7 +44,7 @@ export default function RootLayout({
       >
         <AppContent>
           {children}
-          </AppContent>
+        </AppContent>
         <Analytics />
       </body>
     </html>

@@ -30,7 +30,7 @@ export const DOCS: Documentation[] = [
         children: [
             {
                 label: "Introduction",
-                value: "inroduction",
+                value: "introduction",
                 url: "/docs",
             },
             {
@@ -57,13 +57,13 @@ export const DOCS: Documentation[] = [
                     {
                         label: "v1.0.0",
                         value: "v1.0.0",
-                        url: "/docs/components/teammates/v1.0.0",
+                        url: "/docs/components/teammates/v1",
                         new: false,
                     },
                     {
                         label: "v2.0.0",
                         value: "v2.0.0",
-                        url: "/docs/components/teammates/v2.0.0",
+                        url: "/docs/components/teammates/v2",
                         new: true,
                     }
                 ]
@@ -98,28 +98,41 @@ export const DOCS: Documentation[] = [
                 url: "/docs/components/sidemenu",
                 new: true,
             },
+            {
+                label: "Carousel",
+                value: "carousel",
+                url: "/docs/components/carousel",
+                children: [
+                    {
+                        label: "Vertical Flow",
+                        value: "vertical-flow",
+                        url: "/docs/components/carousel/vertical-flow",
+                        new: true,
+                    }
+                ]
+            },
         ],
     },
-    {
-        groupKey: "templates",
-        groupValue: "Templates",
-        children: [
-            {
-                label: "Portfolio",
-                value: "portfolio",
-                url: "/docs/templates/portfolio",
-                new: true,
-            },
-            {
-                label: "Blog Website",
-                value: "blog-website",
-                url: "/docs/templates/blog-website",
-            },
-            {
-                label: "Web3 SaaS",
-                value: "web3-saas",
-                url: "/docs/templates/web3-saas",
-            },
-        ],
-    }
+    // {
+    //     groupKey: "templates",
+    //     groupValue: "Templates",
+    //     children: [
+    //         {
+    //             label: "Portfolio",
+    //             value: "portfolio",
+    //             url: "/docs/templates/portfolio",
+    //             new: true,
+    //         },
+    //         {
+    //             label: "Blog Website",
+    //             value: "blog-website",
+    //             url: "/docs/templates/blog-website",
+    //         },
+    //         {
+    //             label: "Web3 SaaS",
+    //             value: "web3-saas",
+    //             url: "/docs/templates/web3-saas",
+    //         },
+    //     ],
+    // }
 ];

@@ -9,7 +9,7 @@ export default function AllComponentsPage() {
      const componentsList = DOCS.find(group => group.groupKey === 'components')?.children || []
 
      return (
-          <div>
+          <div className="w-full scroll-smooth">
                {/* All Components Section */}
                <div className="space-y-8" id="all-components">
                     <div className="space-y-4">
@@ -20,7 +20,7 @@ export default function AllComponentsPage() {
                          </p>
                     </div>
 
-                    <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+                    <div className="grid w-full grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
                          {componentsList.map(component => (
                               <div
                                    key={component.value}

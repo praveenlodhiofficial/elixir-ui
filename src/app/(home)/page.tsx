@@ -90,7 +90,7 @@ const Home = () => {
                               <div className="mb-8 flex items-center justify-center gap-2">
                                    <div className="flex items-center gap-2 rounded-full bg-lime-100 px-4 py-2 text-sm font-medium text-lime-800 dark:bg-lime-900/20 dark:text-lime-300">
                                         <Zap className="h-4 w-4" />
-                                        Now with 5+ Components
+                                        Now with 7+ Components
                                    </div>
                               </div>
 
@@ -117,8 +117,10 @@ const Home = () => {
                                         <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
                                    </Button>
                                    <Button size="lg" variant="outline" className="cursor-pointer group">
-                                        <BsTwitterX className="mr-2 h-4 w-4" />
-                                        Follow on X
+                                        <Link href="https://x.com/praveenlodhi99" target="_blank" className="flex items-center" >
+                                             <BsTwitterX className="mr-2 h-4 w-4" />
+                                             Follow on X
+                                        </Link>
                                    </Button>
                               </div>
                          </div>
@@ -224,7 +226,7 @@ const Home = () => {
                               <div className="grid gap-8 text-center md:grid-cols-3">
                                    <div>
                                         <div className="mb-2 text-4xl font-bold text-lime-600 dark:text-lime-400">
-                                             5+
+                                             7+
                                         </div>
                                         <div className="text-slate-600 dark:text-slate-400">
                                              Premium Components

@@ -7,7 +7,7 @@ interface DocsLayoutProps {
 
 export default function DocsLayout({ children }: DocsLayoutProps) {
      return (
-          <div className="mx-auto grid h-full w-full max-w-6xl grid-cols-[300px_1fr]">
+          <div className="mx-auto grid h-full w-full max-w-6xl grid-cols-[300px_1fr]" suppressHydrationWarning>
                <div className="absolute top-0 z-10">
                     <Navbar />
                </div>

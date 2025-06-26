@@ -130,6 +130,28 @@
             "dependencies": [
                 "framer-motion"
             ]
+        },
+        {
+            "name": "vertical-flow-carousel",
+            "type": "registry:block",
+            "title": "Vertical Flow Carousel",
+            "description": "A vertical flow carousel component that displays a list of items in a vertical flow at a fixed interval.",
+            "files": [
+                {
+                    "path": "src/registry/default/carousel/components/vertical-flow.tsx",
+                    "type": "registry:component",
+                    "target": "src/components/elixir-ui/vertical-flow-carousel.tsx"
+                },
+                {
+                    "path": "src/lib/utils.ts",
+                    "type": "registry:lib",
+                    "target": "src/lib/utils.ts"
+                }
+            ],
+            "dependencies": [
+                "motion",
+                "react-icons"
+            ]
         }
     ]
 }
