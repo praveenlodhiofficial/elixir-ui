@@ -1,7 +1,7 @@
 import React from 'react'
-import CodeCard from '@/components/docs/code-card/code-card'
 import fs from 'fs/promises'
 import { cn } from '@/lib/utils'
+import CodeCard from '@/components/docs/code-card/code-card'
 
 interface PreviewCodeCardProps {
      className?: string

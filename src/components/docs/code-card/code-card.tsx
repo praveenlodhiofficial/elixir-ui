@@ -31,7 +31,7 @@ const CodeCard = ({ children, code, className }: CodeCardProps) => {
                          Code
                     </TabsTrigger>
                </TabsList>
-               <TabsContent value="preview" className="mt-4 rounded-md border-2">
+               <TabsContent value="preview" className="mt-4 rounded-lg overflow-hidden border-2">
                     {children}
                </TabsContent>
                <TabsContent value="code" className="mt-4 rounded-md border-2">

@@ -85,9 +85,9 @@ export default function Navbar() {
             alt="Logo"
             width={100}
             height={100}
-            className="w-6.5 h-6.5 object-contain dark:invert"
+            className="w-7.5 h-7.5 mr-0.5 object-contain dark:invert"
           />
-          <span className="text-2xl font-bold">Elixir UI</span>
+          <span className="text-3xl font-bold">Elixir UI</span>
         </Link>
 
         {/* Desktop Navigation */}
@@ -107,7 +107,7 @@ export default function Navbar() {
               {isHovered === idx && (
                 <motion.div
                   layoutId="hovered-span"
-                  className="absolute bottom-0 left-0 right-0 h-1 bg-primary"
+                  className="absolute bottom-0 left-0 right-0"
                   transition={{
                     type: "spring",
                     stiffness: 300,
@@ -126,7 +126,7 @@ export default function Navbar() {
             variant="circle-blur"
             start="top-right"
           />
-          <Button asChild variant="ghost" className="bg-lime-400 text-black md:block hidden rounded-full">
+          <Button asChild variant="ghost" className="bg-lime-400 text-black md:block hidden rounded-full hover:bg-lime-400/80 dark:hover:bg-lime-400/80 dark:text-black">
             <Link href="/docs">Get Started</Link>
           </Button>
         </div>

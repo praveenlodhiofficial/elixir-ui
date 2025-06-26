@@ -5,6 +5,7 @@ import VanillaTiltCard from '@/registry/default/card/components/vanilla-tilt-car
 import ShowcaseComponent from '@/registry/default/showcase/components/showcase'
 import SideMenu from '@/registry/default/sidemenu/components/sidemenu'
 import TeammatesSection from '@/registry/default/teammates/components/teammates-v2'
+import { BsTwitterX } from "react-icons/bs";
 import {
      ArrowRight,
      Sparkles,
@@ -19,6 +20,9 @@ import {
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
+import { LinkedInIcon } from '@/registry/default/teammates/components/ui/icons'
+import { FaLinkedin } from 'react-icons/fa'
+import Footer from '@/components/home/Footer'
 
 const Home = () => {
      const sampleTeammates = [
@@ -90,7 +94,7 @@ const Home = () => {
                                    </div>
                               </div>
 
-                              <h1 className="mb-6 text-5xl font-bold tracking-tight text-slate-900 sm:text-6xl lg:text-6xl dark:text-slate-100">
+                              <h1 className="mb-6 text-3xl md:text-5xl font-bold tracking-tight text-slate-900 lg:text-6xl dark:text-slate-100">
                                    Beautiful by Default
                                    <span className="block text-lime-600 dark:text-lime-400">
                                         Customizable by Design
@@ -107,14 +111,14 @@ const Home = () => {
                               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                    <Button
                                         size="lg"
-                                        className="group bg-lime-600 hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600"
+                                        className="cursor-pointer group bg-lime-600 hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600"
                                    >
-                                        <Link href="/docs/all-components">Browse Components</Link>
-                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                        <Link href="/docs/components">Browse Components</Link>
+                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
                                    </Button>
-                                   <Button size="lg" variant="outline" className="group">
-                                        <Github className="mr-2 h-4 w-4" />
-                                        View on GitHub
+                                   <Button size="lg" variant="outline" className="cursor-pointer group">
+                                        <BsTwitterX className="mr-2 h-4 w-4" />
+                                        Follow on X
                                    </Button>
                               </div>
                          </div>
@@ -259,21 +263,23 @@ const Home = () => {
                               <div className="flex flex-col items-center justify-center gap-4 sm:flex-row">
                                    <Button
                                         size="lg"
-                                        className="group bg-lime-600 hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600"
+                                        className="cursor-pointer group bg-lime-600 hover:bg-lime-700 dark:bg-lime-500 dark:hover:bg-lime-600"
                                    >
-                                        Get Started
-                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                        <Link href="/docs">Get Started</Link>
+                                        <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
                                    </Button>
-                                   <Button size="lg" variant="outline" className="group">
-                                        <Github className="mr-2 h-4 w-4" />
-                                        Star on GitHub
+                                   <Button size="lg" variant="outline" className="cursor-pointer group">
+                                        <Link href="https://www.linkedin.com/in/praveenlodhiofficial/" target="_blank" className="flex items-center" >
+                                             <FaLinkedin className="mr-2 h-5 w-5" />
+                                             Connect on LinkedIn
+                                        </Link>
                                    </Button>
                               </div>
                          </div>
                     </section>
 
                     {/* Footer */}
-                    <footer className="rounded-tl-4xl rounded-tr-4xl border-t border-slate-200 bg-white px-4 py-12 dark:border-slate-800 dark:bg-black">
+                    {/* <footer className="rounded-tl-4xl rounded-tr-4xl border-t border-slate-200 bg-white px-4 py-12 dark:border-slate-800 dark:bg-black">
                          <div className="mx-auto max-w-6xl">
                               <div className="grid gap-8 md:grid-cols-4">
                                    <div>
@@ -407,7 +413,9 @@ const Home = () => {
                                    </p>
                               </div>
                          </div>
-                    </footer>
+                    </footer> */}
+
+                    <Footer />
                </div>
           </>
      )

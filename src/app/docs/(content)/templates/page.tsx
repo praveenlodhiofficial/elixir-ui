@@ -1,6 +1,8 @@
 import { DOCS } from '@/app/docs/documentation.constant'
 import Link from 'next/link'
-import { ArrowRight, Users, Eye, Star, MousePointer, Layers } from 'lucide-react'
+import { ArrowRight } from 'lucide-react'
+import { GrArticle } from 'react-icons/gr'
+import { FaChalkboardUser, FaSass } from 'react-icons/fa6'
 
 interface Template {
      label: string
@@ -16,21 +18,21 @@ const TEMPLATES: Template[] = [
           value: 'portfolio',
           url: '/docs/templates/portfolio',
           new: true,
-          icon: <Users className="h-5 w-5" />,
+          icon: <FaChalkboardUser className="h-5 w-5" />,
      },
      {
           label: 'Blog Website',
           value: 'blog-website',
           url: '/docs/templates/blog-website',
           new: true,
-          icon: <Eye className="h-5 w-5" />,
+          icon: <GrArticle className="h-5 w-5" />,
      },
      {
           label: 'Web3 SaaS',
-          value: 'web-saas',
+          value: 'web3-saas',
           url: '/docs/templates/web3-saas',
           new: true,
-          icon: <Star className="h-5 w-5" />,
+          icon: <FaSass className="h-5 w-5 scale-120" />,
      },
 ]
 
@@ -53,7 +55,7 @@ export default function TemplatesPage() {
                          {templatesList.map(template => (
                               <div
                                    key={template.value}
-                                   className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg"
+                                   className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-4 transition-all duration-300 hover:shadow-lg"
                               >
                                    {/* Background gradient effect */}
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -98,7 +100,7 @@ export default function TemplatesPage() {
                                                             <li key={child.value}>
                                                                  <Link
                                                                       href={child.url}
-                                                                      className="group/link text-muted-foreground hover:bg-muted/50 hover:text-foreground flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-all duration-200"
+                                                                      className="group/link dark:text-muted-foreground hover:bg-muted/80 hover:text-foreground flex items-center justify-between rounded-lg px-3 py-1.5 text-sm text-zinc-700 transition-all duration-200"
                                                                  >
                                                                       <span className="flex items-center gap-2">
                                                                            <div className="bg-muted-foreground/40 h-1.5 w-1.5 rounded-full" />

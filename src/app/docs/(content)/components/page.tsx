@@ -1,6 +1,9 @@
 import { DOCS } from '@/app/docs/documentation.constant'
 import Link from 'next/link'
-import { ArrowRight, Users, Eye, Star, MousePointer, Layers } from 'lucide-react'
+import { ArrowRight, Eye, Star, Users } from 'lucide-react'
+import { MdViewCarousel } from 'react-icons/md'
+import { RiBankCardFill } from 'react-icons/ri'
+import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 
 export default function AllComponentsPage() {
      const componentsList = DOCS.find(group => group.groupKey === 'components')?.children || []
@@ -21,7 +24,7 @@ export default function AllComponentsPage() {
                          {componentsList.map(component => (
                               <div
                                    key={component.value}
-                                   className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg"
+                                   className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-4 transition-all duration-300 hover:shadow-lg"
                               >
                                    {/* Background gradient effect */}
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
@@ -41,10 +44,13 @@ export default function AllComponentsPage() {
                                                             <Star className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'card' && (
-                                                            <MousePointer className="h-5 w-5" />
+                                                            <RiBankCardFill className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'sidemenu' && (
-                                                            <Layers className="h-5 w-5" />
+                                                            <HiOutlineMenuAlt1 className="h-5 w-5" />
+                                                       )}
+                                                       {component.value === 'carousel' && (
+                                                            <MdViewCarousel className="h-5 w-5" />
                                                        )}
                                                   </div>
                                                   <div>
@@ -76,7 +82,7 @@ export default function AllComponentsPage() {
                                                             <li key={child.value}>
                                                                  <Link
                                                                       href={child.url}
-                                                                      className="group/link text-muted-foreground hover:bg-muted/50 hover:text-foreground flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-all duration-200"
+                                                                      className="group/link dark:text-muted-foreground hover:bg-muted/80 hover:text-foreground flex items-center justify-between rounded-lg px-3 py-1.5 text-sm text-zinc-700 transition-all duration-200"
                                                                  >
                                                                       <span className="flex items-center gap-2">
                                                                            <div className="bg-muted-foreground/40 h-1.5 w-1.5 rounded-full" />

@@ -37,8 +37,8 @@ export default function Navbar({ className, pageName }: NavbarProps) {
                     </Link>
 
                     <div className="items-center gap-5  hidden md:flex md:font-semibold">
-                        <Link href="/components">Components</Link>
-                        <Link href="/templates">Templates</Link>
+                        <Link href="/docs/components">Components</Link>
+                        <Link href="/docs/templates">Templates</Link>
                         <Link href="/about">About</Link>
                         <Link href="/contact">Contact</Link>
                     </div>
