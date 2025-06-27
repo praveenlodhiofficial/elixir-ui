@@ -1,10 +1,15 @@
 import VerticalFlow from '@/registry/default/carousel/components/vertical-flow'
-import { FaBus, FaCar, FaSchool, FaTruckMoving } from 'react-icons/fa'
-import { TbCircleNumber1Filled, TbCircleNumber2Filled, TbCircleNumber3Filled, TbCircleNumber4Filled, TbCircleNumber5Filled } from 'react-icons/tb'
+import { Icon } from '@/components/ui/icon'
+
 const featuredCards = [
      {
           link: '/components/carousel/liquid-frame.png',
-          icons: <TbCircleNumber1Filled className="h-7 w-7 text-2xl text-black dark:text-white" />,
+          icons: (
+               <Icon
+                    name="TbCircleNumber1Filled"
+                    className="h-7 w-7 text-2xl text-black dark:text-white"
+               />
+          ),
           title: 'Liquid Frame',
           category: 'Component',
           description:
@@ -13,7 +18,12 @@ const featuredCards = [
      },
      {
           link: '/components/carousel/sidemenu.png',
-          icons: <TbCircleNumber2Filled  className="h-7 w-7 text-xl text-black dark:text-white" />,
+          icons: (
+               <Icon
+                    name="TbCircleNumber2Filled"
+                    className="h-7 w-7 text-xl text-black dark:text-white"
+               />
+          ),
           title: 'SideMenu',
           category: 'Components',
           description:
@@ -22,7 +32,12 @@ const featuredCards = [
      },
      {
           link: '/components/carousel/3d-vanilla-tilt.png',
-          icons: <TbCircleNumber3Filled className="h-7 w-7 text-xl text-black dark:text-white" />,
+          icons: (
+               <Icon
+                    name="TbCircleNumber3Filled"
+                    className="h-7 w-7 text-xl text-black dark:text-white"
+               />
+          ),
           title: '3D Vanilla Tilt',
           category: 'Components / Cards',
           description: 'A React component containing stunning 3D tilt effects.',
@@ -30,7 +45,12 @@ const featuredCards = [
      },
      {
           link: '/components/carousel/showcase.png',
-          icons: <TbCircleNumber4Filled className="h-7 w-7 text-xl text-black dark:text-white" />,
+          icons: (
+               <Icon
+                    name="TbCircleNumber4Filled"
+                    className="h-7 w-7 text-xl text-black dark:text-white"
+               />
+          ),
           title: 'Showcase',
           category: 'Components',
           description:
@@ -39,7 +59,12 @@ const featuredCards = [
      },
      {
           link: '/components/carousel/teammates-v1.png',
-          icons: <TbCircleNumber5Filled className="h-7 w-7 text-xl text-black dark:text-white" />,
+          icons: (
+               <Icon
+                    name="TbCircleNumber5Filled"
+                    className="h-7 w-7 text-xl text-black dark:text-white"
+               />
+          ),
           title: 'Teammates v1.0.0',
           category: 'Components / Teams',
           description: 'A component that displays a list of teammates with a hover effect.',

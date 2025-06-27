@@ -4,7 +4,7 @@
 import React, { useState, useEffect } from 'react'
 import { usePathname } from 'next/navigation'
 import Link from 'next/link'
-import { ChevronDown, ChevronRight, Search } from 'lucide-react'
+import { Icon } from '@/components/ui/icon'
 import { cn } from '@/lib/utils'
 import { Button } from '@/components/ui/button'
 import { ScrollArea } from '@/components/ui/scroll-area'
@@ -94,9 +94,9 @@ const SubItem: React.FC<SubItemProps> = ({ item, pathname, level = 1 }) => {
                          {item.label}
                          <span>
                               {isOpen ? (
-                                   <ChevronDown className="h-4 w-4" />
+                                   <Icon name="ChevronDown" className="h-4 w-4" />
                               ) : (
-                                   <ChevronRight className="h-4 w-4" />
+                                   <Icon name="ChevronRight" className="h-4 w-4" />
                               )}
                          </span>
                     </Button>
@@ -170,7 +170,7 @@ export default function Sidebar() {
      }).filter(group => group.children.length > 0)
 
      return (
-          <aside className="sticky top-0 hidden h-full w-64 flex-col border-r border-gray-200 md:flex dark:border-zinc-800">
+          <aside className="hidden h-full w-64 flex-col border-r border-gray-200 md:flex dark:border-zinc-800">
                <ScrollArea className="flex-1">
                     <nav className="space-y-2">
                          {filteredDocs.map(group => (
@@ -186,9 +186,9 @@ export default function Sidebar() {
                                         >
                                              {group.groupValue}
                                              {openGroups.includes(group.groupKey) ? (
-                                                  <ChevronDown className="h-4 w-4" />
+                                                  <Icon name="ChevronDown" className="h-4 w-4" />
                                              ) : (
-                                                  <ChevronRight className="h-4 w-4" />
+                                                  <Icon name="ChevronRight" className="h-4 w-4" />
                                              )}
                                         </Button>
                                    </CollapsibleTrigger>

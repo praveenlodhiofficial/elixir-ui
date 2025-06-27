@@ -1,9 +1,6 @@
 import { DOCS } from '@/app/docs/documentation.constant'
 import Link from 'next/link'
-import { ArrowRight, Eye, Star, Users } from 'lucide-react'
-import { MdViewCarousel } from 'react-icons/md'
-import { RiBankCardFill } from 'react-icons/ri'
-import { HiOutlineMenuAlt1 } from 'react-icons/hi'
+import { Icon } from '@/components/ui/icon'
 
 export default function AllComponentsPage() {
      const componentsList = DOCS.find(group => group.groupKey === 'components')?.children || []
@@ -35,22 +32,22 @@ export default function AllComponentsPage() {
                                              <div className="flex items-center gap-3">
                                                   <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-10 w-10 items-center justify-center rounded-lg transition-colors">
                                                        {component.value === 'teammates' && (
-                                                            <Users className="h-5 w-5" />
+                                                            <Icon name="Users" className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'liquid-frame' && (
-                                                            <Eye className="h-5 w-5" />
+                                                            <Icon name="Eye" className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'showcase' && (
-                                                            <Star className="h-5 w-5" />
+                                                            <Icon name="Star" className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'card' && (
-                                                            <RiBankCardFill className="h-5 w-5" />
+                                                            <Icon name="RiBankCardFill" className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'sidemenu' && (
-                                                            <HiOutlineMenuAlt1 className="h-5 w-5" />
+                                                            <Icon name="HiOutlineMenuAlt1" className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'carousel' && (
-                                                            <MdViewCarousel className="h-5 w-5" />
+                                                            <Icon name="MdViewCarousel" className="h-5 w-5" />
                                                        )}
                                                   </div>
                                                   <div>
@@ -94,7 +91,7 @@ export default function AllComponentsPage() {
                                                                                      New
                                                                                 </span>
                                                                            )}
-                                                                           <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all duration-200 group-hover/link:translate-y-0.5 group-hover/link:rotate-[-45deg] group-hover/link:opacity-100" />
+                                                                           <Icon name="ArrowRight" className="h-3.5 w-3.5 opacity-0 transition-all duration-200 group-hover/link:translate-y-0.5 group-hover/link:rotate-[-45deg] group-hover/link:opacity-100" />
                                                                       </div>
                                                                  </Link>
                                                             </li>
@@ -109,7 +106,7 @@ export default function AllComponentsPage() {
                                                        className="group/link text-muted-foreground hover:bg-muted/50 hover:text-foreground flex items-center justify-between rounded-lg px-3 py-2 text-sm transition-all duration-200"
                                                   >
                                                        <span>View Component</span>
-                                                       <ArrowRight className="h-3.5 w-3.5 opacity-0 transition-all duration-200 group-hover/link:translate-y-0.5 group-hover/link:rotate-[-45deg] group-hover/link:opacity-100" />
+                                                       <Icon name="ArrowRight" className="h-3.5 w-3.5 opacity-0 transition-all duration-200 group-hover/link:translate-y-0.5 group-hover/link:rotate-[-45deg] group-hover/link:opacity-100" />
                                                   </Link>
                                              </div>
                                         )}

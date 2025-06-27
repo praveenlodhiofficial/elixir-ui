@@ -12,8 +12,8 @@ const Sitemap = [
      },
      {
           label: 'All Templates',
-          url: '/docs/templates',
-    },
+          url: '/templates',
+     },
      {
           label: 'About',
           url: '/about',
@@ -36,11 +36,11 @@ const ConnectWithMe = [
      {
           label: 'Twitter',
           url: 'https://x.com/praveenlodhi99',
-    },
-    {
-         label: 'Peerlist',
-         url: 'https://peerlist.io/praveenlodhi99',
-     }
+     },
+     {
+          label: 'Peerlist',
+          url: 'https://peerlist.io/praveenlodhi99',
+     },
 ]
 
 export default function Footer() {
@@ -49,7 +49,7 @@ export default function Footer() {
      const components = componentsSection?.children || []
 
      return (
-          <footer className="rounded-tl-4xl rounded-tr-4xl border-t border-slate-200 bg-white px-4 py-12 dark:border-slate-800 dark:bg-black">
+          <footer className="rounded-tl-4xl rounded-tr-4xl border-t bg-white/50 px-4 py-12 dark:bg-zinc-900">
                <div className="mx-auto max-w-6xl">
                     <div className="grid gap-8 md:grid-cols-4">
                          <div>
@@ -61,7 +61,7 @@ export default function Footer() {
                               </p>
                          </div>
                          <div>
-                              <h4 className="mb-4 text-base uppercase font-semibold text-slate-900 dark:text-slate-100">
+                              <h4 className="mb-4 text-base font-semibold text-slate-900 uppercase dark:text-slate-100">
                                    Components
                               </h4>
                               <ul className="space-y-2 text-[13px] text-slate-600 dark:text-slate-400">
@@ -83,18 +83,20 @@ export default function Footer() {
                               </ul>
                          </div>
                          <div>
-                              <h4 className="mb-4 text-base uppercase font-semibold text-slate-900 dark:text-slate-100">
+                              <h4 className="mb-4 text-base font-semibold text-slate-900 uppercase dark:text-slate-100">
                                    Sitemap
                               </h4>
                               <ul className="space-y-2 text-[13px] text-slate-600 dark:text-slate-400">
                                    {Sitemap.map(resource => (
                                         <li key={resource.label}>
-                                             <Link href={resource.url} className="hover:text-lime-600">
+                                             <Link
+                                                  href={resource.url}
+                                                  className="hover:text-lime-600"
+                                             >
                                                   {resource.label}
                                              </Link>
                                         </li>
                                    ))}
-                                   
                               </ul>
                          </div>
                          <div className="flex flex-col gap-2">
@@ -106,8 +108,8 @@ export default function Footer() {
                                         <li key={resource.label}>
                                              <Link
                                                   href={resource.url}
-                                             className="hover:text-lime-600"
-                                        >
+                                                  className="hover:text-lime-600"
+                                             >
                                                   {resource.label}
                                              </Link>
                                         </li>

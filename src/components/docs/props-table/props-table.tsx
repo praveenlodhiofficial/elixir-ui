@@ -11,7 +11,7 @@ import {
 import { PageSubTitle } from '@/components/docs/page-template'
 import PropInfo from '@/components/docs/props-table/prop-info'
 import { InlineCode } from '@/components/ui/inline-code'
-import { X } from 'lucide-react'
+import { Icon } from '@/components/ui/icon'
 export interface Props {
      prop: string
      required: boolean
@@ -65,7 +65,10 @@ export const PropsTable = ({ title, props }: PropsTableProps) => {
                                              {prop.default ? (
                                                   <InlineCode>{prop.default}</InlineCode>
                                              ) : (
-                                                  <X className="text-destructive h-4 w-4"></X>
+                                                  <Icon
+                                                       name="BsTwitterX"
+                                                       className="text-destructive h-4 w-4"
+                                                  />
                                              )}
                                         </TableCell>
                                    </TableRow>

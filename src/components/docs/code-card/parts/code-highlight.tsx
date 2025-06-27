@@ -1,9 +1,8 @@
 "use client";
 import React, { useState } from "react";
 import Highlight from "react-highlight";
-// import "highlight.js/styles/tomorrow-night-blue.css";
 import "highlight.js/styles/atom-one-light.css";
-
+import { Icon } from "@/components/ui/icon";
 import { Button } from "@/components/ui/button";
 import { CopyButton } from "@/components/ui/copy";
 import { cn } from "@/lib/utils";
@@ -59,7 +58,11 @@ const CodeHighlight = ({
             variant="outline"
             onClick={() => setExpanded((prev) => !prev)}
           >
-            {expand ? "Collapse" : "Expand"}
+            {expand ? (
+              <Icon name="ChevronDown" className="h-4 w-4" />
+            ) : (
+              <Icon name="ChevronUp" className="h-4 w-4" />
+            )}
           </Button>
         </div>
       )}

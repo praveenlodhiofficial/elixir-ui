@@ -1,7 +1,13 @@
 import Link from 'next/link'
-import { ArrowRight, Github, Sparkles, Zap, Palette, Code, Download,  Star, Users, Layers, Eye, MousePointer, Wind, Library, BookOpen, Rocket, Grid3X3, } from 'lucide-react'
+
 import { Button } from '@/components/ui/button'
-import { Accordion, AccordionContent, AccordionItem, AccordionTrigger, } from '@/components/ui/accordion'
+import {
+     Accordion,
+     AccordionContent,
+     AccordionItem,
+     AccordionTrigger,
+} from '@/components/ui/accordion'
+import { Icon } from '@/components/ui/icon'
 
 export default function Documentation() {
      return (
@@ -17,15 +23,14 @@ export default function Documentation() {
                     </div>
 
                     <div className="grid grid-cols-1 gap-4 md:grid-cols-3">
-
                          {/* Introduction */}
                          <Link href="#introduction" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                   <div className="relative space-x-4 flex items-center justify-between">
+                                   <div className="relative flex items-center justify-between space-x-4">
                                         <div className="flex items-center gap-3">
                                              <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
-                                                  <BookOpen className="h-6 w-6" />
+                                                  <Icon name="BookOpen" className="h-6 w-6" />
                                              </div>
                                              <div>
                                                   <h3 className="text-foreground group-hover:text-primary font-semibold transition-colors">
@@ -36,7 +41,10 @@ export default function Documentation() {
                                                   </p>
                                              </div>
                                         </div>
-                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
+                                        <Icon
+                                             name="ArrowRight"
+                                             className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]"
+                                        />
                                    </div>
                               </div>
                          </Link>
@@ -45,10 +53,10 @@ export default function Documentation() {
                          <Link href="#getting-started" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                   <div className="relative space-x-4 flex items-center justify-between">
+                                   <div className="relative flex items-center justify-between space-x-4">
                                         <div className="flex items-center gap-3">
                                              <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
-                                                  <Rocket className="h-6 w-6" />
+                                                  <Icon name="Rocket" className="h-6 w-6" />
                                              </div>
                                              <div>
                                                   <h3 className="text-foreground group-hover:text-primary font-semibold transition-colors">
@@ -59,7 +67,10 @@ export default function Documentation() {
                                                   </p>
                                              </div>
                                         </div>
-                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
+                                        <Icon
+                                             name="ArrowRight"
+                                             className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]"
+                                        />
                                    </div>
                               </div>
                          </Link>
@@ -68,10 +79,10 @@ export default function Documentation() {
                          <Link href="/docs/components" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                   <div className="relative space-x-4 flex items-center justify-between">
+                                   <div className="relative flex items-center justify-between space-x-4">
                                         <div className="flex items-center gap-3">
                                              <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
-                                                  <Grid3X3 className="h-6 w-6" />
+                                                  <Icon name="Grid3X3" className="h-6 w-6" />
                                              </div>
                                              <div>
                                                   <h3 className="text-foreground group-hover:text-primary font-semibold transition-colors">
@@ -82,19 +93,22 @@ export default function Documentation() {
                                                   </p>
                                              </div>
                                         </div>
-                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
+                                        <Icon
+                                             name="ArrowRight"
+                                             className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]"
+                                        />
                                    </div>
                               </div>
                          </Link>
 
                          {/* All Templates */}
-                         <Link href="/docs/templates" className="group">
+                         <Link href="/templates" className="group">
                               <div className="group bg-card/50 hover:border-primary/50 hover:bg-card hover:shadow-primary/5 relative overflow-hidden rounded-xl border p-6 transition-all duration-300 hover:shadow-lg">
                                    <div className="from-primary/5 to-primary/5 absolute inset-0 bg-gradient-to-br via-transparent opacity-0 transition-opacity duration-300 group-hover:opacity-100" />
-                                   <div className="relative space-x-4 flex items-center justify-between">
+                                   <div className="relative flex items-center justify-between space-x-4">
                                         <div className="flex items-center gap-3">
                                              <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-12 w-12 items-center justify-center rounded-lg transition-colors">
-                                             <BookOpen className="h-6 w-6" />
+                                                  <Icon name="BookOpen" className="h-6 w-6" />
                                              </div>
                                              <div>
                                                   <h3 className="text-foreground group-hover:text-primary font-semibold transition-colors">
@@ -105,11 +119,13 @@ export default function Documentation() {
                                                   </p>
                                              </div>
                                         </div>
-                                        <ArrowRight className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]" />
+                                        <Icon
+                                             name="ArrowRight"
+                                             className="text-muted-foreground h-4 w-4 transition-all duration-200 group-hover:translate-x-1 group-hover:rotate-[-45deg]"
+                                        />
                                    </div>
                               </div>
                          </Link>
-
                     </div>
                </div>
 
@@ -125,7 +141,8 @@ export default function Documentation() {
                          <div className="flex gap-4">
                               <Button asChild>
                                    <Link href="#all-components">
-                                        Explore Components <ArrowRight className="ml-2 h-4 w-4" />
+                                        Explore Components{' '}
+                                        <Icon name="ArrowRight" className="ml-2 h-4 w-4" />
                                    </Link>
                               </Button>
                               <Button variant="outline" asChild>
@@ -133,7 +150,7 @@ export default function Documentation() {
                                         href="https://github.com/praveenlodhiofficial/elixir-ui"
                                         target="_blank"
                                    >
-                                        <Github className="mr-2 h-4 w-4" />
+                                        <Icon name="GithubIcon" className="mr-2 h-4 w-4" />
                                         GitHub
                                    </Link>
                               </Button>
@@ -152,7 +169,7 @@ export default function Documentation() {
                               <ul className="space-y-5">
                                    <li className="flex items-start gap-4">
                                         <div className="mt-1 flex-shrink-0">
-                                             <Code className="text-primary h-5 w-5" />
+                                             <Icon name="Code" className="text-primary h-5 w-5" />
                                         </div>
                                         <div>
                                              <h4 className="text-foreground mb-1 font-semibold">
@@ -169,7 +186,7 @@ export default function Documentation() {
                                    </li>
                                    <li className="flex items-start gap-4">
                                         <div className="mt-1 flex-shrink-0">
-                                             <Layers className="text-primary h-5 w-5" />
+                                             <Icon name="Layers" className="text-primary h-5 w-5" />
                                         </div>
                                         <div>
                                              <h4 className="text-foreground mb-1 font-semibold">
@@ -186,7 +203,7 @@ export default function Documentation() {
                                    </li>
                                    <li className="flex items-start gap-4">
                                         <div className="mt-1 flex-shrink-0">
-                                             <Wind className="text-primary h-5 w-5" />
+                                             <Icon name="Wind" className="text-primary h-5 w-5" />
                                         </div>
                                         <div>
                                              <h4 className="text-foreground mb-1 font-semibold">
@@ -221,7 +238,7 @@ export default function Documentation() {
                               <div className="bg-card/50 space-y-5 rounded-xl border p-6">
                                    <div className="flex items-center gap-3">
                                         <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
-                                             <Code className="h-5 w-5" />
+                                             <Icon name="Code" className="h-5 w-5" />
                                         </div>
                                         <h3 className="font-semibold">Prerequisites</h3>
                                    </div>
@@ -248,7 +265,7 @@ export default function Documentation() {
                               <div className="bg-card/50 space-y-5 rounded-xl border p-6">
                                    <div className="flex items-center gap-3">
                                         <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
-                                             <Download className="h-5 w-5" />
+                                             <Icon name="Download" className="h-5 w-5" />
                                         </div>
                                         <h3 className="font-semibold">Installation</h3>
                                    </div>
@@ -286,7 +303,7 @@ export default function Documentation() {
                          <div className="bg-card/50 rounded-xl border p-6">
                               <div className="mb-4 flex items-center gap-3">
                                    <div className="bg-primary/10 text-primary flex h-10 w-10 items-center justify-center rounded-lg">
-                                        <Sparkles className="h-5 w-5" />
+                                        <Icon name="Sparkles" className="h-5 w-5" />
                                    </div>
                                    <h3 className="font-semibold">Quick Example</h3>
                               </div>
@@ -294,7 +311,7 @@ export default function Documentation() {
                                    <p className="text-muted-foreground">
                                         Here's how easy it is to use an Elixir UI component:
                                    </p>
-                                   <div className="bg-muted rounded-lg p-4 font-mono text-xs space-y-2">
+                                   <div className="bg-muted space-y-2 rounded-lg p-4 font-mono text-xs">
                                         <div className="text-muted-foreground">
                                              // 1. Copy component code from docs
                                         </div>
@@ -313,7 +330,7 @@ export default function Documentation() {
                </div>
 
                {/* FAQ Section */}
-               <div className="space-y-5 mb-20">
+               <div className="mb-20 space-y-5">
                     <h2 className="text-3xl font-bold tracking-tight">
                          Frequently Asked Questions
                     </h2>
