@@ -88,6 +88,11 @@ export const DOCS: Documentation[] = [
                               label: '3D Vanilla Tilt',
                               value: '3d-tilt-card',
                               url: '/docs/components/card/vanilla-tilt-card',
+                         },
+                         {
+                              label: 'Split View Panel',
+                              value: 'split-view-panel',
+                              url: '/docs/components/card/split-view-panel',
                               new: true,
                          },
                     ],

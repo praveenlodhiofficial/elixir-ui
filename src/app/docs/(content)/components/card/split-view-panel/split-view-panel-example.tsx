@@ -51,9 +51,9 @@ const SplitViewPanelData = {
      ],
 }
 
-export default function Try() {
+export default function SplitViewPanelExample() {
      return (
-          <div className="">
+          <div className="scale-92 scale-x-95">
                <SplitViewPanel
                     infoBadge={SplitViewPanelData.infoBadge}
                     featureBox={SplitViewPanelData.featureBox}

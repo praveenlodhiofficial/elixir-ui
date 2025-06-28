@@ -1,0 +1,1 @@
+npx shadcn add https://elixir-ui-xi.vercel.app/registry/service-card.json
