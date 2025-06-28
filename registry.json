@@ -84,7 +84,7 @@
                     {
                          "path": "src/registry/blocks/split-view-panel.tsx",
                          "type": "registry:block",
-                         "target": "src/components/split-view-panel.tsx"
+                         "target": "src/components/SplitViewPanel.tsx"
                     }
                ]
           },
@@ -98,7 +98,7 @@
                     {
                          "path": "src/registry/components/vanilla-tilt-card.tsx",
                          "type": "registry:component",
-                         "target": "src/components/vanilla-tilt-card.tsx"
+                         "target": "src/components/VanillaTiltCard.tsx"
                     }
                ],
                "dependencies": ["vanilla-tilt", "class-variance-authority"]
@@ -117,7 +117,7 @@
                     {
                          "path": "src/registry/components/vertical-flow-carousel.tsx",
                          "type": "registry:component",
-                         "target": "src/components/vertical-flow-carousel.tsx"
+                         "target": "src/components/VerticalFlowCarousel.tsx"
                     }
                ],
                "dependencies": ["react-icons", "lucide-react", "clsx", "tailwind-merge", "motion"]
@@ -132,7 +132,7 @@
                     {
                          "path": "src/registry/components/liquid-frame.tsx",
                          "type": "registry:component",
-                         "target": "src/components/liquid-frame.tsx"
+                         "target": "src/components/LiquidFrame.tsx"
                     },
                     {
                          "path": "src/registry/lib/liquid-frame.ts",
@@ -141,6 +141,111 @@
                     }
                ],
                "dependencies": ["three", "@types/three", "class-variance-authority"]
+          },
+          {
+               "name": "showcase",
+               "type": "registry:component",
+               "title": "Showcase",
+               "description": "Showcase is a component that displays a showcase with customizable colors and styling.",
+               "registryDependencies": ["utils"],
+               "files": [
+                    {
+                         "path": "src/registry/components/showcase.tsx",
+                         "type": "registry:component",
+                         "target": "src/components/Showcase.tsx"
+                    }
+               ],
+               "dependencies": [
+                    "three",
+                    "@types/three",
+                    "class-variance-authority",
+                    "@react-three/fiber",
+                    "@react-three/postprocessing",
+                    "@react-three/drei"
+               ]
+          },
+          {
+               "name": "sidemenu-button",
+               "type": "registry:ui",
+               "title": "SideMenu Button",
+               "description": "A side menu button component that displays a side menu button with customizable colors and styling.",
+               "registryDependencies": ["utils"],
+               "files": [
+                    {
+                         "path": "src/registry/ui/sidemenu-button.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/sidemenu-button.tsx"
+                    }
+               ],
+               "dependencies": ["framer-motion", "class-variance-authority"]
+          },
+          {
+               "name": "sidemenu-nav",
+               "type": "registry:ui",
+               "title": "SideMenu Nav",
+               "description": "A side menu nav component that displays a side menu nav with customizable colors and styling.",
+               "registryDependencies": ["utils"],
+               "files": [
+                    {
+                         "path": "src/registry/ui/sidemenu-nav.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/sidemenu-nav.tsx"
+                    }
+               ],
+               "dependencies": ["framer-motion", "class-variance-authority"]
+          },
+          {
+               "name": "sidemenu",
+               "type": "registry:component",
+               "title": "SideMenu",
+               "description": "A side menu component that displays a side menu with customizable colors and styling.",
+               "registryDependencies": [
+                    "utils",
+                    "http://192.168.31.175:3000/registry/sidemenu-button.json",
+                    "http://192.168.31.175:3000/registry/sidemenu-nav.json"
+               ],
+               "files": [
+                    {
+                         "path": "src/registry/components/sidemenu.tsx",
+                         "type": "registry:component",
+                         "target": "src/components/Sidemenu.tsx"
+                    }
+               ],
+               "dependencies": ["framer-motion", "class-variance-authority"]
+          },
+          {
+               "name": "tidal-text-animation",
+               "type": "registry:component",
+               "title": "Tidal Text Animation",
+               "description": "A tidal text animation component that displays a tidal text animation with customizable colors and styling.",
+               "registryDependencies": ["utils"],
+               "files": [
+                    {
+                         "path": "src/registry/components/tidal-text-animation.tsx",
+                         "type": "registry:component",
+                         "target": "src/components/TidalTextAnimation.tsx"
+                    }
+               ],
+               "dependencies": ["gsap", "@types/gsap"]
+          },
+          {
+               "name": "profile-looper",
+               "type": "registry:component",
+               "title": "Profile Looper",
+               "description": "A profile looper component that displays a profile looper with customizable colors and styling.",
+               "registryDependencies": [
+                    "utils",
+                    "http://192.168.31.175:3000/registry/icons.json",
+                    "http://192.168.31.175:3000/registry/icon.json"
+               ],
+               "files": [
+                    {
+                         "path": "src/registry/components/profile-looper.tsx",
+                         "type": "registry:component",
+                         "target": "src/components/ProfileLooper.tsx"
+                    }
+               ],
+               "dependencies": ["framer-motion", "class-variance-authority"]
           }
      ]
 }

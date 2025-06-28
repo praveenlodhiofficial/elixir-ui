@@ -5,6 +5,10 @@ import { Steppers } from '@/components/ui/steppers'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 import VanillaTiltCardPreview from './preview/page'
+import { generateComponentMetadata } from '@/lib/metadata'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = generateComponentMetadata('vanilla-tilt-card')
 
 const VanillaTiltCardPage = () => {
      return (

@@ -4,7 +4,11 @@ import PreviewCodeCard from '@/components/docs/preview-code-card'
 import { Steppers } from '@/components/ui/steppers'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
-import Showcase from './showcase'
+import Showcase from './preview/page'
+import { generateComponentMetadata } from '@/lib/metadata'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = generateComponentMetadata('showcase')
 
 const ShowcasePage = () => {
      return (
@@ -14,7 +18,7 @@ const ShowcasePage = () => {
                description="A React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases."
           >
                <section className="space-y-8">
-                    <PreviewCodeCard path="src/registry/default/showcase/components/showcase.tsx">
+                    <PreviewCodeCard path="src/registry/components/showcase.tsx">
                          <Showcase />
                     </PreviewCodeCard>
 
@@ -48,8 +52,7 @@ const ShowcasePage = () => {
                                              {
                                                   step: '+',
                                                   title: 'Run the following command in the terminal.',
-                                                  codePath:
-                                                       'src/registry/default/showcase/usage/showcase-cli.md',
+                                                  codePath: 'src/registry/cli/showcase-cli.txt',
                                              },
                                         ]}
                                    />
@@ -63,14 +66,12 @@ const ShowcasePage = () => {
                                                   step: 1,
                                                   title: 'Install the dependencies',
                                                   code: `pnpm i three @types/three @react-three/postprocessing @react-three/drei @react-three/fiber`,
-                                                  isInstallStep: true,
                                              },
                                              {
                                                   step: 2,
                                                   title: 'Add the showcase component to your project in',
                                                   codeDirectory: 'src/components/showcase.tsx',
-                                                  codePath:
-                                                       'src/registry/default/showcase/components/showcase.tsx',
+                                                  codePath: 'src/registry/components/showcase.tsx',
                                              },
                                         ]}
                                    />
@@ -95,9 +96,8 @@ const ShowcasePage = () => {
                                    },
                                    {
                                         step: 2,
-                                        title: 'Import the component in your project'
-                                        codePath:
-                                             'src/registry/default/showcase/usage/showcase-example.md',
+                                        title: 'Import the component in your project',
+                                        codePath: 'src/registry/usage/showcase-usage.txt',
                                    },
                               ]}
                          />

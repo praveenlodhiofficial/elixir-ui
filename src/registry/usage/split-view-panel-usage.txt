@@ -51,7 +51,7 @@ const SplitViewPanelData = {
      ],
 }
 
-export default function SplitViewPanelPreview() {
+export default function SplitViewPanelUsage() {
      return (
           <div className="scale-92 scale-x-95">
                <SplitViewPanel

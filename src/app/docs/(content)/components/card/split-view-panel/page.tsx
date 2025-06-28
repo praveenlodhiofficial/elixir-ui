@@ -5,6 +5,10 @@ import { Steppers } from '@/components/ui/steppers'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 import SplitViewPanelPreview from '@/app/docs/(content)/components/card/split-view-panel/preview/page'
+import { generateComponentMetadata } from '@/lib/metadata'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = generateComponentMetadata('split-view-panel')
 
 const VanillaTiltCardPage = () => {
      return (
@@ -48,7 +52,8 @@ const VanillaTiltCardPage = () => {
                                              {
                                                   step: '+',
                                                   title: 'Run the following command in the terminal.',
-                                                  codePath: 'src/registry/cli/split-view-panel-cli.txt',
+                                                  codePath:
+                                                       'src/registry/cli/split-view-panel-cli.txt',
                                              },
                                         ]}
                                    />

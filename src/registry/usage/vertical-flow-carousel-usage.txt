@@ -46,7 +46,7 @@ const VerticalFlowCarouselCards = [
      },
 ]
 
-export default function VerticalFlowCarouselPreview() {
+export default function VerticalFlowCarouselUsage() {
      return (
           <div className="h-full w-full max-w-5xl">
                <VerticalFlowCarousel cards={VerticalFlowCarouselCards} />

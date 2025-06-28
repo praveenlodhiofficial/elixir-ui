@@ -2,7 +2,7 @@ import VanillaTiltCard from '@/components/vanilla-tilt-card'
 import Image from 'next/image'
 import React from 'react'
 
-export default function VanillaTiltCardPreview() {
+export default function VanillaTiltCardUsage() {
      return (
           <div className="flex justify-center items-center py-10">
                <VanillaTiltCard className="flex w-fit flex-col bg-gradient-to-b hover:from-gray-300 hover:to-black dark:hover:from-black dark:hover:to-gray-900">

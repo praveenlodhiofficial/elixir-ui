@@ -5,6 +5,10 @@ import { Steppers } from '@/components/ui/steppers'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
 import LiquidFrame from './preview/page'
+import { generateComponentMetadata } from '@/lib/metadata'
+import { Metadata } from 'next'
+
+export const metadata: Metadata = generateComponentMetadata('liquid-frame')
 
 const LiquidFramePage = () => {
      return (
@@ -49,8 +53,7 @@ const LiquidFramePage = () => {
                                              {
                                                   step: '+',
                                                   title: 'Run the following command in the terminal.',
-                                                  codePath:
-                                                       'src/registry/cli/liquid-frame-cli.txt',
+                                                  codePath: 'src/registry/cli/liquid-frame-cli.txt',
                                              },
                                         ]}
                                    />
@@ -69,8 +72,7 @@ const LiquidFramePage = () => {
                                                   step: 2,
                                                   title: 'Add shaders logic to your project in',
                                                   codeDirectory: 'src/lib/liquid-frame.ts',
-                                                  codePath:
-                                                       'src/registry/lib/liquid-frame.ts',
+                                                  codePath: 'src/registry/lib/liquid-frame.ts',
                                              },
                                              {
                                                   step: 3,
@@ -104,8 +106,7 @@ const LiquidFramePage = () => {
                                    {
                                         step: 2,
                                         title: 'Import the component in your project',
-                                        codePath:
-                                             'src/registry/usage/liquid-frame-usage.txt',
+                                        codePath: 'src/registry/usage/liquid-frame-usage.txt',
                                    },
                               ]}
                          />

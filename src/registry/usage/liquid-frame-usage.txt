@@ -1,6 +1,6 @@
-import LiquidFrameComponent from '@/components/liquid-frame'
+import LiquidFrameComponent from '@/registry/components/liquid-frame'
 
-const LiquidFramePreview = () => {
+const LiquidFrameUsage = () => {
     return (
         <div className="w-full h-full">
             <LiquidFrameComponent
@@ -16,4 +16,4 @@ const LiquidFramePreview = () => {
     )
 }
 
-export default LiquidFramePreview
+export default LiquidFrameUsage

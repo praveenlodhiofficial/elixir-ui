@@ -50,20 +50,19 @@ export const DOCS: Documentation[] = [
           groupValue: 'Components',
           children: [
                {
-                    label: 'Teams',
-                    value: 'teammates',
-                    url: '/docs/components/teammates',
+                    label: 'Team',
+                    value: 'team',
+                    url: '/docs/components/team',
                     children: [
                          {
-                              label: 'v1.0.0',
-                              value: 'v1.0.0',
-                              url: '/docs/components/teammates/v1',
-                              new: false,
+                              label: 'Tidal Text Animation',
+                              value: 'tidal-text-animation',
+                              url: '/docs/components/team/tidal-text-animation',
                          },
                          {
-                              label: 'v2.0.0',
-                              value: 'v2.0.0',
-                              url: '/docs/components/teammates/v2',
+                              label: 'Profile Looper',
+                              value: 'profile-looper',
+                              url: '/docs/components/team/profile-looper',
                               new: true,
                          },
                     ],
