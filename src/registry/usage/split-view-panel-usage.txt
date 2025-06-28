@@ -1,5 +1,4 @@
-import SplitViewPanel from '@/registry/blocks/split-view-panel'
-import Navbar from '@/components/home/Navbar'
+import SplitViewPanel from '@/components/split-view-panel'
 
 const SplitViewPanelData = {
      imageUrl:
@@ -52,10 +51,9 @@ const SplitViewPanelData = {
      ],
 }
 
-export default function Try() {
+export default function SplitViewPanelPreview() {
      return (
-          <div className="flex h-screen items-center justify-center border-2 border-red-500">
-               <Navbar />
+          <div className="scale-92 scale-x-95">
                <SplitViewPanel
                     infoBadge={SplitViewPanelData.infoBadge}
                     featureBox={SplitViewPanelData.featureBox}

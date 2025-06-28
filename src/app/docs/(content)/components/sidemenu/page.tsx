@@ -105,12 +105,12 @@ const SideMenuPage = () => {
                               steps={[
                                    {
                                         step: 1,
-                                        title: 'Import the component',
+                                        title: 'Add the import statement for the component',
                                         code: `import SideMenu from "@/components/sidemenu";`,
                                    },
                                    {
                                         step: 2,
-                                        title: 'Add the component to your project',
+                                        title: 'Import the component in your project'
                                         codePath:
                                              'src/registry/default/sidemenu/usage/example/sidemenu-example.md',
                                    },

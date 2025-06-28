@@ -99,12 +99,12 @@ const TeammatesPage = () => {
                               steps={[
                                    {
                                         step: 1,
-                                        title: 'Import the component',
+                                        title: 'Add the import statement for the component',
                                         code: `import TeamMates from "@/components/teammates-v2";`,
                                    },
                                    {
                                         step: 2,
-                                        title: 'Add the component to your project',
+                                        title: 'Import the component in your project'
                                         codePath:
                                              'src/registry/default/teammates/usage/example/teammates-v2-example.md',
                                    },

@@ -110,8 +110,8 @@ export const DOCS: Documentation[] = [
                     children: [
                          {
                               label: 'Vertical Flow',
-                              value: 'vertical-flow',
-                              url: '/docs/components/carousel/vertical-flow',
+                              value: 'vertical-flow-carousel',
+                              url: '/docs/components/carousel/vertical-flow-carousel',
                               new: true,
                          },
                     ],

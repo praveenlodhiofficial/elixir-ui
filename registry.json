@@ -4,49 +4,49 @@
      "homepage": "https://elixir-ui-xi.vercel.app",
      "items": [
           {
+               "name": "icons",
+               "type": "registry:lib",
+               "title": "Icons",
+               "description": "A icons component that displays a icons with customizable colors and styling.",
+               "files": [
+                    {
+                         "path": "src/registry/lib/icons.ts",
+                         "type": "registry:lib",
+                         "target": "src/lib/icons.ts"
+                    }
+               ],
+               "dependencies": ["lucide-react", "react-icons"]
+          },
+          {
                "name": "icon",
                "type": "registry:ui",
                "title": "Icon",
                "description": "A icon component that displays an icon with customizable colors and styling.",
+               "registryDependencies": ["utils", "http://192.168.31.175:3000/registry/icons.json"],
                "files": [
                     {
-                         "path": "src/registry/default/ui/icon.tsx",
+                         "path": "src/registry/ui/icon.tsx",
                          "type": "registry:ui",
                          "target": "src/components/ui/icon.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/lib/icons.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/icons.ts"
-                    },
-                    {
-                         "path": "src/registry/default/lib/utils.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/utils.ts"
                     }
-               ]
+               ],
+               "dependencies": ["class-variance-authority", "tailwind-merge", "clsx"]
           },
           {
                "name": "info-badge",
                "type": "registry:ui",
                "title": "Info Badge",
                "description": "A info badge component that displays an info badge with customizable colors and styling.",
-               "registryDependencies": ["utils"],
+               "registryDependencies": [
+                    "utils",
+                    "http://192.168.31.175:3000/registry/icons.json",
+                    "http://192.168.31.175:3000/registry/icon.json"
+               ],
                "files": [
                     {
-                         "path": "src/registry/default/ui/info-badge.tsx",
+                         "path": "src/registry/ui/info-badge.tsx",
                          "type": "registry:ui",
                          "target": "src/components/ui/info-badge.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/ui/icon.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/icon.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/lib/icons.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/icons.ts"
                     }
                ]
           },
@@ -55,22 +55,16 @@
                "type": "registry:ui",
                "title": "Feature Box",
                "description": "A feature box component that displays a feature box with customizable colors and styling.",
-               "registryDependencies": ["utils"],
+               "registryDependencies": [
+                    "utils",
+                    "http://192.168.31.175:3000/registry/icons.json",
+                    "http://192.168.31.175:3000/registry/icon.json"
+               ],
                "files": [
                     {
-                         "path": "src/registry/default/ui/feature-box.tsx",
+                         "path": "src/registry/ui/feature-box.tsx",
                          "type": "registry:ui",
                          "target": "src/components/ui/feature-box.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/ui/icon.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/icon.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/lib/icons.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/icons.ts"
                     }
                ]
           },
@@ -79,35 +73,74 @@
                "type": "registry:block",
                "title": "Split View Panel",
                "description": "A split view panel component that displays a split view panel with customizable colors and styling.",
+               "registryDependencies": [
+                    "utils",
+                    "http://192.168.31.175:3000/registry/icons.json",
+                    "http://192.168.31.175:3000/registry/icon.json",
+                    "http://192.168.31.175:3000/registry/info-badge.json",
+                    "http://192.168.31.175:3000/registry/feature-box.json"
+               ],
+               "files": [
+                    {
+                         "path": "src/registry/blocks/split-view-panel.tsx",
+                         "type": "registry:block",
+                         "target": "src/components/split-view-panel.tsx"
+                    }
+               ]
+          },
+          {
+               "name": "vanilla-tilt-card",
+               "type": "registry:component",
+               "title": "Vanilla Tilt Card",
+               "description": "A vanilla tilt card component that displays a vanilla tilt card with customizable colors and styling.",
                "registryDependencies": ["utils"],
                "files": [
                     {
-                         "path": "src/registry/default/blocks/split-view-panel.tsx",
-                         "type": "registry:block",
-                         "target": "src/components/split-view-panel.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/ui/feature-box.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/feature-box.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/ui/info-badge.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/info-badge.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/ui/icon.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/icon.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/lib/icons.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/icons.ts"
+                         "path": "src/registry/components/vanilla-tilt-card.tsx",
+                         "type": "registry:component",
+                         "target": "src/components/vanilla-tilt-card.tsx"
                     }
                ],
-               "dependencies": ["lucide-react", "react-icons"]
+               "dependencies": ["vanilla-tilt", "class-variance-authority"]
+          },
+          {
+               "name": "vertical-flow-carousel",
+               "type": "registry:component",
+               "title": "Vertical Flow Carousel",
+               "description": "Vertical Flow is a carousel component that allows you to create a vertical flow of content where it switches between cards at a fixed interval.",
+               "registryDependencies": [
+                    "utils",
+                    "http://192.168.31.175:3000/registry/icons.json",
+                    "http://192.168.31.175:3000/registry/icon.json"
+               ],
+               "files": [
+                    {
+                         "path": "src/registry/components/vertical-flow-carousel.tsx",
+                         "type": "registry:component",
+                         "target": "src/components/vertical-flow-carousel.tsx"
+                    }
+               ],
+               "dependencies": ["react-icons", "lucide-react", "clsx", "tailwind-merge", "motion"]
+          },
+          {
+               "name": "liquid-frame",
+               "type": "registry:component",
+               "title": "Liquid Frame",
+               "description": "Liquid Frame adds a fluid, interactive water ripple effect to images using Three.js.",
+               "registryDependencies": ["utils"],
+               "files": [
+                    {
+                         "path": "src/registry/components/liquid-frame.tsx",
+                         "type": "registry:component",
+                         "target": "src/components/liquid-frame.tsx"
+                    },
+                    {
+                         "path": "src/registry/lib/liquid-frame.ts",
+                         "type": "registry:lib",
+                         "target": "src/lib/liquid-frame.ts"
+                    }
+               ],
+               "dependencies": ["three", "@types/three", "class-variance-authority"]
           }
      ]
 }

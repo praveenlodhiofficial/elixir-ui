@@ -1,28 +1,28 @@
 import React from 'react'
-import { PageSubTitle, PageTemplate } from '@/components/docs/page-template'
-import PreviewCodeCard from '@/components/docs/preview-code-card'
 import { Steppers } from '@/components/ui/steppers'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
-import VanillaTiltCardPreview from './preview/page'
+import VerticalFlowCarouselPreview from './preview/page'
+import { PageSubTitle, PageTemplate } from '@/components/docs/page-template'
+import PreviewCodeCard from '@/components/docs/preview-code-card'
 
-const VanillaTiltCardPage = () => {
+const VerticalFlowPage = () => {
      return (
           <PageTemplate
-               title="3D Vanilla Card"
+               title="Vertical Flow Carousel"
                className="md:mt-5"
-               description={`A React component library for creating stunning 3D tilt effects using VanillaTilt. Wrap anything inside the ${(<strong>Tilt</strong>)} tag to add dynamic and interactive visuals to your UI.`}
+               description="Vertical Flow is a carousel component that allows you to create a vertical flow of content where it switches between cards at a fixed interval."
           >
                <section className="space-y-8">
-                    <PreviewCodeCard path="src/registry/components/vanilla-tilt-card.tsx">
-                         <VanillaTiltCardPreview />
+                    <PreviewCodeCard path="src/registry/components/vertical-flow-carousel.tsx">
+                         <VerticalFlowCarouselPreview />
                     </PreviewCodeCard>
 
                     <section>
                          <PageSubTitle>Installation</PageSubTitle>
                          <p className="pb-2 text-gray-800 md:pb-5 dark:text-gray-200">
                               Follow the steps below to add the{' '}
-                              <span className="font-bold">3D Tilt Card Component</span> to your
+                              <span className="font-bold">Vertical Flow Carousel</span> to your
                               project.
                          </p>
 
@@ -41,6 +41,7 @@ const VanillaTiltCardPage = () => {
                                         Manual
                                    </TabsTrigger>
                               </TabsList>
+
                               <TabsContent value="cli" className="mt-4 rounded-md">
                                    <Steppers
                                         className="mb-5 md:mb-10"
@@ -49,7 +50,7 @@ const VanillaTiltCardPage = () => {
                                                   step: '+',
                                                   title: 'Run the following command in the terminal.',
                                                   codePath:
-                                                       'src/registry/cli/vanilla-tilt-card-cli.txt',
+                                                       'src/registry/cli/vertical-flow-carousel-cli.txt',
                                              },
                                         ]}
                                    />
@@ -62,15 +63,21 @@ const VanillaTiltCardPage = () => {
                                              {
                                                   step: 1,
                                                   title: 'Install the dependencies',
-                                                  code: `pnpm i vanilla-tilt`,
+                                                  code: `pnpm i motion react-icons`,
                                              },
                                              {
                                                   step: 2,
-                                                  title: 'Add the 3d tilt component to your project in',
+                                                  title: 'Add the utils to your project in',
+                                                  codeDirectory: 'src/lib/utils.ts',
+                                                  codePath: 'src/registry/lib/utils.ts',
+                                             },
+                                             {
+                                                  step: 3,
+                                                  title: 'Add the vertical flow carousel to your project in',
                                                   codeDirectory:
-                                                       'src/components/vanilla-tilt-card.tsx',
+                                                       'src/registry/components/vertical-flow-carousel.tsx',
                                                   codePath:
-                                                       'src/registry/components/vanilla-tilt-card.tsx',
+                                                       'src/registry/components/vertical-flow-carousel.tsx',
                                              },
                                         ]}
                                    />
@@ -82,7 +89,7 @@ const VanillaTiltCardPage = () => {
                          <PageSubTitle>Usage</PageSubTitle>
                          <p className="pb-2 text-gray-800 md:pb-5 dark:text-gray-200">
                               Follow the steps below to add the{' '}
-                              <span className="font-bold">Vanilla Tilt Card Component</span> to your
+                              <span className="font-bold">Vertical Flow Carousel</span> to your
                               project.
                          </p>
 
@@ -92,12 +99,13 @@ const VanillaTiltCardPage = () => {
                                    {
                                         step: 1,
                                         title: 'Add the import statement for the component',
-                                        code: `import VanillaTiltCard from "@/components/vanilla-tilt-card";`,
+                                        code: `import VerticalFlowCarousel from '@/components/vertical-flow-carousel';`,
                                    },
                                    {
                                         step: 2,
                                         title: 'Import the component in your project',
-                                        codePath: 'src/registry/usage/vanilla-tilt-card-usage.txt',
+                                        codePath:
+                                             'src/registry/usage/vertical-flow-carousel-usage.txt',
                                    },
                               ]}
                          />
@@ -107,4 +115,4 @@ const VanillaTiltCardPage = () => {
      )
 }
 
-export default VanillaTiltCardPage
+export default VerticalFlowPage

@@ -12,7 +12,6 @@ interface StepProps {
      code?: string
      codeDirectory?: string
      isCodeStep?: boolean // Boolean to determine if this is a code step (height of the code block)
-     isInstallStep?: boolean // Boolean to determine if this is an installation step
 }
 
 interface SteppersProps {
@@ -27,7 +26,6 @@ const Step = async ({
      code,
      isCodeStep = false,
      codeDirectory,
-     isInstallStep = false,
 }: StepProps) => {
      let codeContent = code
 
@@ -51,12 +49,9 @@ const Step = async ({
 
                <div className="my-3 ml-5 border-l-2 border-l-gray-200 pl-2 text-sm md:pl-8">
                     {codeContent &&
-                         (isInstallStep ? (
-                              <PackageManagers command={codeContent} pkg={codeContent} />
-                         ) : (
+                         (
                               <CodeHighlight
                                    code={codeContent}
-                                   withExpand={false}
                                    className={cn(
                                         'custom-scrollbar items-center border border-zinc-300 dark:border-zinc-800 dark:bg-white/5',
                                         isCodeStep
@@ -64,7 +59,7 @@ const Step = async ({
                                              : 'max-h-[250px] overflow-auto scroll-smooth px-1 py-1 md:px-5 md:py-2'
                                    )}
                               />
-                         ))}
+                         )}
                </div>
           </div>
      )
@@ -82,7 +77,6 @@ export const Steppers = ({ steps, className }: SteppersProps) => {
                          codePath={step.codePath}
                          codeDirectory={step.codeDirectory}
                          isCodeStep={step.isCodeStep}
-                         isInstallStep={step.isInstallStep}
                     />
                ))}
           </div>
@@ -119,7 +113,6 @@ export const usageSteppers = ({
                     <div className="ml-5 border-l-2 border-l-gray-200 pl-2 text-sm md:pl-8">
                          <CodeHighlight
                               code={code}
-                              withExpand={false}
                               className={cn(
                                    'custom-scrollbar items-center border border-zinc-300 dark:border-zinc-800 dark:bg-white/5',
                                    isCodeStep

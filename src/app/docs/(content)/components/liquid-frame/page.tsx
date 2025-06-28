@@ -4,7 +4,7 @@ import PreviewCodeCard from '@/components/docs/preview-code-card'
 import { Steppers } from '@/components/ui/steppers'
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
 import { cn } from '@/lib/utils'
-import LiquidFrame from './liquid-frame'
+import LiquidFrame from './preview/page'
 
 const LiquidFramePage = () => {
      return (
@@ -14,7 +14,7 @@ const LiquidFramePage = () => {
                description="Liquid Frame adds a fluid, interactive water ripple effect to images using Three.js. It maintains aspect ratio, supports mouse interaction, and is styled with Tailwind CSS for a modern, magical UI touch."
           >
                <section className="space-y-8">
-                    <PreviewCodeCard path="src/registry/default/liquid-frame/components/liquid-frame.tsx">
+                    <PreviewCodeCard path="src/registry/components/liquid-frame.tsx">
                          <LiquidFrame />
                     </PreviewCodeCard>
 
@@ -50,7 +50,7 @@ const LiquidFramePage = () => {
                                                   step: '+',
                                                   title: 'Run the following command in the terminal.',
                                                   codePath:
-                                                       'src/registry/default/liquid-frame/usage/liquid-frame-cli.md',
+                                                       'src/registry/cli/liquid-frame-cli.txt',
                                              },
                                         ]}
                                    />
@@ -64,21 +64,20 @@ const LiquidFramePage = () => {
                                                   step: 1,
                                                   title: 'Install the dependencies',
                                                   code: `pnpm i three @types/three`,
-                                                  isInstallStep: true,
                                              },
                                              {
                                                   step: 2,
                                                   title: 'Add shaders logic to your project in',
                                                   codeDirectory: 'src/lib/liquid-frame.ts',
                                                   codePath:
-                                                       'src/registry/default/liquid-frame/lib/liquid-frame.ts',
+                                                       'src/registry/lib/liquid-frame.ts',
                                              },
                                              {
                                                   step: 3,
                                                   title: 'Add the liquid frame component to your project in',
                                                   codeDirectory: 'src/components/liquid-frame.tsx',
                                                   codePath:
-                                                       'src/registry/default/liquid-frame/components/liquid-frame.tsx',
+                                                       'src/registry/components/liquid-frame.tsx',
                                              },
                                         ]}
                                    />
@@ -99,14 +98,14 @@ const LiquidFramePage = () => {
                               steps={[
                                    {
                                         step: 1,
-                                        title: 'Import the component',
+                                        title: 'Add the import statement for the component',
                                         code: `import LiquidFrame from "@/components/liquid-frame";`,
                                    },
                                    {
                                         step: 2,
-                                        title: 'Add the component to your project',
+                                        title: 'Import the component in your project',
                                         codePath:
-                                             'src/registry/default/liquid-frame/usage/liquid-frame-example.md',
+                                             'src/registry/usage/liquid-frame-usage.txt',
                                    },
                               ]}
                          />
