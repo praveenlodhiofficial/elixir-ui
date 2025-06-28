@@ -1,5 +1,6 @@
-import { Icon } from '@/components/ui/icon'
+import { Icon } from '@/registry/default/ui/icon'
 import { cva } from 'class-variance-authority'
+import { cn } from '@/registry/default/lib/utils'
 
 export const featureBoxIconVariants = cva('h-6 w-6 rounded-full p-1 md:h-7 md:w-7 lg:h-8 lg:w-8', {
      variants: {
@@ -50,17 +51,23 @@ export default function FeatureBox({
           | 'FaCode'
 }) {
      return (
-          <div className="flex flex-col gap-2 rounded-xl bg-gradient-to-br from-orange-100 to-orange-300 p-1.5 md:p-4 dark:from-orange-200 dark:to-orange-300">
-               <div className="flex items-center justify-start gap-3">
-                    <div className="flex items-center gap-2 rounded-full bg-white p-1 pr-5">
+          <div
+               className={cn(
+                    'flex flex-col gap-2 rounded-xl bg-gradient-to-br from-orange-100 to-orange-300 p-1.5 md:p-4 dark:from-orange-200 dark:to-orange-300'
+               )}
+          >
+               <div className={cn('flex items-center justify-start gap-3')}>
+                    <div className={cn('flex items-center gap-2 rounded-full bg-white p-1 pr-5')}>
                          <Icon
                               name={iconName}
-                              className={featureBoxIconVariants({ variant: iconColor })}
+                              className={cn(featureBoxIconVariants({ variant: iconColor }))}
                          />
-                         <h3 className="text-sm font-medium text-gray-900 md:text-base">{title}</h3>
+                         <h3 className={cn('text-sm font-medium text-gray-900 md:text-base')}>
+                              {title}
+                         </h3>
                     </div>
                </div>
-               <p className="px-2 text-xs text-black md:text-sm">{description}</p>
+               <p className={cn('px-2 text-xs text-black md:text-sm')}>{description}</p>
           </div>
      )
 }

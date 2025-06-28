@@ -4,222 +4,110 @@
      "homepage": "https://elixir-ui-xi.vercel.app",
      "items": [
           {
-               "name": "liquid-frame",
-               "type": "registry:block",
-               "title": "Liquid-frame Component",
-               "description": "Liquid Frame adds a fluid, interactive water ripple effect to images.",
+               "name": "icon",
+               "type": "registry:ui",
+               "title": "Icon",
+               "description": "A icon component that displays an icon with customizable colors and styling.",
                "files": [
                     {
-                         "path": "src/registry/default/liquid-frame/components/liquid-frame.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/liquid-frame.tsx"
+                         "path": "src/registry/default/ui/icon.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/icon.tsx"
                     },
                     {
-                         "path": "src/registry/default/liquid-frame/lib/liquid-frame.ts",
+                         "path": "src/registry/default/lib/icons.ts",
                          "type": "registry:lib",
-                         "target": "src/lib/liquid-frame.ts"
-                    }
-               ],
-               "dependencies": ["three"],
-               "devDependencies": ["@types/three"]
-          },
-          {
-               "name": "showcase",
-               "type": "registry:block",
-               "title": "Showcase Component",
-               "description": "A React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases.",
-               "files": [
-                    {
-                         "path": "src/registry/default/showcase/components/showcase.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/showcase.tsx"
-                    }
-               ],
-               "dependencies": [
-                    "three",
-                    "@react-three/postprocessing",
-                    "@react-three/drei",
-                    "@react-three/fiber"
-               ],
-               "devDependencies": ["@types/three"]
-          },
-          {
-               "name": "teammates-v1",
-               "type": "registry:block",
-               "title": "Teammates Component",
-               "description": "A component that displays a list of teammates with a hover effect.",
-               "files": [
-                    {
-                         "path": "src/registry/default/teammates/components/teammates-v1.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/teammates-v1.tsx"
-                    }
-               ],
-               "dependencies": ["gsap"],
-               "devDependencies": ["@types/gsap"]
-          },
-          {
-               "name": "teammates-v2",
-               "type": "registry:block",
-               "title": "Teammates Component",
-               "description": "A component that displays a list of teammates with a hover effect.",
-               "files": [
-                    {
-                         "path": "src/registry/default/teammates/components/teammates-v2.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/teammates-v2.tsx"
+                         "target": "src/lib/icons.ts"
                     },
                     {
-                         "path": "src/registry/default/teammates/components/ui/icons.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/icons.tsx"
-                    }
-               ],
-               "dependencies": ["framer-motion"]
-          },
-          {
-               "name": "vanilla-tilt-card",
-               "type": "registry:block",
-               "title": "Vanilla Tilt Card",
-               "description": "A component that displays a 3D tilt effect using VanillaTilt.",
-               "files": [
-                    {
-                         "path": "src/registry/default/card/components/vanilla-tilt-card.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/vanilla-tilt-card.tsx"
-                    }
-               ],
-               "dependencies": ["vanilla-tilt"]
-          },
-          {
-               "name": "sidemenu",
-               "type": "registry:block",
-               "title": "SideMenu",
-               "description": "The SideMenu component is a compact and interactive sidebar menu, ideal for responsive navigation. It offers a toggleable design with smooth animations, making it a versatile choice for modern web applications.",
-               "files": [
-                    {
-                         "path": "src/registry/default/sidemenu/components/sidemenu.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/sidemenu.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/sidemenu/components/ui/button.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/button.tsx"
-                    },
-                    {
-                         "path": "src/registry/default/sidemenu/components/ui/nav.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/nav.tsx"
-                    }
-               ],
-               "dependencies": ["framer-motion"]
-          },
-          {
-               "name": "vertical-flow-carousel",
-               "type": "registry:block",
-               "title": "Vertical Flow Carousel",
-               "description": "A vertical flow carousel component that displays a list of items in a vertical flow at a fixed interval.",
-               "files": [
-                    {
-                         "path": "src/registry/default/carousel/components/vertical-flow.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/vertical-flow-carousel.tsx"
-                    },
-                    {
-                         "path": "src/lib/utils.ts",
+                         "path": "src/registry/default/lib/utils.ts",
                          "type": "registry:lib",
                          "target": "src/lib/utils.ts"
                     }
-               ],
-               "dependencies": ["motion", "react-icons"]
+               ]
+          },
+          {
+               "name": "info-badge",
+               "type": "registry:ui",
+               "title": "Info Badge",
+               "description": "A info badge component that displays an info badge with customizable colors and styling.",
+               "registryDependencies": ["utils"],
+               "files": [
+                    {
+                         "path": "src/registry/default/ui/info-badge.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/info-badge.tsx"
+                    },
+                    {
+                         "path": "src/registry/default/ui/icon.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/icon.tsx"
+                    },
+                    {
+                         "path": "src/registry/default/lib/icons.ts",
+                         "type": "registry:lib",
+                         "target": "src/lib/icons.ts"
+                    }
+               ]
+          },
+          {
+               "name": "feature-box",
+               "type": "registry:ui",
+               "title": "Feature Box",
+               "description": "A feature box component that displays a feature box with customizable colors and styling.",
+               "registryDependencies": ["utils"],
+               "files": [
+                    {
+                         "path": "src/registry/default/ui/feature-box.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/feature-box.tsx"
+                    },
+                    {
+                         "path": "src/registry/default/ui/icon.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/icon.tsx"
+                    },
+                    {
+                         "path": "src/registry/default/lib/icons.ts",
+                         "type": "registry:lib",
+                         "target": "src/lib/icons.ts"
+                    }
+               ]
           },
           {
                "name": "split-view-panel",
                "type": "registry:block",
                "title": "Split View Panel",
-               "description": "A service card component that displays a list of items in a vertical flow at a fixed interval.",
+               "description": "A split view panel component that displays a split view panel with customizable colors and styling.",
+               "registryDependencies": ["utils"],
                "files": [
                     {
-                         "path": "src/registry/default/card/components/split-view-panel.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/SplitViewPanel.tsx"
+                         "path": "src/registry/default/blocks/split-view-panel.tsx",
+                         "type": "registry:block",
+                         "target": "src/components/split-view-panel.tsx"
                     },
                     {
-                         "path": "src/components/ui/icon.tsx",
+                         "path": "src/registry/default/ui/feature-box.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/feature-box.tsx"
+                    },
+                    {
+                         "path": "src/registry/default/ui/info-badge.tsx",
+                         "type": "registry:ui",
+                         "target": "src/components/ui/info-badge.tsx"
+                    },
+                    {
+                         "path": "src/registry/default/ui/icon.tsx",
                          "type": "registry:ui",
                          "target": "src/components/ui/icon.tsx"
                     },
                     {
-                         "path": "src/lib/icons.ts",
+                         "path": "src/registry/default/lib/icons.ts",
                          "type": "registry:lib",
                          "target": "src/lib/icons.ts"
-                    },
-                    {
-                         "path": "src/lib/utils.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/utils.ts"
                     }
                ],
-               "dependencies": ["motion", "react-icons"]
-          },
-          {
-               "name": "feature-box",
-               "type": "registry:block",
-               "title": "Feature Box",
-               "description": "A feature box component that displays a title, description, and icon with customizable colors and styling.",
-               "files": [
-                    {
-                         "path": "src/components/ui/FeatureBox.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/ui/FeatureBox.tsx"
-                    },
-                    {
-                         "path": "src/components/ui/icon.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/icon.tsx"
-                    },
-                    {
-                         "path": "src/lib/icons.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/icons.ts"
-                    },
-                    {
-                         "path": "src/lib/utils.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/utils.ts"
-                    }
-               ],
-               "dependencies": ["class-variance-authority", "react-icons", "lucide-react"]
-          },
-          {
-               "name": "info-badge",
-               "type": "registry:block",
-               "title": "Info Badge",
-               "description": "A compact info badge component that displays a title with an icon, perfect for status indicators and notifications.",
-               "files": [
-                    {
-                         "path": "src/components/ui/InfoBadge.tsx",
-                         "type": "registry:component",
-                         "target": "src/components/ui/InfoBadge.tsx"
-                    },
-                    {
-                         "path": "src/components/ui/icon.tsx",
-                         "type": "registry:ui",
-                         "target": "src/components/ui/icon.tsx"
-                    },
-                    {
-                         "path": "src/lib/icons.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/icons.ts"
-                    },
-                    {
-                         "path": "src/lib/utils.ts",
-                         "type": "registry:lib",
-                         "target": "src/lib/utils.ts"
-                    }
-               ],
-               "dependencies": ["class-variance-authority", "react-icons", "lucide-react"]
+               "dependencies": ["lucide-react", "react-icons"]
           }
      ]
 }

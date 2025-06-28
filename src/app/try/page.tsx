@@ -1,4 +1,5 @@
-import SplitViewPanel from '@/registry/default/card/components/split-view-panel'
+import SplitViewPanel from '@/registry/default/blocks/split-view-panel'
+import Navbar from '@/components/home/Navbar'
 
 const SplitViewPanelData = {
      imageUrl:
@@ -53,7 +54,8 @@ const SplitViewPanelData = {
 
 export default function Try() {
      return (
-          <div className="">
+          <div className="border-2 border-red-500 h-screen items-center justify-center flex ">
+               <Navbar />
                <SplitViewPanel
                     infoBadge={SplitViewPanelData.infoBadge}
                     featureBox={SplitViewPanelData.featureBox}
