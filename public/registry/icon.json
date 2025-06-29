@@ -11,7 +11,7 @@
   ],
   "registryDependencies": [
     "utils",
-    "http://192.168.31.175:3000/registry/icons.json"
+    "https://elixir-ui-xi.vercel.app/registry/icons.json"
   ],
   "files": [
     {

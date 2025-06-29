@@ -22,7 +22,7 @@
                "type": "registry:ui",
                "title": "Icon",
                "description": "A icon component that displays an icon with customizable colors and styling.",
-               "registryDependencies": ["utils", "http://192.168.31.175:3000/registry/icons.json"],
+               "registryDependencies": ["utils", "https://elixir-ui-xi.vercel.app/registry/icons.json"],
                "files": [
                     {
                          "path": "src/registry/ui/icon.tsx",
@@ -39,8 +39,8 @@
                "description": "A info badge component that displays an info badge with customizable colors and styling.",
                "registryDependencies": [
                     "utils",
-                    "http://192.168.31.175:3000/registry/icons.json",
-                    "http://192.168.31.175:3000/registry/icon.json"
+                    "https://elixir-ui-xi.vercel.app/registry/icons.json",
+                    "https://elixir-ui-xi.vercel.app/registry/icon.json"
                ],
                "files": [
                     {
@@ -57,8 +57,8 @@
                "description": "A feature box component that displays a feature box with customizable colors and styling.",
                "registryDependencies": [
                     "utils",
-                    "http://192.168.31.175:3000/registry/icons.json",
-                    "http://192.168.31.175:3000/registry/icon.json"
+                    "https://elixir-ui-xi.vercel.app/registry/icons.json",
+                    "https://elixir-ui-xi.vercel.app/registry/icon.json"
                ],
                "files": [
                     {
@@ -75,10 +75,10 @@
                "description": "A split view panel component that displays a split view panel with customizable colors and styling.",
                "registryDependencies": [
                     "utils",
-                    "http://192.168.31.175:3000/registry/icons.json",
-                    "http://192.168.31.175:3000/registry/icon.json",
-                    "http://192.168.31.175:3000/registry/info-badge.json",
-                    "http://192.168.31.175:3000/registry/feature-box.json"
+                    "https://elixir-ui-xi.vercel.app/registry/icons.json",
+                    "https://elixir-ui-xi.vercel.app/registry/icon.json",
+                    "https://elixir-ui-xi.vercel.app/registry/info-badge.json",
+                    "https://elixir-ui-xi.vercel.app/registry/feature-box.json"
                ],
                "files": [
                     {
@@ -110,8 +110,8 @@
                "description": "Vertical Flow is a carousel component that allows you to create a vertical flow of content where it switches between cards at a fixed interval.",
                "registryDependencies": [
                     "utils",
-                    "http://192.168.31.175:3000/registry/icons.json",
-                    "http://192.168.31.175:3000/registry/icon.json"
+                    "https://elixir-ui-xi.vercel.app/registry/icons.json",
+                    "https://elixir-ui-xi.vercel.app/registry/icon.json"
                ],
                "files": [
                     {
@@ -201,8 +201,8 @@
                "description": "A side menu component that displays a side menu with customizable colors and styling.",
                "registryDependencies": [
                     "utils",
-                    "http://192.168.31.175:3000/registry/sidemenu-button.json",
-                    "http://192.168.31.175:3000/registry/sidemenu-nav.json"
+                    "https://elixir-ui-xi.vercel.app/registry/sidemenu-button.json",
+                    "https://elixir-ui-xi.vercel.app/registry/sidemenu-nav.json"
                ],
                "files": [
                     {
@@ -235,8 +235,8 @@
                "description": "A profile looper component that displays a profile looper with customizable colors and styling.",
                "registryDependencies": [
                     "utils",
-                    "http://192.168.31.175:3000/registry/icons.json",
-                    "http://192.168.31.175:3000/registry/icon.json"
+                    "https://elixir-ui-xi.vercel.app/registry/icons.json",
+                    "https://elixir-ui-xi.vercel.app/registry/icon.json"
                ],
                "files": [
                     {

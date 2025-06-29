@@ -10,8 +10,8 @@
   ],
   "registryDependencies": [
     "utils",
-    "http://192.168.31.175:3000/registry/sidemenu-button.json",
-    "http://192.168.31.175:3000/registry/sidemenu-nav.json"
+    "https://elixir-ui-xi.vercel.app/registry/sidemenu-button.json",
+    "https://elixir-ui-xi.vercel.app/registry/sidemenu-nav.json"
   ],
   "files": [
     {

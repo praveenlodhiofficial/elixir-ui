@@ -6,10 +6,10 @@
   "description": "A split view panel component that displays a split view panel with customizable colors and styling.",
   "registryDependencies": [
     "utils",
-    "http://192.168.31.175:3000/registry/icons.json",
-    "http://192.168.31.175:3000/registry/icon.json",
-    "http://192.168.31.175:3000/registry/info-badge.json",
-    "http://192.168.31.175:3000/registry/feature-box.json"
+    "https://elixir-ui-xi.vercel.app/registry/icons.json",
+    "https://elixir-ui-xi.vercel.app/registry/icon.json",
+    "https://elixir-ui-xi.vercel.app/registry/info-badge.json",
+    "https://elixir-ui-xi.vercel.app/registry/feature-box.json"
   ],
   "files": [
     {
