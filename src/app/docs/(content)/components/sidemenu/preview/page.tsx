@@ -24,7 +24,7 @@ export default function SideMenuPreview() {
     return (
         <div className="min-h-[35rem] w-[50rem] relative top-0">
             <SideMenu 
-            cardImageURL="/components/sidemenu/bg1.webp"
+            // cardImageURL=""
             cardColor="#FFB6C1" 
             links={Links} 
             footerLinks={FooterLinks} 

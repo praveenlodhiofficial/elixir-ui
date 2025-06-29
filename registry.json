@@ -208,7 +208,7 @@
                     {
                          "path": "src/registry/components/sidemenu.tsx",
                          "type": "registry:component",
-                         "target": "src/components/Sidemenu.tsx"
+                         "target": "src/components/SideMenu.tsx"
                     }
                ],
                "dependencies": ["framer-motion", "class-variance-authority"]

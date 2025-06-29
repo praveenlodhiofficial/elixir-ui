@@ -60,14 +60,14 @@ export default function FeatureBox({
                     <div className={cn('flex items-center gap-2 rounded-full bg-white p-1 pr-5')}>
                          <Icon
                               name={iconName}
-                              className={cn(featureBoxIconVariants({ variant: iconColor }))}
+                              className={cn(featureBoxIconVariants({ variant: iconColor })) }
                          />
                          <h3 className={cn('text-sm font-medium text-gray-900 md:text-base')}>
                               {title}
                          </h3>
                     </div>
                </div>
-               <p className={cn('px-2 text-xs text-black md:text-sm')}>{description}</p>
+               <p className={cn('px-2 text-xs text-black md:text-[15px]')}>{description}</p>
           </div>
      )
 }

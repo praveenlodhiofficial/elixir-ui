@@ -1,4 +1,4 @@
-import SideMenu from "@/registry/components/sidemenu";
+import SideMenu from "@/components/SideMenu";
 
 interface LinkProps {
     title: string;

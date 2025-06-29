@@ -1,4 +1,4 @@
-import LiquidFrameComponent from '@/registry/components/liquid-frame'
+import LiquidFrameComponent from '@/components/LiquidFrame'
 
 const LiquidFrameUsage = () => {
     return (

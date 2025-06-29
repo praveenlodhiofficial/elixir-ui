@@ -1,91 +1,10 @@
 import Navbar from '@/components/home/Navbar'
 import { Button } from '@/components/ui/button'
-import LiquidFrame from '@/registry/default/liquid-frame/components/liquid-frame'
-import VanillaTiltCard from '@/registry/default/card/components/vanilla-tilt-card'
-import ShowcaseComponent from '@/registry/default/showcase/components/showcase'
-import SideMenu from '@/registry/default/sidemenu/components/sidemenu'
-import TeammatesSection from '@/registry/default/teammates/components/teammates-v2'
 import { Icon } from '@/components/ui/icon'
-import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 import Footer from '@/components/home/Footer'
 import AnnoncementBanner from '@/components/home/Banner'
-
-const sampleTeammates = [
-     {
-          id: '1',
-          name: 'Sarah Johnson',
-          role: 'Frontend Developer',
-          company: 'TechCorp',
-          companyUrl: 'https://techcorp.com',
-          image: 'https://images.unsplash.com/photo-1494790108755-2616b612b786?w=400&h=400&fit=crop&crop=face',
-          socialLinks: {
-               twitter: 'https://twitter.com/sarahjohnson',
-               linkedin: 'https://linkedin.com/in/sarahjohnson',
-          },
-     },
-     {
-          id: '2',
-          name: 'Michael Chen',
-          role: 'UI/UX Designer',
-          company: 'DesignStudio',
-          companyUrl: 'https://designstudio.com',
-          image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop&crop=face',
-          socialLinks: {
-               twitter: 'https://twitter.com/michaelchen',
-               linkedin: 'https://linkedin.com/in/michaelchen',
-          },
-     },
-     {
-          id: '3',
-          name: 'Emily Rodriguez',
-          role: 'Product Manager',
-          company: 'InnovateLab',
-          companyUrl: 'https://innovatelab.com',
-          image: 'https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=400&h=400&fit=crop&crop=face',
-          socialLinks: {
-               linkedin: 'https://linkedin.com/in/emilyrodriguez',
-          },
-     },
-]
-
-const features = [
-     {
-          title: 'Beautiful Design',
-          icon: 'Palette',
-          description:
-               'Meticulously crafted components with attention to detail and modern aesthetics.',
-     },
-     {
-          title: 'TypeScript Ready',
-          icon: 'TbBrandTypescript',
-          description:
-               'Fully typed components with excellent developer experience and IntelliSense support.',
-     },
-     {
-          title: 'Copy & Paste',
-          icon: 'Copy',
-          description:
-               'No complex setup required. Just copy the component code and start building.',
-     },
-     {
-          title: 'Performance Optimized',
-          icon: 'Zap',
-          description:
-               'Built with performance in mind, ensuring smooth animations and fast loading.',
-     },
-     {
-          title: 'Premium Quality',
-          icon: 'Star',
-          description: 'High-quality components that you can trust for production applications.',
-     },
-     {
-          title: 'Community Driven',
-          icon: 'Users',
-          description: 'Built by developers, for developers. Open source and community maintained.',
-     },
-]
 
 const Home = () => {
      return (
@@ -167,7 +86,7 @@ const Home = () => {
                                    </p>
                               </div>
 
-                              <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+                              {/* <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
                                    {features.map((feature, index) => (
                                         <div
                                              key={index}
@@ -187,7 +106,7 @@ const Home = () => {
                                              </p>
                                         </div>
                                    ))}
-                              </div>
+                              </div> */}
                          </div>
                     </section>
 

@@ -30,7 +30,11 @@ export default function SplitViewPanel({
                <div className={cn('grid h-full w-full grid-cols-1 gap-5 lg:grid-cols-2 lg:gap-10')}>
                     {/* Left Side - Image */}
                     <div className={cn('h-full w-full')} data-aos="fade-right" data-aos-delay="100">
-                         <div className={cn('relative')}>
+                         <div
+                              className={cn(
+                                   'relative h-full w-full flex-shrink-0'
+                              )}
+                         >
                               <Image
                                    src={imageUrl}
                                    alt={title}
@@ -73,7 +77,7 @@ export default function SplitViewPanel({
                               </h2>
                               <p
                                    className={cn(
-                                        'text-xs text-gray-600 md:text-sm dark:text-gray-300'
+                                        'text-xs text-gray-600 md:text-base dark:text-gray-300'
                                    )}
                               >
                                    {description}
@@ -99,7 +103,7 @@ export default function SplitViewPanel({
                                    'group flex w-fit items-center justify-start gap-2 rounded-full bg-orange-500 px-4 py-2 font-medium text-white transition-colors hover:bg-orange-600'
                               )}
                          >
-                              <p className={cn('text-xs md:text-sm')}>Request Custom Service</p>
+                              <p className={cn('text-xs md:text-base')}>Request Custom Service</p>
                               <Icon
                                    name="ArrowRight"
                                    className={cn(

@@ -1,4 +1,4 @@
-import TidalTextAnimation from '@/components/tidal-text-animation'
+import TidalTextAnimation from '@/components/TidalTextAnimation'
 import React from 'react'
 
 const teamMembers = [

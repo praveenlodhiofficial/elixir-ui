@@ -1,4 +1,4 @@
-import SplitViewPanel from '@/registry/blocks/split-view-panel'
+import SplitViewPanel from "@/registry/blocks/split-view-panel"
 
 const SplitViewPanelData = {
      imageUrl:
@@ -27,14 +27,8 @@ const SplitViewPanelData = {
           {
                title: 'Beautiful Animations',
                description: 'Smooth, performant animations that enhance user experience.',
-               iconColor: 'orange',
+               iconColor: 'blue',
                iconName: 'FaRocket',
-          },
-          {
-               title: 'Responsive Design',
-               description: 'All components are mobile-first and fully responsive.',
-               iconColor: 'green',
-               iconName: 'FaCode',
           },
           {
                title: 'Dark Mode Support',
@@ -42,18 +36,12 @@ const SplitViewPanelData = {
                iconColor: 'purple',
                iconName: 'FaLightbulb',
           },
-          {
-               title: 'Accessibility First',
-               description: 'WCAG compliant components for inclusive design.',
-               iconColor: 'blue',
-               iconName: 'FaShield',
-          },
      ],
 }
 
 export default function SplitViewPanelPreview() {
      return (
-          <div className="scale-92 scale-x-95">
+          <div className="scale-94">
                <SplitViewPanel
                     infoBadge={SplitViewPanelData.infoBadge}
                     featureBox={SplitViewPanelData.featureBox}

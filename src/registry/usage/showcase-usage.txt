@@ -1,4 +1,4 @@
-import ShowcaseComponent from '@/components/showcase'
+import ShowcaseComponent from '@/components/Showcase'
 
 const ShowcaseUsage = async () => {
      return (

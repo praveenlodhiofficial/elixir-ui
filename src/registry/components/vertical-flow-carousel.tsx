@@ -112,7 +112,12 @@ export default function VerticalFlowCarousel({ className, cards }: VerticalFlowC
                                                   </h1>
                                              </div>
                                         </div>
-                                        <Icon name="TbArrowRight" className="h-5 w-5 rotate-0 transition-all duration-200 group-hover:block group-hover:translate-x-2 group-hover:-rotate-45" />
+                                        <Icon
+                                   name="ArrowRight"
+                                   className={cn(
+                                        'h-4 w-4 transition-all duration-250 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:rotate-[-45deg] md:h-4 md:w-4'
+                                   )}
+                              />
                                    </div>
 
                                    <motion.p

@@ -1,4 +1,4 @@
-import VanillaTiltCard from '@/components/vanilla-tilt-card'
+import VanillaTiltCard from '@/components/VanillaTiltCard'
 import Image from 'next/image'
 import React from 'react'
 

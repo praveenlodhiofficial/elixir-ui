@@ -1,4 +1,4 @@
-import ProfileLooper from '@/registry/components/profile-looper'
+import ProfileLooper from '@/components/ProfileLooper'
 
 const teamMembers = [
      {

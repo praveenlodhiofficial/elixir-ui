@@ -1,5 +1,5 @@
-import SplitViewPanel from '@/registry/blocks/split-view-panel'
 import Navbar from '@/components/home/Navbar'
+import SplitViewPanel from '@/registry/blocks/split-view-panel'
 
 const SplitViewPanelData = {
      imageUrl:

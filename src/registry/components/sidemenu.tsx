@@ -65,8 +65,8 @@ const backgroundVariants = cva('absolute inset-0 overflow-hidden rounded-[20px]'
 })
 
 export default function SideMenu({
-     cardColor = '#c9fd74',
-     cardImageURL,
+     cardColor = '',
+     cardImageURL="https://imgs.search.brave.com/yN35k8wE_67PIKda9ZWGLieCtzHPG8STXSe5IH4-Ykk/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly90NC5m/dGNkbi5uZXQvanBn/LzAyLzEwLzQ1Lzk1/LzM2MF9GXzIxMDQ1/OTUzNl9YbUxERWNL/cTJEcGVOTFZtaGV1/V2V1OU5NOWFHS25p/aC5qcGc",
      imageOpacity = 1,
      imageSaturation = 1,
      links,
@@ -110,6 +110,7 @@ export default function SideMenu({
           <div className={cn(containerVariants({ size, position, className }))} {...props}>
                <motion.div
                     className={cn(menuVariants({ theme }))}
+                    // @ts-ignore
                     variants={variants}
                     initial="closed"
                     animate={isActive ? 'open' : 'closed'}

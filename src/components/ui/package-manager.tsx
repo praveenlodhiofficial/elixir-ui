@@ -37,7 +37,6 @@ export const PackageManagers: React.FC<PackageManagersProps> = ({ command, pkg }
                     className="my-3 border border-zinc-300 pl-1 md:pl-5 dark:border-zinc-800 dark:bg-white/5"
                     code={selected.getCmd(command, pkg)}
                     lang="shell"
-                    withExpand={false}
                />
           </div>
      )

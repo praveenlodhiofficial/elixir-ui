@@ -1,4 +1,4 @@
-import SplitViewPanel from '@/components/split-view-panel'
+import SplitViewPanel from '@/components/SplitViewPanel'
 
 const SplitViewPanelData = {
      imageUrl:
@@ -53,7 +53,6 @@ const SplitViewPanelData = {
 
 export default function SplitViewPanelUsage() {
      return (
-          <div className="scale-92 scale-x-95">
                <SplitViewPanel
                     infoBadge={SplitViewPanelData.infoBadge}
                     featureBox={SplitViewPanelData.featureBox}
@@ -61,6 +60,5 @@ export default function SplitViewPanelUsage() {
                     description={SplitViewPanelData.description}
                     title={SplitViewPanelData.title}
                />
-          </div>
      )
 }

@@ -125,8 +125,8 @@ export default function SidemenuNav({ links, footerLinks, size, className, ...pr
                          >
                               <motion.div
                                    custom={{ index }}
-                                   variants={perspective}
-                                   initial="initial"
+                                   variants={{perspective}
+}                                   initial="initial"
                                    animate="enter"
                                    exit="exit"
                               >
@@ -148,7 +148,7 @@ export default function SidemenuNav({ links, footerLinks, size, className, ...pr
                          <motion.div
                               key={index}
                               custom={{ index }}
-                              variants={footerAnimation}
+                              variants={{footerAnimation}}
                               initial="initial"
                               animate="enter"
                               exit="exit"
