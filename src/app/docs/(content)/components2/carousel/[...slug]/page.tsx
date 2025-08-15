@@ -1,52 +1,47 @@
-import React from 'react'
-import { generateComponentMetadata } from '@/lib/metadata'
-import { Metadata } from 'next'
-import ComponentTemplate from '@/components/ComponentTemplate'
-import { Carousel1Preview } from '@/app/docs/(content)/preview/carousel1'
-import Carousel2Preview from '@/app/docs/(content)/preview/carousel2'
+import ComponentViewer from '@/components/ComponentViewer'
+import { readUsageFile } from '@/lib/file-utils'
 import carouselData from '@/app/docs/(content)/data/carousel.json'
-import { generateComponentMapping } from '@/lib/component-mapper'
 
-// Dynamic metadata generation
-export async function generateMetadata({ params }: { params: { slug: string[] } }): Promise<Metadata> {
-  const componentName = params.slug[0] || 'carousel'
-  return generateComponentMetadata(componentName)
+interface CarouselPageProps {
+    params: {
+        slug: string[]
+    }
 }
 
-// Automated component mapping - no more manual updates needed!
-const carouselComponents = generateComponentMapping(
-  carouselData,
-  {
-    carousel1: Carousel1Preview,
-    carousel2: Carousel2Preview
-  }
-)
-
-// Dynamic page component
-export default function CarouselPage({ params }: { params: { slug: string[] } }) {
-  const componentKey = params.slug[0] || '1'
-  const component = carouselComponents[componentKey as keyof typeof carouselComponents]
-
-  if (!component) {
-    return (
-      <div className="flex items-center justify-center min-h-[400px]">
-        <div className="text-center">
-          <h1 className="text-2xl font-bold mb-4">Component Not Found</h1>
-          <p className="text-gray-600">The carousel component "{componentKey}" could not be found.</p>
-          <p className="text-sm text-gray-500 mt-2">Available components: 1, 2</p>
-        </div>
-      </div>
+export default async function CarouselPage({ params }: CarouselPageProps) {
+    const slug = (await params).slug[0] || '1'
+    
+    // Find the carousel data based on slug
+    const carouselKey = Object.keys(carouselData).find(
+        key => carouselData[key as keyof typeof carouselData].slug === slug
     )
-  }
+    
+    // Default to carousel1 if no match found
+    const carousel = carouselKey ? carouselData[carouselKey as keyof typeof carouselData] : carouselData.carousel1
+    
+    // Dynamically import the preview component
+    let PreviewComponent
+    try {
+        const componentModule = await import(`@/app/docs/(content)/preview/${carouselKey || 'carousel1'}`)
+        PreviewComponent = componentModule[carousel.previewComponent as keyof typeof componentModule]
+    } catch (error) {
+        console.error(`Failed to load preview component: ${carousel.previewComponent}`)
+        // Fallback to a default component or show error
+        PreviewComponent = () => <div>Preview component not found</div>
+    }
+    
+    // Read the file contents
+    const codePath = await readUsageFile(carousel.codePath)
+    const usagePath = await readUsageFile(carousel.usagePath)
 
-  return (
-    <ComponentTemplate 
-      title={component.title}
-      description={component.description}
-      componentPath={component.componentPath}
-      previewComponent={component.previewComponent}
-      installation={component.installation}
-      usage={component.usage}
-    />
-  )
-} 
+    return (
+        <ComponentViewer
+            preview={<PreviewComponent />}
+            codePath={codePath}
+            usagePath={usagePath}
+            cliCommands={carousel.cliCommand}
+        />
+    )
+}
+
+

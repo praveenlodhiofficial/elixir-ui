@@ -9,7 +9,7 @@ export function Carousel1Preview() {
 
   return (
 
-      <div className='mt-10 bg-secondary-bg-color h-[80vh] justify-center items-center w-full max-w-lg flex flex-col mx-auto gap-10 border border-primary-text-color/30 py-10 px-15 rounded-xl'>
+      <div className='my-10 bg-secondary-bg-color h-[80vh] justify-center items-center w-full max-w-lg flex flex-col mx-auto gap-10 border border-primary-text-color/30 py-10 px-15 rounded-xl'>
 
         {/* Buttons to switch between interfaces (web, phone, sms) */}
         <div className="flex gap-3 justify-center items-center w-fit mb-5">

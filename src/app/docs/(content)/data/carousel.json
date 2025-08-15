@@ -1,132 +1,16 @@
 {
   "carousel1": {
-    "title": "Carousel #1",
-    "description": "A versatile carousel component with multiple interface views (web, phone, SMS) that allows users to switch between different display modes.",
-    "componentPath": "src/registry/components/carousel1.tsx",
-    "previewPath": "src/app/docs/(content)/preview/carousel1.tsx",
-    "category": "Carousel",
-    "tags": ["carousel", "interface", "responsive", "interactive"],
-    "installation": {
-      "cliSteps": [
-        {
-          "step": 1,
-          "title": "Install via CLI",
-          "code": "npx shadcn add https://elixir-ui-xi.vercel.app/registry/carousel1.json"
-        }
-      ],
-      "manualSteps": [
-        {
-          "step": 1,
-          "title": "Copy component file",
-          "code": "Copy carousel1.tsx to your components directory"
-        },
-        {
-          "step": 2,
-          "title": "Install dependencies",
-          "code": "npm install @radix-ui/react-slot"
-        },
-        {
-          "step": 3,
-          "title": "Import and use",
-          "code": "import { Carousel1 } from '@/components/carousel1'"
-        }
-      ]
-    },
-    "usage": {
-      "steps": [
-        {
-          "step": 1,
-          "title": "Import the component",
-          "code": "import { Carousel1 } from '@/components/carousel1'"
-        },
-        {
-          "step": 2,
-          "title": "Use in your JSX",
-          "code": "<Carousel1 />"
-        },
-        {
-          "step": 3,
-          "title": "Customize as needed",
-          "code": "Add your own content and styling"
-        }
-      ]
-    },
-    "features": [
-      "Multiple interface views (Web, Phone, SMS)",
-      "Interactive category switching",
-      "Responsive design",
-      "Customizable styling",
-      "Smooth transitions"
-    ],
-    "dependencies": [
-      "@radix-ui/react-slot",
-      "react",
-      "tailwindcss"
-    ]
+    "slug": "1",
+    "previewComponent": "Carousel1Preview",
+    "codePath": "src/registry/components/carousel1.tsx",
+    "usagePath": "src/app/docs/(content)/preview/carousel1.tsx",
+    "cliCommand": "npx create-next-app@latest"
   },
   "carousel2": {
-    "title": "Carousel #2",
-    "description": "A card-based carousel component that displays multiple items with smooth transitions and interactive navigation.",
-    "componentPath": "src/registry/components/carousel2.tsx",
-    "previewPath": "src/app/docs/(content)/preview/carousel2.tsx",
-    "category": "Carousel",
-    "tags": ["carousel", "cards", "navigation", "transitions"],
-    "installation": {
-      "cliSteps": [
-        {
-          "step": 1,
-          "title": "Install via CLI",
-          "code": "npx shadcn add https://elixir-ui-xi.vercel.app/registry/carousel2.json"
-        }
-      ],
-      "manualSteps": [
-        {
-          "step": 1,
-          "title": "Copy component file",
-          "code": "Copy carousel2.tsx to your components directory"
-        },
-        {
-          "step": 2,
-          "title": "Install dependencies",
-          "code": "npm install @radix-ui/react-slot"
-        },
-        {
-          "step": 3,
-          "title": "Import and use",
-          "code": "import Carousel2 from '@/components/carousel2'"
-        }
-      ]
-    },
-    "usage": {
-      "steps": [
-        {
-          "step": 1,
-          "title": "Import the component",
-          "code": "import Carousel2 from '@/components/carousel2'"
-        },
-        {
-          "step": 2,
-          "title": "Prepare your data",
-          "code": "const cards = [{ title: 'Item 1', description: 'Description 1' }]"
-        },
-        {
-          "step": 3,
-          "title": "Use in your JSX",
-          "code": "<Carousel2 cards={cards} />"
-        }
-      ]
-    },
-    "features": [
-      "Card-based layout",
-      "Smooth transitions",
-      "Interactive navigation",
-      "Customizable card content",
-      "Responsive design"
-    ],
-    "dependencies": [
-      "@radix-ui/react-slot",
-      "react",
-      "tailwindcss"
-    ]
+    "slug": "2",
+    "previewComponent": "Carousel2Preview",
+    "codePath": "src/registry/components/carousel2.tsx",
+    "usagePath": "src/app/docs/(content)/preview/carousel2.tsx",
+    "cliCommand": "npx create-next-app@latest"
   }
 }

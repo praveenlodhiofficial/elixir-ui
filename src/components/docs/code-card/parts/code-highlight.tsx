@@ -32,7 +32,7 @@ const CodeHighlight = ({ code, inTab = false, lang = 'tsx', className }: CodeHig
                />
                <div
                     className={cn(
-                         'max-h-[400px] min-h-[40px] overflow-y-auto rounded-md contrast-150 saturate-200'
+                         'max-h-[70vh] overflow-y-auto rounded-md contrast-150 saturate-200'
                     )}
                >
                     <Highlight className={cn('font-exo text-xs/6 whitespace-pre', lang)}>

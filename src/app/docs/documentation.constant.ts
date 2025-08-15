@@ -52,68 +52,34 @@ export const DOCS: Documentation[] = [
                {
                     label: 'Team',
                     value: 'team',
-                    url: '/docs/components/team',
-                    children: [
-                         {
-                              label: 'Tidal Text Animation',
-                              value: 'tidal-text-animation',
-                              url: '/docs/components/team/tidal-text-animation',
-                         },
-                         {
-                              label: 'Profile Looper',
-                              value: 'profile-looper',
-                              url: '/docs/components/team/profile-looper',
-                              new: true,
-                         },
-                    ],
+                    url: '/docs/components2/team',
                },
                {
                     label: 'Liquid Frame',
                     value: 'liquid-frame',
-                    url: '/docs/components/liquid-frame',
+                    url: '/docs/components2/liquid-frame',
                     new: true,
                },
                {
                     label: 'Showcase',
                     value: 'showcase',
-                    url: '/docs/components/showcase',
+                    url: '/docs/components2/showcase',
                },
                {
                     label: 'Card',
                     value: 'card',
-                    url: '/docs/components/card',
-                    children: [
-                         {
-                              label: '3D Vanilla Tilt',
-                              value: '3d-tilt-card',
-                              url: '/docs/components/card/vanilla-tilt-card',
-                         },
-                         {
-                              label: 'Split View Panel',
-                              value: 'split-view-panel',
-                              url: '/docs/components/card/split-view-panel',
-                              new: true,
-                         },
-                    ],
+                    url: '/docs/components2/card',
                },
                {
                     label: 'SideMenu',
                     value: 'sidemenu',
-                    url: '/docs/components/sidemenu',
+                    url: '/docs/components2/sidemenu',
                     new: true,
                },
                {
                     label: 'Carousel',
                     value: 'carousel',
-                    url: '/docs/components/carousel',
-                    children: [
-                         {
-                              label: 'Vertical Flow',
-                              value: 'vertical-flow-carousel',
-                              url: '/docs/components/carousel/vertical-flow-carousel',
-                              new: true,
-                         },
-                    ],
+                    url: '/docs/components2/carousel',
                },
           ],
      },

@@ -46,7 +46,7 @@ const Carousel2Cards = [
      },
 ]
 
-export default function Carousel2Preview() {
+export function Carousel2Preview() {
      return (
           <div className="h-full w-full max-w-5xl">
                <Carousel2 cards={Carousel2Cards} />

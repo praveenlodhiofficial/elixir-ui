@@ -1,68 +1,18 @@
-import Navbar from '@/components/home/Navbar'
-import SplitViewPanel from '@/registry/blocks/split-view-panel'
+import ComponentViewer from "@/components/ComponentViewer";
+import Carousel2 from "@/registry/components/carousel2";
+import Carousel2Preview from "../docs/(content)/preview/carousel2";
 
-const SplitViewPanelData = {
-     imageUrl:
-          'https://images.pexels.com/photos/3184405/pexels-photo-3184405.jpeg?auto=compress&cs=tinysrgb&w=800',
-     description:
-          "Discover the power of Elixir UI - a comprehensive collection of modern, customizable React components. Whether you're building a landing page, dashboard, or complex web application, our carefully crafted components will help you create stunning user interfaces with ease. Start building beautiful UIs today!",
-     title: 'Ready to Build Something Amazing?',
-     infoBadge: [
-          {
-               title: 'Modern React Components',
-               iconColor: 'orange',
-               iconName: 'Circle',
-          },
-          {
-               title: 'Fully Customizable',
-               iconColor: 'green',
-               iconName: 'Check',
-          },
-          {
-               title: 'TypeScript Ready',
-               iconColor: 'blue',
-               iconName: 'Info',
-          },
-     ],
-     featureBox: [
-          {
-               title: 'Beautiful Animations',
-               description: 'Smooth, performant animations that enhance user experience.',
-               iconColor: 'orange',
-               iconName: 'FaRocket',
-          },
-          {
-               title: 'Responsive Design',
-               description: 'All components are mobile-first and fully responsive.',
-               iconColor: 'green',
-               iconName: 'FaCode',
-          },
-          {
-               title: 'Dark Mode Support',
-               description: 'Built-in dark mode with seamless theme switching.',
-               iconColor: 'purple',
-               iconName: 'FaLightbulb',
-          },
-          {
-               title: 'Accessibility First',
-               description: 'WCAG compliant components for inclusive design.',
-               iconColor: 'blue',
-               iconName: 'FaShield',
-          },
-     ],
-}
-
-export default function Try() {
-     return (
-          <div className="flex h-screen items-center justify-center border-2 border-red-500">
-               <Navbar />
-               <SplitViewPanel
-                    infoBadge={SplitViewPanelData.infoBadge}
-                    featureBox={SplitViewPanelData.featureBox}
-                    imageUrl={SplitViewPanelData.imageUrl}
-                    description={SplitViewPanelData.description}
-                    title={SplitViewPanelData.title}
-               />
-          </div>
-     )
+export default function TryPage() {
+    return (
+        <div className="absolute inset-0 h-[90vh] mx-20 my-10">
+            {/* <ComponentViewer
+                preview={<Carousel2Preview />}
+                code="/src/components/Navbar.tsx"
+                usageContent={<Carousel2Preview />}
+                cliCommands={"npx create-next-app@latest"}
+                className="h-full"
+                
+            /> */}
+        </div>
+      );
 }
