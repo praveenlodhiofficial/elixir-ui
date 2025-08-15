@@ -7,7 +7,8 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "build:registry": "pnpm dlx shadcn@latest build --output ./public/registry"
+    "build:registry": "pnpm dlx shadcn@latest build --output ./public/registry",
+    "generate:mapping": "tsx scripts/generate-component-mapping.ts"
   },
   "dependencies": {
     "@radix-ui/react-accordion": "^1.2.10",

@@ -1,4 +1,4 @@
-import VerticalFlowCarousel from '@/registry/components/vertical-flow-carousel'
+import VerticalFlowCarousel from '@/registry/components/carousel2'
 
 const VerticalFlowCarouselCards = [
      {
