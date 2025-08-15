@@ -48,18 +48,18 @@ export function WebInterface() {
             <div className='w-full flex flex-col mx-auto gap-2'>
                 <Input
                     placeholder='Ask James a question'
-                    leftIcon={<SearchIcon className='w-4 h-4 text-secondary-text-color' />}
-                    rightIcon={<FaArrowRight className='w-5.5 h-5.5 text-secondary-bg-color bg-primary-text-color rounded-full p-1' />}
-                    className="backdrop-blur-sm rounded-full px-10 focus-visible:ring-0 focus-visible:ring-offset-0 border border-primary-text-color/30 text-light text-primary-text-color/70"
+                    leftIcon={<SearchIcon className='w-4 h-4' />}
+                    rightIcon={<FaArrowRight className='w-5.5 h-5.5 rounded-full p-1' />}
+                    className="backdrop-blur-sm rounded-full px-10 focus-visible:ring-0 focus-visible:ring-offset-0 border text-light"
                 />
-                <p className='text-center text-secondary-text-color font-light tracking-wide text-[12.5px] flex items-center justify-center gap-2'>
+                <p className='text-center font-light tracking-wide text-[12.5px] flex items-center justify-center gap-2'>
                     Powered by
-                    <Logo width={14} height={14} fill="white" />
+                    <Logo width={14} height={14} fill="black" className="dark:invert" />
                     Delphi
                 </p>
             </div>
 
-            <p className='text-center text-secondary-text-color font-light tracking-wide text-[12.5px]'>
+            <p className='text-center font-light tracking-wide text-[12.5px]'>
                 Embed your Digital Mind across SMS, WhatsApp, Slack,
                 <br className='hidden md:block' />
                 websites, voice, and video. Your voice, authentic everywhere.
@@ -74,29 +74,29 @@ export function PhoneInterface() {
             <div className="flex flex-col justify-between items-center">
                 <div className="flex gap-2 items-center justify-center">
                     <CardTemplateDescription description="Delphi Audio" className="text-[13px]" />
-                    <Logo className='w-3.5 h-3.5 opacity-60' />
+                    <Logo className='w-3.5 h-3.5 opacity-60 dark:invert' fill="black" />
                     <CardTemplateDescription description="01:32" className="text-[13px]" />
                 </div>
                 <CardTemplateTitle title="Keith Rabois" className="text-4xl" />
             </div>
 
             <div className='w-full flex flex-col mx-auto gap-6'>
-                <div className="flex items-start gap-2 backdrop-blur-sm rounded-md p-3 text-sm border border-primary-text-color/30 text-light text-primary-text-color/70">
+                <div className="flex items-start gap-2 backdrop-blur-sm rounded-md p-3 text-sm border text-light">
                     <BiEqualizer className="absolute w-4.5 h-4.5 mt-1" />
-                    <p className="pl-8 text-primary-text-color/70 font-light text-[13px]">
-                    &quot;Argue the opposite of what you believe. If you can&apos;t, you don&apos;t understand it well enough.&quot;
+                    <p className="pl-8 font-light text-[13px]">
+                        &quot;Argue the opposite of what you believe. If you can&apos;t, you don&apos;t understand it well enough.&quot;
                     </p>
                 </div>
 
                 <div className="w-full flex items-center justify-center">
                     <div
-                        className="transition-all p-5 rounded-full duration-300 group-hover:bg-primary-text-color bg-secondary-color/70 group-hover:text-primary-bg-color text-primary-text-color w-fit justify-end">
+                        className="transition-all p-5 rounded-full duration-300 w-fit justify-end bg-black/8 dark:bg-white/8">
                         <FaPhone className="w-7 h-7" />
                     </div>
                 </div>
             </div>
 
-            <p className='text-center text-secondary-text-color font-light tracking-wide text-[12.5px]'>
+            <p className='text-center font-light tracking-wide text-[12.5px]'>
                 Embed your Digital Mind across SMS, WhatsApp, Slack,
                 <br className='hidden md:block' />
                 websites, voice, and video. Your voice, authentic everywhere.
@@ -121,15 +121,15 @@ export function SmsInterface() {
 
             {/* Search Bar */}
             <div className='w-full flex gap-3 items-center justify-center'>
-                    <FaPlus className='flex w-7 h-7 text-secondary-bg-color bg-primary-text-color rounded-full p-1' />
-                    <Input
-                        placeholder='Message'
-                        rightIcon={<FaMicrophone className='w-5.5 h-5.5 text-secondary-bg-color bg-primary-text-color rounded-full p-[4.5px]' />}
-                        className="w-88 backdrop-blur-sm rounded-full px-4 focus-visible:ring-0 focus-visible:ring-offset-0 border border-primary-text-color/30 text-light text-primary-text-color/70"
-                    />
+                <FaPlus className='flex w-7 h-7 rounded-full p-1' />
+                <Input
+                    placeholder='Message'
+                    rightIcon={<FaMicrophone className='w-5.5 h-5.5 rounded-full p-[4.5px]' />}
+                    className="w-88 backdrop-blur-sm rounded-full px-4 focus-visible:ring-0 focus-visible:ring-offset-0 border text-light"
+                />
             </div>
 
-            <p className='text-center text-secondary-text-color font-light tracking-wide text-[12.5px]'>
+            <p className='text-center font-light tracking-wide text-[12.5px]'>
                 Embed your Digital Mind across SMS, WhatsApp, Slack,
                 <br className='hidden md:block' />
                 websites, voice, and video. Your voice, authentic everywhere.

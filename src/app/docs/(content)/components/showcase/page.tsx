@@ -1,110 +1,59 @@
-import React from 'react'
-import { PageSubTitle, PageTemplate } from '@/components/docs/page-template'
-import PreviewCodeCard from '@/components/docs/preview-code-card'
-import { Steppers } from '@/components/ui/steppers'
-import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs'
-import { cn } from '@/lib/utils'
-import Showcase from './preview/page'
-import { generateComponentMetadata } from '@/lib/metadata'
-import { Metadata } from 'next'
+import Image from "next/image";
+import Link from "next/link";
+import showcase1Data from "@/app/docs/(content)/data/showcase.json";
 
-export const metadata: Metadata = generateComponentMetadata('showcase')
+export default function Showcase1Page() {
+    const showcase1Count = Object.keys(showcase1Data).length;
+    
+    // Separate cards into odd and even indices
+    const oddIndexCards = [];
+    const evenIndexCards = [];
+    
+    for (let i = 0; i < showcase1Count; i++) {
+        if (i % 2 === 0) {
+            // Even index (0, 2, 4...) goes to left column
+            oddIndexCards.push(i);
+        } else {
+            // Odd index (1, 3, 5...) goes to right column
+            evenIndexCards.push(i);
+        }
+    }
 
-const ShowcasePage = () => {
-     return (
-          <PageTemplate
-               title="Showcase"
-               className="md:mt-5"
-               description="A React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases."
-          >
-               <section className="space-y-8">
-                    <PreviewCodeCard path="src/registry/components/showcase.tsx">
-                         <Showcase />
-                    </PreviewCodeCard>
-
-                    <section>
-                         <PageSubTitle>Installation</PageSubTitle>
-                         <p className="pb-2 text-gray-800 md:pb-5 dark:text-gray-200">
-                              Follow the steps below to add the{' '}
-                              <span className="font-bold">Showcase Component</span> to your project.
-                         </p>
-
-                         <Tabs defaultValue="cli" className={cn('mb-5 md:mb-10')}>
-                              <TabsList className="w-32 border bg-transparent">
-                                   <TabsTrigger
-                                        value="cli"
-                                        className="cursor-pointer border-none bg-transparent text-sm/6 font-semibold dark:bg-transparent"
-                                   >
-                                        CLI
-                                   </TabsTrigger>
-                                   <TabsTrigger
-                                        value="manual"
-                                        className="cursor-pointer border-none bg-transparent text-sm/6 font-semibold dark:bg-transparent"
-                                   >
-                                        Manual
-                                   </TabsTrigger>
-                              </TabsList>
-
-                              <TabsContent value="cli" className="mt-4 rounded-md">
-                                   <Steppers
-                                        className="mb-5 md:mb-10"
-                                        steps={[
-                                             {
-                                                  step: '+',
-                                                  title: 'Run the following command in the terminal.',
-                                                  codePath: 'src/registry/cli/showcase-cli.txt',
-                                             },
-                                        ]}
-                                   />
-                              </TabsContent>
-
-                              <TabsContent value="manual" className="mt-4 rounded-md">
-                                   <Steppers
-                                        className="mb-5 md:mb-10"
-                                        steps={[
-                                             {
-                                                  step: 1,
-                                                  title: 'Install the dependencies',
-                                                  code: `pnpm i three @types/three @react-three/postprocessing @react-three/drei @react-three/fiber`,
-                                             },
-                                             {
-                                                  step: 2,
-                                                  title: 'Add the showcase component to your project in',
-                                                  codeDirectory: 'src/components/showcase.tsx',
-                                                  codePath: 'src/registry/components/showcase.tsx',
-                                             },
-                                        ]}
-                                   />
-                              </TabsContent>
-                         </Tabs>
-                    </section>
-
-                    <section>
-                         <PageSubTitle>Usage</PageSubTitle>
-                         <p className="pb-2 text-gray-800 md:pb-5 dark:text-gray-200">
-                              Follow the steps below to add the{' '}
-                              <span className="font-bold">Showcase Component</span> to your project.
-                         </p>
-
-                         <Steppers
-                              className="mb-5 md:mb-10"
-                              steps={[
-                                   {
-                                        step: 1,
-                                        title: 'Add the import statement for the component',
-                                        code: `import Showcase from "@/components/showcase";`,
-                                   },
-                                   {
-                                        step: 2,
-                                        title: 'Import the component in your project',
-                                        codePath: 'src/registry/usage/showcase-usage.txt',
-                                   },
-                              ]}
-                         />
-                    </section>
-               </section>
-          </PageTemplate>
-     )
+    return (
+        <div className="flex flex-col gap-4">
+            <div className="grid grid-cols-2 gap-4 group">
+                {/* Left Column - Even indexed cards (0, 2, 4...) */}
+                <div className="flex flex-col gap-4">
+                    {oddIndexCards.map((index) => (
+                        <Link key={index} href={`/docs/components/showcase/${index + 1}`} className="flex flex-col gap-4 group/card">
+                            <Image
+                                src={`/components/showcase/showcase${index + 1}.png`}
+                                alt={`Showcase ${index + 1}`}
+                                width={500}
+                                height={500}
+                                className="w-full h-fit object-contain rounded-xl border p-2 border-white/40 transition-all duration-300 saturate-90 hover:saturate-110 hover:scale-99 group-hover:opacity-60 group-hover/card:hover:opacity-100"
+                                quality={100}
+                            />
+                        </Link>
+                    ))}
+                </div>
+                
+                {/* Right Column - Odd indexed cards (1, 3, 5...) */}
+                <div className="flex flex-col gap-4">
+                    {evenIndexCards.map((index) => (
+                        <Link key={index} href={`/docs/components/showcase/${index + 1}`} className="flex flex-col gap-4 group/card">
+                            <Image
+                                src={`/components/showcase/showcase${index + 1}.png`}
+                                alt={`Showcase ${index + 1}`}
+                                width={500}
+                                height={500}
+                                className="w-full h-fit object-contain rounded-xl border p-2 border-white/40 transition-all duration-300 saturate-90 hover:saturate-110 hover:scale-99 group-hover:opacity-60 group-hover/card:hover:opacity-100"
+                                quality={100}
+                            />
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </div>
+    )
 }
-
-export default ShowcasePage

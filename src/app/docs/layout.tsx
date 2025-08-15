@@ -16,7 +16,7 @@ export default function DocsLayout({ children }: DocsLayoutProps) {
                     <Sidebar />
                </div>
 
-               <div className="h-full overflow-y-auto">{children}</div>
+               <div className="h-full">{children}</div>
           </div>
      )
 }

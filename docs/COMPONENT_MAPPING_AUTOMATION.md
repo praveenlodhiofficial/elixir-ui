@@ -112,7 +112,7 @@ src/
 │   ├── preview/
 │   │   ├── carousel1.tsx          # Preview components
 │   │   └── carousel2.tsx
-│   └── components2/
+│   └── components/
 │       └── carousel/
 │           └── [...slug]/
 │               └── page.tsx        # Uses automated mapping

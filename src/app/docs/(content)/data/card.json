@@ -12,13 +12,6 @@
       "codePath": "src/registry/components/card2.tsx",
       "usagePath": "src/app/docs/(content)/preview/card2.tsx",
       "cliCommand": "npx create-next-app@latest"
-    },
-    "card3": {
-      "slug": "3",
-      "previewComponent": "Card3Preview",
-      "codePath": "src/registry/components/card3.tsx",
-      "usagePath": "src/app/docs/(content)/preview/card3.tsx",
-      "cliCommand": "npx create-next-app@latest"
     }
   }
   

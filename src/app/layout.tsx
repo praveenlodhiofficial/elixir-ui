@@ -1,7 +1,7 @@
 import type { Metadata } from 'next'
 import { Analytics } from '@vercel/analytics/next'
 import { Barlow_Condensed, Exo, Orbitron, Roboto } from 'next/font/google'
-import './globals.css'
+import '../styles/globals.css'
 import { SpeedInsights } from '@vercel/speed-insights/next'
 import { AppContent } from '@/components/AppContent'
 

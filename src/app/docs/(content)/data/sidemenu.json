@@ -1,0 +1,10 @@
+{
+    "sidemenu1": {
+      "slug": "1",
+      "previewComponent": "SideMenu1Preview",
+      "codePath": "src/registry/components/sidemenu1.tsx",
+      "usagePath": "src/app/docs/(content)/preview/sidemenu1.tsx",
+      "cliCommand": "npx create-next-app@latest"
+    }
+  }
+  

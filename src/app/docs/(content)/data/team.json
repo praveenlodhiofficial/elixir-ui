@@ -1,0 +1,18 @@
+{
+    "team1": {
+      "slug": "1",
+      "previewComponent": "Team1Preview",
+      "codePath": "src/registry/components/team1.tsx",
+      "usagePath": "src/app/docs/(content)/preview/team1.tsx",
+      "cliCommand": "npx create-next-app@latest"
+    },
+    "team2": {
+      "slug": "2",
+      "previewComponent": "Team2Preview",
+      "codePath": "src/registry/components/team2.tsx",
+      "usagePath": "src/app/docs/(content)/preview/team2.tsx",
+      "cliCommand": "npx create-next-app@latest"
+    }
+
+  }
+  

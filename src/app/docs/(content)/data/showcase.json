@@ -1,0 +1,10 @@
+{
+    "showcase1": {
+      "slug": "1",
+      "previewComponent": "Showcase1Preview",
+      "codePath": "src/registry/components/showcase1.tsx",
+      "usagePath": "src/app/docs/(content)/preview/showcase1.tsx",
+      "cliCommand": "npx create-next-app@latest"
+    }
+  }
+  

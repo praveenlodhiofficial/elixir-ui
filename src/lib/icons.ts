@@ -26,7 +26,7 @@ import {
 import { MdViewCarousel } from 'react-icons/md'
 import { HiOutlineMenuAlt1 } from 'react-icons/hi'
 import { GrArticle } from 'react-icons/gr'
-import { FaChalkboardUser, FaSass } from 'react-icons/fa6'
+import { FaChalkboardUser, FaSass, FaUsers } from 'react-icons/fa6'
 import { BsTwitterX } from 'react-icons/bs'
 import { BiLogoPaypal, BiSupport } from 'react-icons/bi'
 import { LuSunMoon, LuSunMedium } from 'react-icons/lu'
@@ -50,7 +50,6 @@ import {
      Search,
      Eye,
      Star,
-     Users,
      Github,
      Sparkles,
      Palette,
@@ -130,7 +129,7 @@ export const iconMap: { [key: string]: React.ComponentType<any> } = {
      Search,
      Eye,
      Star,
-     Users,
+     FaUsers,
      Github,
      Sparkles,
      Palette,

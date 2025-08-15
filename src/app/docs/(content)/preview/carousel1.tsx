@@ -9,15 +9,15 @@ export function Carousel1Preview() {
 
   return (
 
-      <div className='my-10 bg-secondary-bg-color h-[80vh] justify-center items-center w-full max-w-lg flex flex-col mx-auto gap-10 border border-primary-text-color/30 py-10 px-15 rounded-xl'>
+      <div className='scale-90 h-[80vh] justify-center items-center w-full max-w-lg flex flex-col mx-auto gap-10 border py-10 px-15 rounded-xl'>
 
         {/* Buttons to switch between interfaces (web, phone, sms) */}
         <div className="flex gap-3 justify-center items-center w-fit mb-5">
           <Button
             variant="default"
             className={`
-              border-0 rounded-full bg-transparent scale-85 md:scale-100 font-light text-secondary-text-color tracking-wide 
-              ${activeCategory === "web" ? "bg-primary-text-color text-secondary-bg-color" : "hover:bg-primary-text-color/10 hover:text-primary-text-color"}
+              border-0 rounded-full bg-transparent scale-85 shadow-none md:scale-100 font-light tracking-wide text-black dark:text-white
+              ${activeCategory === "web" ? "dark:bg-white/8 bg-black/8 hover:bg-black/5 dark:hover:bg-white/5 font-semibold" : "dark:hover:bg-white/4 hover:bg-black/4"}
               `}
             onClick={() => setActiveCategory("web")}
           >
@@ -27,8 +27,8 @@ export function Carousel1Preview() {
           <Button
             variant="default"
             className={`
-              rounded-full bg-transparent scale-85 md:scale-100 font-light text-secondary-text-color tracking-wide 
-              ${activeCategory === "phone" ? "bg-primary-text-color text-secondary-bg-color" : "hover:bg-primary-text-color/10 hover:text-primary-text-color"}
+              rounded-full bg-transparent scale-85 shadow-none md:scale-100 font-light tracking-wide text-black dark:text-white
+              ${activeCategory === "phone" ? "dark:bg-white/8 bg-black/8 hover:bg-black/5 dark:hover:bg-white/5 font-semibold" : "dark:hover:bg-white/4 hover:bg-black/4"}
               `}
             onClick={() => setActiveCategory("phone")}
           >
@@ -37,8 +37,8 @@ export function Carousel1Preview() {
           <Button
             variant="default"
             className={`
-              rounded-full bg-transparent scale-85 md:scale-100 font-light text-secondary-text-color tracking-wide 
-              ${activeCategory === "sms" ? "bg-primary-text-color text-secondary-bg-color" : "hover:bg-primary-text-color/10 hover:text-primary-text-color"}
+              rounded-full bg-transparent scale-85 shadow-none md:scale-100 font-light tracking-wide text-black dark:text-white
+              ${activeCategory === "sms" ? "dark:bg-white/8 bg-black/8 hover:bg-black/5 dark:hover:bg-white/5 font-semibold" : "dark:hover:bg-white/4 hover:bg-black/4"}
               `}
             onClick={() => setActiveCategory("sms")}
           >

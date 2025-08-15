@@ -1,9 +1,35 @@
 import { DOCS } from '@/app/docs/documentation.constant'
 import Link from 'next/link'
 import { Icon } from '@/components/ui/icon'
+import cardData from '../data/card.json'
+import carouselData from '../data/carousel.json'
+import teamData from '../data/team.json'
+import sidemenuData from '../data/sidemenu.json'
+import showcaseData from '../data/showcase.json'
+import liquidFrameData from '../data/liquidFrame.json'
 
 export default function AllComponentsPage() {
      const componentsList = DOCS.find(group => group.groupKey === 'components')?.children || []
+
+     // Function to get component count from data files
+     const getComponentCount = (componentType: string) => {
+          switch (componentType) {
+               case 'card':
+                    return Object.keys(cardData).length
+               case 'carousel':
+                    return Object.keys(carouselData).length
+               case 'team':
+                    return Object.keys(teamData).length
+               case 'sidemenu':
+                    return Object.keys(sidemenuData).length
+               case 'showcase':
+                    return Object.keys(showcaseData).length
+               case 'liquid-frame':
+                    return Object.keys(liquidFrameData).length
+               default:
+                    return 1
+          }
+     }
 
      return (
           <div className="w-full scroll-smooth">
@@ -31,8 +57,8 @@ export default function AllComponentsPage() {
                                         <div className="flex items-start justify-between">
                                              <div className="flex items-center gap-3">
                                                   <div className="bg-primary/10 text-primary group-hover:bg-primary/20 flex h-10 w-10 items-center justify-center rounded-lg transition-colors">
-                                                       {component.value === 'teammates' && (
-                                                            <Icon name="Users" className="h-5 w-5" />
+                                                       {component.value === 'team' && (
+                                                            <Icon name="FaUsers" className="h-5 w-5" />
                                                        )}
                                                        {component.value === 'liquid-frame' && (
                                                             <Icon name="Eye" className="h-5 w-5" />
@@ -55,9 +81,9 @@ export default function AllComponentsPage() {
                                                             {component.label}
                                                        </h3>
                                                        <p className="text-muted-foreground text-xs">
-                                                            {component.children?.length || 1}{' '}
+                                                            {getComponentCount(component.value)}{' '}
                                                             component
-                                                            {component.children?.length !== 1
+                                                            {getComponentCount(component.value) !== 1
                                                                  ? 's'
                                                                  : ''}
                                                        </p>
