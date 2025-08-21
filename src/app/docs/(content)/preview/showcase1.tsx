@@ -1,9 +1,8 @@
-import ShowcaseComponent from '@/registry/components/showcase1'
+import { Showcase1 } from '@/registry/components/showcase1'
 
 export function Showcase1Preview() {
      return (
-          <div className="rounded-md border shadow-xl bg-black/5 dark:border-zinc-800 dark:bg-black saturate-120 contrast-110 brightness-120">
-               <ShowcaseComponent
+               <Showcase1
                     imageSrc="/components/showcase/jujutsu-kaisen.png"
                     text="Anime"
                     fontSize="55px"
@@ -11,11 +10,10 @@ export function Showcase1Preview() {
                     textColor="#FFFFD4"
                     size="full"
                     variant="default"
-                    className="h-full w-full"
+                    className="h-full w-full bg-black"
                     rotationSpeed={0.005}
                     bloomIntensity={2}
                     enableControls={true}
                />
-          </div>
      )
 }

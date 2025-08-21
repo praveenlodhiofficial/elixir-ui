@@ -2,8 +2,7 @@ import Carousel2 from '@/registry/components/carousel2'
 
 const Carousel2Cards = [
      {
-          link: '',    
-          iconName: 'TbCircleNumber1Filled',
+          link: '#',    
           title: 'Liquid Frame',
           category: 'Component',
           description:
@@ -11,8 +10,7 @@ const Carousel2Cards = [
           imageURL: '/components/carousel/liquid-frame.png',
      },
      {
-          link: '',
-          iconName: 'TbCircleNumber2Filled',
+          link: '#',
           title: 'SideMenu',
           category: 'Components',
           description:
@@ -20,16 +18,14 @@ const Carousel2Cards = [
           imageURL: '/components/carousel/sidemenu.png',
      },
      {
-          link: '',
-          iconName: 'TbCircleNumber3Filled',
+          link: '#',
           title: '3D Vanilla Tilt',
           category: 'Components / Cards',
           description: 'A React component containing stunning 3D tilt effects.',
           imageURL: '/components/carousel/3d-vanilla-tilt.png',
      },
      {
-          link: '',
-          iconName: 'TbCircleNumber4Filled',
+          link: '#',
           title: 'Showcase',
           category: 'Components',
           description:
@@ -37,8 +33,7 @@ const Carousel2Cards = [
           imageURL: '/components/carousel/showcase.png',
      },
      {
-          link: '',
-          iconName: 'TbCircleNumber5Filled', 
+          link: '#',
           title: 'Teammates v1.0.0',
           category: 'Components / Teams',
           description: 'A component that displays a list of teammates with a hover effect.',
@@ -48,7 +43,7 @@ const Carousel2Cards = [
 
 export function Carousel2Preview() {
      return (
-          <div className="h-full w-full max-w-5xl">
+          <div className="h-full w-full max-w-4xl">
                <Carousel2 cards={Carousel2Cards} />
           </div>
      )

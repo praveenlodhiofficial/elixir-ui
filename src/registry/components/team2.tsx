@@ -14,7 +14,7 @@ interface Team2Props {
      defaultText?: string
 }
 
-export default function Team2({ teamMembers, defaultText = 'Enter Team Name' }: Team2Props) {
+export function Team2({ teamMembers, defaultText = 'Enter Team Name' }: Team2Props) {
      const profileImagesRef = useRef<HTMLDivElement>(null)
      const imagesRef = useRef<(HTMLDivElement | null)[]>([])
      const namesRef = useRef<(HTMLDivElement | null)[]>([])

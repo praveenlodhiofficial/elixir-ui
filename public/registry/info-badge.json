@@ -5,16 +5,16 @@
   "title": "Info Badge",
   "description": "A info badge component that displays an info badge with customizable colors and styling.",
   "registryDependencies": [
-    "utils",
-    "https://elixir-ui-xi.vercel.app/registry/icons.json",
-    "https://elixir-ui-xi.vercel.app/registry/icon.json"
+    "http://localhost:3000/registry/utils.json",
+    "http://localhost:3000/registry/icons.json",
+    "http://localhost:3000/registry/icon.json"
   ],
   "files": [
     {
       "path": "src/registry/ui/info-badge.tsx",
       "content": "import { Icon } from '@/registry/ui/icon'\r\nimport { cva } from 'class-variance-authority'\r\nimport { cn } from '@/registry/lib/utils'\r\n\r\nexport const infoBadgeIconVariants = cva(\r\n     'h-3 w-3 rounded-full border-2 md:border-3 md:h-4 md:w-4',\r\n     {\r\n          variants: {\r\n               variant: {\r\n                    orange: 'border-orange-500 bg-orange-500',\r\n                    red: 'border-red-500 bg-red-500',\r\n                    green: 'border-green-500 bg-green-500',\r\n                    blue: 'border-blue-500 bg-blue-500',\r\n               },\r\n          },\r\n          defaultVariants: {\r\n               variant: 'orange',\r\n          },\r\n     }\r\n)\r\n\r\nexport default function InfoBadge({\r\n     title,\r\n     iconColor,\r\n     iconName,\r\n}: {\r\n     title: string\r\n     iconColor:\r\n          | 'orange'\r\n          | 'red'\r\n          | 'green'\r\n          | 'blue'\r\n          | 'yellow'\r\n          | 'purple'\r\n          | 'pink'\r\n          | 'gray'\r\n          | 'brown'\r\n          | 'black'\r\n          | 'white'\r\n     iconName: 'Circle' | 'Check' | 'X' | 'Info'\r\n}) {\r\n     return (\r\n          <div\r\n               className={cn(\r\n                    'md:py-1.5backdrop-blur-sm flex items-center gap-2 rounded-full bg-white/30 px-2 py-1.5'\r\n               )}\r\n          >\r\n               <Icon\r\n                    name={iconName}\r\n                    className={cn(\r\n                         infoBadgeIconVariants({\r\n                              variant: iconColor as 'orange' | 'red' | 'green' | 'blue',\r\n                         })\r\n                    )}\r\n               />\r\n               <p className={cn('text-xs font-medium text-white/90')}>{title}</p>\r\n          </div>\r\n     )\r\n}\r\n",
       "type": "registry:ui",
-      "target": "src/components/ui/info-badge.tsx"
+      "target": "src/components/elixir-ui/info-badge.tsx"
     }
   ]
 }

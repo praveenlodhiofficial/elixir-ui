@@ -4,7 +4,7 @@
       "previewComponent": "Showcase1Preview",
       "codePath": "src/registry/components/showcase1.tsx",
       "usagePath": "src/app/docs/(content)/preview/showcase1.tsx",
-      "cliCommand": "npx create-next-app@latest"
+      "cliCommand": "npx shadcn add http://localhost:3000/registry/showcase-1.json"
     }
   }
   

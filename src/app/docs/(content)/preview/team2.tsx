@@ -1,4 +1,4 @@
-import TidalTextAnimation from '@/registry/components/team2'
+import { Team2 } from '@/registry/components/team2'
 import React from 'react'
 
 const teamMembers = [
@@ -23,7 +23,7 @@ const teamMembers = [
 export function Team2Preview() {
      return (
           <div className='my-15'>
-               <TidalTextAnimation teamMembers={teamMembers} defaultText="The Beatles" />
+               <Team2 teamMembers={teamMembers} defaultText="The Beatles" />
           </div>
      )
 }

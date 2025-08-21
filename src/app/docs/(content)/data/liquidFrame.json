@@ -4,7 +4,7 @@
       "previewComponent": "LiquidFrame1Preview",
       "codePath": "src/registry/components/liquidFrame1.tsx",
       "usagePath": "src/app/docs/(content)/preview/liquidFrame1.tsx",
-      "cliCommand": "npx create-next-app@latest"
+      "cliCommand": "npx shadcn add http://localhost:3000/registry/liquid-frame-1.json"
     }
   }
   

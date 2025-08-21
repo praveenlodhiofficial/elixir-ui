@@ -2,11 +2,12 @@
 
 import React from 'react'
 import { cn } from '@/lib/utils'
-import { Icon } from '@/components/ui/icon'
 import { useEffect, useState } from 'react'
 import { motion } from 'motion/react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { TbCircleNumber1Filled } from 'react-icons/tb'
+import { ArrowRight } from 'lucide-react'
 
 interface Carousel2Props {
      className?: string
@@ -16,7 +17,6 @@ interface Carousel2Props {
           category: string
           description: string
           imageURL: string
-          iconName: string
      }[]
 }
 
@@ -33,7 +33,7 @@ export default function Carousel2({ className, cards }: Carousel2Props) {
      return (
           <div
                className={cn(
-                    'mx-3 grid min-h-[26rem] w-full max-w-7xl grid-cols-[1.2fr_1fr] items-center overflow-hidden rounded-lg border bg-black/10 md:mx-5 md:items-stretch lg:mx-7 xl:mx-auto dark:bg-white/5',
+                    'mx-3 grid min-h-[26rem] w-full max-w-7xl grid-cols-[1.2fr_1fr] items-center overflow-hidden rounded-lg border-2 bg-black/10 md:mx-5 md:items-stretch lg:mx-7 xl:mx-auto dark:bg-white/5',
                     className
                )}
           >
@@ -75,9 +75,8 @@ export default function Carousel2({ className, cards }: Carousel2Props) {
                          <Link
                               href={card.link}
                               key={index}
-                              className={`group relative flex w-full flex-col items-start space-y-2 border-b border-black/20 px-5 py-4 dark:border-white/20 ${
-                                   index === currentCard ? 'h-full' : 'h-auto'
-                              }`}
+                              className={`group relative flex w-full flex-col items-start space-y-2 border-b border-black/20 px-5 py-4 dark:border-white/20 ${index === currentCard ? 'h-full' : 'h-auto'
+                                   }`}
                          >
                               {/* Progress Bar on Left Border */}
                               <div className="absolute top-0 left-0 h-full">
@@ -98,10 +97,8 @@ export default function Carousel2({ className, cards }: Carousel2Props) {
                                    <div className="flex w-full items-center justify-between">
                                         <div className="flex items-center gap-3">
                                              <div className="rounded-full bg-transparent p-1">
-                                                  <Icon
-                                                       name={card.iconName}
-                                                       className="h-7 w-7 text-xl text-black dark:text-white"
-                                                  />
+                                                  <TbCircleNumber1Filled className="h-7 w-7 text-xl text-black dark:text-white" />
+
                                              </div>
                                              <div className="tracking-wide">
                                                   <p className="text-[10px] text-zinc-600 dark:text-zinc-400">
@@ -112,12 +109,11 @@ export default function Carousel2({ className, cards }: Carousel2Props) {
                                                   </h1>
                                              </div>
                                         </div>
-                                        <Icon
-                                   name="ArrowRight"
-                                   className={cn(
-                                        'h-4 w-4 transition-all duration-250 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:rotate-[-45deg] md:h-4 md:w-4'
-                                   )}
-                              />
+                                        <ArrowRight
+                                             className={cn(
+                                                  'h-4 w-4 transition-all duration-250 opacity-0 group-hover:opacity-100 group-hover:translate-x-1 group-hover:rotate-[-45deg] md:h-4 md:w-4'
+                                             )}
+                                        />
                                    </div>
 
                                    <motion.p
@@ -135,7 +131,7 @@ export default function Carousel2({ className, cards }: Carousel2Props) {
                                    >
                                         {card.description}
                                    </motion.p>
-                                   </div>
+                              </div>
                          </Link>
                     ))}
                </div>

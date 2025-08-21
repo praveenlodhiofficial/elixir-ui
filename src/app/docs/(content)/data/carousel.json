@@ -4,13 +4,13 @@
     "previewComponent": "Carousel1Preview",
     "codePath": "src/registry/components/carousel1.tsx",
     "usagePath": "src/app/docs/(content)/preview/carousel1.tsx",
-    "cliCommand": "npx create-next-app@latest"
+    "cliCommand": "npx shadcn add http://localhost:3000/registry/carousel-1.json"
   },
   "carousel2": {
     "slug": "2",
     "previewComponent": "Carousel2Preview",
     "codePath": "src/registry/components/carousel2.tsx",
     "usagePath": "src/app/docs/(content)/preview/carousel2.tsx",
-    "cliCommand": "npx create-next-app@latest"
+    "cliCommand": "npx shadcn add http://localhost:3000/registry/carousel-2.json"
   }
 }

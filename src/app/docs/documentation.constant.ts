@@ -81,6 +81,12 @@ export const DOCS: Documentation[] = [
                     value: 'carousel',
                     url: '/docs/components/carousel',
                },
+               {
+                    label: 'Message Thread',
+                    value: 'message-thread',
+                    url: '/docs/components/messageThread',
+                    new: true,
+               },
           ],
      },
      // {

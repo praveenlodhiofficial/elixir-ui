@@ -6,7 +6,8 @@ import { useTexture, OrbitControls } from '@react-three/drei'
 import * as THREE from 'three'
 import { EffectComposer, Bloom } from '@react-three/postprocessing'
 import { cva, type VariantProps } from 'class-variance-authority'
-import { cn } from '@/registry/lib/utils'
+import { cn } from '@/lib/utils'
+import { div } from 'three/tsl'
 
 const showcaseVariants = cva('z-20 h-full', {
      variants: {
@@ -103,20 +104,22 @@ function ShowcaseScene({
      )
 }
 
-export default function Showcase1({
+export function Showcase1({
      size,
      variant,
      className,
      ...props
 }: Showcase1Props) {
      return (
-          <Canvas
-               flat
-               camera={{ fov: 45 }}
-               className={cn(showcaseVariants({ size, variant }), className)}
-          >
-               <ShowcaseScene {...props} />
-          </Canvas>
+          <div className='w-[60vw] h-[70vh] overflow-clip rounded-lg border shadow-xl bg-black/5 dark:border-zinc-800 dark:bg-black saturate-120 contrast-110 brightness-120'>
+               <Canvas
+                    flat
+                    camera={{ fov: 45 }}
+                    className={cn(showcaseVariants({ size, variant }), className)}
+               >
+                    <ShowcaseScene {...props} />
+               </Canvas>
+          </div>
      )
 }
 

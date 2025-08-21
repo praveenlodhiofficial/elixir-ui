@@ -1,0 +1,19 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "input",
+  "type": "registry:ui",
+  "title": "Input",
+  "description": "An input component with support for left and right icons.",
+  "dependencies": [],
+  "registryDependencies": [
+    "http://localhost:3000/registry/utils.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/ui/input.tsx",
+      "content": "import * as React from \"react\"\r\nimport { cn } from \"@/lib/utils\"\r\n\r\ninterface InputProps extends React.ComponentProps<\"input\"> {\r\n  leftIcon?: React.ReactNode\r\n  rightIcon?: React.ReactNode\r\n  leftIconRotate?: boolean\r\n  rightIconRotate?: boolean\r\n}\r\n\r\nfunction Input({ className, type, leftIcon, rightIcon, leftIconRotate, rightIconRotate, ...props }: InputProps) {\r\n  return (\r\n    <div className=\"relative\">\r\n      {leftIcon && (\r\n        <div className={cn(\r\n          \"absolute left-3 top-1/2 -translate-y-1/2 z-10\",\r\n          leftIconRotate && \"hover:rotate-[-45deg] rotate-0 transition-all\"\r\n        )}>\r\n          {leftIcon}\r\n        </div>\r\n      )}\r\n      <input\r\n        type={type}\r\n        data-slot=\"input\"\r\n        className={cn(\r\n          \"file:text-foreground placeholder:text-muted-foreground selection:bg-primary placeholder- selection:text-primary-foreground dark:bg-input/30 border-input flex h-9 w-full min-w-0 rounded-md border bg-transparent py-1 text-base shadow-xs transition-[color,box-shadow] outline-none file:inline-flex file:h-7 file:border-0 file:bg-transparent file:text-sm file:font-medium disabled:pointer-events-none disabled:cursor-not-allowed disabled:opacity-50 md:text-sm\",\r\n          leftIcon && \"pl-10\",\r\n          rightIcon && \"pr-10\",\r\n          !leftIcon && !rightIcon && \"px-3\",\r\n          \"focus-visible:border-ring focus-visible:ring-ring/50 focus-visible:ring-[3px]\",\r\n          \"aria-invalid:ring-destructive/20 dark:aria-invalid:ring-destructive/40 aria-invalid:border-destructive\",\r\n          className\r\n        )}\r\n        {...props}\r\n      />\r\n      {rightIcon && (\r\n        <div className={cn(\r\n          \"cursor-pointer duration-200 absolute right-2 top-1/2 -translate-y-1/2 z-10\",\r\n          rightIconRotate && \"hover:rotate-[-45deg] rotate-0 transition-all\"\r\n        )}>\r\n          {rightIcon}\r\n        </div>\r\n      )}\r\n    </div>\r\n  )\r\n}\r\n\r\nexport { Input }\r\n",
+      "type": "registry:ui",
+      "target": "src/components/elixir-ui/input.tsx"
+    }
+  ]
+}

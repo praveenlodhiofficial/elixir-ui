@@ -4,14 +4,14 @@
       "previewComponent": "Team1Preview",
       "codePath": "src/registry/components/team1.tsx",
       "usagePath": "src/app/docs/(content)/preview/team1.tsx",
-      "cliCommand": "npx create-next-app@latest"
+      "cliCommand": "npx shadcn add http://localhost:3000/registry/team-1.json"
     },
     "team2": {
       "slug": "2",
       "previewComponent": "Team2Preview",
       "codePath": "src/registry/components/team2.tsx",
       "usagePath": "src/app/docs/(content)/preview/team2.tsx",
-      "cliCommand": "npx create-next-app@latest"
+      "cliCommand": "npx shadcn add http://localhost:3000/registry/team-2.json"
     }
 
   }

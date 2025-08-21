@@ -10,15 +10,15 @@
     "clsx"
   ],
   "registryDependencies": [
-    "utils",
-    "https://elixir-ui-xi.vercel.app/registry/icons.json"
+    "http://localhost:3000/registry/utils.json",
+    "http://localhost:3000/registry/icons.json"
   ],
   "files": [
     {
       "path": "src/registry/ui/icon.tsx",
       "content": "import React from 'react'\r\nimport { getIcon, hasIcon, type IconName } from '@/registry/lib/icons'\r\nimport { cn } from '@/registry/lib/utils'\r\n\r\ninterface IconProps {\r\n     name: IconName\r\n     className?: string\r\n     size?: number | string\r\n     [key: string]: any // Allow passing through other props to the icon component\r\n}\r\n\r\nexport function Icon({ name, className, size = 24, ...props }: IconProps) {\r\n     if (typeof name !== 'string') {\r\n          console.warn(`Icon name must be a string, got:`, name)\r\n          return null\r\n     }\r\n\r\n     if (!hasIcon(name)) {\r\n          console.warn(`Icon \"${name}\" not found in icon registry`)\r\n          return null\r\n     }\r\n\r\n     const IconComponent = getIcon(name)\r\n\r\n     if (!IconComponent) {\r\n          return null\r\n     }\r\n\r\n     return <IconComponent className={cn(className)} size={size} {...props} />\r\n}\r\n\r\n// Export the icon registry for direct access if needed\r\nexport { iconMap, getIcon, hasIcon, type IconName } from '@/lib/icons'\r\n",
       "type": "registry:ui",
-      "target": "src/components/ui/icon.tsx"
+      "target": "src/components/elixir-ui/icon.tsx"
     }
   ]
 }

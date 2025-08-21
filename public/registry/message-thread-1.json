@@ -1,0 +1,25 @@
+{
+  "$schema": "https://ui.shadcn.com/schema/registry-item.json",
+  "name": "message-thread-1",
+  "type": "registry:component",
+  "title": "MessageThread1",
+  "description": "A message thread component that displays chat messages with support for custom data, ID-based data switching, and default fallback data.",
+  "dependencies": [
+    "motion",
+    "lucide-react",
+    "class-variance-authority",
+    "react-icons"
+  ],
+  "registryDependencies": [
+    "http://localhost:3000/registry/utils.json",
+    "http://localhost:3000/registry/chat-messages.json"
+  ],
+  "files": [
+    {
+      "path": "src/registry/components/messageThread1.tsx",
+      "content": "import { ChatMessage, ChatMessageContent, ChatMessageExternalLinks, ChatMessageLink } from \"@/registry/ui/chat-messages\";\n\ninterface Message {\n    id: number\n    author: string\n    avatar: string\n    content: string\n    type: \"sent\" | \"received\"\n    links?: { name: string; url: string }[]\n}\n\n// Default data\nconst defaultMessages: Message[] = [\n    {\n        id: 1,\n        author: \"Alex Rivera\",\n        avatar: \"/3.webp\",\n        content: \"What makes Elixir UI different from other component libraries?\",\n        type: \"received\",\n    },\n    {\n        id: 2,\n        author: \"Elixir Support\",\n        avatar: \"/4.webp\",\n        content:\n            \"Elixir UI is built with React 19, Next.js 15, and Tailwind. It’s minimal, customizable, and production-ready — so you ship polished UIs faster without fighting complexity.\",\n        links: [\n            { name: \"Docs\", url: \"https://elixir.praveenlodhi.me/\" },\n            { name: \"GitHub\", url: \"#\" },\n        ],\n        type: \"sent\",\n    },\n    {\n        id: 3,\n        author: \"Alex Rivera\",\n        avatar: \"/3.webp\",\n        content: \"Perfect — exactly what I need for my next project!\",\n        type: \"received\",\n    },\n]\n\n\nexport function MessageThread1() {\n    const messages = defaultMessages;\n\n    return (\n        <div className='h-full shadow-lg w-full rounded-xl p-5 gap-3 flex flex-col items-center justify-center'>\n            <h1 className=\"justify-start text-center text-2xl text-primary-text-color font-serif\">\n                Build Faster with Elixir UI\n            </h1>\n            <p className=\"text-center max-w-xl text-secondary-text-color font-light text-sm tracking-wide\">\n                A modern React + Tailwind component library for Next.js 15.\n                Crafted for speed, customization, and seamless dark mode support.\n            </p>            <div className='mt-10 w-full h-full rounded-xl'>\n                <div className=\"w-full space-y-6 px-5\">\n                    {messages.map((message, index) => (\n                        <div key={message.id} className={`flex gap-3 ${index === 0 ? \"justify-start\" : \"justify-end\"}`}>\n                            <ChatMessage message={message} isVisible={true}>\n                                <ChatMessageContent content={message.content} isVisible={true}>\n                                    <ChatMessageExternalLinks links={message.links || []} isVisible={true} className=\"justify-start\">\n                                        <ChatMessageLink name=\"Substack\" href=\"#\" />\n                                        <ChatMessageLink name=\"YouTube\" href=\"#\" />\n                                    </ChatMessageExternalLinks>\n                                </ChatMessageContent>\n                            </ChatMessage>\n                        </div>\n                    ))}\n                </div>\n            </div>\n        </div>\n    );\n}",
+      "type": "registry:component",
+      "target": "src/components/elixir-ui/message-thread-1.tsx"
+    }
+  ]
+}

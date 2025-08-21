@@ -9,7 +9,7 @@ export function Carousel1Preview() {
 
   return (
 
-      <div className='scale-90 h-[80vh] justify-center items-center w-full max-w-lg flex flex-col mx-auto gap-10 border py-10 px-15 rounded-xl'>
+      <div className='scale-95 h-[90vh] justify-center items-center w-fit max-w-lg flex flex-col mx-auto gap-10 border py-10 px-15 rounded-xl'>
 
         {/* Buttons to switch between interfaces (web, phone, sms) */}
         <div className="flex gap-3 justify-center items-center w-fit mb-5">
