@@ -38,7 +38,9 @@ import { ActionButtonPreview } from './preview/action-button';
 
 <UsageSteps stepNumber={1} title="Add the import statement for the component">
   ```bash 
-  import ActionButton from "@/components/elixir-ui/action-button"; 
+  "use client";
+
+  import { ActionButton, ActionButton2 } from "@/components/elixir-ui/action-button";
   ```
 </UsageSteps>
 
@@ -57,9 +59,20 @@ import { ActionButtonPreview } from './preview/action-button';
   title="Import the component in your project and use it"
 >
   ```tsx
-  <div className="flex h-full w-full items-center justify-center">
-    <ActionButton isActive={isActive} setIsActive={setIsActive} />
-  </div>
+  "use client"
+
+  import { ActionButton, ActionButton2 } from "@/components/elixir-ui/action-button";
+  import { useState } from "react";
+
+  export default function Home() {
+    const [isActive, setIsActive] = useState(false);
+    return (
+      <div className="flex items-center justify-center min-h-screen">
+        <ActionButton isActive={isActive} setIsActive={setIsActive} />
+        <ActionButton2 className="rounded-full">Get Started</ActionButton2>
+      </div>
+    )
+  }
   ```
 </UsageSteps>
 

@@ -1,6 +1,6 @@
 "use client";
-import ActionButton, { ActionButton2 } from "@/components/elixir-ui/action-button";
-import React, { useState } from "react";
+import { ActionButton, ActionButton2 } from "@/components/elixir-ui/action-button";
+import { useState } from "react";
 
 export function ActionButtonPreview() {
    const [isActive, setIsActive] = useState(false);

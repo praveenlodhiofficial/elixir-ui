@@ -48,7 +48,7 @@ interface ActionButtonProps
    asChild?: boolean;
 }
 
-export default function ActionButton({
+export function ActionButton({
    isActive,
    setIsActive,
    variant,

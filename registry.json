@@ -88,7 +88,7 @@
                "target": "src/components/elixir-ui/action-button.tsx"
             }
          ],
-         "dependencies": ["class-variance-authority", "framer-motion"]
+         "dependencies": ["class-variance-authority", "framer-motion", "react-icons"]
       },
       {
          "name": "sidemenu",
@@ -193,7 +193,7 @@
                "target": "src/components/elixir-ui/reflext-gallery.tsx"
             }
          ],
-         "dependencies": ["class-variance-authority", "lucide-react", "motion"]
+         "dependencies": ["class-variance-authority", "lucide-react", "framer-motion"]
       }
    ]
 }
