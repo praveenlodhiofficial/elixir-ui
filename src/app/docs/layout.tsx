@@ -1,22 +1,22 @@
-import Navbar from '@/components/Navbar'
-import Sidebar from './sidebar-layout/page'
+import Sidebar from "@/app/docs/sidebar-layout/page";
 
 interface DocsLayoutProps {
-     children: React.ReactNode
+   children: React.ReactNode;
 }
 
 export default function DocsLayout({ children }: DocsLayoutProps) {
-     return (
-          <div className="mx-auto grid h-full w-full max-w-6xl grid-cols-[300px_1fr]" suppressHydrationWarning>
-               <div className="absolute top-0 z-10">
-                    <Navbar />
-               </div>
+   return (
+      <div
+         className="grid h-[calc(100vh-6.5rem)] w-full grid-cols-1 lg:mx-auto lg:grid-cols-[280px_1fr]"
+         suppressHydrationWarning
+      >
+         <div className="hidden h-[calc(100vh-5.5rem)] md:pl-5 lg:block lg:pl-0">
+            <Sidebar />
+         </div>
 
-               <div className="pr-10 md:pl-5 lg:pl-0">
-                    <Sidebar />
-               </div>
-
-               <div className="h-full">{children}</div>
-          </div>
-     )
+         <div className="scrollbar-hide no-scrollbar overflow-x-hidden overflow-y-auto px-5 pb-8 lg:px-40">
+            {children}
+         </div>
+      </div>
+   );
 }

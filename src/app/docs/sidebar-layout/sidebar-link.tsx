@@ -5,24 +5,24 @@ import { cn } from "@/lib/utils";
 import Link, { LinkProps } from "next/link";
 
 interface SidebarLinkProps extends LinkProps {
-  children?: React.ReactNode;
-  className?: string;
-  target?: "_blank";
+   children?: React.ReactNode;
+   className?: string;
+   target?: "_blank";
 }
 
 const SidebarLink = (props: SidebarLinkProps) => {
-  const pathname = usePathname();
+   const pathname = usePathname();
 
-  return (
-    <Link
-      {...props}
-      className={cn(
-        "pl-4 text-gray-500 hover:underline",
-        pathname === props.href && "font-bold text-primary underline",
-        props.className,
-      )}
-    />
-  );
+   return (
+      <Link
+         {...props}
+         className={cn(
+            "pl-4 text-gray-500 hover:underline",
+            pathname === props.href && "text-primary font-bold underline",
+            props.className
+         )}
+      />
+   );
 };
 
 export default SidebarLink;

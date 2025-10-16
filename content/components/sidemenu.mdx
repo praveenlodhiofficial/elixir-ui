@@ -1,0 +1,141 @@
+export const metadata = {
+  title: 'Sidemenu',
+  description:
+    'A side menu component that displays a side menu with customizable colors and styling.',
+  alternates: {
+    canonical: '/sidemenu',
+  },
+};
+
+import { ComponentPreview } from '@/components/ComponentPreview';
+import { SidemenuPreview } from './preview/sidemenu';
+
+# Sidemenu
+
+<span className="text-[15px]">
+  The Sidemenu component is a side menu component that displays a side menu with
+  customizable colors and styling.
+</span>
+
+<Container slug="sidemenu">
+  <ComponentPreview componentName="sidemenu" className="h-full w-full">
+    <SidemenuPreview />
+  </ComponentPreview>
+</Container>
+
+## Usage
+
+<span className="text-[15px]">
+  Follow the steps below to add the Sidemenu Component to your project.
+</span>
+
+{/* -----------------------------USAGE - STEP - 01 ---------------------------> */}
+
+<UsageSteps stepNumber={1} title="Add the import statement for the component">
+  ```tsx 
+  import { Sidemenu } from "@/components/elixir-ui/sidemenu"; 
+  ```
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 02 ---------------------------> */}
+
+<UsageSteps stepNumber={2} title="Add the links and footer links props to the component">
+  ```tsx
+  const menuLinks = [
+    { title: "Projects", href: "#" },
+    { title: "Agency", href: "#" },
+    { title: "Expertise", href: "#" },
+    { title: "Careers", href: "#" },
+    { title: "Contact", href: "#" },
+  ]
+
+const footerLinks = [
+{ title: "Instagram", href: "#" },
+{ title: "LinkedIn", href: "#" },
+{ title: "Twitter", href: "#" },
+{ title: "Facebook", href: "#" },
+]
+
+````
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 03 ---------------------------> */}
+<UsageSteps stepNumber={3} title="Import the component in your project and use it">
+```tsx
+<div className="absolute top-10 right-10 flex justify-end h-full w-full">
+  <Sidemenu
+    imageSaturation={1.2}
+    links={menuLinks}
+    footerLinks={footerLinks}
+  />
+</div>
+````
+
+</UsageSteps>
+
+## Props
+
+<MDXPropsTable
+  props={[
+    {
+      prop: 'cardColor',
+      type: 'string',
+      default: '-',
+      description: 'The color of the card',
+    },
+    {
+      prop: 'cardImageURL',
+      type: 'string',
+      default: '-',
+      description: 'The URL of the image to be displayed',
+    },
+    {
+      prop: 'imageOpacity',
+      type: 'number',
+      default: '1',
+      description: 'The opacity of the image',
+    },
+    {
+      prop: 'imageSaturation',
+      type: 'number',
+      default: '1',
+      description: 'The saturation of the image',
+    },
+    {
+      prop: 'links',
+      type: '{ title: string; href: string }[]',
+      default: '-',
+      description: 'The links to be displayed',
+    },
+    {
+      prop: 'links.title',
+      type: 'string',
+      default: '-',
+      description: 'The title of the link',
+    },
+    {
+      prop: 'links.href',
+      type: 'string',
+      default: '-',
+      description: 'The href of the link',
+    },
+    {
+      prop: 'footerLinks',
+      type: '{ title: string; href: string }[]',
+      default: '-',
+      description: 'The footer links to be displayed',
+    },
+    {
+      prop: 'footerLinks.title',
+      type: 'string',
+      default: '-',
+      description: 'The title of the footer link',
+    },
+    {
+      prop: 'footerLinks.href',
+      type: 'string',
+      default: '-',
+      description: 'The href of the footer link',
+    },
+  ]}
+/>

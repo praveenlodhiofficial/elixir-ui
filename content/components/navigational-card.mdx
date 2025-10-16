@@ -1,0 +1,92 @@
+export const metadata = {
+  title: 'Navigational Card',
+  description:
+    'A navigation card component that displays a navigation card with customizable colors and styling.',
+  alternates: {
+    canonical: '/navigational-card',
+  },
+};
+
+import { ComponentPreview } from '@/components/ComponentPreview';
+import { NavigationalCardPreview } from './preview/navigational-card';
+
+# Navigational Card
+
+<span className="text-[15px]">
+  The Navigational Card component is a navigation card component that displays a
+  navigation card with customizable colors and styling.
+</span>
+
+<Container slug="navigational-card">
+  <ComponentPreview componentName="navigational-card" className="h-full w-full">
+    <NavigationalCardPreview />
+  </ComponentPreview>
+</Container>
+
+## Usage
+
+<span className="text-[15px]">
+  Follow the steps below to add the Navigational Card Component to your project.
+</span>
+
+{/* -----------------------------USAGE - STEP - 01 ---------------------------> */}
+
+<UsageSteps stepNumber={1} title="Add the import statement for the component">
+  ```tsx
+  import { NavigationalCard } from "@/components/elixir-ui/navigational-card"; 
+  ```
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 02 ---------------------------> */}
+
+<UsageSteps
+  stepNumber={2}
+  title="Import the component in your project and use it"
+>
+  ```tsx
+  <NavigationalCard
+    title="Getting Started"
+    href="#getting-started"
+    description="Learn about Elixir UI"
+    icon={<RocketIcon className="h-6 w-6" />}
+    className="w-xs"
+  />
+  ```
+</UsageSteps>
+
+## Props
+
+<MDXPropsTable
+  props={[
+    {
+      prop: 'title',
+      type: 'string',
+      default: '-',
+      description: 'The title of the navigational card',
+    },
+    {
+      prop: 'href',
+      type: 'string',
+      default: '-',
+      description: 'The href of the navigational card',
+    },
+    {
+      prop: 'description',
+      type: 'string',
+      default: '-',
+      description: 'The description of the navigational card',
+    },
+    {
+      prop: 'icon',
+      type: 'React.ReactNode',
+      default: '-',
+      description: 'The icon of the navigational card',
+    },
+    {
+      prop: 'className',
+      type: 'string',
+      default: '-',
+      description: 'Additional CSS classes',
+    },
+  ]}
+/>

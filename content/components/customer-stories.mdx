@@ -1,0 +1,137 @@
+export const metadata = {
+  title: 'Customer Stories',
+  description:
+    'A Customer Stories component that displays a customer stories with customizable colors and styling.',
+  alternates: {
+    canonical: '/customer-stories',
+  },
+};
+
+import { ComponentPreview } from '@/components/ComponentPreview';
+import { CustomerStoriesPreview } from './preview/customer-stories';
+
+# Customer Stories
+
+<span className="text-[15px]">
+  The Customer Stories component is a compact and interactive customer stories,
+  ideal for responsive navigation. It offers a toggleable design with smooth
+  animations, making it a versatile choice for modern web applications.
+</span>
+
+<Container slug="customer-stories">
+  <ComponentPreview componentName="customer-stories" className="h-full w-full">
+    <CustomerStoriesPreview />
+  </ComponentPreview>
+</Container>
+
+## Usage
+
+<span className="text-[15px]">
+  Follow the steps below to add the Customer Stories Component to your project.
+</span>
+
+{/* -----------------------------USAGE - STEP - 01 ---------------------------> */}
+
+<UsageSteps stepNumber={1} title="Add the import statement for the component">
+  ```tsx 
+  import {ImageBackgroundCard, StatsCard, ImageContentCard, TextContentCard} from"@/components/elixir-ui/customer-stories"; 
+  ```
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 02 ---------------------------> */}
+
+<UsageSteps stepNumber={2} title="Import the component in your project and use it">
+  ```tsx
+  <section className="flex flex-col justify-center gap-10 md:gap-20">
+    <div className="max-w-6xl my-10 mx-auto flex flex-col gap-6">
+      <div className="flex flex-col md:flex-row gap-6 ">
+
+        {/* ---------------------------------------------------------> Image Background Card */}
+        <ImageBackgroundCard
+          subtitle="Customer stories"
+          description="Step Events&apos;s expertise transformed my vision into success!"
+          title="Kabir Shah"
+          statLabel="Founder of Chipsland"
+          bgImage="/components/background-user-image.jpg"
+        />
+
+        {/* ---------------------------------------------------------> Stats Card */}
+        <StatsCard
+          subtitle="Facts & numbers"
+          statValue="91%"
+          description="Clients recommend our design services."
+        />
+      </div>
+
+      <div className="flex flex-col md:flex-row gap-6 h-full">
+
+        {/* ---------------------------------------------------------> Image Content Card */}
+        <ImageContentCard
+          subtitle="Customer stories"
+          description="Their creativity and attention to detail transformed our brand completely!"
+          image="/components/creativity-banner-image.jpg"
+        />
+
+        {/* ---------------------------------------------------------> Text Content Card */}
+        <TextContentCard
+          subtitle="Customer stories"
+          description="Step Events brought our ideas to life with exceptional creativity and precision, exceeding expectations."
+          title="Kabir Shah"
+          statLabel="Founder of Chipsland"
+        />
+
+      </div>
+    </div>
+
+  </section>
+  ```
+</UsageSteps>
+
+## Props
+
+<MDXPropsTable
+  props={[
+    {
+      prop: 'subtitle',
+      type: 'string',
+      default: '-',
+      description: 'The subtitle of the card',
+    },
+    {
+      prop: 'description',
+      type: 'string',
+      default: '-',
+      description: 'The description of the card',
+    },
+    {
+      prop: 'title',
+      type: 'string',
+      default: '-',
+      description: 'The title of the card',
+    },
+    {
+      prop: 'statLabel',
+      type: 'string',
+      default: '-',
+      description: 'The stat label of the card',
+    },
+    {
+      prop: 'image',
+      type: 'string',
+      default: '-',
+      description: 'The image of the card',
+    },
+    {
+      prop: 'bgImage',
+      type: 'string',
+      default: '-',
+      description: 'The background image of the card',
+    },
+    {
+      prop: 'statValue',
+      type: 'string',
+      default: '-',
+      description: 'The stat value of the card',
+    },
+  ]}
+/>

@@ -1,75 +1,36 @@
-# Elixir UI
+This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
-A beautiful collection of reusable React components built with Aceternity UI, ShadCN UI, and MAGIC UI. These components are designed to be copied and pasted into your projects, offering accessibility, customization, and open-source flexibility.
+## Getting Started
 
-## 🌟 Features
-
-- Beautifully designed components
-- Built with modern UI libraries
-- Fully accessible
-- Highly customizable
-- Open source
-- TypeScript support
-- Dark mode support
-
-## 🚀 Getting Started
-
-### Prerequisites
-
-- Node.js 14.0 or later
-- npm, yarn, or pnpm
-
-### Installation
+First, run the development server:
 
 ```bash
-# Clone the repository
-git clone https://github.com/praveenlodhiofficial/elixir-ui.git
-
-# Navigate to the project directory
-cd elixir-ui
-
-# Install dependencies
-pnpm install
-
-# Start the development server
+npm run dev
+# or
+yarn dev
+# or
 pnpm dev
+# or
+bun dev
 ```
 
-## 📦 Available Components
+Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-### Teammates
-A component that displays a list of teammates with an interactive hover effect. Perfect for team pages and about sections.
+You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
 
-## 🛠️ Built With
+This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
 
-- [Next.js](https://nextjs.org) - The React framework
-- [TypeScript](https://www.typescriptlang.org) - For type safety
-- [Aceternity UI](https://ui.aceternity.com/) - For beautiful UI components
-- [ShadCN UI](https://ui.shadcn.com) - For accessible components
-- [GSAP](https://greensock.com/gsap/) - For animations
+## Learn More
 
-## 🤝 Contributing
+To learn more about Next.js, take a look at the following resources:
 
-Contributions are welcome! If you have a component in mind that you think would be useful for others, please reach out through the following channels:
+- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
+- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-- [Twitter](https://x.com/praveenlodhi99)
-- [LinkedIn](https://www.linkedin.com/in/praveenlodhiofficial)
+You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
 
-## 📝 License
+## Deploy on Vercel
 
-This project is free to use for both personal and commercial projects. No attribution is required.
+The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
-## 🔗 Connect With Me
-
-- Twitter: [@praveenlodhi99](https://x.com/praveenlodhi99)
-- LinkedIn: [praveenlodhiofficial](https://www.linkedin.com/in/praveenlodhiofficial)
-- GitHub: [praveenlodhiofficial](https://github.com/praveenlodhiofficial)
-
-## 🙏 Credits
-
-Special thanks to the amazing open-source community and the following projects that made this possible:
-
-- Aceternity UI
-- ShadCN UI
-- Next.js
-- TypeScript
+Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.

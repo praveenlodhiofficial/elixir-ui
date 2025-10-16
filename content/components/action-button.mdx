@@ -1,0 +1,83 @@
+export const metadata = {
+  title: 'Action Button',
+  description:
+    'The Action Button component that displays a button with customizable colors and styling.',
+  alternates: {
+    canonical: '/action-button',
+  },
+};
+
+import { ComponentPreview } from '@/components/ComponentPreview';
+import { ActionButtonPreview } from './preview/action-button';
+
+# Action Button
+
+<span className="text-[15px]">
+  The Action Button component is a compact and interactive menu toggle
+  button, ideal for responsive navigation. It offers a toggleable design with
+  smooth animations, making it a versatile choice for modern web applications.
+</span>
+
+<Container slug="action-button">
+  <ComponentPreview
+    componentName="action-button"
+    className="h-full w-full"
+  >
+    <ActionButtonPreview />
+  </ComponentPreview>
+</Container>
+
+## Usage
+
+<span className="text-[15px]">
+  Follow the steps below to add the Action Button Component to your
+  project.
+</span>
+
+{/* -----------------------------USAGE - STEP - 01 ---------------------------> */}
+
+<UsageSteps stepNumber={1} title="Add the import statement for the component">
+  ```bash 
+  import ActionButton from "@/components/elixir-ui/action-button"; 
+  ```
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 02 ---------------------------> */}
+
+<UsageSteps stepNumber={2} title="Add the useState hook to the component">
+  ```tsx 
+  const [isActive, setIsActive] = useState(false); 
+  ```
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 03 ---------------------------> */}
+
+<UsageSteps
+  stepNumber={3}
+  title="Import the component in your project and use it"
+>
+  ```tsx
+  <div className="flex h-full w-full items-center justify-center">
+    <ActionButton isActive={isActive} setIsActive={setIsActive} />
+  </div>
+  ```
+</UsageSteps>
+
+## Props
+
+<MDXPropsTable
+  props={[
+    {
+      prop: 'isActive',
+      type: 'boolean',
+      default: 'false',
+      description: 'Controls the visibility of the Action Button',
+    },
+    {
+      prop: 'setIsActive',
+      type: '() => void',
+      default: '-',
+      description: 'Callback function when toggle button is clicked',
+    },
+  ]}
+/>

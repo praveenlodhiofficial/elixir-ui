@@ -1,0 +1,81 @@
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from '@/components/ui/accordion';
+import {
+  ArrowRightIcon,
+  BookOpenIcon,
+  CodeIcon,
+  DownloadIcon,
+  GithubIcon,
+  Grid3X3Icon,
+  LayersIcon,
+  SparklesIcon,
+  WindIcon,
+} from 'lucide-react';
+import { RocketIcon } from 'lucide-react';
+import NavigationalCard from '@/components/elixir-ui/navigational-card';
+
+# Documentation
+
+<span className="text-muted-foreground text-[15px]">
+  Welcome to Elixir UI documentation. Choose a section to get started with our
+  collection of meticulously crafted, re-usable components.
+</span>
+
+<section className="my-6 mb-12 grid grid-cols-1 gap-5 md:grid-cols-3">
+  <NavigationalCard
+    title="Introduction"
+    description="Learn about Elixir UI"
+    icon={<BookOpenIcon className="h-6 w-6" />}
+    href="#introduction"
+  />
+  <NavigationalCard
+    title="Getting Started"
+    description="Learn about Elixir UI"
+    icon={<RocketIcon className="h-6 w-6" />}
+    href="#getting-started"
+  />
+  <NavigationalCard
+    title="All Components"
+    description="Learn about Elixir UI"
+    icon={<Grid3X3Icon className="h-6 w-6" />}
+    href="#all-components"
+  />
+  <NavigationalCard
+    title="All Templates"
+    description="Learn about Elixir UI"
+    icon={<BookOpenIcon className="h-6 w-6" />}
+    href="#all-templates"
+  />
+</section>
+
+## Introduction
+
+<span className="text-muted-foreground text-[15px]">
+  Welcome to the documentation for Elixir UI. Discover a collection of
+  meticulously crafted, re-usable components that you can copy and paste
+  directly into your projects.
+</span>
+
+<div className="flex gap-4 mt-6">
+
+    <Button className='border dark:border-primary dark:bg-primary text-black hover:bg-primary/80' variant="secondary">
+        <Link href="#all-components" className='flex items-center gap-1'>
+            <span className='text-black'>Explore Components</span>
+            <ArrowRightIcon className="ml-2 h-4 w-4" />
+        </Link>
+    </Button>
+
+    <Button variant="outline" asChild>
+        <Link href="https://github.com/praveenlodhiofficial/elixir-ui" target="_blank" className='flex items-center gap-2'>
+            <GithubIcon className="mr-2 h-4 w-4" />
+            GitHub
+        </Link>
+    </Button>
+
+</div>

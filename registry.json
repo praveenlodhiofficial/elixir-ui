@@ -1,345 +1,199 @@
 {
-    "$schema": "https://ui.shadcn.com/schema/registry.json",
-    "name": "@elixir/ui",
-    "homepage": "http://localhost:3000",
-    "items": [
-        {
-            "name": "utils",
-            "type": "registry:lib",
-            "title": "Utils",
-            "description": "Utility functions for class name merging and other common operations.",
-            "files": [
-                {
-                    "path": "src/lib/utils.ts",
-                    "type": "registry:lib",
-                    "target": "src/lib/utils.ts"
-                }
-            ],
-            "dependencies": ["clsx", "tailwind-merge"]
-        },
-        {
-            "name": "icons",
-            "type": "registry:lib",
-            "title": "Icons",
-            "description": "A icons component that displays a icons with customizable colors and styling.",
-            "files": [
-                {
-                    "path": "src/registry/lib/icons.ts",
-                    "type": "registry:lib",
-                    "target": "src/lib/icons.ts"
-                }
-            ],
-            "dependencies": ["lucide-react", "react-icons"]
-        },
-        {
-            "name": "icon",
-            "type": "registry:ui",
-            "title": "Icon",
-            "description": "A icon component that displays an icon with customizable colors and styling.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/icons.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/icon.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/icon.tsx"
-                }
-            ],
-            "dependencies": ["class-variance-authority", "tailwind-merge", "clsx"]
-        },
-        {
-            "name": "button",
-            "type": "registry:ui",
-            "title": "Button",
-            "description": "A button component with various variants and sizes.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/button.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/button.tsx"
-                }
-            ],
-            "dependencies": ["@radix-ui/react-slot", "class-variance-authority"]
-        },
-        {
-            "name": "input",
-            "type": "registry:ui",
-            "title": "Input",
-            "description": "An input component with support for left and right icons.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/input.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/input.tsx"
-                }
-            ],
-            "dependencies": []
-        },
-        {
-            "name": "logo",
-            "type": "registry:ui",
-            "title": "Logo",
-            "description": "A logo component that displays the Elixir logo.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/logo.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/logo.tsx"
-                }
-            ],
-            "dependencies": []
-        },
-        {
-            "name": "card-template",
-            "type": "registry:ui",
-            "title": "Card Template",
-            "description": "A card template component with title and description.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/card-template.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/card-template.tsx"
-                }
-            ],
-            "dependencies": []
-        },
-        {
-            "name": "chat-messages",
-            "type": "registry:ui",
-            "title": "Chat Messages",
-            "description": "A chat message component with support for sent and received messages.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/chat-messages.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/chat-messages.tsx"
-                }
-            ],
-            "dependencies": ["motion", "lucide-react", "class-variance-authority", "react-icons"]
-        },
-        {
-            "name": "info-badge",
-            "type": "registry:ui",
-            "title": "Info Badge",
-            "description": "A info badge component that displays an info badge with customizable colors and styling.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/icons.json", "http://localhost:3000/registry/icon.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/info-badge.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/info-badge.tsx"
-                }
-            ]
-        },
-        {
-            "name": "feature-box",
-            "type": "registry:ui",
-            "title": "Feature Box",
-            "description": "A feature box component that displays a feature box with customizable colors and styling.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/icons.json", "http://localhost:3000/registry/icon.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/feature-box.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/feature-box.tsx"
-                }
-            ]
-        },
-        {
-            "name": "sidemenu-button",
-            "type": "registry:ui",
-            "title": "SideMenu Button",
-            "description": "A side menu button component that displays a side menu button with customizable colors and styling.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/sidemenu-button.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/sidemenu-button.tsx"
-                }
-            ],
-            "dependencies": ["framer-motion", "class-variance-authority"]
-        },
-        {
-            "name": "sidemenu-nav",
-            "type": "registry:ui",
-            "title": "SideMenu Nav",
-            "description": "A side menu nav component that displays a side menu nav with customizable colors and styling.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/ui/sidemenu-nav.tsx",
-                    "type": "registry:ui",
-                    "target": "src/components/elixir-ui/sidemenu-nav.tsx"
-                }
-            ],
-            "dependencies": ["framer-motion", "class-variance-authority"]
-        },
-        {
-            "name": "card-1",
-            "type": "registry:component",
-            "title": "Card1",
-            "description": "A vanilla tilt card component with customizable variants and tilt effects.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/card1.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/card-1.tsx"
-                }
-            ],
-            "dependencies": ["vanilla-tilt", "class-variance-authority"]
-        },
-        {
-            "name": "card-2",
-            "type": "registry:component",
-            "title": "Card2",
-            "description": "A feature-rich card component with image, info badges, and feature boxes.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/icon.json", "http://localhost:3000/registry/feature-box.json", "http://localhost:3000/registry/info-badge.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/card2.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/card-2.tsx"
-                }
-            ],
-            "dependencies": []
-        },
-        {
-            "name": "carousel-1",
-            "type": "registry:component",
-            "title": "Carousel1",
-            "description": "A web interface carousel component with chat messages and search functionality.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/chat-messages.json", "http://localhost:3000/registry/input.json", "http://localhost:3000/registry/logo.json", "http://localhost:3000/registry/card-template.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/carousel1.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/carousel-1.tsx"
-                }
-            ],
-            "dependencies": ["react-icons", "lucide-react"]
-        },
-        {
-            "name": "carousel-2",
-            "type": "registry:component",
-            "title": "Carousel2",
-            "description": "A carousel component with various display options.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/carousel2.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/carousel-2.tsx"
-                }
-            ],
-            "dependencies": ["motion", "react-icons", "lucide-react"]
-        },
-        {
-            "name": "team-1",
-            "type": "registry:component",
-            "title": "Team1",
-            "description": "A team component with interactive member cards and animations.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/icon.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/team1.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/team-1.tsx"
-                }
-            ],
-            "dependencies": ["framer-motion"]
-        },
-        {
-            "name": "team-2",
-            "type": "registry:component",
-            "title": "Team2",
-            "description": "A team component with GSAP animations and interactive profile images.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/team2.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/team-2.tsx"
-                }
-            ],
-            "dependencies": ["gsap"]
-        },
-        {
-            "name": "showcase-1",
-            "type": "registry:component",
-            "title": "Showcase1",
-            "description": "A 3D showcase component with Three.js and React Three Fiber.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/showcase1.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/showcase-1.tsx"
-                }
-            ],
-            "dependencies": [
-                "three",
-                "@types/three",
-                "class-variance-authority",
-                "@react-three/fiber",
-                "@react-three/postprocessing",
-                "@react-three/drei"
-            ]
-        },
-        {
-            "name": "sidemenu-1",
-            "type": "registry:component",
-            "title": "SideMenu1",
-            "description": "A side menu component with smooth animations and customizable themes.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/sidemenu-button.json", "http://localhost:3000/registry/sidemenu-nav.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/sidemenu1.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/sidemenu-1.tsx"
-                }
-            ],
-            "dependencies": ["framer-motion", "class-variance-authority"]
-        },
-        {
-            "name": "liquid-frame-1",
-            "type": "registry:component",
-            "title": "LiquidFrame1",
-            "description": "A liquid frame component with water ripple effects using Three.js.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/liquidFrame1.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/liquid-frame-1.tsx"
-                },
-                {
-                    "path": "src/registry/lib/liquid-frame.ts",
-                    "type": "registry:lib",
-                    "target": "src/lib/liquid-frame.ts"
-                }
-            ],
-            "dependencies": ["three", "@types/three", "class-variance-authority"]
-        },
-        {
-            "name": "message-thread-1",
-            "type": "registry:component",
-            "title": "MessageThread1",
-            "description": "A message thread component that displays chat messages with support for custom data, ID-based data switching, and default fallback data.",
-            "registryDependencies": ["http://localhost:3000/registry/utils.json", "http://localhost:3000/registry/chat-messages.json"],
-            "files": [
-                {
-                    "path": "src/registry/components/messageThread1.tsx",
-                    "type": "registry:component",
-                    "target": "src/components/elixir-ui/message-thread-1.tsx"
-                }
-            ],
-            "dependencies": ["motion", "lucide-react", "class-variance-authority", "react-icons"]
-        }
-    ]
+   "$schema": "https://ui.shadcn.com/schema/registry.json",
+   "name": "@elixir-ui",
+   "homepage": "https://elixir-ui.vercel.app",
+   "items": [
+      {
+         "name": "utils",
+         "type": "registry:lib",
+         "title": "Utils",
+         "description": "Utility functions for class name merging and other common operations.",
+         "files": [
+            {
+               "path": "src/lib/utils.ts",
+               "type": "registry:lib",
+               "target": "src/lib/utils.ts"
+            }
+         ],
+         "dependencies": ["clsx", "tailwind-merge"]
+      },
+      {
+         "name": "liquid-frame",
+         "type": "registry:component",
+         "title": "LiquidFrame",
+         "description": "A liquid frame component with water ripple effects using Three.js.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/liquid-frame.tsx",
+               "type": "registry:component",
+               "target": "src/components/elixir-ui/liquid-frame.tsx"
+            },
+            {
+               "path": "src/lib/liquid-frame.ts",
+               "type": "registry:lib",
+               "target": "src/lib/liquid-frame.ts"
+            }
+         ],
+         "dependencies": ["three", "class-variance-authority"],
+         "devDependencies": ["@types/three"]
+      },
+      {
+         "name": "showcase",
+         "type": "registry:component",
+         "title": "Showcase",
+         "description": "The Showcase component is a React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/showcase.tsx",
+               "type": "registry:ui",
+               "target": "src/components/elixir-ui/showcase.tsx"
+            }
+         ],
+         "dependencies": [
+            "three",
+            "class-variance-authority",
+            "@react-three/postprocessing",
+            "@react-three/drei",
+            "@react-three/fiber"
+         ],
+         "devDependencies": ["@types/three"]
+      },
+      {
+         "name": "tidal-text-animation",
+         "type": "registry:component",
+         "title": "TidalTextAnimation",
+         "description": "Team Carousel 02 showcases a tidal-text animation component is an interactive component where hovering over a team members image reveals their name rising from the bottom, mimicking a wave motion. In the default state, the team name is displayed.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/tidal-text-animation.tsx",
+               "type": "registry:ui",
+               "target": "src/components/elixir-ui/tidal-text-animation.tsx"
+            }
+         ],
+         "dependencies": ["class-variance-authority", "gsap"]
+      },
+      {
+         "name": "action-button",
+         "type": "registry:component",
+         "title": "ActionButton",
+         "description": "The Action Button component is a button that displays an action button with customizable colors and styling.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/action-button.tsx",
+               "type": "registry:ui",
+               "target": "src/components/elixir-ui/action-button.tsx"
+            }
+         ],
+         "dependencies": ["class-variance-authority", "framer-motion"]
+      },
+      {
+         "name": "sidemenu",
+         "type": "registry:component",
+         "title": "Sidemenu",
+         "description": "The Sidemenu component is a side menu component that displays a side menu with customizable colors and styling.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/sidemenu.tsx",
+               "type": "registry:component",
+               "target": "src/components/elixir-ui/sidemenu.tsx"
+            }
+         ],
+         "dependencies": ["class-variance-authority", "framer-motion"]
+      },
+      {
+         "name": "vanilla-tilt-card",
+         "type": "registry:component",
+         "title": "VanillaTiltCard",
+         "description": "A card component that uses the Vanilla Tilt library to create a 3D tilt effect.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/vanilla-tilt-card.tsx",
+               "type": "registry:component",
+               "target": "src/components/elixir-ui/vanilla-tilt-card.tsx"
+            }
+         ],
+         "dependencies": ["vanilla-tilt"],
+         "devDependencies": ["@types/vanilla-tilt"]
+      },
+      {
+         "name": "orbital-flow",
+         "type": "registry:component",
+         "title": "OrbitalFlow",
+         "description": "A orbital flow component that displays a orbital flow with customizable colors and styling.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/orbital-flow.tsx",
+               "type": "registry:component",
+               "target": "src/components/elixir-ui/orbital-flow.tsx"
+            }
+         ],
+         "dependencies": ["motion", "class-variance-authority", "lucide-react", "react-icons"]
+      },
+      {
+         "name": "action-input",
+         "type": "registry:ui",
+         "title": "ActionInput",
+         "description": "A action input component that displays a action input with customizable colors and styling.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/action-input.tsx",
+               "type": "registry:ui",
+               "target": "src/components/elixir-ui/action-input.tsx"
+            }
+         ],
+         "dependencies": ["class-variance-authority", "lucide-react", "react-icons"]
+      },
+      {
+         "name": "navigational-card",
+         "type": "registry:component",
+         "title": "NavigationalCard",
+         "description": "A navigational card component that displays a navigational card with customizable colors and styling.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/navigational-card.tsx",
+               "type": "registry:component",
+               "target": "src/components/elixir-ui/navigational-card.tsx"
+            }
+         ],
+         "dependencies": ["class-variance-authority", "lucide-react"]
+      },
+      {
+         "name": "customer-stories",
+         "type": "registry:component",
+         "title": "CustomerStories",
+         "description": "A customer stories component that displays a customer stories with customizable colors and styling.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/customer-stories.tsx",
+               "type": "registry:component",
+               "target": "src/components/elixir-ui/customer-stories.tsx"
+            }
+         ]
+      },
+      {
+         "name": "reflext-gallery",
+         "type": "registry:component",
+         "title": "ReflextGallery",
+         "description": "A reflext gallery component that displays a reflext gallery with customizable colors and styling.",
+         "registryDependencies": ["utils"],
+         "files": [
+            {
+               "path": "src/components/elixir-ui/reflext-gallery.tsx",
+               "type": "registry:component",
+               "target": "src/components/elixir-ui/reflext-gallery.tsx"
+            }
+         ],
+         "dependencies": ["class-variance-authority", "lucide-react", "motion"]
+      }
+   ]
 }

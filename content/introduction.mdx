@@ -1,0 +1,548 @@
+import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import {
+  ArrowRightIcon,
+  BookOpenIcon,
+  CodeIcon,
+  DownloadIcon,
+  GithubIcon,
+  Grid3X3Icon,
+  LayersIcon,
+  SparklesIcon,
+  WindIcon,
+  StarIcon,
+  UsersIcon,
+  ZapIcon,
+  ShieldIcon,
+} from 'lucide-react';
+import NavigationalCard from '@/components/elixir-ui/navigational-card';
+
+export const metadata = {
+  title: 'Introduction',
+  description: 'Welcome to Elixir UI - A collection of modern, reusable React components built with Next.js, TypeScript, and Tailwind CSS.',
+  alternates: {
+    canonical: '/introduction',
+  },
+};
+
+# Introduction
+
+<div className="relative overflow-hidden">
+  {/* Hero Section */}
+  <div className="relative bg-gradient-to-br from-primary/5 via-background to-primary/10 dark:from-primary/10 dark:via-background dark:to-primary/20 rounded-2xl p-8 md:p-12 mb-12 border border-border/50 dark:border-border/20">
+    <div className="absolute inset-0 bg-grid-pattern opacity-5 dark:opacity-10" />
+    <div className="absolute inset-0 bg-gradient-to-r from-transparent via-primary/5 to-transparent dark:via-primary/10" />
+    <div className="relative z-10">
+      <div className="text-center max-w-4xl mx-auto">
+        <div className="inline-flex items-center gap-2 bg-primary/10 dark:bg-primary/20 text-zinc-900 dark:text-zinc-100 px-4 py-2 rounded-full text-sm font-medium mb-6 border border-primary/20 dark:border-primary/30">
+          <SparklesIcon className="h-4 w-4" />
+          <span className='text-zinc-900 dark:text-zinc-100'>Modern React Components</span>
+        </div>
+        
+        <h1 className="text-4xl md:text-6xl font-bold tracking-tight mb-6 text-foreground dark:text-foreground">
+          Build Beautiful UIs with
+          <span className="bg-gradient-to-r from-primary via-primary/80 to-primary/60 dark:from-primary dark:via-primary/90 dark:to-primary/70 bg-clip-text text-transparent">
+            Elixir UI
+          </span>
+        </h1>
+        
+        <p className="text-xl text-muted-foreground dark:text-muted-foreground mb-8 max-w-2xl mx-auto">
+          A curated collection of modern, reusable React components designed to accelerate your development workflow. 
+          Copy, paste, and customize - no dependencies required.
+        </p>
+        
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Button size="lg" asChild className="text-base px-8 py-6 bg-primary hover:bg-primary/90 dark:bg-primary dark:hover:bg-primary/90 shadow-lg dark:shadow-primary/25">
+            <Link href="/docs/components">
+              <Grid3X3Icon className="mr-2 h-5 w-5" />
+              Explore Components
+              <ArrowRightIcon className="ml-2 h-4 w-4" />
+            </Link>
+          </Button>
+          <Button size="lg" variant="outline" asChild className="text-base px-8 py-6 border-2 hover:bg-accent dark:hover:bg-accent/50">
+            <Link href="https://github.com/praveenlodhiofficial/elixir-ui" target="_blank">
+              <GithubIcon className="mr-2 h-5 w-5" />
+              View on GitHub
+            </Link>
+          </Button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+{/* Quick Stats */}
+
+  <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-12">
+    <div className="text-center p-6 bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300">
+      <div className="text-3xl font-bold text-primary dark:text-primary mb-2">10+</div>
+      <div className="text-sm text-muted-foreground dark:text-muted-foreground">Components</div>
+    </div>
+    <div className="text-center p-6 bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300">
+      <div className="text-3xl font-bold text-primary dark:text-primary mb-2">3D</div>
+      <div className="text-sm text-muted-foreground dark:text-muted-foreground">WebGL Effects</div>
+    </div>
+    <div className="text-center p-6 bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300">
+      <div className="text-3xl font-bold text-primary dark:text-primary mb-2">0</div>
+      <div className="text-sm text-muted-foreground dark:text-muted-foreground">Dependencies</div>
+    </div>
+    <div className="text-center p-6 bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300">
+      <div className="text-3xl font-bold text-primary dark:text-primary mb-2">100%</div>
+      <div className="text-sm text-muted-foreground dark:text-muted-foreground">TypeScript</div>
+    </div>
+  </div>
+</div>
+
+## What is Elixir UI?
+
+Elixir UI is a modern component collection that focuses on:
+
+- **Full Code Ownership** - You get the complete source code for every component
+- **Modern Tech Stack** - Built with React, TypeScript, and Tailwind CSS
+- **Copy & Paste** - No npm packages, just copy the code and customize
+- **3D & Interactive** - Advanced components with Three.js integration
+- **Responsive Design** - Mobile-first approach with beautiful animations
+
+## Available Components
+
+Our collection includes 10+ carefully crafted components, each designed with modern web standards and beautiful animations.
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+  <NavigationalCard
+    title="Sidemenu"
+    description="Animated sidebar navigation with smooth transitions"
+    icon={<LayersIcon className="h-6 w-6" />}
+    href="/docs/components/sidemenu"
+  />
+  <NavigationalCard
+    title="LiquidFrame"
+    description="Water ripple effects using Three.js"
+    icon={<ZapIcon className="h-6 w-6" />}
+    href="/docs/components/liquid-frame"
+  />
+  <NavigationalCard
+    title="3D Showcase"
+    description="3D hollow cylinder with custom textures"
+    icon={<Grid3X3Icon className="h-6 w-6" />}
+    href="/docs/components/showcase"
+  />
+  <NavigationalCard
+    title="OrbitalFlow"
+    description="Dynamic orbital animation system"
+    icon={<WindIcon className="h-6 w-6" />}
+    href="/docs/components/orbital-flow"
+  />
+  <NavigationalCard
+    title="VanillaTiltCard"
+    description="3D tilt effects for cards"
+    icon={<StarIcon className="h-6 w-6" />}
+    href="/docs/components/vanilla-tilt-card"
+  />
+  <NavigationalCard
+    title="NavigationalCard"
+    description="Clean navigation cards with hover effects"
+    icon={<BookOpenIcon className="h-6 w-6" />}
+    href="/docs/components/navigational-card"
+  />
+  <NavigationalCard
+    title="ActionInput"
+    description="Interactive input components"
+    icon={<CodeIcon className="h-6 w-6" />}
+    href="/docs/components/action-input"
+  />
+  <NavigationalCard
+    title="CustomerStories"
+    description="Beautiful customer testimonial cards"
+    icon={<UsersIcon className="h-6 w-6" />}
+    href="/docs/components/customer-stories"
+  />
+  <NavigationalCard
+    title="TidalTextAnimation"
+    description="Flowing text animations"
+    icon={<SparklesIcon className="h-6 w-6" />}
+    href="/docs/components/tidal-text-animation"
+  />
+</div>
+
+## Quick Start
+
+Getting started with Elixir UI is simple:
+
+<UsageSteps stepNumber={1} title="Choose a Component">
+  Browse our component collection and select the one that fits your needs.
+</UsageSteps>
+
+<UsageSteps stepNumber={2} title="Copy the Code">
+  Click the copy button to get the complete source code for the component.
+</UsageSteps>
+
+<UsageSteps stepNumber={3} title="Paste & Customize">
+  Create a new file in your project, paste the code, and customize it to match your design.
+</UsageSteps>
+
+## Example Usage
+
+Here are some practical examples of how to use Elixir UI components:
+
+### Sidemenu Component
+
+```tsx
+import Sidemenu from "@/components/elixir-ui/sidemenu";
+
+const links = [
+  { title: "Home", href: "/" },
+  { title: "About", href: "/about" },
+  { title: "Contact", href: "/contact" },
+];
+
+const footerLinks = [
+  { title: "GitHub", href: "https://github.com" },
+  { title: "Twitter", href: "https://twitter.com" },
+];
+
+export default function MyApp() {
+  return (
+    <Sidemenu
+      cardColor="#FF6B6B"
+      cardImageURL="/background.jpg"
+      links={links}
+      footerLinks={footerLinks}
+      imageOpacity={0.8}
+      imageSaturation={1.2}
+    />
+  );
+}
+```
+
+### LiquidFrame Component
+
+```tsx
+import LiquidFrame from "@/components/elixir-ui/liquid-frame";
+
+export default function ImageGallery() {
+  return (
+    <LiquidFrame
+      src="/images/hero.jpg"
+      alt="Hero image with water effect"
+      width={400}
+      height={300}
+      variant="default"
+      className="rounded-lg shadow-lg"
+    />
+  );
+}
+```
+
+### Showcase Component
+
+```tsx
+import { Showcase } from "@/components/elixir-ui/showcase";
+
+export default function ProductShowcase() {
+  return (
+    <Showcase
+      imageSrc="/products/featured.jpg"
+      text="Featured Product"
+      fontSize="48px"
+      textColor="#FFFFFF"
+      rotationSpeed={0.01}
+      bloomIntensity={2.5}
+      enableControls={true}
+      className="w-full h-96"
+    />
+  );
+}
+```
+
+### NavigationalCard Component
+
+```tsx
+import NavigationalCard from "@/components/elixir-ui/navigational-card";
+import { ArrowRightIcon, BookOpenIcon } from "lucide-react";
+
+export default function NavigationGrid() {
+    return (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
+      <NavigationalCard
+        title="Documentation"
+        description="Learn how to use our components"
+        icon={<BookOpenIcon className="h-6 w-6" />}
+        href="/docs"
+      />
+      <NavigationalCard
+        title="Components"
+        description="Browse our component library"
+        icon={<ArrowRightIcon className="h-6 w-6" />}
+        href="/components"
+            />
+        </div>
+  );
+}
+```
+
+## Features
+
+<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
+  <div className="bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 p-6 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300 hover:border-primary/20 dark:hover:border-primary/30">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-lg border border-primary/20 dark:border-primary/30">
+        <SparklesIcon className="h-5 w-5" />
+      </div>
+      <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Modern Design</h3>
+    </div>
+    <ul className="space-y-2 text-sm text-muted-foreground dark:text-muted-foreground">
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Clean, contemporary aesthetics
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Framer Motion animations
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Dark mode support
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Responsive layouts
+      </li>
+    </ul>
+  </div>
+
+  <div className="bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 p-6 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300 hover:border-primary/20 dark:hover:border-primary/30">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-lg border border-primary/20 dark:border-primary/30">
+        <ZapIcon className="h-5 w-5" />
+      </div>
+      <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Performance</h3>
+    </div>
+    <ul className="space-y-2 text-sm text-muted-foreground dark:text-muted-foreground">
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Lightweight components
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        No dependencies
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Tree-shaking friendly
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Next.js optimized
+      </li>
+    </ul>
+  </div>
+
+  <div className="bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 p-6 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300 hover:border-primary/20 dark:hover:border-primary/30">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-lg border border-primary/20 dark:border-primary/30">
+        <CodeIcon className="h-5 w-5" />
+      </div>
+      <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Developer Experience</h3>
+    </div>
+    <ul className="space-y-2 text-sm text-muted-foreground dark:text-muted-foreground">
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Copy & paste ready
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Full source code
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        TypeScript support
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Easy integration
+      </li>
+    </ul>
+  </div>
+
+  <div className="bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 p-6 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300 hover:border-primary/20 dark:hover:border-primary/30">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-lg border border-primary/20 dark:border-primary/30">
+        <Grid3X3Icon className="h-5 w-5" />
+      </div>
+      <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Advanced Features</h3>
+    </div>
+    <ul className="space-y-2 text-sm text-muted-foreground dark:text-muted-foreground">
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Three.js integration
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Custom shaders
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        GSAP support
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Interactive elements
+      </li>
+    </ul>
+  </div>
+
+  <div className="bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 p-6 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300 hover:border-primary/20 dark:hover:border-primary/30">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-lg border border-primary/20 dark:border-primary/30">
+        <ShieldIcon className="h-5 w-5" />
+      </div>
+      <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Accessibility</h3>
+    </div>
+    <ul className="space-y-2 text-sm text-muted-foreground dark:text-muted-foreground">
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        ARIA labels
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Keyboard navigation
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Screen reader support
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Focus management
+      </li>
+    </ul>
+  </div>
+
+  <div className="bg-card/50 dark:bg-card/30 rounded-xl border border-border/50 dark:border-border/30 p-6 hover:shadow-lg dark:hover:shadow-primary/10 transition-all duration-300 hover:border-primary/20 dark:hover:border-primary/30">
+    <div className="flex items-center gap-3 mb-4">
+      <div className="bg-primary/10 dark:bg-primary/20 text-primary dark:text-primary p-2 rounded-lg border border-primary/20 dark:border-primary/30">
+        <LayersIcon className="h-5 w-5" />
+      </div>
+      <h3 className="text-lg font-semibold text-foreground dark:text-foreground">Tech Stack</h3>
+    </div>
+    <ul className="space-y-2 text-sm text-muted-foreground dark:text-muted-foreground">
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        React 19
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        TypeScript
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Tailwind CSS
+      </li>
+      <li className="flex items-center gap-2">
+        <div className="w-1.5 h-1.5 bg-primary dark:bg-primary rounded-full" />
+        Framer Motion
+      </li>
+    </ul>
+  </div>
+</div>
+
+## Prerequisites
+
+To use Elixir UI components, you'll need:
+
+- **React 18+** or **Next.js 13+**
+- **TypeScript** (recommended)
+- **Tailwind CSS**
+- **Lucide React** (for icons)
+
+## Getting Help
+
+- 📖 **Documentation** - Comprehensive guides for each component
+- 💬 **GitHub Issues** - Report bugs or request features
+- 🎨 **Examples** - Live previews and code examples
+- 🔧 **Customization** - Tips for adapting components to your needs
+
+## Component Showcase
+
+Here are some examples of our components in action:
+
+<Container>
+  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="space-y-4">
+      <h4 className="text-lg font-semibold">Sidemenu Component</h4>
+      <p className="text-sm text-gray-600 dark:text-gray-400">
+        Animated sidebar navigation with smooth transitions and customizable styling.
+      </p>
+    </div>
+    <div className="space-y-4">
+      <h4 className="text-lg font-semibold">LiquidFrame Component</h4>
+      <p className="text-sm text-gray-600 dark:text-gray-400">
+        Water ripple effects using Three.js for stunning visual interactions.
+      </p>
+    </div>
+  </div>
+</Container>
+
+## Ready to Get Started?
+
+<div className="bg-gradient-to-br from-primary/10 via-background to-primary/5 dark:from-primary/20 dark:via-background dark:to-primary/10 rounded-2xl p-8 md:p-12 text-center mb-8 border border-border/50 dark:border-border/30">
+  <div className="max-w-3xl mx-auto">
+    <h2 className="text-3xl md:text-4xl font-bold mb-4 text-foreground dark:text-foreground">
+      Start Building Beautiful UIs Today
+    </h2>
+    <p className="text-lg text-muted-foreground dark:text-muted-foreground mb-8">
+      Join thousands of developers who are already using Elixir UI to create stunning, 
+      interactive web applications. No setup required - just copy, paste, and customize.
+    </p>
+    
+    <div className="flex flex-col sm:flex-row gap-4 justify-center mb-8">
+      <Button size="lg" asChild className="text-base px-8 py-6 bg-primary hover:bg-primary/90 dark:bg-primary dark:hover:bg-primary/90 text-primary-foreground dark:text-primary-foreground shadow-lg dark:shadow-primary/25">
+        <Link href="/docs/components">
+          <Grid3X3Icon className="mr-2 h-5 w-5" />
+          Browse Components
+          <ArrowRightIcon className="ml-2 h-4 w-4" />
+        </Link>
+      </Button>
+      <Button size="lg" variant="outline" asChild className="text-base px-8 py-6 border-2 hover:bg-accent dark:hover:bg-accent/50">
+        <Link href="https://github.com/praveenlodhiofficial/elixir-ui" target="_blank">
+          <GithubIcon className="mr-2 h-5 w-5" />
+          Star on GitHub
+        </Link>
+      </Button>
+    </div>
+    
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-sm">
+      <div className="flex items-center justify-center gap-2">
+        <div className="w-2 h-2 bg-green-500 dark:bg-green-400 rounded-full" />
+        <span className="text-muted-foreground dark:text-muted-foreground">Free to use</span>
+      </div>
+      <div className="flex items-center justify-center gap-2">
+        <div className="w-2 h-2 bg-blue-500 dark:bg-blue-400 rounded-full" />
+        <span className="text-muted-foreground dark:text-muted-foreground">MIT License</span>
+      </div>
+      <div className="flex items-center justify-center gap-2">
+        <div className="w-2 h-2 bg-purple-500 dark:bg-purple-400 rounded-full" />
+        <span className="text-muted-foreground dark:text-muted-foreground">No attribution required</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div className="text-center">
+  <p className="text-muted-foreground dark:text-muted-foreground mb-4">
+    Have questions or need help? We're here to support you.
+  </p>
+  <div className="flex flex-col sm:flex-row gap-4 justify-center">
+    <Button variant="ghost" asChild className="hover:bg-accent dark:hover:bg-accent/50">
+      <Link href="https://github.com/praveenlodhiofficial/elixir-ui/issues" target="_blank">
+        <GithubIcon className="mr-2 h-4 w-4" />
+        Report an Issue
+      </Link>
+    </Button>
+    <Button variant="ghost" asChild className="hover:bg-accent dark:hover:bg-accent/50">
+      <Link href="https://x.com/praveenlodhi99" target="_blank">
+        <span className="mr-2">𝕏</span>
+        Follow for Updates
+      </Link>
+    </Button>
+  </div>
+</div>

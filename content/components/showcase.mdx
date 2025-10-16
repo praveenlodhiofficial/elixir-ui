@@ -1,0 +1,74 @@
+export const metadata = {
+  title: '3D Showcase',
+  description:
+    'A React Three Fiber component that renders a 3D hollow cylinder with a custom image texture and subtle rotation. Perfect for dynamic 3D showcases.',
+  alternates: {
+    canonical: '/showcase',
+  },
+};
+
+import { ComponentPreview } from '@/components/ComponentPreview';
+import { ShowcasePreview } from './preview/showcase';
+
+# 3D Showcase
+
+<span className="text-[15px]">
+  The 3D Showcase component is a React Three Fiber component that renders a 3D
+  hollow cylinder with a custom image texture and subtle rotation. Perfect for
+  dynamic 3D showcases.
+</span>
+
+<Container slug="showcase">
+  <ComponentPreview componentName="showcase" className="h-full w-full">
+    <ShowcasePreview />
+  </ComponentPreview>
+</Container>
+
+## Usage
+
+<span className="text-[15px]">
+  Follow the steps below to add the 3D Showcase Component to your project.
+</span>
+
+{/* -----------------------------USAGE - STEP - 01 ---------------------------> */}
+
+<UsageSteps stepNumber={1} title="Add the import statement for the component">
+  ```tsx 
+  import { Showcase } from "@/components/elixir-ui/showcase"; 
+  ```
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 02 ---------------------------> */}
+
+<UsageSteps
+  stepNumber={2}
+  title="Import the component in your project and use it"
+>
+  ```tsx
+  <Showcase
+    imageSrc="/components/jujutsu-kaisen.png"
+    text="Anime"
+    fontSize="55px"
+    fontFamily="exo"
+    textColor="#FFFFD4"
+    className="h-full w-full bg-black"
+    rotationSpeed={0.005}
+    bloomIntensity={2}
+    enableControls={true}
+  />
+  ```
+</UsageSteps>
+
+## Props
+
+| Prop             | Type      | Default           | Description                             |
+| ---------------- | --------- | ----------------- | --------------------------------------- |
+| `imageSrc`       | `string`  | -                 | The source of the image to be displayed |
+| `text`           | `string`  | -                 | The text to be displayed                |
+| `fontSize`       | `string`  | `40px`            | The size of the text                    |
+| `fontFamily`     | `string`  | `Times New Roman` | The font family of the text             |
+| `textColor`      | `string`  | `#F6F77D`         | The color of the text                   |
+| `rotationSpeed`  | `number`  | `0.006`           | The speed of the rotation               |
+| `bloomIntensity` | `number`  | `3`               | The intensity of the bloom              |
+| `enableControls` | `boolean` | `true`            | Whether to enable the controls          |
+| `className`      | `string`  | -                 | Additional CSS classes                  |

@@ -1,0 +1,25 @@
+{
+   "semi": true,
+   "tabWidth": 3,
+   "printWidth": 100,
+   "singleQuote": false,
+   "trailingComma": "es5",
+   "bracketSpacing": true,
+   "arrowParens": "always",
+   "endOfLine": "lf",
+   "useTabs": false,
+   "quoteProps": "as-needed",
+   "jsxSingleQuote": false,
+   "plugins": ["prettier-plugin-tailwindcss"],
+   "overrides": [
+      {
+         "files": "*.mdx",
+         "options": {
+            "printWidth": 80,
+            "proseWrap": "preserve",
+            "embeddedLanguageFormatting": "off",
+            "htmlWhitespaceSensitivity": "ignore"
+         }
+      }
+   ]
+}

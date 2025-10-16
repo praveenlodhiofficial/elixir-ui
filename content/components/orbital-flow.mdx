@@ -1,0 +1,158 @@
+export const metadata = {
+  title: 'Orbital Flow',
+  description:
+    'A orbital flow component that displays a orbital flow with customizable colors and styling.',
+  alternates: {
+    canonical: '/orbital-flow',
+  },
+};
+
+import { ComponentPreview } from '@/components/ComponentPreview';
+import { OrbitalFlowPreview } from './preview/orbital-flow';
+
+# Orbital Flow
+
+<span className="text-[15px]">
+  The Orbital Flow component is a compact and interactive orbital flow, ideal
+  for responsive navigation. It offers a toggleable design with smooth
+  animations, making it a versatile choice for modern web applications.
+</span>
+
+<Container slug="orbital-flow">
+  <ComponentPreview componentName="orbital-flow" className="h-full w-full">
+    <OrbitalFlowPreview />
+  </ComponentPreview>
+</Container>
+
+## Usage
+
+<span className="text-[15px]">
+  Follow the steps below to add the Orbital Flow Component to your project.
+</span>
+
+{/* -----------------------------USAGE - STEP - 01 ---------------------------> */}
+
+<UsageSteps stepNumber={1} title="Add the import statement for the component">
+  ```tsx 
+  import OrbitalFlow from "@/components/elixir-ui/orbital-flow"; 
+  ```
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 02 ---------------------------> */}
+
+<UsageSteps stepNumber={2} title="Add the inner and outer tags props to the component">
+  ```tsx
+  const innerTags = [
+    { name: "Slack", icon: <FaSlack /> },
+    { name: "Notion", icon: <SiNotion /> },
+    { name: "Discord", icon: <FaDiscord /> },
+    { name: "Youtube", icon: <FaYoutube /> },
+  ];
+
+const outerTags = [
+{ name: "Messages", icon: <FaEnvelope /> },
+{ name: "Substack", icon: <FaRss /> },
+{ name: "Recordings", icon: <FaMicrophone /> },
+{ name: "Spotify", icon: <FaSpotify /> },
+{ name: "Instagram", icon: <FaInstagram /> },
+];
+
+````
+</UsageSteps>
+
+{/* -----------------------------USAGE - STEP - 03 ---------------------------> */}
+<UsageSteps stepNumber={2} title="Import the component in your project and use it">
+```tsx
+<div className="h-full w-full flex items-center justify-center">
+    <OrbitalFlow
+          outerTags={outerTags}
+          innerTags={innerTags}
+          centerImageSrc="/components/john-lennon.jpg"
+          outerOrbitDiameter={850}
+          innerOrbitDiameter={550}
+          outerRotationSpeed={32}
+          innerRotationSpeed={30}
+    />
+</div>
+````
+
+</UsageSteps>
+
+## Props
+
+<MDXPropsTable
+  props={[
+    {
+      prop: 'outerTags',
+      type: 'OrbitTag[]',
+      default: '-',
+      description: 'The outer tags to be displayed',
+    },
+    {
+      prop: 'outerTags.name',
+      type: 'string',
+      default: '-',
+      description: 'The name of the outer tag',
+    },
+    {
+      prop: 'outerTags.icon',
+      type: 'React.ReactNode',
+      default: '-',
+      description: 'The icon of the outer tag',
+    },
+    {
+      prop: 'innerTags',
+      type: 'OrbitTag[]',
+      default: '-',
+      description: 'The inner tags to be displayed',
+    },
+    {
+      prop: 'innerTags.name',
+      type: 'string',
+      default: '-',
+      description: 'The name of the inner tag',
+    },
+    {
+      prop: 'innerTags.icon',
+      type: 'React.ReactNode',
+      default: '-',
+      description: 'The icon of the inner tag',
+    },
+    {
+      prop: 'centerImageSrc',
+      type: 'string',
+      default: '-',
+      description: 'The source of the center image',
+    },
+    {
+      prop: 'outerOrbitDiameter',
+      type: 'number',
+      default: '850',
+      description: 'The diameter of the outer orbit',
+    },
+    {
+      prop: 'innerOrbitDiameter',
+      type: 'number',
+      default: '550',
+      description: 'The diameter of the inner orbit',
+    },
+    {
+      prop: 'outerRotationSpeed',
+      type: 'number',
+      default: '32',
+      description: 'The speed of the outer rotation',
+    },
+    {
+      prop: 'innerRotationSpeed',
+      type: 'number',
+      default: '30',
+      description: 'The speed of the inner rotation',
+    },
+    {
+      prop: 'className',
+      type: 'string',
+      default: '-',
+      description: 'Additional CSS classes',
+    },
+  ]}
+/>
