@@ -1,14 +1,10 @@
 {
-  "name": "mdx",
+  "name": "mdx-component-registry",
   "type": "component",
   "files": [
     {
       "path": "mdx-component-registry.tsx",
       "target": "components\\mdx-component-registry.tsx"
-    },
-    {
-      "path": "mdx.tsx",
-      "target": "components\\mdx.tsx"
     }
   ]
 }

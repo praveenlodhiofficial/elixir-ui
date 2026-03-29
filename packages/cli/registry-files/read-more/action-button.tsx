@@ -4,11 +4,12 @@ import { cva, type VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
+import Link from "next/link";
 
 import { cn } from "../lib/utils";
 
 const actionButtonVariants = cva(
-  "group relative flex items-center justify-between overflow-hidden rounded-lg px-5 py-2.5 text-sm font-medium transition-colors",
+  "group relative flex items-center justify-between overflow-hidden rounded-lg px-5 py-3 cursor-pointer text-sm font-medium transition-colors",
   {
     variants: {
       variant: {
@@ -33,6 +34,7 @@ const actionButtonVariants = cva(
 export interface ActionButtonProps {
   children?: React.ReactNode;
   icon?: React.ReactNode;
+  href?: string;
   className?: string;
   onClick?: React.MouseEventHandler<HTMLButtonElement>;
 }
@@ -41,22 +43,12 @@ export function ActionButton({
   children = "Button Name",
   icon = <ChevronDown size={20} />,
   variant = "default",
+  href,
   className,
   onClick,
 }: ActionButtonProps & VariantProps<typeof actionButtonVariants>) {
-  return (
-    <motion.button
-      initial="rest"
-      whileHover="hover"
-      animate="rest"
-      onClick={onClick}
-      data-variant={variant}
-      className={cn(
-        clsx(actionButtonVariants({ variant })),
-        !icon && "justify-center",
-        className
-      )}
-    >
+  const content = (
+    <>
       {/* TEXT */}
       <div className="relative h-5 overflow-hidden">
         {/* original */}
@@ -65,7 +57,7 @@ export function ActionButton({
             rest: { y: 0 },
             hover: { y: "-100%" },
           }}
-          transition={{ duration: 0.12, ease: "easeOut" }}
+          transition={{ duration: 0.15, ease: "easeOut" }}
           className="block"
         >
           {children}
@@ -115,6 +107,43 @@ export function ActionButton({
           </motion.div>
         </div>
       )}
+    </>
+  );
+
+  if (href) {
+    return (
+      <motion.div
+        initial="rest"
+        whileHover="hover"
+        animate="rest"
+        data-variant={variant}
+        className={cn(
+          clsx(actionButtonVariants({ variant })),
+          !icon && "justify-center",
+          className
+        )}
+      >
+        <Link href={href} className="flex w-full items-center justify-between">
+          {content}
+        </Link>
+      </motion.div>
+    );
+  }
+
+  return (
+    <motion.button
+      initial="rest"
+      whileHover="hover"
+      animate="rest"
+      onClick={onClick}
+      data-variant={variant}
+      className={cn(
+        clsx(actionButtonVariants({ variant })),
+        !icon && "justify-center",
+        className
+      )}
+    >
+      {content}
     </motion.button>
   );
 }

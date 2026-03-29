@@ -3,6 +3,10 @@
   "type": "ui",
   "files": [
     {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    },
+    {
       "path": "vanilla-tilt-card.tsx",
       "target": "components\\vanilla-tilt-card.tsx"
     }

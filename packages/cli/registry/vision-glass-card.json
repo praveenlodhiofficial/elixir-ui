@@ -3,6 +3,10 @@
   "type": "ui",
   "files": [
     {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    },
+    {
       "path": "vision-glass-card.tsx",
       "target": "components\\vision-glass-card.tsx"
     }
