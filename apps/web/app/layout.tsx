@@ -31,7 +31,7 @@ export default function RootLayout({
       className={cn(
         "antialiased",
         fontMono.variable,
-        exo.className,
+        // exo.className,
         "font-sans",
         geist.variable
       )}

@@ -7,6 +7,7 @@ import Image from "next/image";
 import clsx from "clsx";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import VanillaTilt from "vanilla-tilt";
+import { cn } from "../lib/utils"; // adjust path if needed
 
 interface HTMLDivElementWithVanillaTilt extends HTMLDivElement {
   vanillaTilt?: { destroy: () => void };
@@ -17,11 +18,13 @@ const SPRING = { stiffness: 55, damping: 18, mass: 1 };
 export interface VisionGlassCardProps {
   src?: string;
   label?: string;
+  className?: string; // ✅ added
 }
 
 export function VisionGlassCard({
   src = "https://plus.unsplash.com/premium_photo-1682124752476-40db22034a58",
   label = "Vision Glass Card",
+  className, // ✅ added
 }: VisionGlassCardProps) {
   const tiltRef = useRef<HTMLDivElementWithVanillaTilt | null>(null);
 
@@ -71,16 +74,17 @@ export function VisionGlassCard({
         rawY.set(0);
         scaleRaw.set(1.35);
       }}
+      className={cn( // ✅ merged here
+        "relative cursor-pointer min-w-60",
+        className
+      )}
       style={{
-        width: 256,
         aspectRatio: "11/16",
         borderRadius: 27,
         transformStyle: "preserve-3d",
         perspective: "900px",
-        position: "relative",
         boxShadow:
           "0 40px 80px rgba(0,0,0,0.15), 0 10px 100px rgba(0,0,0,0.15)",
-        cursor: "pointer",
       }}
     >
       <div
@@ -92,7 +96,6 @@ export function VisionGlassCard({
           transformStyle: "preserve-3d",
         }}
       >
-        {/* Photo */}
         <motion.div
           style={{
             position: "absolute",
@@ -112,7 +115,6 @@ export function VisionGlassCard({
           />
         </motion.div>
 
-        {/* Specular dot */}
         <motion.div
           style={{
             position: "absolute",
@@ -130,7 +132,6 @@ export function VisionGlassCard({
         />
       </div>
 
-      {/* Card rim — convex bulge effect */}
       <div
         style={{
           position: "absolute",
@@ -138,7 +139,6 @@ export function VisionGlassCard({
           borderRadius: 26,
           transform: "translateZ(35px)",
           pointerEvents: "none",
-          // Inset shadows simulate the raised convex rim edges
           boxShadow: `
             inset 0 2px 0px rgba(255,255,255,0.55),
             inset 0 -2px 0px rgba(0,0,0,0.25),
@@ -146,7 +146,6 @@ export function VisionGlassCard({
             inset -2px 0px 0px rgba(0,0,0,0.18),
             0 0 0 1px rgba(255,255,255,0.10)
           `,
-          // Radial gradients fake the curved glass surface catching light
           background: `
             radial-gradient(ellipse 90% 50% at 50% 0%,   rgba(255,255,255,0.15) 0%, transparent 60%),
             radial-gradient(ellipse 90% 30% at 50% 100%, rgba(0,0,0,0.18)       0%, transparent 60%),

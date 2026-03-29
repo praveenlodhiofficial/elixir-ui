@@ -156,7 +156,7 @@ export function FunnelGallery({ className, ...props }: FunnelGalleryProps) {
   return (
     <div
       className={clsx(
-        "h-[70vh] w-full overflow-clip rounded-lg border bg-black/5 shadow-xl brightness-120 contrast-110 saturate-120 md:rounded-xl lg:w-[60vw] lg:rounded-2xl dark:border-zinc-800 dark:bg-black",
+        "h-[70vh] w-full overflow-clip rounded-lg border bg-black/5 shadow-xl brightness-120 contrast-110 saturate-120 md:rounded-xl lg:max-w-[60vw] lg:rounded-2xl dark:border-zinc-800 dark:bg-black",
         className
       )}
     >
