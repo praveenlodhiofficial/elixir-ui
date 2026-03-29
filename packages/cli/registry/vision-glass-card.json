@@ -1,0 +1,10 @@
+{
+  "name": "vision-glass-card",
+  "type": "ui",
+  "files": [
+    {
+      "path": "vision-glass-card.tsx",
+      "target": "components\\vision-glass-card.tsx"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "mdx",
+  "type": "component",
+  "files": [
+    {
+      "path": "mdx.tsx",
+      "target": "components\\mdx.tsx"
+    }
+  ]
+}

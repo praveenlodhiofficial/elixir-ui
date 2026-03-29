@@ -1,0 +1,10 @@
+{
+  "name": "funnel-gallery",
+  "type": "ui",
+  "files": [
+    {
+      "path": "funnel-gallery.tsx",
+      "target": "components\\funnel-gallery.tsx"
+    }
+  ]
+}

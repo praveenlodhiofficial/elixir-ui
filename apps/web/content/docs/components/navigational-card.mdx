@@ -1,0 +1,169 @@
+---
+title: Navigational Card
+description:
+  NavigationalCard is an interactive UI component designed for linking sections
+  or pages. It combines iconography, concise text, and subtle hover animations
+  to create clear and engaging navigation elements in dashboards, docs, and
+  landing pages.
+---
+
+import {
+  BookOpenIcon,
+  LayoutGridIcon,
+  RocketIcon,
+  WandSparklesIcon,
+} from "lucide-react";
+
+<ComponentPreview
+  name="navigational-card"
+  align="center"
+  component={
+    <div className="grid grid-cols-1 gap-4 md:grid-cols-2">
+      <NavigationalCard
+        title="Getting Started"
+        href="/docs/installation"
+        description="Install Elixir UI and set up your first component in minutes."
+        icon={<RocketIcon className="size-fit" />}
+      />
+      <NavigationalCard
+        title="Introduction"
+        href="/docs"
+        description="Understand the design philosophy and core principles of Elixir UI."
+        icon={<BookOpenIcon className="size-fit" />}
+      />
+      <NavigationalCard
+        title="Components"
+        href="/docs/components"
+        description="Explore all available UI components with usage examples."
+        icon={<LayoutGridIcon className="size-fit" />}
+      />
+      <NavigationalCard
+        title="Templates"
+        href="/docs/templates"
+        description="Start faster with ready-made section and page templates."
+        icon={<WandSparklesIcon className="size-fit" />}
+      />
+    </div>
+  }
+  filePath="packages/ui/src/components/navigational-card.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add navigational-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add navigational-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add navigational-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add navigational-card
+```
+
+  </Tab>
+</Tabs>
+
+  </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install lucide-react clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add lucide-react clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add lucide-react clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add lucide-react clsx
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/navigational-card.tsx` and paste the source.
+
+<include lang="tsx" meta='title="components/ui/navigational-card.tsx"'>
+  ../../../../../packages/ui/src/components/navigational-card.tsx
+</include>
+
+  </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { BookOpenIcon } from "lucide-react";
+
+import { NavigationalCard } from "@/components/ui/navigational-card";
+
+export default function DemoPage() {
+  return (
+    <NavigationalCard
+      title="Introduction"
+      href="#introduction"
+      description="Learn about Elixir UI and how to get started."
+      icon={<BookOpenIcon className="size-fit" />}
+    />
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/navigational-card.tsx"
+  name="NavigationalCardProps"
+/>

@@ -1,0 +1,127 @@
+---
+title: Orbital Flow
+description:
+  OrbitalFlow is an animated layout component that arranges items in concentric
+  rotating orbits around a central element. It’s ideal for visualizing
+  relationships, ecosystems, or grouped content in an interactive and visually
+  appealing way.
+---
+
+<ComponentPreview
+  name="button"
+  align="start"
+  component={<OrbitalFlow />}
+  filePath="packages/ui/src/components/orbital-flow.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add orbital-flow
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add orbital-flow
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add orbital-flow
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add orbital-flow
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion clsx lucide-react
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion clsx lucide-react
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion clsx lucide-react
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion clsx lucide-react
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/orbital-flow.tsx` and paste the Orbital Flow
+source.
+
+<include lang="tsx" meta='title="components/ui/orbital-flow.tsx"'>
+  ../../../../../packages/ui/src/components/orbital-flow.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { OrbitalFlow } from "@/components/ui/orbital-flow";
+
+export default function DemoPage() {
+  return <OrbitalFlow />;
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/orbital-flow.tsx"
+  name="OrbitalFlowProps"
+/>

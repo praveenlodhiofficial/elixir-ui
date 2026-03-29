@@ -1,0 +1,18 @@
+{
+  "name": "feature-card",
+  "type": "ui",
+  "files": [
+    {
+      "path": "card.tsx",
+      "target": "components\\card.tsx"
+    },
+    {
+      "path": "feature-card.tsx",
+      "target": "components\\feature-card.tsx"
+    },
+    {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    }
+  ]
+}

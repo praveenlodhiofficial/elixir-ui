@@ -1,0 +1,159 @@
+---
+title: Read More
+description:
+  ReadMore is an expandable text component that truncates long content to a
+  configurable number of lines and reveals the full text with a smooth height
+  animation.
+---
+
+import { ReadMore } from "@workspace/ui/components/read-more";
+
+<ComponentPreview
+  name="read-more"
+  align="start"
+  component={
+    <section className="p-5">
+      <ReadMore>{`Elixir UI is built for teams that want production-ready motion components without spending
+    days polishing interactions from scratch. Every block is designed to feel intentional,
+    from hover states and micro-animations to responsive behavior across devices.
+
+    The library follows a copy-paste friendly workflow: preview the component, install with
+    the CLI, and customize styles directly in your codebase. Because everything is built with
+    Tailwind and modern React patterns, it stays easy to scale as your design system grows.
+
+    Use ReadMore for long product descriptions, changelogs, and documentation callouts where
+    context matters but screen space is limited. Users get a clean summary first, then can
+    expand for the full detail only when they need it.`}</ReadMore>
+    </section>
+
+} filePath="packages/ui/src/components/read-more.tsx" />
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add read-more
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add read-more
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add read-more
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add read-more
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+</Tabs>
+
+### Add ReadMore component
+
+Create a file at `components/ui/read-more.tsx` and paste the source.
+
+<include lang="tsx" meta='title="components/ui/read-more.tsx"'>
+  ../../../../../packages/ui/src/components/read-more.tsx
+</include>
+
+### Add ActionButton dependency
+
+ReadMore uses ActionButton for the toggle control. Create a file at
+`components/ui/action-button.tsx` and paste the source.
+
+<include lang="tsx" meta='title="components/ui/action-button.tsx"'>
+  ../../../../../packages/ui/src/components/action-button.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { ReadMore } from "@workspace/ui/components/read-more";
+
+export function Demo() {
+  return (
+    <ReadMore lines={3} duration={0.3}>
+      {`ReadMore keeps long content readable by default and lets users expand when
+      they need full details. You can tune line count and animation duration to
+      fit the tone of your interface. 
+      
+      Use it for product descriptions, changelogs, and anywhere you want to balance brevity 
+      with context. The smooth height animation makes the transition feel natural, so 
+      users can focus on the content instead of the mechanics of expanding and collapsing.`}
+    </ReadMore>
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/read-more.tsx"
+  name="ReadMoreProps"
+/>

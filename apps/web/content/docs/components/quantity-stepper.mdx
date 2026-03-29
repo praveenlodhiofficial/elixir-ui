@@ -1,0 +1,135 @@
+---
+title: Quantity Stepper
+description:
+  A compact, animated quantity control that toggles between an ADD button and a
+  stepper interface with increment and decrement actions. Built with smooth
+  transitions using Motion Library. Designed as a reusable UI component for
+  selecting item quantities in modern applications.
+---
+
+<ComponentPreview
+  name="quantity-stepper"
+  align="center"
+  component={<QuantityStepper />}
+  filePath="packages/ui/src/components/quantity-stepper.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add quantity-stepper
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add quantity-stepper
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add quantity-stepper
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add quantity-stepper
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion lucide-react clsx class-variance-authority radix-ui
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion lucide-react clsx class-variance-authority radix-ui
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion lucide-react clsx class-variance-authority radix-ui
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion lucide-react clsx class-variance-authority radix-ui
+```
+
+  </Tab>
+</Tabs>
+
+### Add QuantityStepper component
+
+Create a file at `components/ui/quantity-stepper.tsx` and paste the source.
+
+<include lang="tsx" meta='title="components/ui/quantity-stepper.tsx"'>
+  ../../../../../packages/ui/src/components/quantity-stepper.tsx
+</include>
+
+### Add Button dependency
+
+QuantityStepper uses Button for control actions. Create a file at
+`components/ui/button.tsx` and paste the source.
+
+<include lang="tsx" meta='title="components/ui/button.tsx"'>
+  ../../../../../packages/ui/src/components/button.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { QuantityStepper } from "@workspace/ui/components/quantity-stepper";
+
+export function Demo() {
+  return <QuantityStepper variant="outline" size="lg" />;
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/quantity-stepper.tsx"
+  name="QuantityStepperProps"
+/>

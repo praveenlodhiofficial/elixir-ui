@@ -1,0 +1,129 @@
+---
+title: Vanilla Tilt Card
+description:
+  The Vanilla Tilt Card is a lightweight interactive card that adds a smooth 3D
+  tilt effect based on cursor movement using VanillaTilt. It focuses on simple
+  depth and motion without heavy lighting or glass morphism effects.
+---
+
+<ComponentPreview
+  name="vanilla-tilt-card"
+  align="center"
+  component={
+    <div className="flex w-full items-center justify-center p-8">
+      <VanillaTiltCard src="/funnel-gallery-image-2.png" label="Itadori" />
+    </div>
+  }
+  filePath="packages/ui/src/components/vanilla-tilt-card.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add vanilla-tilt-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add vanilla-tilt-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add vanilla-tilt-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add vanilla-tilt-card
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion vanilla-tilt
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion vanilla-tilt
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion vanilla-tilt
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion vanilla-tilt
+```
+
+  </Tab>
+</Tabs>
+
+### Add VanillaTiltCard component
+
+Create a file at `components/ui/vanilla-tilt-card.tsx` and paste the
+VanillaTiltCard source.
+
+<include lang="tsx" meta='title="components/ui/vanilla-tilt-card.tsx"'>
+  ../../../../../packages/ui/src/components/vanilla-tilt-card.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { VanillaTiltCard } from "@workspace/ui/components/vanilla-tilt-card";
+
+export function Demo() {
+  return <VanillaTiltCard src="/path/to/image.png" label="Image Label" />;
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/vanilla-tilt-card.tsx"
+  name="VanillaTiltCardProps"
+/>

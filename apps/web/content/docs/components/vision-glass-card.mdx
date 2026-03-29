@@ -1,0 +1,130 @@
+---
+title: Vision Glass Card
+description:
+  A visually rich glass-style card component with smooth tilt interaction and
+  depth-based motion effects, powered by motion and VanillaTilt. It creates a
+  dynamic 3D illusion using parallax shifts, specular highlights, and
+  spring-based animations.
+---
+
+<ComponentPreview
+  name="vision-glass-card"
+  align="center"
+  component={
+    <div className="flex w-full items-center justify-center p-8">
+      <VisionGlassCard src="/funnel-gallery-image-1.png" label="Vision Glass" />
+    </div>
+  }
+  filePath="packages/ui/src/components/vision-glass-card.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add vision-glass-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add vision-glass-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add vision-glass-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add vision-glass-card
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion vanilla-tilt clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion vanilla-tilt clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion vanilla-tilt clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion vanilla-tilt clsx
+```
+
+  </Tab>
+</Tabs>
+
+### Add VisionGlassCard component
+
+Create a file at `components/ui/vision-glass-card.tsx` and paste the
+VisionGlassCard source.
+
+<include lang="tsx" meta='title="components/ui/vision-glass-card.tsx"'>
+  ../../../../../packages/ui/src/components/vision-glass-card.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { VisionGlassCard } from "@workspace/ui/components/vision-glass-card";
+
+export function Demo() {
+  return <VisionGlassCard src="/path/to/image.png" label="Image Label" />;
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/vision-glass-card.tsx"
+  name="VisionGlassCardProps"
+/>

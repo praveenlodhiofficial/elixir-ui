@@ -1,0 +1,138 @@
+---
+title: Gallery Showcase
+description:
+  GalleryShowcase is a responsive image gallery component that displays a
+  featured image alongside animated thumbnail previews, allowing users to
+  quickly explore and switch between images.
+---
+
+<ComponentPreview
+  name="gallery-showcase"
+  align="start"
+  component={
+    <div className="h-120 origin-top">
+      <GalleryShowcase />
+    </div>
+  }
+  filePath="packages/ui/src/components/gallery-showcase.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add gallery-showcase
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add gallery-showcase
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add gallery-showcase
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add gallery-showcase
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/gallery-showcase.tsx` and paste the
+GalleryShowcase source.
+
+<include lang="tsx" meta='title="components/ui/gallery-showcase.tsx"'>
+  ../../../../../packages/ui/src/components/gallery-showcase.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { GalleryShowcase } from "@/components/ui/gallery-showcase";
+
+export default function DemoPage() {
+  return (
+    <GalleryShowcase
+      images={[
+        "/path/to/image-1.jpg",
+        "/path/to/image-2.jpg",
+        "/path/to/image-3.jpg",
+      ]}
+    />
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/gallery-showcase.tsx"
+  name="GalleryShowcaseProps"
+/>

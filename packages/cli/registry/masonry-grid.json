@@ -1,0 +1,14 @@
+{
+  "name": "masonry-grid",
+  "type": "ui",
+  "files": [
+    {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    },
+    {
+      "path": "masonry-grid.tsx",
+      "target": "components\\masonry-grid.tsx"
+    }
+  ]
+}

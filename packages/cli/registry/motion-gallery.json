@@ -1,0 +1,10 @@
+{
+  "name": "motion-gallery",
+  "type": "ui",
+  "files": [
+    {
+      "path": "motion-gallery.tsx",
+      "target": "components\\motion-gallery.tsx"
+    }
+  ]
+}

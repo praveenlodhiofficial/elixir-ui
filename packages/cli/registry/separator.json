@@ -1,0 +1,14 @@
+{
+  "name": "separator",
+  "type": "ui",
+  "files": [
+    {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    },
+    {
+      "path": "separator.tsx",
+      "target": "components\\separator.tsx"
+    }
+  ]
+}

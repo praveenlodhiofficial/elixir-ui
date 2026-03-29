@@ -1,0 +1,14 @@
+{
+  "name": "liquid-frame",
+  "type": "ui",
+  "files": [
+    {
+      "path": "lib\\liquid-frame.ts",
+      "target": "lib\\liquid-frame.ts"
+    },
+    {
+      "path": "liquid-frame.tsx",
+      "target": "components\\liquid-frame.tsx"
+    }
+  ]
+}

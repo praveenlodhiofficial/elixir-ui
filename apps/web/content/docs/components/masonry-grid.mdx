@@ -1,0 +1,106 @@
+---
+title: Masonry Grid
+description:
+  Masonry Grid is a responsive layout component that arranges items in a
+  staggered, gap-free structure similar to a Pinterest-style layout. It adapts
+  to varying content heights while maintaining a balanced and visually appealing
+  grid, making it ideal for galleries, cards, and dynamic content collections.
+---
+
+<ComponentPreview
+  name="masonry-grid"
+  align="center"
+  component={<MasonryGrid />}
+  filePath="packages/ui/src/components/masonry-grid.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add masonry-grid
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add masonry-grid
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add masonry-grid
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add masonry-grid
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Create component file
+
+Create a file at `components/ui/masonry-grid.tsx` and paste the MasonryGrid
+source.
+
+<include lang="tsx" meta='title="components/ui/masonry-grid.tsx"'>
+  ../../../../../packages/ui/src/components/masonry-grid.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { MasonryGrid } from "@/components/ui/masonry-grid";
+
+export default function DemoPage() {
+  return (
+    <MasonryGrid
+      images={[
+        "/gallery/image-1.jpg",
+        "/gallery/image-2.jpg",
+        "/gallery/image-3.jpg",
+        "/gallery/image-4.jpg",
+      ]}
+    />
+  );
+}
+```
+
+If you do not pass `images`, MasonryGrid uses its built-in default Unsplash
+images.
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/masonry-grid.tsx"
+  name="MasonryGridProps"
+/>

@@ -1,0 +1,146 @@
+---
+title: Motion Sidebar
+description:
+  Motion Sidebar is an animated sidebar menu that expands from a compact toggle
+  into a full navigation panel with staggered link transitions.
+---
+
+<ComponentPreview
+  name="button"
+  align="start"
+  relative={true}
+  component={<MotionSidebar />}
+  filePath="packages/ui/src/components/motion-sidebar.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add motion-sidebar
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add motion-sidebar
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add motion-sidebar
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add motion-sidebar
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion clsx lucide-react
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion clsx lucide-react
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion clsx lucide-react
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion clsx lucide-react
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/motion-sidebar.tsx` and paste the Motion Sidebar
+source.
+
+<include lang="tsx" meta='title="components/ui/motion-sidebar.tsx"'>
+  ../../../../../packages/ui/src/components/motion-sidebar.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+### Basic usage
+
+```tsx
+import { MotionSidebar } from "@/components/ui/motion-sidebar";
+
+export default function DemoPage() {
+  return <MotionSidebar />;
+}
+```
+
+### Custom links
+
+```tsx
+import { MotionSidebar } from "@/components/ui/motion-sidebar";
+
+const links = [
+  { title: "Home", href: "/", type: "main" },
+  { title: "Work", href: "/work", type: "main" },
+  { title: "About", href: "/about", type: "main" },
+  { title: "X", href: "https://x.com", type: "footer" },
+  { title: "GitHub", href: "https://github.com", type: "footer" },
+];
+
+export default function DemoPage() {
+  return <MotionSidebar links={links} className="z-50" />;
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/motion-sidebar.tsx"
+  name="MotionSidebarProps"
+/>

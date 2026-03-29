@@ -1,0 +1,196 @@
+---
+title: Feature Card
+description:
+  FeatureCard is a versatile UI component designed to display content in
+  multiple visual styles using a single, unified API. It supports variants like
+  background, stat, media, and text, making it ideal for showcasing highlights,
+  metrics, images, or quotes.
+---
+
+import { FeatureCard } from "@workspace/ui/components/feature-card";
+
+### Available Variants
+
+- `background` – Image-based highlight card
+- `stat` – Numeric/statistics card
+- `media` – Image + content card
+- `text` – Quote/content card
+
+Use the `variant` prop to switch between styles.
+
+<ComponentPreview
+  name="feature-card-overview"
+  align="start"
+  component={
+    <div className="grid grid-cols-1 gap-3 md:gap-6 w-full p-5 justify-center items-center">
+
+      <FeatureCard
+        variant="background"
+        bgImage="/liquid-frame-1.jpg"
+        subtitle="Customer stories"
+        description="“Step Events' s expertise transformed my vision into success!”"
+        title="Kabir Shah"
+        statLabel="Founder of Chipsland"
+      />
+
+      <FeatureCard
+        variant="media"
+        subtitle="Jujutsu Kaisen"
+        description="Gojo Satoru is the strongest jujutsu sorcerer, known for his limitless cursed energy and unmatched combat abilities."
+        image="/funnel-gallery-image-1.png"
+        title="Preview"
+      />
+
+      <FeatureCard
+          variant="text"
+          subtitle="Text Card"
+          description="Simplicity is the ultimate sophistication"
+          title="Leonardo da Vinci"
+          statLabel="Artist"
+      />
+
+    </div>
+
+} filePath="packages/ui/src/components/feature-card.tsx" />
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add feature-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add feature-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add feature-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add feature-card
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Add FeatureCard component
+
+Create a file at `components/ui/feature-card.tsx` and paste the source.
+
+<include lang="tsx" meta='title="components/ui/feature-card.tsx"'>
+  ../../../../../packages/ui/src/components/feature-card.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+### Background Card
+
+```tsx
+import { FeatureCard } from "@workspace/ui/components/feature-card";
+
+export function BackgroundCardDemo() {
+  return (
+    <FeatureCard
+      variant="background"
+      bgImage="https://images.unsplash.com/photo-1500534314209-a25ddb2bd429?q=80&w=1200&auto=format&fit=crop"
+      subtitle="Case Study"
+      description="Design is intelligence made visible"
+      title="Elixir UI"
+      statLabel="2026"
+    />
+  );
+}
+```
+
+### Stat Card
+
+```tsx
+import { FeatureCard } from "@workspace/ui/components/feature-card";
+
+export function StatCardDemo() {
+  return (
+    <FeatureCard
+      variant="stat"
+      subtitle="Users"
+      statValue="10K+"
+      description="Active monthly users"
+    />
+  );
+}
+```
+
+### Media Card
+
+```tsx
+import { FeatureCard } from "@workspace/ui/components/feature-card";
+
+export function MediaCardDemo() {
+  return (
+    <FeatureCard
+      variant="media"
+      subtitle="Preview"
+      description="Modern UI components"
+      image="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+      title="Preview"
+    />
+  );
+}
+```
+
+### Text Card
+
+```tsx
+import { FeatureCard } from "@workspace/ui/components/feature-card";
+
+export function TextCardDemo() {
+  return (
+    <FeatureCard
+      variant="text"
+      subtitle="Quote"
+      description="Simplicity is the ultimate sophistication"
+      title="Leonardo da Vinci"
+      statLabel="Artist"
+    />
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/feature-card.tsx"
+  name="FeatureCardProps"
+/>

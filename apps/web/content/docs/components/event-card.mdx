@@ -1,0 +1,213 @@
+---
+title: Event Card
+description:
+  Event Card is a clean UI component for displaying event details like image,
+  date, title, and venue in a compact layout. It includes subtle motion effects
+  and works well in grids or galleries.
+---
+
+### Animation Behavior
+
+- **Vertical Translation** – The card smoothly moves upward (40px → 0px) as you
+  scroll
+- **Scale Effect** – The card grows from 90% to 100% scale for emphasis
+- **Image Parallax** – The cover image zooms from 1.4x to 1x, creating depth
+  separation
+- **Rotation** – Subtle z-axis rotation for a polished entrance
+
+<ComponentPreview
+  name="event-card"
+  align="center"
+  component={
+    <div className="space-y-5 pt-3 pb-7">
+      <EventCard />
+    </div>
+  }
+  filePath="packages/ui/src/components/event-card.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add event-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add event-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add event-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add event-card
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/event-card.tsx` and paste the Event Card source.
+
+<include lang="tsx" meta='title="components/ui/event-card.tsx"'>
+  ../../../../../packages/ui/src/components/event-card.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { EventCard } from "@/components/ui/event-card";
+
+export default function EventGrid() {
+  return (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <EventCard
+        name= "Event Title Goes Here",
+        slug= "#",
+        coverImage= "path/to/image.jpg",
+        date= "Apr 20, 2026, 7:00 PM",
+        venue= "Wood Castle Hotel, New Delhi",
+        price= "₹ 1499 onwards",
+      />
+    </div>
+  );
+}
+```
+
+## Props
+
+| Prop         | Type   | Default                        | Description                     |
+| ------------ | ------ | ------------------------------ | ------------------------------- |
+| `id`         | string | "1"                            | Unique identifier for the event |
+| `name`       | string | "Sample Event Title Goes Here" | Event name/title                |
+| `slug`       | string | "sample-event"                 | URL-friendly event identifier   |
+| `coverImage` | string | "/demo.jpg"                    | Event cover image URL           |
+| `date`       | string | "Mar 25, 2026, 7:00 PM"        | Event date and time             |
+| `venue`      | string | "Venue to be announced"        | Event location                  |
+| `price`      | string | "₹ 999 onwards"                | Ticket pricing                  |
+
+## Examples
+
+    <div className="w-fit mx-auto md:relative bottom-22 right-5.5 grid grid-cols-1 space-x-10 whitespace-nowrap sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+      <EventCard
+        className="md:scale-85 origin-top-right border"
+
+      />
+
+      <EventCard
+        coverImage="https://images.unsplash.com/photo-1492684223066-81342ee5ff30"
+        name="Live Music Night"
+        venue="Mumbai Arena"
+        date="May 5, 2026, 8:00 PM"
+        price="₹999 onwards"
+        slug="live-music-night"
+        className="md:scale-85 origin-top-right border"
+      />
+
+      <EventCard
+        coverImage="https://images.unsplash.com/photo-1515169067868-5387ec356754"
+        name="Startup Networking Meetup"
+        venue="Bangalore Hub"
+        date="Jun 12, 2026, 6:30 PM"
+        price="₹499 onwards"
+        slug="startup-meetup"
+        className="md:scale-85 origin-top-right border"
+      />
+
+      <EventCard
+        coverImage="https://images.unsplash.com/photo-1505373877841-8d25f7d46678"
+        name="DJ Sunset Party"
+        venue="Goa Beach Club"
+        date="Apr 28, 2026, 5:00 PM"
+        price="₹1999 onwards"
+        slug="dj-sunset-party"
+        className="md:scale-85 origin-top-right border"
+      />
+
+      <EventCard
+        coverImage="https://images.unsplash.com/photo-1523580494863-6f3031224c94"
+        name="Tech Conference 2026"
+        venue="Hyderabad Convention Center"
+        date="Jul 20, 2026, 10:00 AM"
+        price="₹2999 onwards"
+        slug="tech-conference"
+        className="md:scale-85 origin-top-right border"
+      />
+
+      <EventCard
+        coverImage="https://images.unsplash.com/photo-1501281668745-f7f57925c3b4"
+        name="Food Festival Carnival"
+        venue="Delhi Grounds"
+        date="Aug 10, 2026, 12:00 PM"
+        price="₹299 onwards"
+        slug="food-festival"
+        className="md:scale-85 origin-top-right border"
+      />
+    </div>

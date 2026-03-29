@@ -1,0 +1,10 @@
+{
+  "name": "orbital-flow",
+  "type": "ui",
+  "files": [
+    {
+      "path": "orbital-flow.tsx",
+      "target": "components\\orbital-flow.tsx"
+    }
+  ]
+}

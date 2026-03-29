@@ -1,0 +1,10 @@
+{
+  "name": "theme-provider",
+  "type": "component",
+  "files": [
+    {
+      "path": "theme-provider.tsx",
+      "target": "components\\theme-provider.tsx"
+    }
+  ]
+}

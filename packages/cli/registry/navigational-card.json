@@ -1,0 +1,14 @@
+{
+  "name": "navigational-card",
+  "type": "ui",
+  "files": [
+    {
+      "path": "card.tsx",
+      "target": "components\\card.tsx"
+    },
+    {
+      "path": "navigational-card.tsx",
+      "target": "components\\navigational-card.tsx"
+    }
+  ]
+}

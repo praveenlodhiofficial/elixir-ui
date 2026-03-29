@@ -1,0 +1,14 @@
+{
+  "name": "gallery-showcase",
+  "type": "ui",
+  "files": [
+    {
+      "path": "gallery-showcase.tsx",
+      "target": "components\\gallery-showcase.tsx"
+    },
+    {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    }
+  ]
+}

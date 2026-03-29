@@ -1,0 +1,190 @@
+---
+title: Stat Card
+description:
+  Stat Card is a versatile component for showcasing key metrics and performance
+  numbers with multiple visual variants.
+---
+
+<ComponentPreview
+  name="stat-card"
+  align="center"
+  component={
+    <div className="space-y-5 py-5">
+      <StatCard
+        variant="glass"
+        label="Conversions"
+        value="3.8×"
+        badge="↑ 22%"
+        badgeTone="positive"
+        caption="vs industry avg"
+      />
+    </div>
+  }
+  filePath="packages/ui/src/components/stat-card.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add stat-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add stat-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add stat-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add stat-card
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Add StatCard component
+
+Create a file at `components/ui/stat-card.tsx` and paste the StatCard source.
+
+<include lang="tsx" meta='title="components/ui/stat-card.tsx"'>
+  ../../../../../packages/ui/src/components/stat-card.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { StatCard } from "@workspace/ui/components/stat-card";
+
+export function Demo() {
+  return (
+    <StatCard
+      variant="colorful"
+      label="Conversions"
+      value="3.8×"
+      caption="vs industry avg"
+      badge="↑ 22%"
+      badgeTone="positive"
+    />
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/stat-card.tsx"
+  name="StatCardProps"
+/>
+
+## Examples
+
+<div className="w-fit mx-auto grid grid-cols-1 space-x-10 not-prose whitespace-nowrap sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3">
+  <StatCard
+    className="md:scale-80 origin-top-left"
+    variant="dark"
+    label="Monthly Revenue"
+    value="$4.2M"
+    badge="↑ 12%"
+    badgeTone="positive"
+    caption="vs last month"
+  />
+
+<StatCard
+  className="origin-top-left md:scale-80"
+  variant="colorful"
+  label="Conversions"
+  value="3.8×"
+  badge="↑ 22%"
+  badgeTone="positive"
+  caption="vs industry avg"
+/>
+
+<StatCard
+  className="origin-top-left md:scale-80"
+  variant="glass"
+  label="NPS Score"
+  value="72"
+  badge="Top 5%"
+  badgeTone="positive"
+  caption="enterprise tier"
+/>
+
+<StatCard
+  className="origin-top-left md:scale-80"
+  variant="neon"
+  label="Latency"
+  value="4ms"
+  badge="Live"
+  badgeTone="positive"
+  caption="edge nodes"
+/>
+
+<StatCard
+  className="origin-top-left md:scale-80"
+  variant="earth"
+  label="Carbon Offset"
+  value="840t"
+  caption="CO2 this year"
+/>
+
+<StatCard
+  className="origin-top-left md:scale-80"
+  variant="editorial"
+  label="Subscribers"
+  value="1.2M"
+  badge="↓ 3k"
+  badgeTone="negative"
+  caption="paid newsletter"
+/>
+
+<StatCard
+  className="origin-top-left md:scale-80"
+  variant="aurora"
+  label="Generations"
+  value="2.1B"
+  caption="since launch"
+/>
+
+  <StatCard
+    className="md:scale-80 origin-top-left"
+    variant="minimal"
+    label="Open Tickets"
+    value="143"
+    badge="Needs review"
+    badgeTone="neutral"
+    caption="across all queues"
+  />
+</div>

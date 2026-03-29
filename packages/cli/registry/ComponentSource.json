@@ -1,0 +1,10 @@
+{
+  "name": "ComponentSource",
+  "type": "component",
+  "files": [
+    {
+      "path": "ComponentSource.tsx",
+      "target": "components\\ComponentSource.tsx"
+    }
+  ]
+}

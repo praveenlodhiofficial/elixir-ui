@@ -1,0 +1,174 @@
+---
+title: Liquid Frame
+description:
+  Liquid Frame is an interactive image component that creates fluid ripple
+  effects in response to mouse movement, combining WebGL shaders with three.js
+  for smooth wave propagation and distortion animations.
+---
+
+<ComponentPreview
+  name="liquid-frame"
+  align="center"
+  component={
+    <LiquidFrame
+      src="/funnel-gallery-image-1.png"
+      alt="Liquid Frame Demo"
+      className="mx-auto"
+    />
+  }
+  filePath="packages/ui/src/components/liquid-frame.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add liquid-frame
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add liquid-frame
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add liquid-frame
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add liquid-frame
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add three
+```
+
+  </Tab>
+</Tabs>
+
+### Install dev-dependency
+
+If you are using TypeScript, install `@types/three` as a dev dependency.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install -D @types/three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add -D @types/three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add -D @types/three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add -D @types/three
+```
+
+  </Tab>
+</Tabs>
+
+### Add LiquidFrame component
+
+Create a file at `components/ui/liquid-frame.tsx` and paste the LiquidFrame
+source.
+
+<include lang="tsx" meta='title="components/ui/liquid-frame.tsx"'>
+  ../../../../../packages/ui/src/components/liquid-frame.tsx
+</include>
+
+### Add shader utilities
+
+Create a file at `lib/liquid-frame.ts` and paste the shaders.
+
+<include lang="ts" meta='title="lib/liquid-frame.ts"'>
+  ../../../../../packages/ui/src/lib/liquid-frame.ts
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { LiquidFrame } from "@workspace/ui/components/liquid-frame";
+
+export function Demo() {
+  return <LiquidFrame src="/path/to/image.png" alt="My Image" fit="cover" />;
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/liquid-frame.tsx"
+  name="LiquidFrameProps"
+/>

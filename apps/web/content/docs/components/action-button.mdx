@@ -1,0 +1,135 @@
+---
+title: Action Button
+description:
+  ActionButton is an animated CTA component with sliding text and icon
+  transitions, designed for high-emphasis actions with multiple visual variants.
+---
+
+import { ActionButton } from "@workspace/ui/components/action-button";
+
+<ComponentPreview
+  name="action-button"
+  align="center"
+  component={
+    <ActionButton variant="default" className="mx-auto">
+      Action Button 01
+    </ActionButton>
+  }
+  filePath="packages/ui/src/components/action-button.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add action-button
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add action-button
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add action-button
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add action-button
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add motion lucide-react class-variance-authority clsx
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/action-button.tsx` and paste the ActionButton
+source.
+
+<include lang="tsx" meta='title="components/ui/action-button.tsx"'>
+  ../../../../../packages/ui/src/components/action-button.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { ActionButton } from "@workspace/ui/components/action-button";
+
+export function Demo() {
+  return (
+    <ActionButton variant="outline" onClick={() => console.log("clicked")}>
+      Explore Components
+    </ActionButton>
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/action-button.tsx"
+  name="ActionButtonProps"
+/>

@@ -1,0 +1,10 @@
+{
+  "name": "ComponentPreviewTabs",
+  "type": "component",
+  "files": [
+    {
+      "path": "ComponentPreviewTabs.tsx",
+      "target": "components\\ComponentPreviewTabs.tsx"
+    }
+  ]
+}

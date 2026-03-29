@@ -1,0 +1,14 @@
+{
+  "name": "action-button",
+  "type": "ui",
+  "files": [
+    {
+      "path": "action-button.tsx",
+      "target": "components\\action-button.tsx"
+    },
+    {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    }
+  ]
+}

@@ -1,0 +1,10 @@
+{
+  "name": "vanilla-tilt-card",
+  "type": "ui",
+  "files": [
+    {
+      "path": "vanilla-tilt-card.tsx",
+      "target": "components\\vanilla-tilt-card.tsx"
+    }
+  ]
+}

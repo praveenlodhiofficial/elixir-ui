@@ -1,0 +1,164 @@
+---
+title: Tidal Text Animation
+description:
+  idal Text Animation is an interactive UI component that animates text in a
+  wave-like motion when users hover over elements. It combines smooth GSAP
+  transitions with layered text masking to create a fluid, tidal effect. Ideal
+  for showcasing names, categories, or highlights in a visually engaging way.
+---
+
+<ComponentPreview
+  name="tidal-text-animation"
+  align="start"
+  component={
+    <div className='scale-80 h-full'>
+      <TidalTextAnimation  />
+    </div>
+  }
+  filePath="packages/ui/src/components/tidal-text-animation.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add tidal-text-animation
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add tidal-text-animation
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add tidal-text-animation
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add tidal-text-animation
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install gsap clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add gsap clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add gsap clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add gsap clsx
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/tidal-text-animation.tsx` and paste the Tidal
+Text Animation source.
+
+<include lang="tsx" meta='title="components/ui/tidal-text-animation.tsx"'>
+  ../../../../../packages/ui/src/components/tidal-text-animation.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+### Basic usage
+
+```tsx
+import { TidalTextAnimation } from "@/components/ui/tidal-text-animation";
+
+export default function DemoPage() {
+  return <TidalTextAnimation />;
+}
+```
+
+### Custom items
+
+```tsx
+import { TidalTextAnimation } from "@/components/ui/tidal-text-animation";
+
+const items = [
+  {
+    label: "Crimson Horizon",
+    imageSrc: "/path/to/image.png",
+  },
+  {
+    label: "Neon Coast",
+    imageSrc: "/path/to/image.png",
+  },
+  {
+    label: "Golden Dunes",
+    imageSrc: "/path/to/image.png",
+  },
+];
+
+export default function DemoPage() {
+  return (
+    <TidalTextAnimation
+      items={items}
+      fallbackText="Studio Showcase"
+      className="max-w-5xl"
+    />
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/tidal-text-animation.tsx"
+  name="TidalTextAnimationProps"
+/>

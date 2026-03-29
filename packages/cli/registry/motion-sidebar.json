@@ -1,0 +1,10 @@
+{
+  "name": "motion-sidebar",
+  "type": "ui",
+  "files": [
+    {
+      "path": "motion-sidebar.tsx",
+      "target": "components\\motion-sidebar.tsx"
+    }
+  ]
+}

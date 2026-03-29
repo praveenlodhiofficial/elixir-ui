@@ -1,0 +1,180 @@
+---
+title: Funnel Gallery
+description:
+  FunnelGallery is a 3D animated image carousel built with React Three Fiber. It
+  arranges up to three images on curved panels with smooth rotation and bloom,
+  making it ideal for rich hero sections and featured visual storytelling.
+---
+
+<ComponentPreview
+  name="funnel-gallery"
+  align="start"
+  component={
+    <FunnelGallery
+      text="Jujutsu Kaisen"
+      images={[
+        "/funnel-gallery-image-1.png",
+        "/funnel-gallery-image-2.png",
+        "/funnel-gallery-image-3.png",
+      ]}
+      className="h-130"
+    />
+  }
+  filePath="packages/ui/src/components/funnel-gallery.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add funnel-gallery
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add funnel-gallery
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add funnel-gallery
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add funnel-gallery
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install @react-three/fiber @react-three/drei @react-three/postprocessing three clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add @react-three/fiber @react-three/drei @react-three/postprocessing three clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add @react-three/fiber @react-three/drei @react-three/postprocessing three clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add @react-three/fiber @react-three/drei @react-three/postprocessing three clsx
+```
+
+  </Tab>
+</Tabs>
+
+### Install dev-dependency
+
+If you are using TypeScript, install `@types/three` as a dev dependency.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install -D @types/three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add -D @types/three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add -D @types/three
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add -D @types/three
+```
+
+  </Tab>
+</Tabs>
+
+### Create component file
+
+Create a file at `components/ui/funnel-gallery.tsx` and paste the FunnelGallery
+source.
+
+<include lang="tsx" meta='title="components/ui/funnel-gallery.tsx"'>
+  ../../../../../packages/ui/src/components/funnel-gallery.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { FunnelGallery } from "@/components/ui/funnel-gallery";
+
+export default function DemoPage() {
+  return (
+    <FunnelGallery
+      text="Jujutsu Kaisen"
+      images={[
+        "/path/to/image-1.png",
+        "/path/to/image-2.png",
+        "/path/to/image-3.png",
+      ]}
+    />
+  );
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/funnel-gallery.tsx"
+  name="FunnelGalleryProps"
+/>

@@ -1,0 +1,14 @@
+{
+  "name": "button",
+  "type": "ui",
+  "files": [
+    {
+      "path": "button.tsx",
+      "target": "components\\button.tsx"
+    },
+    {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    }
+  ]
+}

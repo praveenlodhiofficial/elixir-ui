@@ -1,0 +1,14 @@
+{
+  "name": "tabs",
+  "type": "ui",
+  "files": [
+    {
+      "path": "lib\\utils.ts",
+      "target": "lib\\utils.ts"
+    },
+    {
+      "path": "tabs.tsx",
+      "target": "components\\tabs.tsx"
+    }
+  ]
+}

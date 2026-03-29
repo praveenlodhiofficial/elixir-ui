@@ -1,0 +1,10 @@
+{
+  "name": "tidal-text-animation",
+  "type": "ui",
+  "files": [
+    {
+      "path": "tidal-text-animation.tsx",
+      "target": "components\\tidal-text-animation.tsx"
+    }
+  ]
+}
