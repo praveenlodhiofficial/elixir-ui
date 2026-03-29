@@ -11,6 +11,9 @@ const nextConfig = {
       ],
    },
   transpilePackages: ["@workspace/ui"],
+   outputFileTracingExcludes: {
+      "*": ["../../packages/cli/dist/**/*"],
+   },
 }
 
 const withMDX = createMDX({
