@@ -11,6 +11,9 @@ const nextConfig = {
       ],
    },
   transpilePackages: ["@workspace/ui"],
+   outputFileTracingIncludes: {
+      "/docs/[[...slug]]": ["./.next/fumadocs-typescript/**/*.json"],
+   },
    outputFileTracingExcludes: {
       "*": ["../../packages/cli/dist/**/*"],
    },

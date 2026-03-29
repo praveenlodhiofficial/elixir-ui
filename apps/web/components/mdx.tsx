@@ -29,7 +29,9 @@ import { ComponentPreview } from "@/web/components/ComponentPreview";
 
 const generator = createGenerator({
   // set a cache, necessary for serverless platform like Vercel
-  cache: createFileSystemGeneratorCache(".next/fumadocs-typescript"),
+  cache: createFileSystemGeneratorCache(
+    process.env.VERCEL ? "/tmp/fumadocs-typescript" : ".next/fumadocs-typescript"
+  ),
 });
 
 export function getMDXComponents(
