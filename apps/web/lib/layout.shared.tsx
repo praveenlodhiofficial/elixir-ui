@@ -1,6 +1,7 @@
 import Image from "next/image";
 
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+import { docsBadge } from "@/web/lib/docs-badge";
 
 export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
   return {
@@ -113,32 +114,44 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
         external: true,
         items: [
           {
-            text: "Funnel Gallery",
+            text: docsBadge(
+              "Funnel Gallery",
+              "/docs/components/funnel-gallery"
+            ),
             description: "Explore the Funnel Gallery",
             url: "/docs/components/funnel-gallery",
           },
           {
-            text: "Liquid Frame",
+            text: docsBadge("Liquid Frame", "/docs/components/liquid-frame"),
             description: "Discover the Liquid Frame component",
             url: "/docs/components/liquid-frame",
           },
           {
-            text: "Vision Glass Card",
+            text: docsBadge(
+              "Vision Glass Card",
+              "/docs/components/vision-glass-card"
+            ),
             description: "Discover the Vision Glass Card component",
             url: "/docs/components/vision-glass-card",
           },
           {
-            text: "Orbital Flow",
+            text: docsBadge("Orbital Flow", "/docs/components/orbital-flow"),
             description: "Experience the Orbital Flow component",
             url: "/docs/components/orbital-flow",
           },
           {
-            text: "Motion Gallery",
+            text: docsBadge(
+              "Motion Gallery",
+              "/docs/components/motion-gallery"
+            ),
             description: "Browse the Motion Gallery component",
             url: "/docs/components/motion-gallery",
           },
           {
-            text: "Vanilla Tilt Card",
+            text: docsBadge(
+              "Vanilla Tilt Card",
+              "/docs/components/vanilla-tilt-card"
+            ),
             description: "Check out the Vanilla Tilt Card component",
             url: "/docs/components/vanilla-tilt-card",
           },
@@ -150,22 +163,28 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
         on: "menu",
         items: [
           {
-            text: "Event Card",
+            text: docsBadge("Event Card", "/docs/components/event-card"),
             description: "Showcase upcoming events and details",
             url: "/docs/components/event-card",
           },
           {
-            text: "Testimonial Card",
+            text: docsBadge(
+              "Testimonial Card",
+              "/docs/components/testimonial-card"
+            ),
             description: "Showcase customer testimonials and reviews",
             url: "/docs/components/testimonial-card",
           },
           {
-            text: "Stat Card",
+            text: docsBadge("Stat Card", "/docs/components/stat-card"),
             description: "Display key metrics and statistics",
             url: "/docs/components/stat-card",
           },
           {
-            text: "Navigational Card",
+            text: docsBadge(
+              "Navigational Card",
+              "/docs/components/navigational-card"
+            ),
             description: "Interactive navigation card component",
             url: "/docs/components/navigational-card",
           },
@@ -177,7 +196,10 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
         on: "menu",
         items: [
           {
-            text: "Motion Sidebar",
+            text: docsBadge(
+              "Motion Sidebar",
+              "/docs/components/motion-sidebar"
+            ),
             description:
               "An animated sidebar menu with smooth transitions and expandable navigation.",
             url: "/docs/components/motion-sidebar",
@@ -190,13 +212,16 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
         on: "menu",
         items: [
           {
-            text: "Gallery Showcase",
+            text: docsBadge(
+              "Gallery Showcase",
+              "/docs/components/gallery-showcase"
+            ),
             description:
               "A responsive image gallery component with thumbnail previews.",
             url: "/docs/components/gallery-showcase",
           },
           {
-            text: "Masonry Grid",
+            text: docsBadge("Masonry Grid", "/docs/components/masonry-grid"),
             description: "A responsive masonry grid layout component",
             url: "/docs/components/masonry-grid",
           },
@@ -208,7 +233,10 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
         on: "menu",
         items: [
           {
-            text: "Tidal Text Animation",
+            text: docsBadge(
+              "Tidal Text Animation",
+              "/docs/components/tidal-text-animation"
+            ),
             description: "Animated text wave effect",
             url: "/docs/components/tidal-text-animation",
           },
@@ -220,17 +248,20 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
         on: "menu",
         items: [
           {
-            text: "Action Button",
+            text: docsBadge("Action Button", "/docs/components/action-button"),
             description: "Reusable action button component",
             url: "/docs/components/action-button",
           },
           {
-            text: "Read More",
+            text: docsBadge("Read More", "/docs/components/read-more"),
             description: "Expandable text component",
             url: "/docs/components/read-more",
           },
           {
-            text: "Quantity Stepper",
+            text: docsBadge(
+              "Quantity Stepper",
+              "/docs/components/quantity-stepper"
+            ),
             description: "Increment/decrement numeric input",
             url: "/docs/components/quantity-stepper",
           },
@@ -241,3 +272,4 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
     githubUrl: "https://github.com/praveenlodhiofficial/elixir-ui",
   };
 }
+

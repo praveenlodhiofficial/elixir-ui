@@ -15,7 +15,6 @@ import { LiquidFrame } from "@workspace/ui/components/liquid-frame";
 import { NavigationalCard } from "@workspace/ui/components/navigational-card";
 import { OrbitalFlow } from "@workspace/ui/components/orbital-flow";
 import { Separator } from "@workspace/ui/components/separator";
-import { TidalTextAnimation } from "@workspace/ui/components/tidal-text-animation";
 import { VanillaTiltCard } from "@workspace/ui/components/vanilla-tilt-card";
 import { VisionGlassCard } from "@workspace/ui/components/vision-glass-card";
 import {
@@ -140,8 +139,10 @@ const footerComponentLinks = [
 ];
 
 export default function Page() {
+  const { twitterUrl: _twitterUrl, ...homeLayoutProps } = baseOptions();
+
   return (
-    <HomeLayout {...baseOptions()}>
+    <HomeLayout {...homeLayoutProps}>
       <div className="relative isolate overflow-hidden">
         <div className="pointer-events-none absolute inset-0 -z-10 bg-[radial-gradient(circle_at_8%_8%,hsl(var(--primary)/0.2),transparent_35%),radial-gradient(circle_at_84%_16%,hsl(var(--accent)/0.14),transparent_32%),radial-gradient(circle_at_60%_82%,hsl(var(--chart-2)/0.14),transparent_36%)]" />
 
@@ -316,29 +317,6 @@ export default function Page() {
           />
         </section>
 
-        {/* Gallery Showcase Section */}
-        <section className="mx-auto flex max-w-7xl flex-col px-6 py-6">
-          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
-            <div className="space-y-2">
-              <p className="text-muted-foreground text-xs tracking-[0.18em] uppercase">
-                Gallery showcase
-              </p>
-              <h3 className="text-2xl font-semibold sm:text-3xl">
-                Visual layouts ready for modern product pages.
-              </h3>
-            </div>
-            <ActionButton
-              href="/docs/components/gallery-showcase"
-              variant="outline"
-              icon={null}
-            >
-              View component
-            </ActionButton>
-          </div>
-
-          <GalleryShowcase />
-        </section>
-
         {/* 3D Components Section */}
         <section className="mx-auto max-w-7xl px-6 py-10">
           <div className="mb-8 flex flex-wrap items-end justify-between gap-5">
@@ -359,7 +337,7 @@ export default function Page() {
             </ActionButton>
           </div>
 
-          <div className="mt-8 grid grid-cols-1 grid-cols-[0.5fr_1.2fr_0.5fr] gap-6">
+          <div className="mt-8 grid grid-cols-1 grid-cols-[0.5fr_1.5fr_0.5fr] gap-6">
             <Card className="bg-background/80 h-full">
               <CardContent className="space-y-2 py-5">
                 <p className="text-muted-foreground text-xs uppercase">
@@ -374,7 +352,11 @@ export default function Page() {
                 </p>
               </CardContent>
             </Card>
-            <LiquidFrame src="/funnel-gallery-image-1.png" />
+            <LiquidFrame 
+      src="/funnel-gallery-image-1.png"
+
+            fit="cover" 
+            />
             <Card className="bg-background/80 h-full">
               <CardContent className="space-y-2 py-5">
                 <p className="text-muted-foreground text-xs uppercase">
@@ -470,6 +452,29 @@ export default function Page() {
               <VanillaTiltCard className="h-full w-full" />
             </div>
           </div>
+        </section>
+
+        {/* Gallery Showcase Section */}
+        <section className="mx-auto flex max-w-7xl flex-col px-6 py-6">
+          <div className="mb-6 flex flex-wrap items-end justify-between gap-4">
+            <div className="space-y-2">
+              <p className="text-muted-foreground text-xs tracking-[0.18em] uppercase">
+                Gallery showcase
+              </p>
+              <h3 className="text-2xl font-semibold sm:text-3xl">
+                Visual layouts ready for modern product pages.
+              </h3>
+            </div>
+            <ActionButton
+              href="/docs/components/gallery-showcase"
+              variant="outline"
+              icon={null}
+            >
+              View component
+            </ActionButton>
+          </div>
+
+          <GalleryShowcase />
         </section>
 
         {/* <Separator className="mx-auto my-4 max-w-7xl" /> */}

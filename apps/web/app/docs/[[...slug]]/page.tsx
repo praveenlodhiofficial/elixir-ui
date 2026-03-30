@@ -8,6 +8,7 @@ import {
 } from "fumadocs-ui/layouts/docs/page";
 
 import { getMDXComponents } from "@/web/components/mdx";
+import { getDocsFooterItems } from "@/web/lib/docs-footer";
 import { source } from "@/web/lib/source";
 
 export default async function Page({
@@ -20,11 +21,17 @@ export default async function Page({
 
   if (!page) return notFound();
 
+  const footerItems = getDocsFooterItems(source.getPages(), page.url);
+
   const MDX = page.data.body;
 
   return (
     <DocsPage
       toc={page.data.toc}
+      footer={{
+        enabled: true,
+        items: footerItems,
+      }}
       tableOfContent={{ style: "clerk" }}
       tableOfContentPopover={{ style: "clerk" }}
     >

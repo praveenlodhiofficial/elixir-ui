@@ -3,10 +3,103 @@ title: Installation
 description: Set up Elixir UI in your project.
 ---
 
-Install Elixir UI and verify your project setup.
+Elixir UI is a reusable component collection for modern React and Next.js
+projects. It provides polished, production-ready UI blocks and a CLI that helps
+you copy components directly into your app with the required internal files and
+dependencies.
+
+## Why Elixir UI
+
+- Copy-paste ownership: component code lives in your project
+- Ready-to-use components with clean APIs
+- Automatic dependency installation via CLI
+- Works with npm, pnpm, yarn, and bun
 
 ## Quick Start
 
-1. Install dependencies.
-2. Configure your project.
-3. Start building UI blocks.
+1. Run the Elixir UI CLI with a component name.
+2. The CLI copies component files into your project.
+3. Required dependencies are installed automatically.
+4. Import and use the component in your app.
+
+## Install a Component
+
+Choose your package manager and run one command:
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+	<Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add action-button
+```
+
+	</Tab>
+	<Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add action-button
+```
+
+	</Tab>
+	<Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add action-button
+```
+
+	</Tab>
+	<Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add action-button
+```
+
+	</Tab>
+</Tabs>
+
+## Install Multiple Components
+
+You can add more than one component in a single command:
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+	<Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add motion-sidebar motion-gallery orbital-flow
+```
+
+	</Tab>
+	<Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add motion-sidebar motion-gallery orbital-flow
+```
+
+	</Tab>
+	<Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add motion-sidebar motion-gallery orbital-flow
+```
+
+	</Tab>
+	<Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add motion-sidebar motion-gallery orbital-flow
+```
+
+	</Tab>
+</Tabs>
+
+## What the CLI Adds
+
+- Component files in `src/components/ui`
+- Internal support files in folders like `src/lib`, `src/hooks`, and
+	`src/styles` when needed
+- External npm packages required by selected components
+
+## Next Step
+
+After installation, open the component documentation page and copy the usage
+example into your app.
