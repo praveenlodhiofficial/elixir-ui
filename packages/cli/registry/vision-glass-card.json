@@ -8,7 +8,7 @@
     },
     {
       "path": "vision-glass-card.tsx",
-      "target": "components\\vision-glass-card.tsx"
+      "target": "components\\ui\\vision-glass-card.tsx"
     }
   ]
 }

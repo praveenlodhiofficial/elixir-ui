@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "card.tsx",
-      "target": "components\\card.tsx"
+      "target": "components\\ui\\card.tsx"
     }
   ]
 }

@@ -11,12 +11,15 @@ import defaultMdxComponents from "fumadocs-ui/mdx";
 import type { MDXComponents } from "mdx/types";
 
 import { ComponentPreview } from "@/web/components/ComponentPreview";
+
 import { showcaseComponents } from "./mdx-component-registry";
 
 const generator = createGenerator({
   // set a cache, necessary for serverless platform like Vercel
   cache: createFileSystemGeneratorCache(
-    process.env.VERCEL ? "/tmp/fumadocs-typescript" : ".next/fumadocs-typescript"
+    process.env.VERCEL
+      ? "/tmp/fumadocs-typescript"
+      : ".next/fumadocs-typescript"
   ),
 });
 

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "funnel-gallery.tsx",
-      "target": "components\\funnel-gallery.tsx"
+      "target": "components\\ui\\funnel-gallery.tsx"
     }
   ]
 }

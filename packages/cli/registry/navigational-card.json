@@ -4,11 +4,11 @@
   "files": [
     {
       "path": "card.tsx",
-      "target": "components\\card.tsx"
+      "target": "components\\ui\\card.tsx"
     },
     {
       "path": "navigational-card.tsx",
-      "target": "components\\navigational-card.tsx"
+      "target": "components\\ui\\navigational-card.tsx"
     }
   ]
 }

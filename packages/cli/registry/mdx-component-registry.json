@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "mdx-component-registry.tsx",
-      "target": "components\\mdx-component-registry.tsx"
+      "target": "components\\ui\\mdx-component-registry.tsx"
     }
   ]
 }

@@ -8,7 +8,7 @@
     },
     {
       "path": "masonry-grid.tsx",
-      "target": "components\\masonry-grid.tsx"
+      "target": "components\\ui\\masonry-grid.tsx"
     }
   ]
 }

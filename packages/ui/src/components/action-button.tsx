@@ -1,10 +1,11 @@
 "use client";
 
+import Link from "next/link";
+
 import { cva, type VariantProps } from "class-variance-authority";
 import clsx from "clsx";
 import { ChevronDown } from "lucide-react";
 import { motion } from "motion/react";
-import Link from "next/link";
 
 import { cn } from "../lib/utils";
 

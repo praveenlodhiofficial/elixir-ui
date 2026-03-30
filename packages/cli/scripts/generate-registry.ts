@@ -231,7 +231,7 @@ async function generateFileList(dir: string) {
         const target =
           base && knownDirs.includes(firstDir)
             ? fullRelativePath
-            : path.join("components", fullRelativePath);
+            : path.join("components/ui", fullRelativePath);
         files.push({
           path: fullRelativePath,
           target,

@@ -11,7 +11,7 @@ export interface NavigationalCardProps {
   title?: string;
   description?: string;
   icon?: React.ReactNode;
-  trailingIcon?: React.ReactNode; 
+  trailingIcon?: React.ReactNode;
   href?: string;
   className?: string;
 }
@@ -20,7 +20,7 @@ export function NavigationalCard({
   title = "Navigational Card",
   description = "This is a description for the navigational card. It can be a brief summary or key information.",
   icon = <BookOpenIcon />,
-  trailingIcon, 
+  trailingIcon,
   href = "#",
   className,
 }: NavigationalCardProps) {

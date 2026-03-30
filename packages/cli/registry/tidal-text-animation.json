@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "tidal-text-animation.tsx",
-      "target": "components\\tidal-text-animation.tsx"
+      "target": "components\\ui\\tidal-text-animation.tsx"
     }
   ]
 }

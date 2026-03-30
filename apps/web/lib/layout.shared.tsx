@@ -155,9 +155,9 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
             url: "/docs/components/event-card",
           },
           {
-            text: "Feature Card",
-            description: "Showcase feature highlights and benefits",
-            url: "/docs/components/feature-card",
+            text: "Testimonial Card",
+            description: "Showcase customer testimonials and reviews",
+            url: "/docs/components/testimonial-card",
           },
           {
             text: "Stat Card",

@@ -8,7 +8,7 @@
     },
     {
       "path": "separator.tsx",
-      "target": "components\\separator.tsx"
+      "target": "components\\ui\\separator.tsx"
     }
   ]
 }

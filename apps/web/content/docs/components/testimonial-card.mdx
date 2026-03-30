@@ -1,0 +1,125 @@
+---
+title: Testimonial Card
+description:
+  The Testimonial Card is a responsive card component designed to showcase customer testimonials with a clean and modern look.
+---
+
+<ComponentPreview
+  name="testimonial-card"
+  align="center"
+  component={
+      <TestimonialCard />
+  }
+  filePath="packages/ui/src/components/testimonial-card.tsx"
+/>
+
+## Installation
+
+<Tabs items={["CLI", "Manual"]}>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install with CLI
+
+Choose your package manager.
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npx @praveenlodhi/elixir-ui add testimonial-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm dlx @praveenlodhi/elixir-ui add testimonial-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn dlx @praveenlodhi/elixir-ui add testimonial-card
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun x @praveenlodhi/elixir-ui add testimonial-card
+```
+
+  </Tab>
+</Tabs>
+
+    </div>
+
+  </Tab>
+  <Tab>
+    <div className="fd-steps [&_h3]:fd-step">
+
+### Install dependencies
+
+<Tabs items={["npm", "pnpm", "yarn", "bun"]}>
+  <Tab>
+
+```bash
+npm install clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+pnpm add clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+yarn add clsx
+```
+
+  </Tab>
+  <Tab>
+
+```bash
+bun add clsx
+```
+
+  </Tab>
+</Tabs>
+
+### Add TestimonialCard component
+
+Create a file at `components/ui/testimonial-card.tsx` and paste the
+TestimonialCard source.
+
+<include lang="tsx" meta='title="components/ui/testimonial-card.tsx"'>
+  ../../../../../packages/ui/src/components/testimonial-card.tsx
+</include>
+
+    </div>
+
+  </Tab>
+</Tabs>
+
+## Usage
+
+```tsx
+import { TestimonialCard } from "@workspace/ui/components/testimonial-card";
+
+export function Demo() {
+  return <TestimonialCard />;
+}
+```
+
+## Props
+
+<AutoTypeTable
+  path="../../packages/ui/src/components/testimonial-card.tsx"
+  name="TestimonialCardProps"
+/>

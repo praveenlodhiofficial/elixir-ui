@@ -8,7 +8,7 @@
     },
     {
       "path": "vanilla-tilt-card.tsx",
-      "target": "components\\vanilla-tilt-card.tsx"
+      "target": "components\\ui\\vanilla-tilt-card.tsx"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "gallery-showcase.tsx",
-      "target": "components\\gallery-showcase.tsx"
+      "target": "components\\ui\\gallery-showcase.tsx"
     },
     {
       "path": "lib\\utils.ts",

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "button.tsx",
-      "target": "components\\button.tsx"
+      "target": "components\\ui\\button.tsx"
     },
     {
       "path": "lib\\utils.ts",
@@ -12,7 +12,7 @@
     },
     {
       "path": "quantity-stepper.tsx",
-      "target": "components\\quantity-stepper.tsx"
+      "target": "components\\ui\\quantity-stepper.tsx"
     }
   ]
 }

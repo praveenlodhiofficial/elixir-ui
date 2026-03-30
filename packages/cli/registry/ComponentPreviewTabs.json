@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "ComponentPreviewTabs.tsx",
-      "target": "components\\ComponentPreviewTabs.tsx"
+      "target": "components\\ui\\ComponentPreviewTabs.tsx"
     }
   ]
 }

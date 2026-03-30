@@ -1,5 +1,5 @@
 {
-  "name": "stat-card",
+  "name": "testimonial-card",
   "type": "ui",
   "files": [
     {
@@ -11,8 +11,8 @@
       "target": "lib\\utils.ts"
     },
     {
-      "path": "stat-card.tsx",
-      "target": "components\\ui\\stat-card.tsx"
+      "path": "testimonial-card.tsx",
+      "target": "components\\ui\\testimonial-card.tsx"
     }
   ]
 }

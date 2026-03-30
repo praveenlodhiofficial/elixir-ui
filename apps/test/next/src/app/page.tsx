@@ -1,6 +1,5 @@
 import { ActionButton } from "@/components/action-button";
 import { EventCard } from "@/components/event-card";
-import { FeatureCard } from "@/components/feature-card";
 import { FunnelGallery } from "@/components/funnel-gallery";
 import { GalleryShowcase } from "@/components/gallery-showcase";
 import { LiquidFrame } from "@/components/liquid-frame";
@@ -72,21 +71,6 @@ This approach ensures new React features work reliably in the App Router while m
         <MotionGallery />
         <OrbitalFlow />
         <VanillaTiltCard />
-        <FeatureCard
-          variant="background"
-          subtitle="Customer stories"
-          description="Step Events brought our ideas to life with exceptional creativity and precision, exceeding expectations."
-          title="Kabir Shah"
-          statLabel="Founder of Chipsland"
-        />
-        <FeatureCard variant="media" />
-        <FeatureCard
-          variant="stat"
-          subtitle="Stat Card"
-          statValue="10K+"
-          description="Active monthly users"
-        />
-        <FeatureCard variant="text" />
         <NavigationalCard />
         <GalleryShowcase />
         <EventCard />

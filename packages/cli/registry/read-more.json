@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "action-button.tsx",
-      "target": "components\\action-button.tsx"
+      "target": "components\\ui\\action-button.tsx"
     },
     {
       "path": "lib\\utils.ts",
@@ -12,7 +12,7 @@
     },
     {
       "path": "read-more.tsx",
-      "target": "components\\read-more.tsx"
+      "target": "components\\ui\\read-more.tsx"
     }
   ]
 }

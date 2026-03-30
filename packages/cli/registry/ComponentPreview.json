@@ -4,15 +4,15 @@
   "files": [
     {
       "path": "ComponentPreview.tsx",
-      "target": "components\\ComponentPreview.tsx"
+      "target": "components\\ui\\ComponentPreview.tsx"
     },
     {
       "path": "ComponentPreviewTabs.tsx",
-      "target": "components\\ComponentPreviewTabs.tsx"
+      "target": "components\\ui\\ComponentPreviewTabs.tsx"
     },
     {
       "path": "ComponentSource.tsx",
-      "target": "components\\ComponentSource.tsx"
+      "target": "components\\ui\\ComponentSource.tsx"
     }
   ]
 }

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "event-card.tsx",
-      "target": "components\\event-card.tsx"
+      "target": "components\\ui\\event-card.tsx"
     },
     {
       "path": "lib\\utils.ts",

@@ -1,12 +1,17 @@
 "use client";
 
-import { useState, type ReactNode } from "react";
+import { type ReactNode, useState } from "react";
 
 import Image from "next/image";
 import Link from "next/link";
 
 import clsx from "clsx";
-import { motion, useAnimationFrame, useMotionValue, useTransform } from "motion/react";
+import {
+  motion,
+  useAnimationFrame,
+  useMotionValue,
+  useTransform,
+} from "motion/react";
 
 export interface OrbitTag {
   name: string;
@@ -143,7 +148,7 @@ export function OrbitalFlow({
               return (
                 <motion.div
                   key={tag.name}
-                  className={`invert cursor-pointer ${orbitTagClass}`}
+                  className={`cursor-pointer invert ${orbitTagClass}`}
                   style={{
                     left: `${x}px`,
                     top: `${y}px`,
@@ -157,10 +162,7 @@ export function OrbitalFlow({
                     y: { type: "spring", stiffness: 320, damping: 22 },
                   }}
                 >
-                  <Link
-                    href={tag.href ?? "#"}
-                    className={orbitLinkClass}
-                  >
+                  <Link href={tag.href ?? "#"} className={orbitLinkClass}>
                     {tag.icon}
                     <span className="whitespace-nowrap">{tag.name}</span>
                   </Link>
@@ -192,7 +194,7 @@ export function OrbitalFlow({
               return (
                 <motion.div
                   key={tag.name}
-                  className={`invert cursor-pointer ${orbitTagClass}`}
+                  className={`cursor-pointer invert ${orbitTagClass}`}
                   style={{
                     left: `${x}px`,
                     top: `${y}px`,
@@ -206,10 +208,7 @@ export function OrbitalFlow({
                     y: { type: "spring", stiffness: 320, damping: 22 },
                   }}
                 >
-                  <Link
-                    href={tag.href ?? "#"}
-                    className={` ${orbitLinkClass}`}
-                  >
+                  <Link href={tag.href ?? "#"} className={` ${orbitLinkClass}`}>
                     {tag.icon}
                     <span className="whitespace-nowrap">{tag.name}</span>
                   </Link>

@@ -272,7 +272,10 @@ export function LiquidFrame({
   return (
     <div
       ref={containerRef}
-      className={clsx(className, "rounded-2xl border md:max-w-4xl w-full h-full relative overflow-hidden bg-transparent")}
+      className={clsx(
+        className,
+        "relative h-full w-full overflow-hidden rounded-2xl border bg-transparent md:max-w-4xl"
+      )}
       style={{
         position: "relative",
         width: "100%",

@@ -5,9 +5,11 @@ import React, { useEffect, useRef } from "react";
 import Image from "next/image";
 
 import clsx from "clsx";
-import { cn } from "../lib/utils"; // adjust path if needed
+// adjust path if needed
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import VanillaTilt from "vanilla-tilt";
+
+import { cn } from "../lib/utils";
 
 interface HTMLDivElementWithVanillaTilt extends HTMLDivElement {
   vanillaTilt?: { destroy: () => void };

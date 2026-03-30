@@ -39,6 +39,11 @@ export const showcaseComponents = {
       (mod) => mod.NavigationalCard
     )
   ),
+  TestimonialCard: dynamic(() =>
+    import("@workspace/ui/components/testimonial-card").then(
+      (mod) => mod.TestimonialCard
+    )
+  ),
   OrbitalFlow: dynamic(() =>
     import("@workspace/ui/components/orbital-flow").then(
       (mod) => mod.OrbitalFlow

@@ -4,7 +4,7 @@
   "files": [
     {
       "path": "ComponentSource.tsx",
-      "target": "components\\ComponentSource.tsx"
+      "target": "components\\ui\\ComponentSource.tsx"
     }
   ]
 }

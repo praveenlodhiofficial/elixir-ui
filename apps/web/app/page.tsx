@@ -124,8 +124,8 @@ const footerComponentLinks = [
   { title: "Motion Gallery", href: "/docs/components/motion-gallery" },
   { title: "Vanilla Tilt Card", href: "/docs/components/vanilla-tilt-card" },
   { title: "Event Card", href: "/docs/components/event-card" },
-  { title: "Feature Card", href: "/docs/components/feature-card" },
   { title: "Stat Card", href: "/docs/components/stat-card" },
+  { title: "Testimonial Card", href: "/docs/components/testimonial-card" },
   { title: "Navigational Card", href: "/docs/components/navigational-card" },
   { title: "Motion Sidebar", href: "/docs/components/motion-sidebar" },
   { title: "Gallery Showcase", href: "/docs/components/gallery-showcase" },
@@ -148,9 +148,9 @@ export default function Page() {
 
         {/* Hero Section */}
         <section className="mx-auto max-w-7xl p-6">
-          <div className="from-primary/10 via-background to-accent/10 relative overflow-hidden rounded-t-[2rem] border border-border/70 bg-gradient-to-br p-6 sm:p-8 lg:p-10">
-            <div className="pointer-events-none absolute -top-16 -left-12 h-52 w-52 rounded-full bg-primary/20 blur-3xl" />
-            <div className="pointer-events-none absolute -right-10 bottom-0 h-48 w-48 rounded-full bg-accent/20 blur-3xl" />
+          <div className="from-primary/10 via-background to-accent/10 border-border/70 relative overflow-hidden rounded-t-[2rem] border bg-gradient-to-br p-6 sm:p-8 lg:p-10">
+            <div className="bg-primary/20 pointer-events-none absolute -top-16 -left-12 h-52 w-52 rounded-full blur-3xl" />
+            <div className="bg-accent/20 pointer-events-none absolute -right-10 bottom-0 h-48 w-48 rounded-full blur-3xl" />
 
             <div className="relative space-y-6">
               <div className="flex flex-wrap items-center gap-2">
@@ -174,7 +174,11 @@ export default function Page() {
               </div>
 
               <div className="flex flex-wrap items-center gap-3">
-                <ActionButton href="/docs/components" icon={null} className="px-6">
+                <ActionButton
+                  href="/docs/components"
+                  icon={null}
+                  className="px-6"
+                >
                   Explore components
                 </ActionButton>
                 <ActionButton
@@ -188,7 +192,7 @@ export default function Page() {
               </div>
             </div>
           </div>
-                    <div className="p-6 border rounded-b-[2rem] mt-2 border-border/70 bg-background/70 backdrop-blur-sm">
+          <div className="border-border/70 bg-background/70 mt-2 rounded-b-[2rem] border p-6 backdrop-blur-sm">
             <CardContent className="grid gap-4 py-5 sm:grid-cols-3 sm:gap-6">
               <div>
                 <p className="text-muted-foreground text-xs uppercase">
@@ -620,7 +624,8 @@ export default function Page() {
                   Elixir UI
                 </p>
                 <p className="text-sm leading-relaxed text-zinc-400">
-                  A modern component system for shipping expressive pages faster.
+                  A modern component system for shipping expressive pages
+                  faster.
                 </p>
               </div>
 
@@ -634,12 +639,18 @@ export default function Page() {
                   </Link>
                 </div>
                 <div className="text-sm">
-                  <Link className="text-zinc-400 hover:text-white" href="/docs/components">
+                  <Link
+                    className="text-zinc-400 hover:text-white"
+                    href="/docs/components"
+                  >
                     Components
                   </Link>
                 </div>
                 <div className="text-sm">
-                  <Link className="text-zinc-400 hover:text-white" href="/docs/installation">
+                  <Link
+                    className="text-zinc-400 hover:text-white"
+                    href="/docs/installation"
+                  >
                     Installation
                   </Link>
                 </div>
@@ -652,7 +663,10 @@ export default function Page() {
                 <div className="grid grid-cols-1 gap-1 sm:grid-cols-2 lg:grid-cols-1">
                   {footerComponentLinks.map((item) => (
                     <div key={item.href} className="text-sm">
-                      <Link className="text-zinc-400 hover:text-white" href={item.href}>
+                      <Link
+                        className="text-zinc-400 hover:text-white"
+                        href={item.href}
+                      >
                         {item.title}
                       </Link>
                     </div>
@@ -665,7 +679,8 @@ export default function Page() {
                   Status
                 </p>
                 <p className="text-sm text-zinc-400">
-                  Built with shared tokens, reusable blocks, and motion-first UI patterns.
+                  Built with shared tokens, reusable blocks, and motion-first UI
+                  patterns.
                 </p>
               </div>
             </div>

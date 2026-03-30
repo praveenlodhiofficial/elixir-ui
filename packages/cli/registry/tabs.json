@@ -8,7 +8,7 @@
     },
     {
       "path": "tabs.tsx",
-      "target": "components\\tabs.tsx"
+      "target": "components\\ui\\tabs.tsx"
     }
   ]
 }

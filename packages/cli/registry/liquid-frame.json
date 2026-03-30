@@ -8,7 +8,7 @@
     },
     {
       "path": "liquid-frame.tsx",
-      "target": "components\\liquid-frame.tsx"
+      "target": "components\\ui\\liquid-frame.tsx"
     }
   ]
 }

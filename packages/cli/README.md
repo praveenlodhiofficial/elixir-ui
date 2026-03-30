@@ -71,7 +71,9 @@ The following items are currently exposed from the shared layout navigation.
 
 #### Card Components
 
-- feature-card
+- testimonial-card
+- event-card
+- stat-card
 - navigational-card
 
 #### Navigation

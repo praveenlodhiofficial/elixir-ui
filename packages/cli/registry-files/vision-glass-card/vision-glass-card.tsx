@@ -7,7 +7,10 @@ import Image from "next/image";
 import clsx from "clsx";
 import { motion, useMotionValue, useSpring, useTransform } from "motion/react";
 import VanillaTilt from "vanilla-tilt";
-import { cn } from "../lib/utils"; // adjust path if needed
+
+import { cn } from "../lib/utils";
+
+// adjust path if needed
 
 interface HTMLDivElementWithVanillaTilt extends HTMLDivElement {
   vanillaTilt?: { destroy: () => void };
@@ -74,8 +77,9 @@ export function VisionGlassCard({
         rawY.set(0);
         scaleRaw.set(1.35);
       }}
-      className={cn( // ✅ merged here
-        "relative cursor-pointer min-w-60",
+      className={cn(
+        // ✅ merged here
+        "relative min-w-60 cursor-pointer",
         className
       )}
       style={{
