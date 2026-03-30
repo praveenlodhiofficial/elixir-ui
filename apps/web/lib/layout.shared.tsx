@@ -230,11 +230,6 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
             url: "/docs/components/read-more",
           },
           {
-            text: "Action Input",
-            description: "Interactive input component",
-            url: "/docs/components/action-input",
-          },
-          {
             text: "Quantity Stepper",
             description: "Increment/decrement numeric input",
             url: "/docs/components/quantity-stepper",

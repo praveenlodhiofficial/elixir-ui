@@ -136,7 +136,6 @@ const footerComponentLinks = [
   },
   { title: "Action Button", href: "/docs/components/action-button" },
   { title: "Read More", href: "/docs/components/read-more" },
-  { title: "Action Input", href: "/docs/components/action-input" },
   { title: "Quantity Stepper", href: "/docs/components/quantity-stepper" },
 ];
 

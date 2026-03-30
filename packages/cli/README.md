@@ -13,32 +13,25 @@ and external package dependencies.
 Use one of the following commands without installing globally:
 
 ```bash
-npx @praveenlodhi/elixir-ui add motion-sidebar
+npx @praveenlodhi/elixir-ui add <COMPONENT_NAME>
 ```
 
 ```bash
-pnpm dlx @praveenlodhi/elixir-ui add motion-sidebar
+pnpm dlx @praveenlodhi/elixir-ui add <COMPONENT_NAME>
 ```
 
 ```bash
-yarn dlx @praveenlodhi/elixir-ui add motion-sidebar
+yarn dlx @praveenlodhi/elixir-ui add <COMPONENT_NAME>
 ```
 
 ```bash
-bun x @praveenlodhi/elixir-ui add motion-sidebar
-```
-
-Or install globally:
-
-```bash
-npm i -g @praveenlodhi/elixir-ui
-elixir-ui add motion-sidebar
+bun x @praveenlodhi/elixir-ui add <COMPONENT_NAME>
 ```
 
 Add multiple components at once:
 
 ```bash
-elixir-ui add motion-sidebar motion-gallery orbital-flow
+npx @praveenlodhi/elixir-ui add motion-sidebar motion-gallery orbital-flow
 ```
 
 ## What the add command does
@@ -47,6 +40,12 @@ elixir-ui add motion-sidebar motion-gallery orbital-flow
 - Resolves and copies internal dependencies used by each component
 - Installs required npm packages automatically using your project package manager
   (bun, pnpm, yarn, or npm)
+
+## Output paths
+
+- Component files are written to `src/components/ui`
+- Internal support files are written to their matching folders (for example
+  `src/lib`, `src/hooks`, and `src/styles`) when required by a component
 
 ## Available in docs navigation
 
@@ -80,6 +79,11 @@ The following items are currently exposed from the shared layout navigation.
 
 - motion-sidebar
 
+#### Layout Components
+
+- gallery-showcase
+- masonry-grid
+
 #### Text Components
 
 - tidal-text-animation
@@ -87,7 +91,8 @@ The following items are currently exposed from the shared layout navigation.
 #### UI Components
 
 - action-button
-- action-input
+- read-more
+- quantity-stepper
 
 ## Local development
 
