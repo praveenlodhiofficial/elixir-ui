@@ -352,11 +352,7 @@ export default function Page() {
                 </p>
               </CardContent>
             </Card>
-            <LiquidFrame 
-      src="/funnel-gallery-image-1.png"
-
-            fit="cover" 
-            />
+            <LiquidFrame src="/funnel-gallery-image-1.png" fit="cover" />
             <Card className="bg-background/80 h-full">
               <CardContent className="space-y-2 py-5">
                 <p className="text-muted-foreground text-xs uppercase">

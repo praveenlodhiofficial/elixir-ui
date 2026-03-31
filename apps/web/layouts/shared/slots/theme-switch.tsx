@@ -11,8 +11,8 @@ import { cn } from "@/web/lib/cn";
 const itemVariants = cva("size-6.5 p-1.5 text-fd-muted-foreground", {
   variants: {
     active: {
-      true: "bg-fd-accent text-fd-accent-foreground",
-      false: "text-fd-muted-foreground",
+      true: "bg-fd-accent text-fd-accent-foreground ",
+      false: "text-fd-muted-foreground ",
     },
   },
 });

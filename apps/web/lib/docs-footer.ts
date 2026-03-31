@@ -57,13 +57,18 @@ function getOrderedDocUrlsFromLayout() {
   return urls;
 }
 
-export function getDocsFooterItems(pages: FooterPage[], currentUrl: string): {
+export function getDocsFooterItems(
+  pages: FooterPage[],
+  currentUrl: string
+): {
   previous?: FooterItem;
   next?: FooterItem;
 } {
   const orderedUrls = getOrderedDocUrlsFromLayout();
   const orderedUrlSet = new Set(orderedUrls);
-  const pageByUrl = new Map(pages.map((item) => [normalizeUrl(item.url), item]));
+  const pageByUrl = new Map(
+    pages.map((item) => [normalizeUrl(item.url), item])
+  );
 
   const orderedPages = orderedUrls
     .map((url) => pageByUrl.get(url))

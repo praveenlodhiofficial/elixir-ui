@@ -16,7 +16,7 @@ export function docsBadge(text: string, url: string) {
       <span className="min-w-0 truncate">{text}</span>
       <Badge
         variant="outline"
-        className="h-5 shrink-0 rounded-full border-emerald-500/40 bg-emerald-500/10 px-1.5 text-[10px] leading-none font-semibold uppercase tracking-wide text-emerald-300 whitespace-nowrap"
+        className="h-5 shrink-0 rounded-full border-emerald-500/40 bg-emerald-500/10 px-1.5 text-[10px] leading-none font-semibold tracking-wide whitespace-nowrap text-emerald-300 uppercase"
       >
         New
       </Badge>

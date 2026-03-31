@@ -1,6 +1,6 @@
 import { Exo, Geist, Geist_Mono } from "next/font/google";
 
-import { LiquidFrame } from "@workspace/ui/components/liquid-frame";
+import { Analytics } from "@vercel/analytics/next";
 import "@workspace/ui/globals.css";
 import { cn } from "@workspace/ui/lib/utils";
 import { RootProvider } from "fumadocs-ui/provider/next";
@@ -36,9 +36,12 @@ export default function RootLayout({
         geist.variable
       )}
     >
-      <body className="flex min-h-screen flex-col tracking-wide">
+      <body className="flex min-h-screen flex-col tracking-wide dark:brightness-125">
         <ThemeProvider>
-          <RootProvider>{children}</RootProvider>
+          <RootProvider>
+            {children}
+            <Analytics />
+          </RootProvider>
         </ThemeProvider>
       </body>
     </html>

@@ -1,0 +1,10 @@
+{
+  "name": "badge",
+  "type": "ui",
+  "files": [
+    {
+      "path": "badge.tsx",
+      "target": "components\\ui\\badge.tsx"
+    }
+  ]
+}

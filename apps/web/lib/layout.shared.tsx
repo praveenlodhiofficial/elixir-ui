@@ -1,6 +1,10 @@
 import Image from "next/image";
+import Link from "next/link";
 
+import { ActionButton } from "@workspace/ui/components/action-button";
+import { Button } from "@workspace/ui/components/button";
 import type { BaseLayoutProps } from "fumadocs-ui/layouts/shared";
+
 import { docsBadge } from "@/web/lib/docs-badge";
 
 export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
@@ -40,6 +44,25 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
 
       /* ================================================= Sidebar Menu =================================================== */
       /* ================================= Getting Started =================================== */
+      {
+        type: "custom",
+        secondary: true,
+        on: "menu",
+        children: (
+          <Link
+            href="https://x.com/praveenlodhi99"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <Button
+              variant="secondary"
+              className="mb-6 w-full cursor-pointer justify-start border border-gray-500 px-3 py-4.5 font-extralight tracking-wider"
+            >
+              Twitter @praveenlodhi99
+            </Button>
+          </Link>
+        ),
+      },
       {
         type: "custom",
         secondary: true,
@@ -272,4 +295,3 @@ export function baseOptions(): BaseLayoutProps & { twitterUrl?: string } {
     githubUrl: "https://github.com/praveenlodhiofficial/elixir-ui",
   };
 }
-
